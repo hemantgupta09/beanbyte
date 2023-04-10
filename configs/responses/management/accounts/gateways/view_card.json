@@ -1,0 +1,39 @@
+ {
+    "status": true,
+    "message": "message",
+    "title": "title",
+    "info"    : {
+        "version" : "1.0.0" ,
+        "created" : {
+          "date"       : "20-03-2023" ,
+          "author"     : "Balram" ,
+          "maintainer" : "Lokesh" ,
+          "note"       : ""
+        } ,
+        "updated" : {
+          "updater"     : "" ,
+          "date"        : "" ,
+          "description" : ""
+        }
+      } ,
+      "sample"  : {
+
+        "account": {
+          "id": "12",
+          "name": "Sean Bean",
+          "tcd": "837489",
+          "cycle": "Processing",
+          "avatar": "300-4.jpg"
+        }
+
+      } ,
+    "data": {
+      "account": {
+        "id": "12",
+        "name": "Sean Bean",
+        "tcd": "837489",
+        "cycle": "Processing",
+        "avatar": "300-4.jpg"
+      }
+    }
+  }

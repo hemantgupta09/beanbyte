@@ -1,0 +1,65 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "customers" : {
+      "group_id" : [
+        "int : id",
+        "str : customer_name"
+      ]
+    }
+  },
+  "data" : {
+    "customers" : {
+      "21" : [
+        21 , 
+        "Lokesh Kumar" , 
+        "lucky" , 
+        "3" , 
+        "2"
+      ],
+      "22" : [
+        22 , 
+        "Naveen Kumar" , 
+        "vicky" , 
+        "3" , 
+        "3"
+      ],
+      "23" : [
+        23 , 
+        "Suresh Kumar" , 
+        "suri" , 
+        "3" , 
+        "4"
+      ],
+      "24" : [
+        24 , 
+        "Rakesh Kumar" , 
+        "rakhi" , 
+        "3" , 
+        "2"
+      ]
+    },
+    "dues" : {
+      "2" : [
+         2 , 
+        "10000"],
+      
+      "3" : [
+         3 , 
+        "2000"],
+      
+      "4" : [
+         4 , 
+        "40000"]
+      
+    }
+  }
+}

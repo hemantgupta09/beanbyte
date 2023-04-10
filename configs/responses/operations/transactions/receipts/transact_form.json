@@ -1,0 +1,134 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Lokesh" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+    "transact" : {
+      "group_id" : [
+        "int: entry_id" ,
+        "str: Bank Name" ,
+        "url: Contact Name" ,
+        "str: current balance"
+      ]
+    }
+  } ,
+  "data"    : {
+    "pos"     : [
+      {
+        "lid"     : 40 ,
+        "name"    : "SBI Bank" ,
+        "balance" : ""
+      } ,
+      {
+        "lid"     : 41 ,
+        "name"    : "HDFC Bank" ,
+        "balance" : ""
+      } ,
+      {
+        "lid"     : 42 ,
+        "name"    : "KOTAK Bank" ,
+        "balance" : ""
+      }
+    ] ,
+    "bank_ac" : [
+      {
+        "lid"     : 10 ,
+        "name"    : "SBI Bank" ,
+        "alias"   : "xx52345" ,
+        "prefix"  : 1 ,
+        "balance" : "52374.52" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 11 ,
+        "name"    : "HDFC Bank" ,
+        "alias"   : "xx23456" ,
+        "prefix"  : 1 ,
+        "balance" : "1234.2" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 12 ,
+        "name"    : "KOTAK Bank" ,
+        "alias"   : "xx42234" ,
+        "prefix"  : 1 ,
+        "balance" : "89027" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 14 ,
+        "name"    : "Lokesh Bank" ,
+        "alias"   : "" ,
+        "prefix"  : 1 ,
+        "balance" : "1892.54" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 10 ,
+        "name"    : "ICICI OD Account" ,
+        "alias"   : "" ,
+        "prefix"  : 1 ,
+        "balance" : "-52345" ,
+        "suffix"  : "1"
+      }
+    ] ,
+    "credit"  : [
+      {
+        "lid"     : 10 ,
+        "name"    : "ICICI OD Account" ,
+        "balance" : "-52345" ,
+        "suffix"  : "1"
+      }
+    ] ,
+    "cash"    : [
+      {
+        "lid"     : 4 ,
+        "name"    : "Cash Main" ,
+        "balance" : "348971" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 5 ,
+        "name"    : "Cash Local" ,
+        "balance" : "900.61" ,
+        "suffix"  : "0"
+      }
+    ] ,
+    "nature"  : [
+      {
+        "id"     : 24 ,
+        "name"   : "Equity" ,
+        "alias"  : "" ,
+        "string" : "0" ,
+        "group"  : "Deposits"
+      } , {
+        "id"     : 25 ,
+        "name"   : "Dividends" ,
+        "alias"  : "" ,
+        "string" : "0" ,
+        "group"  : "Withdrawals"
+      } ,
+      {
+        "id"     : 24 ,
+        "name"   : "Capital" ,
+        "alias"  : "" ,
+        "string" : "0" ,
+        "group"  : "Deposits"
+      } , {
+        "id"     : 25 ,
+        "name"   : "Drawing" ,
+        "alias"  : "" ,
+        "alias"  : "185000" ,
+        "string" : "0" ,
+        "group"  : "Withdrawals"
+      }
+    ]
+  }
+}

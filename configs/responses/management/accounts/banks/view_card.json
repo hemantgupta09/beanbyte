@@ -1,0 +1,35 @@
+{
+  "status" : true ,
+  "message" : "message" ,
+  "title" : "title" ,
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "20-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+      "id": 11,
+      "account" : {
+        "name" : "SBI Bank" ,
+        "icon" : "300-4.jpg" ,
+        "cate_id" : "Current Account"
+      }
+    } ,
+  "data" : {
+    "account" : {
+      "id": 11,
+      "name" : "SBI Bank" ,
+      "icon" : "300-4.jpg" ,
+      "cate_id" : "Current Account"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "name" : "avatar_remove" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "gateway_name" ,
+    "value" : "Ramesh Kumar"
+  } ,
+  {
+    "name" : "terminal_id" ,
+    "value" : "dk23"
+  } ,
+  {
+    "name" : "category" ,
+    "value" : "11"
+  } ,
+  {
+    "name" : "connect_account" ,
+    "value" : "11"
+  } ,
+  {
+    "name" : "settlement_charges" ,
+    "value" : "₹ 3,124.00"
+  } ,
+  {
+    "name" : "unsettled_amount" ,
+    "value" : "₹ 234,231.00"
+  } ,
+  {
+    "name" : "cycle" ,
+    "value" : "12"
+  } ,
+  {
+    "name" : "charge_method" ,
+    "value" : "1"
+  } ,
+  {
+    "name" : "check" ,
+    "value" : "1"
+  } ,
+  {
+    "name" : "balance_date" ,
+    "value" : "2023-01-03"
+  }
+]

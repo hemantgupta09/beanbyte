@@ -1,0 +1,36 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "email_notification" : {
+    }
+  } ,
+  "data"    : {
+    "email_notification" : {
+      "payment"             : "1" ,
+      "payout"              : "0" ,
+      "Application fees"    : "1" ,
+      "Disputes"            : "0" ,
+      "Payment reviews"     : "1" ,
+      "Mentions"            : "0" ,
+      "Invoice Mispayments" : "0" ,
+      "Webhooks"            : "1" ,
+      "Trial"               : "0"
+    }
+  }
+}

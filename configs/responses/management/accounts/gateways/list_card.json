@@ -1,0 +1,42 @@
+{
+  "status": true,
+  "message": "message",
+  "title": "title",
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "20-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "list": {
+        "id" : ["id" , "avatarg" , "name" , "unsettled_amount" , "cate_id" , "balance" , "last_settlement" , "cycle_id"]
+      },
+
+      "cycle_id": {
+        "cycle_id" : ["map with diff. cycle"]
+      }
+    } ,
+  "data": {
+    "list": {
+      "12": [12, "avatars/300-2.jpg", "Sean Bean", "83748", "13", "352345", "82374", "11"],
+      "13": [13, "avatars/300-3.jpg", "Francis Mitch am", "984831", "11", "52345", "83473974", "12"],
+      "15": [15, "avatars/300-4.jpg", "Dan Wilson", "89349", "12", "2345", "384738", "13"]
+    },
+    "cycle": {
+      "11": ["Completed"],
+      "12": ["Processing"],
+      "13": ["Failed"]
+    }
+  }
+
+}

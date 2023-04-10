@@ -1,0 +1,70 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1  " ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Sagar" ,
+    "note" : "first setup" ,
+    "changes" : "--"
+  } ,
+  "sample" : {
+    "bank" : {
+      "account_detail" : [
+        "int: bank_id" ,
+        "str: Bank Name" ,
+        "str: current balance" ,
+        "int: notify method"
+      ]
+    }
+  } ,
+  "data" : {
+    "bank_ac" : [
+      {
+        "lid" : 10 ,
+        "name" : "SBI Bank" ,
+        "balance" : "52374.52" ,
+        "suffix" : "0"
+      } ,
+      {
+        "lid" : 11 ,
+        "name" : "HDFC Bank" ,
+        "balance" : "1234.2" ,
+        "suffix" : "0"
+      } ,
+      {
+        "lid" : 12 ,
+        "name" : "KOTAK Bank" ,
+        "balance" : "89027" ,
+        "suffix" : "0"
+      } ,
+      {
+        "lid" : 14 ,
+        "name" : "Lokesh Bank" ,
+        "balance" : "1892.54" ,
+        "suffix" : "0"
+      }
+    ] ,
+    "current_ac" : [
+      {
+        "lid" : 10 ,
+        "name" : "ICICI OD Account" ,
+        "balance" : "-52345" ,
+        "suffix" : "1"
+      } ,
+      {
+        "lid" : 11 ,
+        "name" : "HDFC Bank" ,
+        "balance" : "1234.2" ,
+        "suffix" : "0"
+      } ,
+      {
+        "lid" : 12 ,
+        "name" : "KOTAK Bank" ,
+        "balance" : "89027" ,
+        "suffix" : "0"
+      }
+    ]
+  }
+}

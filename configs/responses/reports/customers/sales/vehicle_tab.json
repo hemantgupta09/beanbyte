@@ -1,0 +1,70 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "customers" : {
+      "group_id" : [
+        "int : id",
+        "str : customer_name"
+      ]
+    }
+  },
+  "sample1" : {
+    "vehicles" : {
+      "group_id" : [
+        "int : id",
+        "str : vehicle_name",
+        "str : customer_name"
+      ]
+    }
+  },
+  "data" : {
+    "customers": {
+      "21" : [
+        21 , 
+        "Lokesh Kumar"
+      ],
+      "22" : [
+        22 , 
+        "Naveen Kumar"
+      ],
+      "23" : [
+        23 , 
+        "Suresh Kumar"
+      ],
+      "24" : [
+        24 , 
+        "Rakesh Kumar"
+      ]
+    },
+    "vehicles" : {
+      "342" : [
+        342 , 
+        "RJ 14 GA 4523" , 
+        "21"
+      ],
+      "424" : [
+        424 , 
+        "RJ 34 FA 5345" , 
+        "21"
+      ],
+      "426" : [
+        426 , 
+        "RJ 34 CA 9928" , 
+        "21"
+      ],
+      "427" : [
+        427 , 
+        "RJ 34 CA 0897" , 
+        "22"
+      ]
+    }
+  }
+}

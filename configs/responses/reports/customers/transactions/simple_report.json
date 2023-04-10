@@ -1,0 +1,138 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "data" : {
+      "group_id" : [
+        "int : id",
+        "int : way_id",
+        "int : date_id",
+        "int : particular_id",
+        "int : v_type_id",
+        "int : transaction",
+        "int : debited",
+        "int : credited",
+        "int : closing",
+        "str : view"
+      ]
+    }
+  },
+  "data" : {
+    "detail": {
+      "account": "DPS School, India",
+      "closing": "340971",
+      "range": ["2021-10-20", "2022-01-30"],
+      "ledger_id": 232
+    },
+    "data" : {
+      "12" : [
+        234 ,
+        "112" ,
+        "12" ,
+        "212" ,
+        "1" ,
+        "VNO-78" ,
+        "171.23" ,
+        "15,000" ,
+        "25,000" ,
+        "view1"
+      ],
+      "13" : [
+        406 ,
+        "113" ,
+        "18" ,
+        "213" ,
+        "2" ,
+        "NGST-35 3" ,
+        "168.1 6" ,
+        "15,00 0" ,
+        "25,00 0" ,
+        "view2"],
+      "14" : [
+        496 ,
+        "113" ,
+        "14" ,
+        "214" ,
+        "1" ,
+        "VNO-78" ,
+        "171.23" ,
+        "15,000" ,
+        "25,000" ,
+        "view3"
+        ],
+      "15" : [
+        505 ,
+        "112" ,
+        "12" ,
+        "215" ,
+        "4" ,
+        "VNO-78" ,
+        "171.23" ,
+        "15,000" ,
+        "25,000" ,
+        "view4"
+        ]
+    },
+    "particulars" : {
+      "212" : [
+        212 ,
+        "Opening Balance"
+      ],
+      "213" : [
+        213 ,
+        "Sales Fuel"
+      ],
+      "214" : [
+        214 ,
+        "SBI Bank C/A"
+      ],
+      "215" : [
+        215 ,
+        "Cash"
+      ]
+    },
+    "types" : {
+      "1" : [
+        1 ,
+        "sales"
+      ],
+      "2" : [
+        2 ,
+        "receipt"
+      ],
+      "4" : [
+        4 ,
+        "journal"
+      ]
+    },
+    "dates" : {
+      "12" : [
+        "2022-12-12"
+      ],
+      "13" : [
+        "2022-03-23"
+      ],
+      "14" : [
+        "2022-12-15"
+      ],
+      "18" : [
+        "2022-12-20"
+      ]
+    },
+    "way" : {
+      "112" : [
+        "to"
+      ],
+      "113" : [
+        "by"
+      ]
+    }
+  }
+}

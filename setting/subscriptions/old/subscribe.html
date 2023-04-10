@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="../../" />
+	<title>PetroByte</title>
+	<meta charset="utf-8" />
+	<meta name="description"
+	      content="PetroByte" />
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon"
+	      href="assets/media/logos/favicon.ico" />
+	<link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+	<link href="assets/plugins/custom/datatables/datatables.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="assets/plugins/global/plugins.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="assets/css/style.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+</head>
+
+<body id="kt_app_body"
+      data-kt-app-header-fixed-mobile="true"
+      data-kt-app-sidebar-enabled="true"
+      data-kt-app-sidebar-fixed="true"
+      data-kt-app-sidebar-push-header="true"
+      data-kt-app-sidebar-push-toolbar="true"
+      data-kt-app-sidebar-push-footer="true"
+      class="app-default">
+<script src="assets/js/theme.js"></script>
+
+<div class="d-flex flex-column flex-root app-root"
+     id="kt_app_root">
+	<div class="app-page flex-column flex-column-fluid"
+	     id="kt_app_page">
+		<div id="kt_app_header"
+		     class="app-header d-flex"
+		     data-kt-sticky="true"
+		     data-kt-sticky-name="app-header-sticky"
+		     data-kt-sticky-offset="{default: 'false', lg: '300px'}">
+			<div class="app-container container-fluid d-flex align-items-stretch justify-content-between"
+			     id="kt_app_header_container">
+				<div class="d-flex d-lg-none align-items-center ms-n2 me-2"
+				     title="Show sidebar menu">
+					<div class="btn btn-icon btn-active-color-primary w-35px h-35px"
+					     id="kt_app_sidebar_mobile_toggle">
+						<span class="svg-icon svg-icon-2">
+							<svg width="24"
+							     height="24"
+							     viewBox="0 0 24 24"
+							     fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+								      fill="currentColor" />
+								<path opacity="0.3"
+								      d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
+								      fill="currentColor" />
+							</svg>
+						</span>
+					</div>
+				</div>
+				<div class="d-flex d-lg-none align-items-center me-auto">
+					<a href="">
+						<img alt="PetroByte"
+						     src="assets/media/logos/petrobyte.png"
+						     class="theme-light-show h-25px" />
+						<img alt="PetroByte"
+						     src="assets/media/logos/petrobyte-dark.png"
+						     class="theme-dark-show h-25px" />
+					</a>
+				</div>
+				<div data-kt-swapper="true"
+				     data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}"
+				     data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_container'}"
+				     class="page-title d-flex flex-column justify-content-center me-3 mb-6 mb-lg-0">
+					<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Title of the Page</h1>
+					<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+						<li class="breadcrumb-item text-muted">Level-0</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-1</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-2</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-3</li>
+					</ul>
+				</div>
+				<!--## Navbar ##-->
+				<div class="app-navbar flex-shrink-0"
+				     id="kt_app_aside_navbar">
+					<!--  ## toolbar of navbar ##-->
+					<div class="app-navbar-item ms-1 ms-lg-3"
+					     id="kt_header_user_menu_toggle">
+						<!--@@ USer wrapper-->
+						<div class="cursor-pointer symbol symbol-circle ms-2 symbol-35px symbol-lg-50px"
+						     data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+						     data-kt-menu-attach="parent"
+						     data-kt-menu-placement="bottom-end">
+							<img src="assets/media/logos/petrobyte-round.png"
+							     alt="petrobyte" />
+						</div>
+						<!--@@ User Menu-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--## Wrapper ##-->
+		<div class="app-wrapper flex-column flex-row-fluid"
+		     id="kt_app_wrapper">
+			
+			<!--## Sidebar ##-->
+			<div id="kt_app_sidebar"
+			     class="app-sidebar flex-column"
+			     data-kt-drawer="true"
+			     data-kt-drawer-name="app-sidebar"
+			     data-kt-drawer-activate="{default: true, lg: false}"
+			     data-kt-drawer-overlay="true"
+			     data-kt-drawer-width="250px"
+			     data-kt-drawer-direction="start"
+			     data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+				<!-- ## sidebar menus ## -->
+			</div>
+			
+			<div class="app-main flex-column flex-row-fluid"
+			     id="kt_app_main">
+				<div class="d-flex flex-column flex-column-fluid">
+					<div id="kt_app_content"
+					     class="app-content flex-column-fluid">
+						<div id="kt_app_content_container"
+						     class="app-container container-fluid">
+							
+							<div class="d-flex flex-column flex-lg-row">
+								<div class="flex-lg-row-fluid me-lg-15 order-2 order-lg-1 mb-10 mb-lg-0">
+									<form class="form"
+									      action="#"
+									      id="kt_subscriptions_create_new">
+										
+										<div class="card mb-5 mb-lg-10">
+											<div class="card-body">
+												<div class="notice d-flex bg-light-warning rounded border-primary border border-dashed rounded-3 p-6">
+													<div class="d-flex flex-stack flex-grow-1">
+														<div class="fw-semibold">
+															<h4 class="text-gray-800 fw-semibold">
+																<span class="fw-bold text-dark">Important:</span>
+																Subscription creation does not require any balance in wallet or on-demand payment.
+															</h4>
+															<div class="fs-6 text-gray-700">14 days trial is available for all products.
+																<a href="#"
+																   class="fw-bold">Learn more</a>
+															                                .
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="card mb-5 mb-lg-10">
+											<div class="card-header">
+												<div class="card-title">
+													<h2 class="fw-bold">Products</h2>
+												</div>
+												<div class="card-toolbar">
+													<button type="button"
+													        class="btn btn-light-primary"
+													        data-bs-toggle="modal"
+													        data-bs-target="#kt_modal_add_product">Add Product
+													</button>
+												</div>
+											</div>
+											<div class="card-body pt-0">
+												<div class="table-responsive">
+													<table class="table align-middle table-row-dashed fs-6 fw-semibold gy-3"
+													       id="kt_subscription_products_table">
+														<thead>
+														<tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+															<th class="min-w-300px">Product</th>
+															<th class="min-w-100px">Qty</th>
+															<th class="min-w-150px">Total</th>
+															<th class="min-w-70px text-end">Remove</th>
+														</tr>
+														</thead>
+														<tbody class="text-gray-700">
+														<tr>
+															<td>Beginner Plan</td>
+															<td>1</td>
+															<td>149.99 / Year</td>
+															<td class="text-end">
+																<a href="#"
+																   class="btn btn-icon btn-flex btn-active-light-danger w-50px h-35px me-3"
+																   data-bs-toggle="tooltip"
+																   title="Delete"
+																   data-kt-action="product_remove">
+																	<i class="fs-2 me-1 bi bi-window-dash"></i>
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<td>Pro Plan</td>
+															<td>1</td>
+															<td>499.99 / Year</td>
+															<td class="text-end">
+																<a href="#"
+																   class="btn btn-icon btn-flex btn-active-light-danger w-50px h-35px me-3"
+																   data-bs-toggle="tooltip"
+																   title="Delete"
+																   data-kt-action="product_remove">
+																	<i class="fs-2 me-1 bi bi-window-dash"></i>
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<td>Team Plan</td>
+															<td>1</td>
+															<td>999.99 / Year</td>
+															<td class="text-end">
+																<a href="#"
+																   class="btn btn-icon btn-flex btn-active-light-danger w-50px h-35px me-3"
+																   data-bs-toggle="tooltip"
+																   title="Delete"
+																   data-kt-action="product_remove">
+																	<i class="fs-2 me-1 bi bi-window-dash"></i>
+																</a>
+															</td>
+														</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="card card-flush pt-3 mb-5 mb-lg-10"
+										     data-kt-subscriptions-form="pricing">
+											<div class="card-header">
+												<div class="card-title">
+													<h2 class="fw-bold">Payment Method</h2>
+												</div>
+												<div class="card-toolbar">
+													<a href="#"
+													   class="btn btn-light-primary"
+													   data-bs-toggle="modal"
+													   data-bs-target="#kt_modal_new_card">New Method</a>
+												</div>
+											</div>
+											<div class="card-body pt-0">
+												<div id="kt_create_new_payment_method">
+													<div class="py-1">
+														<div class="py-3 d-flex flex-stack flex-wrap">
+															<div class="d-flex align-items-center collapsible toggle"
+															     data-bs-toggle="collapse"
+															     data-bs-target="#kt_create_new_payment_method_1">
+																<div class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2">
+																	<span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+																		<svg width="24"
+																		     height="24"
+																		     viewBox="0 0 24 24"
+																		     fill="none"
+																		     xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.3"
+																			      x="2"
+																			      y="2"
+																			      width="20"
+																			      height="20"
+																			      rx="5"
+																			      fill="currentColor" />
+																			<rect x="6.0104"
+																			      y="10.9247"
+																			      width="12"
+																			      height="2"
+																			      rx="1"
+																			      fill="currentColor" />
+																		</svg>
+																	</span>
+																	<span class="svg-icon toggle-off svg-icon-2">
+																		<svg width="24"
+																		     height="24"
+																		     viewBox="0 0 24 24"
+																		     fill="none"
+																		     xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.3"
+																			      x="2"
+																			      y="2"
+																			      width="20"
+																			      height="20"
+																			      rx="5"
+																			      fill="currentColor" />
+																			<rect x="10.8891"
+																			      y="17.8033"
+																			      width="12"
+																			      height="2"
+																			      rx="1"
+																			      transform="rotate(-90 10.8891 17.8033)"
+																			      fill="currentColor" />
+																			<rect x="6.01041"
+																			      y="10.9247"
+																			      width="12"
+																			      height="2"
+																			      rx="1"
+																			      fill="currentColor" />
+																		</svg>
+																	</span>
+																</div>
+																<img src="assets/media/svg/card-logos/mastercard.svg"
+																     class="w-40px me-3"
+																     alt="" />
+																<div class="me-3">
+																	<div class="d-flex align-items-center fw-bold">Mastercard
+																		<div class="badge badge-light-primary ms-5">Primary</div>
+																	</div>
+																	<div class="text-muted">Expires Dec 2024</div>
+																</div>
+															</div>
+															<div class="d-flex my-3 ms-9">
+																<label class="form-check form-check-custom form-check-solid me-5">
+																	<input class="form-check-input"
+																	       type="radio"
+																	       name="payment_method"
+																	       checked="checked" />
+																</label>
+															</div>
+														</div>
+														<div id="kt_create_new_payment_method_1"
+														     class="collapse show fs-6 ps-10">
+															<div class="d-flex flex-wrap py-5">
+																<div class="flex-equal me-5">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Name</td>
+																			<td class="text-gray-800">Emma Smith</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Number</td>
+																			<td class="text-gray-800">**** 3988</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Expires</td>
+																			<td class="text-gray-800">12/2024</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Type</td>
+																			<td class="text-gray-800">Mastercard credit card</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Issuer</td>
+																			<td class="text-gray-800">VICBANK</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">ID</td>
+																			<td class="text-gray-800">id_4325df90sdf8</td>
+																		</tr>
+																	</table>
+																</div>
+																<div class="flex-equal">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Billing address</td>
+																			<td class="text-gray-800">AU</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Phone</td>
+																			<td class="text-gray-800">No phone provided</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Email</td>
+																			<td class="text-gray-800">
+																				<a href="#"
+																				   class="text-gray-900 text-hover-primary">smith@kpmg.com</a>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Origin</td>
+																			<td class="text-gray-800">Australia
+																				<div class="symbol symbol-20px symbol-circle ms-2">
+																					<img src="assets/media/flags/australia.svg" />
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">CVC check</td>
+																			<td class="text-gray-800">Passed
+																				<span class="svg-icon svg-icon-2 svg-icon-success">
+																					<svg width="24"
+																					     height="24"
+																					     viewBox="0 0 24 24"
+																					     fill="none"
+																					     xmlns="http://www.w3.org/2000/svg">
+																						<rect opacity="0.3"
+																						      x="2"
+																						      y="2"
+																						      width="20"
+																						      height="20"
+																						      rx="10"
+																						      fill="currentColor" />
+																						<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z"
+																						      fill="currentColor" />
+																					</svg>
+																				</span>
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="separator separator-dashed"></div>
+													<div class="py-1">
+														<div class="py-3 d-flex flex-stack flex-wrap">
+															<div class="d-flex align-items-center collapsible toggle collapsed"
+															     data-bs-toggle="collapse"
+															     data-bs-target="#kt_create_new_payment_method_2">
+																<div class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2">
+																	<span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+																		<svg width="24"
+																		     height="24"
+																		     viewBox="0 0 24 24"
+																		     fill="none"
+																		     xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.3"
+																			      x="2"
+																			      y="2"
+																			      width="20"
+																			      height="20"
+																			      rx="5"
+																			      fill="currentColor" />
+																			<rect x="6.0104"
+																			      y="10.9247"
+																			      width="12"
+																			      height="2"
+																			      rx="1"
+																			      fill="currentColor" />
+																		</svg>
+																	</span>
+																	<span class="svg-icon toggle-off svg-icon-2">
+																		<svg width="24"
+																		     height="24"
+																		     viewBox="0 0 24 24"
+																		     fill="none"
+																		     xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.3"
+																			      x="2"
+																			      y="2"
+																			      width="20"
+																			      height="20"
+																			      rx="5"
+																			      fill="currentColor" />
+																			<rect x="10.8891"
+																			      y="17.8033"
+																			      width="12"
+																			      height="2"
+																			      rx="1"
+																			      transform="rotate(-90 10.8891 17.8033)"
+																			      fill="currentColor" />
+																			<rect x="6.01041"
+																			      y="10.9247"
+																			      width="12"
+																			      height="2"
+																			      rx="1"
+																			      fill="currentColor" />
+																		</svg>
+																	</span>
+																</div>
+																<img src="assets/media/svg/card-logos/visa.svg"
+																     class="w-40px me-3"
+																     alt="" />
+																<div class="me-3">
+																	<div class="d-flex align-items-center fw-bold">Visa</div>
+																	<div class="text-muted">Expires Feb 2022</div>
+																</div>
+															</div>
+															<div class="d-flex my-3 ms-9">
+																<label class="form-check form-check-custom form-check-solid me-5">
+																	<input class="form-check-input"
+																	       type="radio"
+																	       name="payment_method" />
+																</label>
+															</div>
+														</div>
+														<div id="kt_create_new_payment_method_2"
+														     class="collapse fs-6 ps-10">
+															<div class="d-flex flex-wrap py-5">
+																<div class="flex-equal me-5">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Name</td>
+																			<td class="text-gray-800">Melody Macy</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Number</td>
+																			<td class="text-gray-800">**** 3030</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Expires</td>
+																			<td class="text-gray-800">02/2022</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Type</td>
+																			<td class="text-gray-800">Visa credit card</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Issuer</td>
+																			<td class="text-gray-800">ENBANK</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">ID</td>
+																			<td class="text-gray-800">id_w2r84jdy723</td>
+																		</tr>
+																	</table>
+																</div>
+																<div class="flex-equal">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Billing address</td>
+																			<td class="text-gray-800">UK</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Phone</td>
+																			<td class="text-gray-800">No phone provided</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Email</td>
+																			<td class="text-gray-800">
+																				<a href="#"
+																				   class="text-gray-900 text-hover-primary">melody@altbox.com</a>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Origin</td>
+																			<td class="text-gray-800">United Kingdom
+																				<div class="symbol symbol-20px symbol-circle ms-2">
+																					<img src="assets/media/flags/united-kingdom.svg" />
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">CVC check</td>
+																			<td class="text-gray-800">Passed
+																				<span class="svg-icon svg-icon-2 svg-icon-success">
+																					<svg width="24"
+																					     height="24"
+																					     viewBox="0 0 24 24"
+																					     fill="none"
+																					     xmlns="http://www.w3.org/2000/svg">
+																						<path opacity="0.3"
+																						      d="M10 18C9.7 18 9.5 17.9 9.3 17.7L2.3 10.7C1.9 10.3 1.9 9.7 2.3 9.3C2.7 8.9 3.29999 8.9 3.69999 9.3L10.7 16.3C11.1 16.7 11.1 17.3 10.7 17.7C10.5 17.9 10.3 18 10 18Z"
+																						      fill="currentColor" />
+																						<path d="M10 18C9.7 18 9.5 17.9 9.3 17.7C8.9 17.3 8.9 16.7 9.3 16.3L20.3 5.3C20.7 4.9 21.3 4.9 21.7 5.3C22.1 5.7 22.1 6.30002 21.7 6.70002L10.7 17.7C10.5 17.9 10.3 18 10 18Z"
+																						      fill="currentColor" />
+																					</svg>
+																				</span>
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="separator separator-dashed"></div>
+													<div class="py-1">
+														<div class="py-3 d-flex flex-stack flex-wrap">
+															<div class="d-flex align-items-center collapsible toggle collapsed"
+															     data-bs-toggle="collapse"
+															     data-bs-target="#kt_create_new_payment_method_3">
+																<div class="btn btn-sm btn-icon btn-active-color-primary ms-n3 me-2">
+																	<span class="svg-icon toggle-on svg-icon-primary svg-icon-2">
+																		<svg width="24"
+																		     height="24"
+																		     viewBox="0 0 24 24"
+																		     fill="none"
+																		     xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.3"
+																			      x="2"
+																			      y="2"
+																			      width="20"
+																			      height="20"
+																			      rx="5"
+																			      fill="currentColor" />
+																			<rect x="6.0104"
+																			      y="10.9247"
+																			      width="12"
+																			      height="2"
+																			      rx="1"
+																			      fill="currentColor" />
+																		</svg>
+																	</span>
+																	<span class="svg-icon toggle-off svg-icon-2">
+																		<svg width="24"
+																		     height="24"
+																		     viewBox="0 0 24 24"
+																		     fill="none"
+																		     xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.3"
+																			      x="2"
+																			      y="2"
+																			      width="20"
+																			      height="20"
+																			      rx="5"
+																			      fill="currentColor" />
+																			<rect x="10.8891"
+																			      y="17.8033"
+																			      width="12"
+																			      height="2"
+																			      rx="1"
+																			      transform="rotate(-90 10.8891 17.8033)"
+																			      fill="currentColor" />
+																			<rect x="6.01041"
+																			      y="10.9247"
+																			      width="12"
+																			      height="2"
+																			      rx="1"
+																			      fill="currentColor" />
+																		</svg>
+																	</span>
+																</div>
+																<img src="assets/media/svg/card-logos/american-express.svg"
+																     class="w-40px me-3"
+																     alt="" />
+																<div class="me-3">
+																	<div class="d-flex align-items-center fw-bold">American Express
+																		<div class="badge badge-light-danger ms-5">Expired</div>
+																	</div>
+																	<div class="text-muted">Expires Aug 2021</div>
+																</div>
+															</div>
+															<div class="d-flex my-3 ms-9">
+																<label class="form-check form-check-custom form-check-solid me-5">
+																	<input class="form-check-input"
+																	       type="radio"
+																	       name="payment_method" />
+																</label>
+															</div>
+														</div>
+														<div id="kt_create_new_payment_method_3"
+														     class="collapse fs-6 ps-10">
+															<div class="d-flex flex-wrap py-5">
+																<div class="flex-equal me-5">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Name</td>
+																			<td class="text-gray-800">Max Smith</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Number</td>
+																			<td class="text-gray-800">**** 9942</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Expires</td>
+																			<td class="text-gray-800">08/2021</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Type</td>
+																			<td class="text-gray-800">American express credit card</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Issuer</td>
+																			<td class="text-gray-800">USABANK</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">ID</td>
+																			<td class="text-gray-800">id_89457jcje63</td>
+																		</tr>
+																	</table>
+																</div>
+																<div class="flex-equal">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Billing address</td>
+																			<td class="text-gray-800">US</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Phone</td>
+																			<td class="text-gray-800">No phone provided</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Email</td>
+																			<td class="text-gray-800">
+																				<a href="#"
+																				   class="text-gray-900 text-hover-primary">max@kt.com</a>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Origin</td>
+																			<td class="text-gray-800">United States of America
+																				<div class="symbol symbol-20px symbol-circle ms-2">
+																					<img src="assets/media/flags/united-states.svg" />
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">CVC check</td>
+																			<td class="text-gray-800">Failed
+																				<span class="svg-icon svg-icon-2 svg-icon-danger">
+																					<svg width="24"
+																					     height="24"
+																					     viewBox="0 0 24 24"
+																					     fill="none"
+																					     xmlns="http://www.w3.org/2000/svg">
+																						<rect opacity="0.5"
+																						      x="6"
+																						      y="17.3137"
+																						      width="16"
+																						      height="2"
+																						      rx="1"
+																						      transform="rotate(-45 6 17.3137)"
+																						      fill="currentColor" />
+																						<rect x="7.41422"
+																						      y="6"
+																						      width="16"
+																						      height="2"
+																						      rx="1"
+																						      transform="rotate(45 7.41422 6)"
+																						      fill="currentColor" />
+																					</svg>
+																				</span>
+																			</td>
+																		</tr>
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card card-flush pt-3 mb-5 mb-lg-10">
+											<div class="card-header">
+												<div class="card-title">
+													<h2 class="fw-bold">Advanced Options</h2>
+												</div>
+											</div>
+											<div class="card-body pt-0">
+												<div class="d-flex flex-column mb-15 fv-row">
+													<div class="fs-5 fw-bold form-label mb-3">Custom fields
+														<i class="fas fa-exclamation-circle ms-2 fs-7"
+														   data-bs-toggle="popover"
+														   data-bs-trigger="hover"
+														   data-bs-html="true"
+														   data-bs-content="Add custom fields to the billing invoice."></i></div>
+													<div class="table-responsive">
+														<table id="kt_create_new_custom_fields"
+														       class="table align-middle table-row-dashed fw-semibold fs-6 gy-5">
+															<thead>
+															<tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+																<th class="pt-0">Field Name</th>
+																<th class="pt-0">Field Value</th>
+																<th class="pt-0 text-end">Remove</th>
+															</tr>
+															</thead>
+															<tbody>
+															<tr>
+																<td>
+																	<input type="text"
+																	       class="form-control form-control-solid"
+																	       name="row-name"
+																	       value="" />
+																</td>
+																<td>
+																	<input type="text"
+																	       class="form-control form-control-solid"
+																	       name="row-value"
+																	       value="" />
+																</td>
+																<td class="text-end">
+																	<button type="button"
+																	        class="btn btn-icon btn-flex btn-active-light-primary w-30px h-30px me-3"
+																	        data-kt-action="field_remove">
+																		<span class="svg-icon svg-icon-3">
+																			<svg width="24"
+																			     height="24"
+																			     viewBox="0 0 24 24"
+																			     fill="none"
+																			     xmlns="http://www.w3.org/2000/svg">
+																				<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z"
+																				      fill="currentColor" />
+																				<path opacity="0.5"
+																				      d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z"
+																				      fill="currentColor" />
+																				<path opacity="0.5"
+																				      d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z"
+																				      fill="currentColor" />
+																			</svg>
+																		</span>
+																	</button>
+																</td>
+															</tr>
+															</tbody>
+														</table>
+														<!--end:Table-->
+													</div>
+													<button type="button"
+													        class="btn btn-light-primary me-auto"
+													        id="kt_create_new_custom_fields_add">Add custom field
+													</button>
+												</div>
+												<div class="d-flex flex-column mb-10 fv-row">
+													<div class="fs-5 fw-bold form-label mb-3">Invoice footer
+														<i tabindex="0"
+														   class="cursor-pointer fas fa-exclamation-circle ms-2 fs-7"
+														   data-bs-toggle="popover"
+														   data-bs-trigger="hover focus"
+														   data-bs-html="true"
+														   data-bs-content="Add an addition invoice footer note."></i></div>
+													<textarea class="form-control form-control-solid rounded-3"
+													          rows="4"></textarea>
+												</div>
+												<div class="d-flex flex-column mb-5 fv-row rounded-3 p-7 border border-dashed border-gray-300">
+													<div class="fs-5 fw-bold form-label mb-3">Usage treshold
+														<i tabindex="0"
+														   class="cursor-pointer fas fa-exclamation-circle ms-2 fs-7"
+														   data-bs-toggle="popover"
+														   data-bs-trigger="hover focus"
+														   data-bs-html="true"
+														   data-bs-delay-hide="1000"
+														   data-bs-content="Thresholds help manage risk by limiting the unpaid usage balance a customer can accrue. Thresholds only measure and bill for metered usage (including discounts but excluding tax). &lt;a href='#'&gt;Learn more&lt;/a&gt;."></i></div>
+													<label class="form-check form-check-custom form-check-solid">
+														<input class="form-check-input"
+														       type="checkbox"
+														       checked="checked"
+														       value="1" />
+														<span class="form-check-label text-gray-600">Bill immediately if usage treshold reaches 80%.</span>
+													</label>
+												</div>
+												<div class="d-flex flex-column fv-row rounded-3 p-7 border border-dashed border-gray-300">
+													<div class="fs-5 fw-bold form-label mb-3">Pro-rate billing
+														<i tabindex="0"
+														   class="cursor-pointer fas fa-exclamation-circle ms-2 fs-7"
+														   data-bs-toggle="popover"
+														   data-bs-trigger="hover focus"
+														   data-bs-html="true"
+														   data-bs-delay-hide="1000"
+														   data-bs-content="Pro-rated billing dynamically calculates the remainder amount leftover per billing cycle that is owed. &lt;a href='#'&gt;Learn more&lt;/a&gt;."></i></div>
+													<label class="form-check form-check-custom form-check-solid">
+														<input class="form-check-input"
+														       type="checkbox"
+														       value="1" />
+														<span class="form-check-label text-gray-600">Allow pro-rated billing when treshold usage is paid before end of billing cycle.</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="flex-column flex-lg-row-auto w-100 w-lg-250px w-xl-300px mb-10 order-1 order-lg-2">
+									<div class="card mb-0"
+									     data-kt-sticky="true"
+									     data-kt-sticky-name="subscription-summary"
+									     data-kt-sticky-offset="{default: false, lg: '200px'}"
+									     data-kt-sticky-width="{lg: '250px', xl: '300px'}"
+									     data-kt-sticky-left="auto"
+									     data-kt-sticky-top="150px"
+									     data-kt-sticky-animation="false"
+									     data-kt-sticky-zindex="95">
+										<div class="card-header">
+											<div class="card-title">
+												<h2>Subscription Summary</h2>
+											</div>
+										</div>
+										<div class="card-body fs-6">
+											<div class="mb-7">
+												<h5 class="mb-3">Account details</h5>
+												<div class="d-flex align-items-center mb-1">
+													LICENCE:
+													<a href=""
+													   class="fw-bold text-gray-800 text-hover-primary mx-2">PB08B1243</a>
+													<span class="badge badge-light-success">Active</span>
+												</div>
+												<a href="#"
+												   class="fw-semibold text-gray-600 text-hover-primary">lokesh@petrobyte.in</a>
+											</div>
+											<div class="separator separator-dashed mb-7"></div>
+											<div class="mb-7">
+												<h5 class="mb-3">Product details</h5>
+												<div class="mb-0">
+													<span class="badge badge-light-info me-2">Custom Bundle</span>
+													<span class="fw-semibold text-gray-600">
+														<span class="in_inr"
+														      data-cs-currency="1"
+														      id="final_price">53458
+														</span>
+														/ Year
+													</span>
+												</div>
+											</div>
+											<div class="separator separator-dashed mb-7"></div>
+											<div class="mb-0">
+												<h5 class="mb-3">Payment Details</h5>
+												<div class="mb-0">
+													<div class="fw-semibold text-gray-600 d-flex align-items-center">Mastercard
+														<img src="assets/media/svg/card-logos/mastercard.svg"
+														     class="w-35px ms-2"
+														     alt="" />
+													</div>
+													<div class="fw-semibold text-gray-600">Expires Dec 2024</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="mb-0">
+												<button type="submit"
+												        class="btn btn-primary"
+												        id="kt_subscriptions_create_button">
+													<span class="indicator-label">Create Subscription</span>
+													<span class="indicator-progress">Please wait...
+														<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+													</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade"
+							     id="kt_modal_add_product"
+							     tabindex="-1"
+							     aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered mw-650px">
+									<div class="modal-content">
+										<form class="form"
+										      action="#"
+										      id="kt_modal_add_product_form">
+											<div class="modal-header">
+												<h2 class="fw-bold">Add a Product</h2>
+												<div class="btn btn-icon btn-sm btn-active-icon-primary"
+												     data-bs-dismiss="modal">
+													<span class="svg-icon svg-icon-1">
+														<svg width="24"
+														     height="24"
+														     viewBox="0 0 24 24"
+														     fill="none"
+														     xmlns="http://www.w3.org/2000/svg">
+															<rect opacity="0.5"
+															      x="6"
+															      y="17.3137"
+															      width="16"
+															      height="2"
+															      rx="1"
+															      transform="rotate(-45 6 17.3137)"
+															      fill="currentColor" />
+															<rect x="7.41422"
+															      y="6"
+															      width="16"
+															      height="2"
+															      rx="1"
+															      transform="rotate(45 7.41422 6)"
+															      fill="currentColor" />
+														</svg>
+													</span>
+												</div>
+											</div>
+											<div class="modal-body py-10 px-lg-17">
+												<h3 class="mb-7">
+													<span class="fw-bold required">Select Subscription</span>
+													<i class="fas fa-exclamation-circle ms-1 fs-7"
+													   data-bs-toggle="tooltip"
+													   title="Please select a subscription"></i>
+												</h3>
+												<div class="scroll-y mh-300px me-n7 pe-7">
+													<div class="fv-row">
+														<label class="d-flex align-items-center mb-5">
+															<span class="form-check form-check-custom form-check-solid me-5">
+																<input class="form-check-input"
+																       type="radio"
+																       name="product"
+																       checked="checked"
+																       data-kt-product-name="Basic"
+																       data-kt-product-price="15.99"
+																       data-kt-product-frequency="Month" />
+															</span>
+															<span class="d-flex flex-column me-3">
+																<span class="fw-bold">Basic</span>
+																<span class="text-gray-400 fw-semibold fs-6">Basic subscription</span>
+															</span>
+															<span class="fw-bold ms-auto">$15.99 /
+																<span class="text-gray-400 fs-6 fw-semibold">Month</span>
+															</span>
+														</label>
+														<label class="d-flex align-items-center mb-5">
+															<span class="form-check form-check-custom form-check-solid me-5">
+																<input class="form-check-input"
+																       type="radio"
+																       name="product"
+																       data-kt-product-name="Basic Bundle"
+																       data-kt-product-price="149.99"
+																       data-kt-product-frequency="Year" />
+															</span>
+															<span class="d-flex flex-column me-3">
+																<span class="fw-bold">Basic Bundle</span>
+																<span class="text-gray-400 fw-semibold fs-6">Basic yearly bundle</span>
+															</span>
+															<span class="fw-bold ms-auto">$149.99 /
+																<span class="text-gray-400 fs-6 fw-semibold">Year</span>
+															</span>
+														</label>
+														<label class="d-flex align-items-center mb-5">
+															<span class="form-check form-check-custom form-check-solid me-5">
+																<input class="form-check-input"
+																       type="radio"
+																       name="product"
+																       data-kt-product-name="Teams"
+																       data-kt-product-price="20.99"
+																       data-kt-product-frequency="Month" />
+															</span>
+															<span class="d-flex flex-column me-3">
+																<span class="fw-bold">Teams</span>
+																<span class="text-gray-400 fw-semibold fs-6">Teams subscription</span>
+															</span>
+															<span class="fw-bold ms-auto">$20.99 /
+																<span class="text-gray-400 fs-6 fw-semibold">Month</span>
+															</span>
+														</label>
+														<label class="d-flex align-items-center mb-5">
+															<span class="form-check form-check-custom form-check-solid me-5">
+																<input class="form-check-input"
+																       type="radio"
+																       name="product"
+																       data-kt-product-name="Teams Bundle"
+																       data-kt-product-price="199.99"
+																       data-kt-product-frequency="Year" />
+															</span>
+															<span class="d-flex flex-column me-3">
+																<span class="fw-bold">Teams Bundle</span>
+																<span class="text-gray-400 fw-semibold fs-6">Teams yearly bundle</span>
+															</span>
+															<span class="fw-bold ms-auto">$199.99 /
+																<span class="text-gray-400 fs-6 fw-semibold">Year</span>
+															</span>
+														</label>
+														<label class="d-flex align-items-center mb-5">
+															<span class="form-check form-check-custom form-check-solid me-5">
+																<input class="form-check-input"
+																       type="radio"
+																       name="product"
+																       data-kt-product-name="Corporate"
+																       data-kt-product-price="224.99"
+																       data-kt-product-frequency="Month" />
+															</span>
+															<span class="d-flex flex-column me-3">
+																<span class="fw-bold">Corporate</span>
+																<span class="text-gray-400 fw-semibold fs-6">Corporate subscription</span>
+															</span>
+															<span class="fw-bold ms-auto">$224.99 /
+																<span class="text-gray-400 fs-6 fw-semibold">Month</span>
+															</span>
+														</label>
+														<label class="d-flex align-items-center mb-5">
+															<span class="form-check form-check-custom form-check-solid me-5">
+																<input class="form-check-input"
+																       type="radio"
+																       name="product"
+																       data-kt-product-name="Corporate Bundle"
+																       data-kt-product-price="1249.99"
+																       data-kt-product-frequency="Year" />
+															</span>
+															<span class="d-flex flex-column me-3">
+																<span class="fw-bold">Corporate Bundle</span>
+																<span class="text-gray-400 fw-semibold fs-6">Corporate yearly bundle</span>
+															</span>
+															<span class="fw-bold ms-auto">$1249.99 /
+																<span class="text-gray-400 fs-6 fw-semibold">Year</span>
+															</span>
+														</label>
+														<label class="d-flex align-items-center mb-5">
+															<span class="form-check form-check-custom form-check-solid me-5">
+																<input class="form-check-input"
+																       type="radio"
+																       name="product"
+																       data-kt-product-name="Enterprise"
+																       data-kt-product-price="224.99"
+																       data-kt-product-frequency="Month" />
+															</span>
+															<span class="d-flex flex-column me-3">
+																<span class="fw-bold">Enterprise</span>
+																<span class="text-gray-400 fw-semibold fs-6">Enterprise subscription</span>
+															</span>
+															<span class="fw-bold ms-auto">$224.99 /
+																<span class="text-gray-400 fs-6 fw-semibold">Month</span>
+															</span>
+														</label>
+														<label class="d-flex align-items-center mb-5">
+															<span class="form-check form-check-custom form-check-solid me-5">
+																<input class="form-check-input"
+																       type="radio"
+																       name="product"
+																       data-kt-product-name="Enterprise Bundle"
+																       data-kt-product-price="2249.99"
+																       data-kt-product-frequency="Year" />
+															</span>
+															<span class="d-flex flex-column me-3">
+																<span class="fw-bold">Enterprise Bundle</span>
+																<span class="text-gray-400 fw-semibold fs-6">Enterprise yearly bundle</span>
+															</span>
+															<span class="fw-bold ms-auto">$2249.99 /
+																<span class="text-gray-400 fs-6 fw-semibold">Year</span>
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer flex-center">
+												<button type="reset"
+												        id="kt_modal_add_product_cancel"
+												        class="btn btn-light me-3">Discard
+												</button>
+												<button type="button"
+												        id="kt_modal_add_product_submit"
+												        class="btn btn-primary">
+													<span class="indicator-label">Submit</span>
+													<span class="indicator-progress">Please wait...
+														<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+													</span>
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="modal fade"
+							     id="kt_modal_new_card"
+							     tabindex="-1"
+							     aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered mw-650px">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h2>Add New Card</h2>
+											<div class="btn btn-sm btn-icon btn-active-color-primary"
+											     data-bs-dismiss="modal">
+												<span class="svg-icon svg-icon-1">
+													<svg width="24"
+													     height="24"
+													     viewBox="0 0 24 24"
+													     fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<rect opacity="0.5"
+														      x="6"
+														      y="17.3137"
+														      width="16"
+														      height="2"
+														      rx="1"
+														      transform="rotate(-45 6 17.3137)"
+														      fill="currentColor" />
+														<rect x="7.41422"
+														      y="6"
+														      width="16"
+														      height="2"
+														      rx="1"
+														      transform="rotate(45 7.41422 6)"
+														      fill="currentColor" />
+													</svg>
+												</span>
+											</div>
+										</div>
+										<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+											<form id="kt_modal_new_card_form"
+											      class="form"
+											      action="#">
+												<div class="d-flex flex-column mb-7 fv-row">
+													<label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+														<span class="required">Name On Card</span>
+														<i class="fas fa-exclamation-circle ms-2 fs-7"
+														   data-bs-toggle="tooltip"
+														   title="Specify a card holder's name"></i>
+													</label>
+													<input type="text"
+													       class="form-control form-control-solid"
+													       placeholder=""
+													       name="card_name"
+													       value="Max Doe" />
+												</div>
+												<div class="d-flex flex-column mb-7 fv-row">
+													<label class="required fs-6 fw-semibold form-label mb-2">Card Number</label>
+													<div class="position-relative">
+														<input type="text"
+														       class="form-control form-control-solid"
+														       placeholder="Enter card number"
+														       name="card_number"
+														       value="4111 1111 1111 1111" />
+														<div class="position-absolute translate-middle-y top-50 end-0 me-5">
+															<img src="assets/media/svg/card-logos/visa.svg"
+															     alt=""
+															     class="h-25px" />
+															<img src="assets/media/svg/card-logos/mastercard.svg"
+															     alt=""
+															     class="h-25px" />
+															<img src="assets/media/svg/card-logos/american-express.svg"
+															     alt=""
+															     class="h-25px" />
+														</div>
+													</div>
+												</div>
+												<div class="row mb-10">
+													<div class="col-md-8 fv-row">
+														<label class="required fs-6 fw-semibold form-label mb-2">Expiration Date</label>
+														<div class="row fv-row">
+															<div class="col-6">
+																<select name="card_expiry_month"
+																        class="form-select form-select-solid"
+																        data-control="select2"
+																        data-hide-search="true"
+																        data-placeholder="Month">
+																	<option></option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																	<option value="11">11</option>
+																	<option value="12">12</option>
+																</select>
+															</div>
+															<div class="col-6">
+																<select name="card_expiry_year"
+																        class="form-select form-select-solid"
+																        data-control="select2"
+																        data-hide-search="true"
+																        data-placeholder="Year">
+																	<option></option>
+																	<option value="2022">2022</option>
+																	<option value="2023">2023</option>
+																	<option value="2024">2024</option>
+																	<option value="2025">2025</option>
+																	<option value="2026">2026</option>
+																	<option value="2027">2027</option>
+																	<option value="2028">2028</option>
+																	<option value="2029">2029</option>
+																	<option value="2030">2030</option>
+																	<option value="2031">2031</option>
+																	<option value="2032">2032</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-4 fv-row">
+														<label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+															<span class="required">CVV</span>
+															<i class="fas fa-exclamation-circle ms-2 fs-7"
+															   data-bs-toggle="tooltip"
+															   title="Enter a card CVV code"></i>
+														</label>
+														<div class="position-relative">
+															<input type="text"
+															       class="form-control form-control-solid"
+															       minlength="3"
+															       maxlength="4"
+															       placeholder="CVV"
+															       name="card_cvv" />
+															<div class="position-absolute translate-middle-y top-50 end-0 me-3">
+																<span class="svg-icon svg-icon-2hx">
+																	<svg width="24"
+																	     height="24"
+																	     viewBox="0 0 24 24"
+																	     fill="none"
+																	     xmlns="http://www.w3.org/2000/svg">
+																		<path d="M22 7H2V11H22V7Z"
+																		      fill="currentColor" />
+																		<path opacity="0.3"
+																		      d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z"
+																		      fill="currentColor" />
+																	</svg>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="d-flex flex-stack">
+													<div class="me-5">
+														<label class="fs-6 fw-semibold form-label">Save Card for further billing?</label>
+														<div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+													</div>
+													<label class="form-check form-switch form-check-custom form-check-solid">
+														<input class="form-check-input"
+														       type="checkbox"
+														       value="1"
+														       checked="checked" />
+														<span class="form-check-label fw-semibold text-muted">Save Card</span>
+													</label>
+												</div>
+												<div class="text-center pt-15">
+													<button type="reset"
+													        id="kt_modal_new_card_cancel"
+													        class="btn btn-light me-3">Discard
+													</button>
+													<button type="submit"
+													        id="kt_modal_new_card_submit"
+													        class="btn btn-primary">
+														<span class="indicator-label">Submit</span>
+														<span class="indicator-progress">Please wait...
+															<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+														</span>
+													</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+				<div id="kt_app_footer"
+				     class="app-footer">
+					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+						@lokesh
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--@@ Javascript-->
+<script>var hostUrl = "assets/";</script>
+<!--@@ Global Javascript Bundle(mandatory for all pages)-->
+<script src="assets/plugins/global/plugins.bundle.js"></script>
+<script src="assets/js/scripts.bundle.js"></script>
+<script src="assets/js/scripts.common.js"></script>
+
+<!--@@ Vendors Javascript(used for this page only)-->
+<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+
+<!--@@ Custom Javascript(used for this page only)-->
+<script src="assets/js/custom/apps/subscriptions/add/advanced.js"></script>
+<script src="assets/js/custom/apps/subscriptions/add/products.js"></script>
+<script src="assets/js/custom/utilities/modals/new-card.js"></script>
+
+</body>
+</html>

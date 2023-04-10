@@ -1,0 +1,92 @@
+{
+  id : "220765e2-91a1-4adf-9726-0f5bd364339a" ,
+  name : "contacts" ,
+  description : "Contacts" ,
+  icon : "FOLDER" ,
+  sortWeight : 1000000 ,
+  variables : {
+    management : {
+      port : '7924'
+    }
+  } ,
+  requests : [
+    {
+      id : "94e22642-54d6-4986-b92a-ff6c8ef3a7b5" ,
+      name : "page_open" ,
+      description : "it load all required data at page load" ,
+      method : "GET" ,
+      url : "{{host}}:{{port}}/{{path_accounts}}/{{myname}}?act=page&type=open" ,
+      queryParams : [
+        {
+          key : "act" ,
+          value : "page" ,
+          required : true
+        } ,
+        {
+          key : "type" ,
+          value : "open" ,
+          required : true
+        }
+      ] ,
+      headers : [
+        {
+          key : "Content-Type" ,
+          value : "application/json"
+        }
+      ] ,
+      body : {
+        type : "JSON"
+      }
+    } ,
+    {
+      id : "8d73cd66-c54f-42e0-b2a8-fad9fffbe2b5" ,
+      name : "list_card" ,
+      description : "fetch all list of contacts" ,
+      method : "GET" ,
+      url : "{{host}}:{{port}}/{{path_accounts}}/{{myname}}?act=list&type=card" ,
+      queryParams : [
+        {
+          key : "act" ,
+          value : "list" ,
+          required : true
+        } ,
+        {
+          key : "type" ,
+          value : "card" ,
+          required : true
+        } ,
+        {
+          key : "account" ,
+          value : "12" ,
+          required : true
+        }
+      ]
+    } ,
+    {
+      id : "4deead0a-2b56-412e-9d0a-7ff8032d5e10" ,
+      name : "save_action" ,
+      description : "It save new contact to the server." ,
+      method : "POST" ,
+      url : "{{host}}:{{port}}/{{path_accounts}}/{{myname}}?act=save&type=action" ,
+      queryParams : [
+        {
+          key : "act" ,
+          value : "save"
+        } ,
+        {
+          key : "type" ,
+          value : "action"
+        }
+      ] ,
+      headers : [
+        {
+          key : "Content-Type" ,
+          value : "application/json"
+        }
+      ] ,
+      body : {
+        type : "JSON"
+      }
+    }
+  ]
+}

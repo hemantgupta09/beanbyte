@@ -1,0 +1,58 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "invoices" : {
+      "group_id" : [
+        "int : id",
+        "int : book_name",
+        "int : date_id"
+      ]
+    }
+  },
+  "data" : {
+    "invoices" : {
+      "21" : [
+        21 , 
+        "invoice 1" , 
+        "12" 
+      ],
+      "22" : [
+        22 , 
+        "invoice 2" , 
+        "13" 
+      ],
+      "23" : [
+        23 , 
+        "invoice 3" , 
+        "14" 
+      ],
+      "24" : [
+        24 , 
+        "invoice 4" , 
+        "18" 
+      ]
+    },
+    "dates" : {
+      "12" : [
+        "2022-12-12"
+      ],
+      "13" : [
+        "2022-03-23"
+      ],
+      "14" : [
+        "2022-12-15"
+      ],
+      "18" : [
+        "2022-12-20"
+      ]
+    }
+  }
+}

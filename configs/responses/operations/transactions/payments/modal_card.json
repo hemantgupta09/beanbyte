@@ -1,0 +1,58 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Sagar" ,
+    "note" : "first setup" ,
+    "changes" : "--"
+  } ,
+  "sample" : {
+    "list" : {
+      "group_id" : [
+        "int: group_id" ,
+        "url: Contact Name" ,
+        "str: contact alias (account code)" ,
+        "str: alias of the group" ,
+        "str: group_id" ,
+        "str: current balance" ,
+        "date: last date of transaction" ,
+        "int: notify method"
+      ]
+    }
+  } ,
+  "data" : {
+    "rows" : [
+      {
+        "id" : 0 ,
+        "debit" : 53462 ,
+        "credit" : 53462 ,
+        "amount" : 53462 ,
+        "note" : 53462
+      } ,
+      {
+        "id" : 0 ,
+        "debit" : 53462 ,
+        "credit" : 53462 ,
+        "amount" : 53462 ,
+        "note" : 53462
+      } ,
+      {
+        "id" : 0 ,
+        "debit" : 53462 ,
+        "credit" : 53462 ,
+        "amount" : 53462 ,
+        "note" : 53462
+      } ,
+      {
+        "id" : 0 ,
+        "debit" : 53462 ,
+        "credit" : 53462 ,
+        "amount" : 53462 ,
+        "note" : 53462
+      }
+    ]
+  }
+}

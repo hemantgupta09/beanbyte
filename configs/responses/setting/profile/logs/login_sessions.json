@@ -1,0 +1,48 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "login_sessions" : {
+      "id" : ["id" , "user_name" , "user_type" , "device" , "date_time" , "location" , "ip_address"]
+    } ,
+    "user_type"      : {
+      "user_type" : ["ADMIN"]
+    } ,
+    "dates"          : {
+      "date_time" : ["12 Oct, 22 - 15:22:43"]
+    }
+  } ,
+  "data"    : {
+    "login_sessions" : {
+      "11" : ["11" , "Lokesh Kumar" , "11" , "Chrome-Windows" , "21" , "india" , "236.125.56.78"] ,
+      "12" : ["12" , "Lokesh Kumar" , "12" , "Chrome-Windows" , "23" , "india" , "236.125.56.78"] ,
+      "13" : ["13" , "Dinesh Kumar" , "13" , "Chrome-Windows" , "22" , "india" , "236.125.56.78"]
+    } ,
+    "user_type"      : {
+      "11" : ["ADMIN"] ,
+      "12" : ["MANAGER"] ,
+      "13" : ["STAFF"]
+    } ,
+    "dates"          : {
+      "21" : ["12 Oct, 22 - 15:22:43"] ,
+      "22" : ["12 Oct, 22 - 15:22:43"] ,
+      "23" : ["12 Oct, 22 - 15:22:43"] ,
+      "24" : ["12 Oct, 22 - 15:22:43"]
+    }
+  }
+}

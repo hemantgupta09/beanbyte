@@ -1,0 +1,22 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "pageState" : {
+
+    }
+  },
+  "data" : {
+    "pageState" : {
+      "items": {},
+      "employee": {}
+    }
+  }
+}

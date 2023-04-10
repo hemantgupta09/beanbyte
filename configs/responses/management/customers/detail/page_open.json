@@ -1,0 +1,69 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "24-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "recent"    : {
+        "id" : ["id" , "name" , "tab" , "group"]
+
+      } ,
+      "customers" : {
+        "12" : [12 , "Dinesh Meena" , "dinu" , "Regulars"]
+
+      } ,
+      "pageState" : {
+        "employ" : [
+          {
+            "eid"   : 21 ,
+            "name"  : "Lokesh Kumar" ,
+            "post"  : "Manager" ,
+            "image" : "false"
+          }
+        ]
+      }
+    } ,
+  "data"    : {
+    "recent"    : {
+      "12" : [12 , "Lokesh Kumar" , "overview" , "Regular Customers"] ,
+      "13" : [13 , "Ramesh Kumar" , "profits" , "Regular Customers"]
+    } ,
+    "customers" : {
+      "12" : [12 , "Dinesh Meena" , "dinu" , "Regulars"] ,
+      "13" : [13 , "Mukul Loat" , "aki" , "Regulars"] ,
+      "11" : [13 , "Mukesh Singh" , "aki" , "Regulars"] ,
+      "14" : [14 , "Bharti Meena" , "idk" , "Regulars"] ,
+      "15" : [15 , "Saloni Mathur" , "chinu" , "Regulars"]
+    } ,
+    "pageState" : {
+      "employ" : [
+        {
+          "eid"   : 21 ,
+          "name"  : "Lokesh Kumar" ,
+          "post"  : "Manager" ,
+          "image" : "false"
+        } ,
+        {
+          "eid"   : 22 ,
+          "name"  : "Naveen Kumar" ,
+          "post"  : "Employee" ,
+          "image" : "false"
+        }
+      ]
+    }
+  }
+}

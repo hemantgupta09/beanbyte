@@ -1,0 +1,17 @@
+### Send GET request with json body
+GET http://localhost:4220/management/accounts/contacts/act=page&type=open
+Content-Type: application/x-www-form-urlencoded
+
+{
+  "id" : 999 ,
+  "value" : "content"
+}
+
+### Send POST request with json body
+POST https://httpbin.org/post
+Content-Type: application/json
+
+{
+  "id" : 999 ,
+  "value" : "content"
+}

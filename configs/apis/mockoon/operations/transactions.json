@@ -1,0 +1,144 @@
+{
+  "openapi" : "3.0.0" ,
+  "info" : {
+    "title" : "Operations > Transactions" ,
+    "version" : "1.0.0"
+  } ,
+  "servers" : [
+    {
+      "url" : "http://localhost:4110/operations/transactions"
+    }
+  ] ,
+  "paths" : {
+    "/banking" : {
+      "get" : {
+        "description" : "" ,
+        "responses" : {
+          "200" : {
+            "description" : "" ,
+            "content" : {
+              "application/json" : {}
+            } ,
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "*"
+              } ,
+              "Access-Control-Allow-Methods" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              } ,
+              "Access-Control-Allow-Headers" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    } ,
+    "/payments" : {
+      "post" : {
+        "description" : "" ,
+        "responses" : {
+          "200" : {
+            "description" : "Page Open" ,
+            "content" : {
+              "application/json" : {}
+            } ,
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "*"
+              } ,
+              "Access-Control-Allow-Methods" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              } ,
+              "Access-Control-Allow-Headers" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      } ,
+      "get" : {
+        "description" : "" ,
+        "responses" : {
+          "200" : {
+            "description" : "Page Open" ,
+            "content" : {
+              "application/json" : {}
+            } ,
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "*"
+              } ,
+              "Access-Control-Allow-Methods" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              } ,
+              "Access-Control-Allow-Headers" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    } ,
+    "/sales" : {
+      "get" : {
+        "description" : "" ,
+        "responses" : {
+          "200" : {
+            "description" : "" ,
+            "content" : {
+              "application/json" : {}
+            } ,
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "*"
+              } ,
+              "Access-Control-Allow-Methods" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              } ,
+              "Access-Control-Allow-Headers" : {
+                "schema" : {
+                  "type" : "string"
+                } ,
+                "example" : "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  id          : "",
+  name        : "management",
+  description : "Management",
+  icon        : "FOLDER",
+  sortWeight  : 3000000,
+  variables   : {
+    management : {
+      host           : 'http://127.0.0.1',
+      port           : 4200,
+      path_products  : 'management/products',
+      path_accounts  : 'management/accounts',
+      path_customers : 'management/customers'
+    }
+  }
+}

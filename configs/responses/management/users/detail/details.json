@@ -1,0 +1,41 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "25-03-2023" ,
+      "author"     : "dinesh" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "deatils" : {
+      "id" : ["id" , "account_id" , "email_id" , "address" , "language" , "lastlogin_date"]
+    } ,
+    "Date"    : {
+      "lastlogin_date" : ["10-03-2022"]
+    }
+  } ,
+  "data"    : {
+    "deatils" : {
+      "1" : ["1" , "ID-45453423" , "info@keenthemes.com" , "101 Collin Street,Australia" , "English" , "21"] ,
+      "2" : ["2" , "ID-12345678" , "john.doe@example.com" , "123 Main Street, USA" , "English" , "22"] ,
+      "3" : ["3" , "ID-98765432" , "jane.smith@example.com" , "456 Maple Avenue, Canada" , "French" , "23"] ,
+      "4" : ["4" , "ID-24681012" , "samuel.lee@example.com" , "789 Oak Street, Singapore" , "Chinese" , "24"]
+    } ,
+    "Date"    : {
+      "21" : ["10-03-2022"] ,
+      "22" : ["25-04-2022"] ,
+      "23" : ["21-09-2002"] ,
+      "24" : ["19-09=2022"]
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "data" : {
+      "group_id" : [
+        "int : id",
+        "int : sr",
+        "int : book_id",
+        "int : from",
+        "int : to",
+        "int : total",
+        "int : used",
+        "int : available",
+        "int : valid"
+      ]
+    }
+  },
+  "data" : {
+    "detail": {
+      "account": "DPS School, India",
+      "closing": "340971",
+      "range": ["2021-10-20", "2022-01-30"],
+      "ledger_id": 232
+    },
+    "data" : {
+      "12" : [
+        234 , 
+        "1" , 
+         1 , 
+        "87" , 
+        "171" ,
+        "15" , 
+        "4" , 
+        "132" , 
+        "1" 
+      ],
+      "13" : [
+        406 , 
+        "3" , 
+         2 , 
+        "89" , 
+        "168" ,
+        "16" , 
+        "2" , 
+        "132" , 
+        "4" 
+      ],
+      "14" : [
+        496 , 
+        "4" , 
+         3 , 
+        "87" , 
+        "171" ,
+        "17" , 
+        "9" , 
+        "132" , 
+        "9" 
+      ],
+      "15" : [
+        505 , 
+        "8" , 
+         4 , 
+        "87" , 
+        "171" ,
+        "18" , 
+        "6" , 
+        "132" , 
+        "3" 
+      ]
+    },
+    "items" : {
+      "1" : [
+        1 ,
+        "Diesel"
+      ],
+      "2" : [
+        2 ,
+        "Petrol"
+      ],
+      "3" : [
+        3 ,
+        "Speed"
+      ],
+      "4" : [
+        4 ,
+        "MAK 4T"
+      ]
+    }
+
+  }
+}

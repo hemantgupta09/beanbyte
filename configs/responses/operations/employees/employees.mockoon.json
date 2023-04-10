@@ -1,0 +1,288 @@
+{
+  "uuid": "f2c6c74b-770d-4884-8ef6-0f7313311ed5",
+  "lastMigration": 27,
+  "name": "Operations > Employees",
+  "endpointPrefix": "operations/employees",
+  "latency": 0,
+  "port": 4130,
+  "hostname": "127.0.0.1",
+  "folders": [
+    {
+      "uuid": "cc949ce0-e7ba-49de-af8c-0e747b887e9c",
+      "name": "activities",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "356fc556-a0f2-47bf-83ee-2474b529d01a"
+        }
+      ]
+    },
+    {
+      "uuid": "309b26b0-414d-42d9-aeb4-c002f857b464",
+      "name": "salary",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "f12ec2e1-2e96-4895-a600-b626d3614dca"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "356fc556-a0f2-47bf-83ee-2474b529d01a",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "activities",
+      "responses": [
+        {
+          "uuid": "69e31e2b-b720-40b5-bc76-d309b0413b66",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Page Open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./activities/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "01262f9b-7b2d-44f6-a4ac-5c849c30adc8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "absent form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./activities/absent_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "absent",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "50260084-a06b-49c8-adef-8215010a42e9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "overtime form ",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./activities/overtime_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "absent",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "ecab7c73-ab0f-40b3-b4a0-004cbe7db92d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "expense form ",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./activities/expense_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "expense",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "5f066113-757a-4e88-86b9-bfe90ad77e34",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "f12ec2e1-2e96-4895-a600-b626d3614dca",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "salary",
+      "responses": [
+        {
+          "uuid": "57e30858-c369-4c67-81d0-1d8a36aaa8bd",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./salary/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "cc949ce0-e7ba-49de-af8c-0e747b887e9c"
+    },
+    {
+      "type": "folder",
+      "uuid": "309b26b0-414d-42d9-aeb4-c002f857b464"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

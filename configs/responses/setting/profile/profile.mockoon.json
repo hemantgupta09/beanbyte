@@ -1,0 +1,796 @@
+{
+  "uuid"              : "32decf2f-f3cf-45c1-95c0-870cedffab85" ,
+  "lastMigration"     : 27 ,
+  "name"              : "Setting>Profile" ,
+  "endpointPrefix"    : "setting/profile" ,
+  "latency"           : 0 ,
+  "port"              : 4710 ,
+  "hostname"          : "127.0.0.1" ,
+  "folders"           : [
+    {
+      "uuid"      : "0f60d040-0bdf-42fb-90e0-416fc8dd0e38" ,
+      "name"      : "account" ,
+      "collapsed" : true ,
+      "children"  : [
+        {
+          "type" : "route" ,
+          "uuid" : "c63c1d97-a182-4852-bae7-bb2959c8dec9"
+        }
+      ]
+    } ,
+    {
+      "uuid"      : "326d1fe7-4642-488c-8b66-7e1ea7ae670e" ,
+      "name"      : "billing" ,
+      "collapsed" : true ,
+      "children"  : [
+        {
+          "type" : "route" ,
+          "uuid" : "e93da92b-aceb-451f-bf72-2deded6b6b7b"
+        }
+      ]
+    } ,
+    {
+      "uuid"      : "dfd8b06f-2ede-49c6-82a1-2cbbf0c14acc" ,
+      "name"      : "logs" ,
+      "collapsed" : true ,
+      "children"  : [
+        {
+          "type" : "route" ,
+          "uuid" : "71d99fe6-5d6e-44a8-ba98-388209858cde"
+        }
+      ]
+    } ,
+    {
+      "uuid"      : "c1849b18-6b8a-403b-8485-66946550dcf1" ,
+      "name"      : "overview" ,
+      "collapsed" : true ,
+      "children"  : [
+        {
+          "type" : "route" ,
+          "uuid" : "345778d3-3b6d-4859-9f83-f88ab8b2bca0"
+        }
+      ]
+    } ,
+    {
+      "uuid"      : "8075db26-15c2-4080-959a-c4d27d0aa49f" ,
+      "name"      : "referral" ,
+      "collapsed" : true ,
+      "children"  : [
+        {
+          "type" : "route" ,
+          "uuid" : "ef7363c1-bb90-4121-a1d3-473ed4df905c"
+        }
+      ]
+    } ,
+    {
+      "uuid"      : "49ec1f4c-c233-4e88-b027-dc16c8d70d5d" ,
+      "name"      : "security" ,
+      "collapsed" : true ,
+      "children"  : [
+        {
+          "type" : "route" ,
+          "uuid" : "30093c89-fe61-476d-8140-77e4ab925eba"
+        }
+      ]
+    } ,
+    {
+      "uuid"      : "65a59c8c-70df-4260-9266-4ad23f3b308f" ,
+      "name"      : "wallet" ,
+      "collapsed" : true ,
+      "children"  : [
+        {
+          "type" : "route" ,
+          "uuid" : "5abaa6d7-cb76-4e28-8813-3e0521ef1baa"
+        }
+      ]
+    }
+  ] ,
+  "routes"            : [
+    {
+      "uuid"          : "c63c1d97-a182-4852-bae7-bb2959c8dec9" ,
+      "type"          : "http" ,
+      "documentation" : "" ,
+      "method"        : "get" ,
+      "endpoint"      : "account" ,
+      "responses"     : [
+        {
+          "uuid"              : "059d05a8-c4fd-4ee4-9c55-fc28ca0e73eb" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./account/page_open.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "page " ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "open" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : true
+        } ,
+        {
+          "uuid"              : "2dfd6184-bb90-408b-9497-fa259df543c6" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./account/details.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "details" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : false
+        } ,
+        {
+          "uuid"              : "bdf3b8e9-20a2-4ed9-b3f6-8304eb9eefc3" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./account/details_form.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "details" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "form" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : false
+        }
+      ] ,
+      "enabled"       : true ,
+      "responseMode"  : null
+    } ,
+    {
+      "uuid"          : "e93da92b-aceb-451f-bf72-2deded6b6b7b" ,
+      "type"          : "http" ,
+      "documentation" : "" ,
+      "method"        : "get" ,
+      "endpoint"      : "billing" ,
+      "responses"     : [
+        {
+          "uuid"              : "270a5a7f-c758-4a2f-a417-28fba5e284f9" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./billing/page_open.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "page" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "open" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : true
+        } ,
+        {
+          "uuid"              : "788c7d0a-e62d-451d-8051-809a80020a66" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./billing/details.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "details" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : false
+        }
+      ] ,
+      "enabled"       : true ,
+      "responseMode"  : null
+    } ,
+    {
+      "uuid"          : "71d99fe6-5d6e-44a8-ba98-388209858cde" ,
+      "type"          : "http" ,
+      "documentation" : "" ,
+      "method"        : "get" ,
+      "endpoint"      : "logs" ,
+      "responses"     : [
+        {
+          "uuid"              : "1ffdcac1-d6ef-4944-9630-8073f66fa679" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./logs/page_open.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "page" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "open" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : true
+        } ,
+        {
+          "uuid"              : "35ba5b6d-5270-4660-97c3-adee3024d136" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./logs/login_sessions.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "login_sessions" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : false
+        }
+      ] ,
+      "enabled"       : true ,
+      "responseMode"  : null
+    } ,
+    {
+      "uuid"          : "345778d3-3b6d-4859-9f83-f88ab8b2bca0" ,
+      "type"          : "http" ,
+      "documentation" : "" ,
+      "method"        : "get" ,
+      "endpoint"      : "overview" ,
+      "responses"     : [
+        {
+          "uuid"              : "ab6e0045-19a7-4b13-ad7d-862e79e01049" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./overview/page_open.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "page" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "open" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : true
+        } ,
+        {
+          "uuid"              : "f92fbd38-1868-4fc7-a074-672dd464ed5e" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./overview/details.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "details" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : false
+        }
+      ] ,
+      "enabled"       : true ,
+      "responseMode"  : null
+    } ,
+    {
+      "uuid"          : "ef7363c1-bb90-4121-a1d3-473ed4df905c" ,
+      "type"          : "http" ,
+      "documentation" : "" ,
+      "method"        : "get" ,
+      "endpoint"      : "referral" ,
+      "responses"     : [
+        {
+          "uuid"              : "c24473cb-421f-4ea5-9943-639c43c1c6b3" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./referral/page_open.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "page" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "open" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : true
+        } ,
+        {
+          "uuid"              : "0ed6c301-9fa3-4afa-a1c4-87b13dd2baeb" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./referral/details.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "details" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : false
+        }
+      ] ,
+      "enabled"       : true ,
+      "responseMode"  : null
+    } ,
+    {
+      "uuid"          : "30093c89-fe61-476d-8140-77e4ab925eba" ,
+      "type"          : "http" ,
+      "documentation" : "" ,
+      "method"        : "get" ,
+      "endpoint"      : "security" ,
+      "responses"     : [
+        {
+          "uuid"              : "54120edf-2237-486d-8bb9-003d4af5434e" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./security/page_open.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "page" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "open" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : true
+        } ,
+        {
+          "uuid"              : "1eb24416-c66d-4b9b-85ca-ca14568c62e3" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./security/details.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "details" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : false
+        }
+      ] ,
+      "enabled"       : true ,
+      "responseMode"  : null
+    } ,
+    {
+      "uuid"          : "5abaa6d7-cb76-4e28-8813-3e0521ef1baa" ,
+      "type"          : "http" ,
+      "documentation" : "" ,
+      "method"        : "get" ,
+      "endpoint"      : "wallet" ,
+      "responses"     : [
+        {
+          "uuid"              : "47966dde-f36b-4f65-b5f3-d616b7fba506" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./wallet/page_open.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "page" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "open" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : true
+        } ,
+        {
+          "uuid"              : "96d118eb-66ca-48a0-a46e-f49d1efb08fc" ,
+          "body"              : "{}" ,
+          "latency"           : 0 ,
+          "statusCode"        : 200 ,
+          "label"             : "" ,
+          "headers"           : [
+            {
+              "key"   : "Content-Type" ,
+              "value" : "application/json"
+            }
+          ] ,
+          "bodyType"          : "FILE" ,
+          "filePath"          : "./wallet/details.json" ,
+          "databucketID"      : "" ,
+          "sendFileAsBody"    : true ,
+          "rules"             : [
+            {
+              "target"   : "query" ,
+              "modifier" : "act" ,
+              "value"    : "details" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            } ,
+            {
+              "target"   : "query" ,
+              "modifier" : "type" ,
+              "value"    : "" ,
+              "invert"   : false ,
+              "operator" : "equals"
+            }
+          ] ,
+          "rulesOperator"     : "AND" ,
+          "disableTemplating" : false ,
+          "fallbackTo404"     : false ,
+          "default"           : false
+        }
+      ] ,
+      "enabled"       : true ,
+      "responseMode"  : null
+    }
+  ] ,
+  "rootChildren"      : [
+    {
+      "type" : "folder" ,
+      "uuid" : "0f60d040-0bdf-42fb-90e0-416fc8dd0e38"
+    } ,
+    {
+      "type" : "folder" ,
+      "uuid" : "326d1fe7-4642-488c-8b66-7e1ea7ae670e"
+    } ,
+    {
+      "type" : "folder" ,
+      "uuid" : "dfd8b06f-2ede-49c6-82a1-2cbbf0c14acc"
+    } ,
+    {
+      "type" : "folder" ,
+      "uuid" : "c1849b18-6b8a-403b-8485-66946550dcf1"
+    } ,
+    {
+      "type" : "folder" ,
+      "uuid" : "8075db26-15c2-4080-959a-c4d27d0aa49f"
+    } ,
+    {
+      "type" : "folder" ,
+      "uuid" : "49ec1f4c-c233-4e88-b027-dc16c8d70d5d"
+    } ,
+    {
+      "type" : "folder" ,
+      "uuid" : "65a59c8c-70df-4260-9266-4ad23f3b308f"
+    }
+  ] ,
+  "proxyMode"         : false ,
+  "proxyHost"         : "" ,
+  "proxyRemovePrefix" : false ,
+  "tlsOptions"        : {
+    "enabled"    : false ,
+    "type"       : "CERT" ,
+    "pfxPath"    : "" ,
+    "certPath"   : "" ,
+    "keyPath"    : "" ,
+    "caPath"     : "" ,
+    "passphrase" : ""
+  } ,
+  "cors"              : true ,
+  "headers"           : [
+    {
+      "key"   : "Content-Type" ,
+      "value" : "application/json"
+    } ,
+    {
+      "key"   : "Access-Control-Allow-Origin" ,
+      "value" : "*"
+    } ,
+    {
+      "key"   : "Access-Control-Allow-Methods" ,
+      "value" : "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    } ,
+    {
+      "key"   : "Access-Control-Allow-Headers" ,
+      "value" : "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ] ,
+  "proxyReqHeaders"   : [
+    {
+      "key"   : "" ,
+      "value" : ""
+    }
+  ] ,
+  "proxyResHeaders"   : [
+    {
+      "key"   : "" ,
+      "value" : ""
+    }
+  ] ,
+  "data"              : []
+}

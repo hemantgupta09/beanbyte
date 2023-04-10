@@ -1,0 +1,85 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "bank_ac" : [
+      {
+        "lid"     : 10 ,
+        "name"    : "SBI Bank" ,
+        "balance" : "52374.52" ,
+        "suffix"  : "0"
+      }
+    ] ,
+    "cash_ac" : [
+      {
+        "lid"     : 4 ,
+        "name"    : "Cash Main" ,
+        "balance" : "348971" ,
+        "suffix"  : "0"
+      }
+    ]
+  } ,
+  "data"    : {
+    "bank_ac" : [
+      {
+        "lid"     : 10 ,
+        "name"    : "SBI Bank" ,
+        "balance" : "52374.52" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 11 ,
+        "name"    : "HDFC Bank" ,
+        "balance" : "1234.2" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 12 ,
+        "name"    : "KOTAK Bank" ,
+        "balance" : "89027" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 14 ,
+        "name"    : "Lokesh Bank" ,
+        "balance" : "1892.54" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 10 ,
+        "name"    : "ICICI OD Account" ,
+        "balance" : "-52345" ,
+        "suffix"  : "1"
+      }
+    ] ,
+    "cash_ac" : [
+      {
+        "lid"     : 4 ,
+        "name"    : "Cash Main" ,
+        "balance" : "348971" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 5 ,
+        "name"    : "Cash Local" ,
+        "balance" : "900.61" ,
+        "suffix"  : "0"
+      }
+    ]
+  }
+}

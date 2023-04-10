@@ -1,0 +1,117 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "session"          : {
+      "credit-volume"    : "0" ,
+      "customer-balance" : "0"
+    } ,
+    "pageState"        : {
+      "days"     : [
+        {
+          "value"  : "0" ,
+          "key"    : "This Month" ,
+          "select" : true
+        } ,
+        {
+          "value"  : "1" ,
+          "key"    : "Last Month" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "30" ,
+          "key"    : "Last 30 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "60" ,
+          "key"    : "Last 60 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "90" ,
+          "key"    : "Last 90 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "365" ,
+          "key"    : "This Year" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "100" ,
+          "key"    : "Whole Time" ,
+          "select" : false
+        }
+      ] ,
+      "category" : [
+        {
+          "value"  : "0" ,
+          "key"    : "Item cate-1" ,
+          "select" : true
+        } ,
+        {
+          "value"  : "1" ,
+          "key"    : "Item cate-2" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "2" ,
+          "key"    : "Item cate-3" ,
+          "select" : false
+        }
+      ]
+    } ,
+    "credit-volume"    : {
+      "dataset" : [
+        {
+          "name" : "Amount" ,
+          "data" : [50378 , 5034 , 50324 , 503214 , 50324 , 50324 , 50324]
+        }
+      ] ,
+      "labels"  : ["01 Jan" , "02 Jan" , "03 Jan" , "04 Jan" , "05 Jan" , "06 Jan" , "07 Jan"]
+    } ,
+    "customer-balance" : {
+      "dataset" : [
+        {
+          "name" : "Balance Line" ,
+          "type" : "line" ,
+          "data" : [130 , 150 , 145 , 208 , 309 , 240 , 110]
+        } ,
+        {
+          "name" : "Credit Line" ,
+          "type" : "line" ,
+          "data" : [50 , 55 , 90 , 70 , 120 , 90 , 100]
+        } ,
+        {
+          "name" : "Receipts Line" ,
+          "type" : "line" ,
+          "data" : [40 , 10 , 30 , 78 , 89 , 70 , 70]
+        } ,
+        {
+          "name" : "Credit Sale" ,
+          "type" : "line" ,
+          "data" : [30 , 45 , 25 , 60 , 100 , 80 , 85]
+        }
+      ] ,
+      "labels"  : ["30 days" , "60 days" , "90 days" , "120 days" , "150 days" , "366 days" , "all time"]
+    }
+  }
+}

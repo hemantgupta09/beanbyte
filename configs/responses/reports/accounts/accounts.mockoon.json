@@ -1,0 +1,402 @@
+{
+  "uuid": "a1a8fa8b-dd2b-4450-a21c-550c2e60a572",
+  "lastMigration": 27,
+  "name": "Reports>Accounts",
+  "endpointPrefix": "reports/accounts",
+  "latency": 0,
+  "port": 4340,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "7b426921-8b98-443e-963c-16f24a3803ca",
+      "name": "Interest",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "850175f8-7cb0-45bb-8ca0-150696d4ae6b"
+        }
+      ]
+    },
+    {
+      "uuid": "58510076-8d25-4e5a-97b0-ef17814b2b29",
+      "name": "Register",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "7663364e-2c27-4bc4-a74f-06b647949393"
+        }
+      ]
+    },
+    {
+      "uuid": "6098ec5e-b36d-4c1b-9b8d-bf811ad53d1e",
+      "name": "Statement",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "f04410c0-29cc-419a-9099-c7cf5aa99b9f"
+        }
+      ]
+    },
+    {
+      "uuid": "b9934f10-0f78-42c0-bab8-ad12397c6143",
+      "name": "Wave",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "62ab4201-9824-4930-af04-c52442040c4e"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "850175f8-7cb0-45bb-8ca0-150696d4ae6b",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "interest",
+      "responses": [
+        {
+          "uuid": "d69d3a79-ddbd-4190-b25d-6b756a78a84f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./interest/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "7ae09656-a8d0-49e0-9a8c-21193cec2767",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "interest-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./interest/interest_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "interest",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "7663364e-2c27-4bc4-a74f-06b647949393",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "register",
+      "responses": [
+        {
+          "uuid": "b5badb80-81fc-4c77-b21b-165f9e2a308e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./register/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "15e86dcd-e41d-462f-906f-db45c9195dfc",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "register-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./register/register_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "register",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "f04410c0-29cc-419a-9099-c7cf5aa99b9f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "statement",
+      "responses": [
+        {
+          "uuid": "d674853e-48c2-4eaa-94a8-b853535f642d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./statement/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "e422958d-829a-4f33-8e17-b304b9e2ace7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "statement-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./statement/statement_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "statement",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "62ab4201-9824-4930-af04-c52442040c4e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "wave",
+      "responses": [
+        {
+          "uuid": "2d01ee85-b69a-4d16-80c5-5d10f401dc6b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "7b426921-8b98-443e-963c-16f24a3803ca"
+    },
+    {
+      "type": "folder",
+      "uuid": "58510076-8d25-4e5a-97b0-ef17814b2b29"
+    },
+    {
+      "type": "folder",
+      "uuid": "6098ec5e-b36d-4c1b-9b8d-bf811ad53d1e"
+    },
+    {
+      "type": "folder",
+      "uuid": "b9934f10-0f78-42c0-bab8-ad12397c6143"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

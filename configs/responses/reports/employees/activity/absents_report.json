@@ -1,0 +1,98 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "data" : {
+      "group_id" : [
+        "int : id",
+        "int : name_id",
+        "int : date_id",
+        "int : absent",
+        "int : charge",
+        "str : description"
+      ]
+    }
+  },
+  "data" : {
+    "detail": {
+      "account": "DPS School, India",
+      "closing": "340971",
+      "range": ["2021-10-20", "2022-01-30"],
+      "ledger_id": 232
+    },
+    "data" : {
+      "12" : [
+        234 , 
+         1 , 
+         12 , 
+        "87.60" , 
+        "171.23" , 
+        "none"
+      ],
+      "13" : [
+        406 , 
+         1 , 
+         12 , 
+        "89.20" , 
+        "168.16" , 
+        "none"
+      ],
+      "14" : [
+        496 , 
+         1 , 
+         13 , 
+        "87.60" , 
+        "171.23" , 
+        "none"
+      ],
+      "15" : [
+        505 , 
+         1 , 
+         14 , 
+        "87.60" , 
+        "171.23" , 
+        "none"
+      ]
+    },
+    "names" : {
+      "1" : [
+        1 , 
+        "Lokesh Kumar"
+      ],
+      "2" : [
+        2 , 
+        "Naveen Kumar"
+      ],
+      "3" : [
+        3 , 
+        "Suresh Kumar"
+      ],
+      "4" : [
+        4 , 
+        "Rakesh Kumar"
+      ]
+    },
+
+    "dates" : {
+      "12" : [
+        "2022-12-12"
+      ],
+      "13" : [
+        "2022-03-23"
+      ],
+      "14" : [
+        "2022-12-15"
+      ],
+      "18" : [
+        "2022-12-20"
+      ]
+    }
+  }
+}

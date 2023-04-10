@@ -1,0 +1,68 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "customers" : {
+      "group_id" : [
+        "int : id",
+        "str : customer_name",
+        "str : alias",
+        "int : bill_id",
+        "int : status"
+      ]
+    }
+  },
+  "data" : {
+    "customers" : {
+      "21" : [
+        21 ,
+        "Lokesh Kumar" ,
+        "lucky" ,
+        "4" ,
+        "2"
+      ] ,
+      "22" : [
+        22 ,
+        "Naveen Kumar" ,
+        "vicky" ,
+        "4" ,
+        "3"
+      ] ,
+      "23" : [
+        23,
+        "Suresh Kumar" ,
+        "suri" ,
+        "4" ,
+        "4"
+      ] ,
+      "24" : [
+        24 ,
+        "Rakesh Kumar" ,
+        "rakhi" ,
+        "4" ,
+        "2"
+      ]
+    } ,
+    "bills": {
+      "2" : [
+        2 ,
+        "54"
+      ],
+      "3" : [
+        3 ,
+        "88"
+      ],
+      "4" : [
+        4 ,
+        "98"
+      ]
+    }
+  }
+}

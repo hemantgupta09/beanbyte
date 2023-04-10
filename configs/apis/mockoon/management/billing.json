@@ -1,0 +1,148 @@
+{
+  "openapi" : "3.0.0",
+  "info"    : {
+    "title"   : "Management> Billing",
+    "version" : "1.0.0"
+  },
+  "servers" : [
+    {
+      "url" : "http://localhost:4240/management/billing"
+    }
+  ],
+  "paths"   : {
+    "/bucket"   : {
+      "get"  : {
+        "description" : "",
+        "responses"   : {
+          "200" : {
+            "description" : "it load required data when dom is load ",
+            "content"     : {
+              "application/json" : {}
+            },
+            "headers"     : {
+              "Access-Control-Allow-Origin"  : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "*"
+              },
+              "Access-Control-Allow-Methods" : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              },
+              "Access-Control-Allow-Headers" : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              },
+              ""                             : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : ""
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "description" : "",
+        "responses"   : {
+          "200" : {
+            "description" : "",
+            "content"     : {
+              "application/json" : {}
+            },
+            "headers"     : {
+              "Access-Control-Allow-Origin"  : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "*"
+              },
+              "Access-Control-Allow-Methods" : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              },
+              "Access-Control-Allow-Headers" : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/generate" : {
+      "get"  : {
+        "description" : "",
+        "responses"   : {
+          "200" : {
+            "description" : "it load the response when dom is loaded",
+            "content"     : {
+              "application/json" : {}
+            },
+            "headers"     : {
+              "Access-Control-Allow-Origin"  : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "*"
+              },
+              "Access-Control-Allow-Methods" : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              },
+              "Access-Control-Allow-Headers" : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "description" : "",
+        "responses"   : {
+          "200" : {
+            "description" : "",
+            "content"     : {
+              "application/json" : {}
+            },
+            "headers"     : {
+              "Access-Control-Allow-Origin"  : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "*"
+              },
+              "Access-Control-Allow-Methods" : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+              },
+              "Access-Control-Allow-Headers" : {
+                "schema"  : {
+                  "type" : "string"
+                },
+                "example" : "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "status"  : true,
+  "message" : "message",
+  "title"   : "title",
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "20-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "license_detail" : {
+        "id"                : "11",
+        "license_code"      : "23243233232",
+        "deployed_date"     : "2022-02-03",
+        "activation_date"   : "2022-04-02",
+        "life_days"         : "2017-03-04",
+        "subscription_type" : "basic",
+        "expire_date"       : "2022-02-05"
+      },
+      "profile_detail" : {
+        "id"             : "11",
+        "user_name"      : "lokesh kumar",
+        "business_name"  : "bean byte pvt ltd",
+        "contact_number" : "7845340923",
+        "account_status" : "verified",
+        "gstin"          : "UWE32432R2R23323",
+        "tin"            : "456235345",
+        "address"        : "lalsot",
+        "state"          : "rajasthan",
+        "district"       : "dausa",
+        "communication"  : "phone",
+        "allow_market"   : "Yes"
+      },
+      "account_detail" : {
+        "id"             : "11",
+        "bank_name"      : "SBI India",
+        "account_type"   : "primary",
+        "account_number" : "89247398473294",
+        "ifsc"           : "BARB0JHILLA"
+      }
+    } ,
+  "data"    : {
+    "license_detail" : {
+      "id"                : "11",
+      "license_code"      : "23243233232",
+      "deployed_date"     : "2022-02-03",
+      "activation_date"   : "2022-04-02",
+      "life_days"         : "2017-03-04",
+      "subscription_type" : "basic",
+      "expire_date"       : "2022-02-05"
+    },
+    "profile_detail" : {
+      "id"             : "11",
+      "user_name"      : "lokesh kumar",
+      "business_name"  : "bean byte pvt ltd",
+      "contact_number" : "7845340923",
+      "account_status" : "verified",
+      "gstin"          : "UWE32432R2R23323",
+      "tin"            : "456235345",
+      "address"        : "lalsot",
+      "state"          : "rajasthan",
+      "district"       : "dausa",
+      "communication"  : "phone",
+      "allow_market"   : "Yes"
+    },
+    "account_detail" : {
+      "id"             : "11",
+      "bank_name"      : "SBI India",
+      "account_type"   : "primary",
+      "account_number" : "89247398473294",
+      "ifsc"           : "BARB0JHILLA"
+    }
+  }
+}

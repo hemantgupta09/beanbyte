@@ -1,0 +1,51 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "pageState" : {
+      "header" : {
+        "amount" : "2343242" ,
+        "target"  : "5023232"
+      }
+    } ,
+    "summary": {
+      "navtab": {
+        "11": [ "2022-03-11"],
+        "12": [ "2022-03-12"],
+        "13": [ "2022-03-13"],
+        "14": [ "2022-03-14"],
+        "15": [ "2022-03-15"],
+        "16": [ "2022-03-16"],
+        "17": [ "2022-03-17"],
+        "18": [ "2022-03-18"],
+        "19": [ "2022-03-19"],
+        "20": [ "2022-03-20"]
+      },
+      "detail": {
+        "date_id": 20,
+        "sales_revenue": "1334334",
+        "credit_sale": "13342",
+        "cash_hand": "3455654",
+        "cash_sale": "345564",
+        "gross_profit": "943568"
+      }
+    }
+  }
+}

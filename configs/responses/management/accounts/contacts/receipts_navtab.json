@@ -1,0 +1,51 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "data"       : {
+      "row_id" : ["row_id" , "date_id" , "credit_lid" , "amount" , "note"]
+    } ,
+    "date"       : {
+      "date_id" : ["date_id with date"]
+    } ,
+    "credit_lid" : {
+      "credit_lid" : ["credit_lid with actual ledger"]
+    }
+  } ,
+  "data"    : {
+    "data"   : {
+      "534" : [534 , 124 , 32 , 3453 , "note-1"] ,
+      "535" : [535 , 125 , 33 , 25000 , "note-asdfd"] ,
+      "536" : [536 , 126 , 34 , 345345 , "note-ewfds"] ,
+      "537" : [537 , 127 , 32 , 345345 , "note-afsd"] ,
+      "538" : [537 , 127 , 33 , 345345 , "note-fd"] ,
+      "539" : [537 , 127 , 34 , 345345 , "note-sdf"]
+    } ,
+    "date"   : {
+      "124" : ["2022-12-31"] ,
+      "125" : ["2023-01-10"] ,
+      "126" : ["2023-02-11"] ,
+      "127" : ["2023-03-12"]
+    } ,
+    "ledger" : {
+      "32" : ["SBI Bank"] ,
+      "33" : ["ICICI Account"] ,
+      "34" : ["CASH in Hand"]
+    }
+  }
+}

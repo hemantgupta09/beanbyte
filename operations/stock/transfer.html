@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="" />
+	<title>Stocks</title>
+	<meta charset="utf-8" />
+	<meta name="description"
+	      content="PetroByte" />
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon"
+	      href="../../assets/media/logos/favicon.ico" />
+	<link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+	<link href="../../assets/plugins/custom/datatables/datatables.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/plugins/global/plugins.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/css/style.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/css/style.common.css"
+	      rel="stylesheet"
+	      type="text/css" />
+</head>
+
+<body id="kt_app_body"
+      data-kt-app-header-fixed-mobile="true"
+      data-kt-app-sidebar-enabled="true"
+      data-kt-app-sidebar-fixed="true"
+      data-kt-app-sidebar-push-header="true"
+      data-kt-app-sidebar-push-toolbar="true"
+      data-kt-app-sidebar-push-footer="true"
+      class="app-default">
+<script src="../../assets/js/base/theme.js"></script>
+
+<div class="d-flex flex-column flex-root app-root"
+     id="kt_app_root">
+	<div class="app-page flex-column flex-column-fluid"
+	     id="kt_app_page">
+		<div id="kt_app_header"
+		     class="app-header d-flex"
+		     data-kt-sticky="true"
+		     data-kt-sticky-name="app-header-sticky"
+		     data-kt-sticky-offset="{default: 'false', lg: '300px'}">
+			<div class="app-container container-fluid d-flex align-items-stretch justify-content-between"
+			     id="kt_app_header_container">
+				<div class="d-flex d-lg-none align-items-center ms-n2 me-2"
+				     title="Show sidebar menu">
+					<div class="btn btn-icon btn-active-color-primary w-35px h-35px"
+					     id="kt_app_sidebar_mobile_toggle">
+						<span class="svg-icon svg-icon-2">
+							<svg width="24"
+							     height="24"
+							     viewBox="0 0 24 24"
+							     fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+								      fill="currentColor" />
+								<path opacity="0.3"
+								      d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
+								      fill="currentColor" />
+							</svg>
+						</span>
+					</div>
+				</div>
+				<div class="d-flex d-lg-none align-items-center me-auto">
+					<a href="">
+						<img alt="PetroByte"
+						     src="../../assets/media/logos/petrobyte.png"
+						     class="theme-light-show h-25px" />
+						<img alt="PetroByte"
+						     src="../../assets/media/logos/petrobyte-dark.png"
+						     class="theme-dark-show h-25px" />
+					</a>
+				</div>
+				<div data-kt-swapper="true"
+				     data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}"
+				     data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_container'}"
+				     class="page-title d-flex flex-column justify-content-center me-3 mb-6 mb-lg-0">
+					<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Title of the Page</h1>
+					<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+						<li class="breadcrumb-item text-muted">Operations</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Stocks</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Transfer</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-3</li>
+					</ul>
+				</div>
+				<!--## Navbar ##-->
+				<div class="app-navbar flex-shrink-0"
+				     id="kt_app_aside_navbar">
+					<!--  ## toolbar of navbar ##-->
+					<div class="app-navbar-item ms-1 ms-lg-3"
+					     id="kt_header_user_menu_toggle">
+						<!--@@ USer wrapper-->
+						<div class="cursor-pointer symbol symbol-circle ms-2 symbol-35px symbol-lg-50px"
+						     data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+						     data-kt-menu-attach="parent"
+						     data-kt-menu-placement="bottom-end">
+							<img src="../../assets/media/logos/petrobyte-round.png"
+							     alt="petrobyte" />
+						</div>
+						<!--@@ User Menu-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--## Wrapper ##-->
+		<div class="app-wrapper flex-column flex-row-fluid"
+		     id="kt_app_wrapper">
+			
+			<!--## Sidebar ##-->
+			<div id="kt_app_sidebar"
+			     class="app-sidebar flex-column"
+			     data-kt-drawer="true"
+			     data-kt-drawer-name="app-sidebar"
+			     data-kt-drawer-activate="{default: true, lg: false}"
+			     data-kt-drawer-overlay="true"
+			     data-kt-drawer-width="250px"
+			     data-kt-drawer-direction="start"
+			     data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+				<!-- ## sidebar menus ## -->
+			</div>
+			<div class="app-main flex-column flex-row-fluid"
+			     id="kt_app_main">
+				<div class="d-flex flex-column flex-column-fluid">
+					<div id="kt_app_content"
+					     class="app-content flex-column-fluid">
+						<div id="kt_app_content_container"
+						     class="app-container container-fluid">
+							
+							<div id="layout_zone"
+							     class="row g-7"
+							     data-pb-welcome="buttons"
+							     data-pb-layout="buttons">
+								<div id="menu"
+								     class="col-xxl-4 col-xl-5 col-lg-6 col-md-6 col-12">
+									<div class="card">
+										<div class="card-header pt-1">
+											<div class="card-title w-50">
+												<h2>
+													<input type="text"
+													       name="work-date"
+													       data-control="date"
+													       data-pb-method="human"
+													       value="2023-03-10"
+													       class="form-control form-control-transparent p-0 fs-2"
+													       placeholder="Work Date"
+													       title="" />
+												</h2>
+											</div>
+											<div class="card-toolbar">
+												<!--todo: modal call for change the default date-->
+												<button type="button"
+												        class="btn btn-outline btn-outline-dashed btn-outline-dark py-1"
+												        data-bs-toggle="tooltip"
+												        data-bs-html="true"
+												        title="<span class='fs-6'>Change Working Date</span>">
+													Change
+												</button>
+											</div>
+										</div>
+										<div class="card-body pt-5">
+											<div class="d-flex flex-column gap-5"
+											     id="menulist">
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="banking"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-dark text-hover-primary">Total Sales:
+													</button>
+													<div class="fs-4 badge badge-light-dark fw-semibold">0</div>
+												</div>
+												<div class="separator separator-dashed"></div>
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="cash-deposit"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-gray-800 text-hover-primary">Petroleum Fuel
+														<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   data-bs-html="true"
+														   title="<span class='fs-4'>Used for Petroleum Fuel</span>"></i>
+													</button>
+													<div class="fs-4 badge fw-normal">0</div>
+												</div>
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="cash-withdrawal"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-gray-800 text-hover-primary">Lubricant Oils
+														<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   data-bs-html="true"
+														   title="<span class='fs-4'>Used for Lubricant Oils</span>"></i>
+													</button>
+													<div class="fs-4 badge fw-normal">0</div>
+												</div>
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="intra-transfer"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-gray-800 text-hover-primary">Vehicle Servicing
+														<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   data-bs-html="true"
+														   title="<span class='fs-4'>Used for Vehicle Servicing</span>"></i>
+													</button>
+													<div class="fs-4 badge fw-normal">0</div>
+												</div>
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="clearance"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-gray-800 text-hover-primary">Other
+														<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   data-bs-html="true"
+														   title="<span class='fs-4'>Used for Others</span>"></i>
+													</button>
+													<div class="fs-4 badge fw-normal">0</div>
+												</div>
+												<div class="separator separator-dashed"></div>
+												<div class="d-flex flex-stack">
+													<a href="javascript:"
+													   class="fs-4 fw-semibold text-gray-800 text-hover-danger">Stock Voucher</a>
+													<div class="fs-4 badge badge-light-primary"
+													     data-bs-toggle="tooltip"
+													     title="Total Stocks Voucher">0
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<button class="btn btn-flex btn-light-info px-6 mb-6 w-100">
+												<i class="fs-1 bi bi-pencil-square"></i>
+												<span class="d-flex flex-column align-items-start ms-2">
+													<span class="fs-3 fw-bold">Edit</span>
+													<span class="fs-7">Stock Transfer</span>
+												</span>
+											</button>
+											<button class="btn btn-flex btn-light-danger px-6 w-100">
+												<i class="fs-3 bi bi-trash-fill"></i>
+												<span class="d-flex flex-column align-items-start ms-2">
+													<span class="fs-3 fw-bold">Delete</span>
+													<span class="fs-7">Stock Transfer</span>
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="working"
+								     class="col-xxl-8 col-xl-7 col-lg-6 col-md-6 col-12"
+								     data-class="col-12">
+									<div id="buttons"
+									     class="row">
+										<div class="col-xl-6 col-lg-12 col-md-12">
+											<div class="card card-flush mb-6 hover-elevate-up">
+												<div class="card-body p-0">
+													<div class="card-px text-center py-10 my-0">
+														<i class="bi bi-battery-half fs-1 fs-4x text-primary"
+														   data-bs-toggle="tooltip"
+														   data-bs-placement="bottom"
+														   data-bs-html="true"
+														   title="<span class='fs-5'>It used to cross-transfer the Stock in Tanks by Nozzles or Direct</span>"></i>
+														<h2 class="fs-1 fw-bold text-primary mb-10 mt-5">Tank to Tank</h2>
+														<button type="button"
+														        value="tank"
+														        name="form"
+														        data-pb-origin="buttons"
+														        class="btn btn-light-primary">
+															<i class="bi bi-plus-lg fs-2"></i>Create
+														</button>
+														<button type="button"
+														        value="tank"
+														        name="table"
+														        data-pb-origin="buttons"
+														        class="btn btn-active-light-primary btn-text-primary">
+															Overview
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-6 col-lg-12 col-md-12">
+											<div class="card card-flush mb-6 hover-elevate-up">
+												<div class="card-body p-0">
+													<div class="card-px text-center py-10 my-0">
+														<i class="bi bi-cloud-haze2 fs-1 fs-4x text-primary"
+														   data-bs-toggle="tooltip"
+														   data-bs-placement="bottom"
+														   data-bs-html="true"
+														   title="<span class='fs-5'>It used to create direct stock evaporation entry or Stock Loss Entry.</span>"></i>
+														<h2 class="fs-1 fw-bold text-primary mb-10 mt-5">Tank to Air</h2>
+														<button type="button"
+														        value="air"
+														        name="form"
+														        class="btn btn-light-primary">
+															<i class="bi bi-plus-lg fs-2"></i>Create
+														</button>
+														<button type="button"
+														        value="air"
+														        name="table"
+														        class="btn btn-active-light-primary btn-text-primary">
+															Overview
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-6 col-lg-12 col-md-12">
+											<div class="card card-flush mb-6 hover-elevate-up">
+												<div class="card-body p-0">
+													<div class="card-px text-center py-10 my-0">
+														<i class="bi bi-pin-map fs-1 fs-4x text-primary"
+														   data-bs-toggle="tooltip"
+														   data-bs-placement="bottom"
+														   data-bs-html="true"
+														   title="<span class='fs-5'>It used to transfer stock to Office or another Trade location.</span>"></i>
+														<h2 class="fs-1 fw-bold text-primary mb-10 mt-5">Godown to Location</h2>
+														<button type="button"
+														        value="location"
+														        name="form"
+														        class="btn btn-light-primary">
+															<i class="bi bi-plus-lg fs-2"></i>Create
+														</button>
+														<button type="button"
+														        value="location"
+														        name="table"
+														        class="btn btn-active-light-primary btn-text-primary">
+															Overview
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-6 col-lg-12 col-md-12">
+											<div class="card card-flush mb-6 hover-elevate-up">
+												<div class="card-body p-0">
+													<div class="card-px text-center py-10 my-0">
+														<span class="svg-icon svg-icon-4x text-primary"
+														      data-bs-toggle="tooltip"
+														      data-bs-placement="bottom"
+														      data-bs-html="true"
+														      title="<span class='fs-5'>It used to assign stock to the Salesman for sell.</span>">
+															<svg xmlns="http://www.w3.org/2000/svg"
+															     width="16"
+															     height="16"
+															     fill="currentColor"
+															     class="bi bi-person-vcard"
+															     viewBox="0 0 16 16">
+																<path d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z" />
+																<path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z" />
+															</svg>
+														</span>
+														<h2 class="fs-1 fw-bold text-primary mb-10 mt-5">Person</h2>
+														<button type="button"
+														        value="person"
+														        name="form"
+														        class="btn btn-light-primary">
+															<i class="bi bi-plus-lg fs-2"></i>Create
+														</button>
+														<button type="button"
+														        value="person"
+														        name="table"
+														        class="btn btn-active-light-primary btn-text-primary">
+															Overview
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									
+									</div>
+									<div id="forms">
+										<div id="tank-form"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-body py-5">
+													<form id="form-tank"
+													      class=""
+													      data-pb-control="repeater"
+													      data-pb-method="nested"
+													      data-form-sno="1"
+													      method="post"
+													      autocomplete="off">
+														<div class="form-group">
+															<div data-list="tank_tank">
+																//
+															</div>
+														</div>
+													</form>
+												</div>
+												
+												<div class="card-footer py-5">
+													<div class="d-flex flex-stack">
+														<div class="align-items-start">
+															<button type="button"
+															        value="tank"
+															        name="back"
+															        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+															</button>
+														</div>
+														<div class="align-items-end">
+															<button form="form-tank"
+															        class="btn btn-light-info btn-active-info mx-3"
+															        name="action"
+															        value="reset"
+															        data-pb-value="tank-tank"
+															        type="button">Reset
+															</button>
+															<button form="form-tank"
+															        class="btn btn-primary"
+															        data-form-submit
+															        name="action"
+															        value="save"
+															        data-pb-origin="form"
+															        data-pb-value="tank-tank"
+															        type="button">
+																<span class="indicator-label">Save Tank to tank</span>
+																<span class="indicator-progress">Please wait...
+																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="air-form"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-body py-5">
+													<form id="form-tank-air"
+													      class=""
+													      data-pb-control="repeater"
+													      data-pb-method="nested"
+													      data-form-sno="2"
+													      method="post"
+													      autocomplete="off">
+														<div class="form-group">
+															<div data-list="form_list">
+																//
+															</div>
+														</div>
+													</form>
+												</div>
+												
+												<div class="card-footer py-5">
+													<div class="d-flex flex-stack">
+														<div class="align-items-start">
+															<button type="button"
+															        value="withdrawal"
+															        name="back"
+															        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+															</button>
+														</div>
+														<div class="align-items-end">
+															<button form="form-tank-air"
+															        class="btn btn-light-info btn-active-info mx-3"
+															        name="action"
+															        value="reset"
+															        data-pb-value="tank-air"
+															        type="button">Reset
+															</button>
+															<button form="form-tank-air"
+															        class="btn btn-primary"
+															        data-form-submit
+															        name="action"
+															        value="save"
+															        data-pb-origin="form"
+															        data-pb-value="tank-air"
+															        type="button">
+																<span class="indicator-label">Save Tank to Air</span>
+																<span class="indicator-progress">Please wait...
+																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="location-form"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-body py-5">
+													<form id="form-godown-location"
+													      class=""
+													      data-pb-control="repeater"
+													      data-pb-method="nested"
+													      data-form-sno="2"
+													      method="post"
+													      autocomplete="off">
+														<div class="form-group">
+															<div data-list="godown_location">
+																//
+															</div>
+														</div>
+													</form>
+												</div>
+												
+												<div class="card-footer py-5">
+													<div class="d-flex flex-stack">
+														<div class="align-items-start">
+															<button type="button"
+															        value="transfer"
+															        name="back"
+															        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+															</button>
+														</div>
+														<div class="align-items-end">
+															<button form="form-godown-location"
+															        class="btn btn-light-info btn-active-info mx-3"
+															        name="action"
+															        value="reset"
+															        data-pb-value="godown-location"
+															        type="button">Reset
+															</button>
+															<button form="form-godown-location"
+															        class="btn btn-primary"
+															        data-form-submit
+															        name="action"
+															        value="save"
+															        data-pb-origin="form"
+															        data-pb-value="godown-location"
+															        type="button">
+																<span class="indicator-label">Save Godown Location</span>
+																<span class="indicator-progress">Please wait...
+																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="godown-person-form"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-body py-5">
+													<form id="form-godown-person"
+													      class=""
+													      data-form-sno="4"
+													      method="post"
+													      autocomplete="off">
+														<div class="form-group">
+															<div data-list="godown_person">
+																//
+															</div>
+														</div>
+													</form>
+												</div>
+												
+												<div class="card-footer py-5">
+													<div class="d-flex flex-stack">
+														<div class="align-items-start">
+															<button type="button"
+															        value="godown"
+															        name="back"
+															        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+															</button>
+														</div>
+														<div class="align-items-end">
+															<button form="form-godown-person"
+															        class="btn btn-light-info btn-active-info mx-3"
+															        name="action"
+															        value="reset"
+															        data-pb-value="godown-person"
+															        type="button">Reset
+															</button>
+															<button form="form-godown-person"
+															        class="btn btn-primary"
+															        data-form-submit
+															        name="action"
+															        value="save"
+															        data-pb-origin="form"
+															        data-pb-value="godown-person"
+															        type="button">
+																<span class="indicator-label">Save Godown Person</span>
+																<span class="indicator-progress">Please wait...
+																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									
+									</div>
+									<div id="tables">
+										<div id="tank-table"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-header">
+													<h3 class="card-title">Stock Input Entry - Simple</h3>
+													<div class="card-toolbar">
+														<button type="button"
+														        value="tank"
+														        name="back"
+														        class="btn btn-sm btn-light hover-rotate-start">
+															<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+															<span>Go Back</span>
+														</button>
+														<button type="button"
+														        value="tank"
+														        name="minus"
+														        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+															<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+														</button>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="table-responsive">
+														<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+														       id="table-tank-tank"></table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="tank-air-table"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-header">
+													<h3 class="card-title">Stock Input Entry - Advance</h3>
+													<div class="card-toolbar">
+														<button type="button"
+														        value="air"
+														        name="back"
+														        class="btn btn-sm btn-light go_back hover-rotate-start">
+															<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+															<span>Go Back</span>
+														</button>
+														<button type="button"
+														        value="air"
+														        name="minus"
+														        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+															<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+														</button>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="table-responsive">
+														<table class="table align-middle table-row-dashed gy-3 gs-4"
+														       id="table-air">
+															<tbody class="text-gray-600 fw-semibold fs-5"></tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="kt_app_footer"
+				     class="app-footer">
+					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+						@lokesh
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--@@ Javascript-->
+<script>
+	var hostUrl = "../../assets/";
+	var thePage = "operations@stock@transfer";
+</script>
+<!--@@ Global Javascript Bundle (mandatory for all pages)-->
+<script src="../../assets/plugins/global/plugins.bundle.js"></script>
+<script src="../../assets/js/scripts/scripts.bundle.js"></script>
+<script src="../../assets/js/scripts/scripts.common.js"></script>
+<script src="../../assets/js/scripts/scripts.general.js"></script>
+
+<!--@@ Global Javascript Base (mandatory for all pages)-->
+<script src="../../assets/js/base/const.js"></script>
+<script src="../../assets/js/base/attributes.js"></script>
+<script src="../../assets/js/base/structure.js"></script>
+<script src="../../assets/js/base/events.js"></script>
+<script src="../../assets/js/base/elements.js"></script>
+<script src="../../assets/js/base/holding.js"></script>
+<script src="../../assets/js/base/arranges.js"></script>
+<script src="../../assets/js/base/handling.js"></script>
+<script src="../../assets/js/base/layout.js"></script>
+<script src="../../assets/js/base/ajax.js"></script>
+
+<!--@@ Rendering data into javascript (mandatory for all pages)-->
+<script src="../../assets/js/render/render.menu.js"></script>
+<script src="../../assets/js/render/render.table.js"></script>
+<script src="../../assets/js/render/render.common.js"></script>
+<script src="../../assets/js/render/render.form.js"></script>
+<script src="../../assets/js/options/option.datatables.js"></script>
+<script src="../../assets/js/extend/extend.collect.js"></script>
+<script src="../../assets/js/extend/extend.foreign.js"></script>
+<script src="../../assets/js/extend/extend.reset.js"></script>
+
+<!--@@ Vendors Javascript -->
+<script src="../../assets/plugins/custom/formrepeater/formrepeater.bundle.js"></script>
+<script src="../../assets/plugins/custom/datatables/datatables.bundle.js"></script>
+
+
+<!--@@ Plugins Javascript -->
+<script src="../../assets/js/plugins/quickAccess.js"></script>
+<script src="../../assets/js/plugins/dataTables.js"></script>
+<script src="../../assets/js/plugins/formValid.js"></script>
+<script src="../../assets/js/plugins/datePicker.js"></script>
+<script src="../../assets/js/plugins/selectPicker.js"></script>
+<script src="../../assets/js/plugins/tagifyInput.js"></script>
+<script src="../../assets/js/plugins/formKeen.js"></script>
+<script src="../../assets/js/plugins/inputMask.js"></script>
+<script src="../../assets/js/plugins/formRepeater.js"></script>
+
+<!--@@ Custom Files Javascript -->
+<script src="../../assets/js/heads/operations.js"></script>
+<script src="../../assets/js/pages/operations/stock.js"></script>
+<script src="../../assets/js/pages/operations/stocks/transfer.js"></script>
+
+</body>
+</html>

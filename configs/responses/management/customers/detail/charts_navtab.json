@@ -1,0 +1,80 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "0" : {
+      "dataset" : [
+        {
+          "name" : "Sold" ,
+          "type" : "area" ,
+          "data" : [30 , 40 , 40 , 90 , 90 , 70 , 70 , 90 , 90 , 70 , 70]
+        }
+      ] ,
+      "labels"  : ["Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+    }
+  } ,
+  "data"    : {
+    "0" : {
+      "dataset" : [
+        {
+          "name" : "Sold" ,
+          "type" : "area" ,
+          "data" : [30 , 40 , 40 , 90 , 90 , 70 , 70 , 90 , 90 , 70 , 70]
+        }
+      ] ,
+      "labels"  : ["Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+    } ,
+    "1" : {
+      "dataset" : [
+        {
+          "name" : "Sales" ,
+          "type" : "bar" ,
+          "data" : [44 , 55 , 57 , 56 , 61 , 58 , 44 , 55 , 57 , 56 , 61 , 58]
+        } ,
+        {
+          "name" : "Received" ,
+          "type" : "bar" ,
+          "data" : [76 , 85 , 101 , 98 , 87 , 105 , 76 , 85 , 101 , 98 , 87 , 105]
+        }
+      ] ,
+      "labels"  : ["Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul"]
+    } ,
+    "2" : {
+      "dataset" : [
+        {
+          "name"    : "Sales, Paid" ,
+          "type"    : "bar" ,
+          "stacked" : true ,
+          "data"    : [40 , 50 , 65 , 70 , 50 , 30]
+        } ,
+        {
+          "name"    : "Sales, Unpaid" ,
+          "type"    : "bar" ,
+          "stacked" : true ,
+          "data"    : [20 , 20 , 25 , 30 , 30 , 20]
+        } ,
+        {
+          "name" : "Total Sale" ,
+          "type" : "area" ,
+          "data" : [60 , 70 , 90 , 100 , 80 , 50]
+        }
+      ] ,
+      "labels"  : ["Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul"]
+    }
+  }
+}

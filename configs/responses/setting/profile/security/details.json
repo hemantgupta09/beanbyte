@@ -1,0 +1,94 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "security_option" : {
+      "logged_devices"  : "324" ,
+      "app_signin"      : "2343" ,
+      "failed_attempts" : "21"
+    } ,
+    "admin_enable"    : {
+      "id" : ["id" , "name" , "username" , "signin" , "failed" , "user_type" , "auth"]
+    } ,
+    "admin_disable"   : {
+      "id" : ["id" , "name" , "username" , "signin" , "failed" , "user_type" , "auth"]
+    } ,
+    "user_enable"     : {
+      "id" : ["id" , "name" , "username" , "signin" , "failed" , "user_type" , "auth"]
+    } ,
+    "user_disable"    : {
+      "id" : ["id" , "name" , "username" , "signin" , "failed" , "user_type" , "auth"]
+    } ,
+    "device_use"      : {
+      "id" : ["id" , "device" , "agent" , "ip_address" , "last_access" , "unique_id" , "icon_id"]
+    } ,
+    "user_type"       : {
+      "user_type" : ["SUPER ADMIN"]
+    } ,
+    "auth"            : {
+      "auth" : ["SMS OTP"]
+    }
+
+} ,
+"data" : {
+"security_option" : {
+"logged_devices" : "324" ,
+"app_signin" : "2343" ,
+"failed_attempts" : "21"
+} ,
+"admin_enable"    : {
+"11" : ["11" , "lokesh kumar" , "tiger" , "12" , "5" , "1" , "1"],
+"12" : ["12" , "lokesh kumar" , "tiger" , "12" , "5" , "2" , "2"],
+"13" : ["13" , "lokesh kumar" , "tiger" , "12" , "25" , "2" , "3"],
+"14" : ["14" , "lokesh kumar" , "tiger" , "32" , "5" , "1" , "2"]
+} ,
+"admin_disable" : {
+"11" : ["11" , "lokesh kumar" , "tiger" , "12" , "5" , "1" , "1"],
+"12" : ["12" , "lokesh kumar" , "tiger" , "12" , "5" , "2" , "2"],
+"13" : ["13" , "lokesh kumar" , "tiger" , "12" , "25" , "2" , "3"],
+"14" : ["14" , "lokesh kumar" , "tiger" , "32" , "5" , "1" , "2"]
+} ,
+"user_enable" : {
+"11" : ["11" , "lokesh kumar" , "tiger" , "12" , "5" , "1" , "1"],
+"12" : ["12" , "lokesh kumar" , "tiger" , "12" , "5" , "2" , "2"],
+"13" : ["13" , "lokesh kumar" , "tiger" , "12" , "25" , "2" , "3"],
+"14" : ["14" , "lokesh kumar" , "tiger" , "32" , "5" , "1" , "2"]
+} ,
+"user_disable" : {
+"11" : ["11" , "lokesh kumar" , "tiger" , "12" , "5" , "1" , "1"],
+"12" : ["12" , "lokesh kumar" , "tiger" , "12" , "5" , "2" , "2"],
+"13" : ["13" , "lokesh kumar" , "tiger" , "12" , "25" , "2" , "3"],
+"14" : ["14" , "lokesh kumar" , "tiger" , "32" , "5" , "1" , "2"]
+} ,
+"device_use" : {
+"11" : ["11" , "Android" , "Chrome" , "236.125.56.78" , "20 min ago" , "fftt456765gjkkjhi8306767" , "4"],
+"12" : ["12" , "Window" , "Chrome" , "236.125.56.78" , "20 min ago" , "fftt456765gjkkjhi8306767" , "4"],
+"13" : ["13" , "Android" , "Chrome" , "1236.125.56.7" , "20 min ago" , "fftt456765gjkkjhi8306767" , "4"],
+"14" : ["14" , "Android" , "Chrome" , "236.125.56.78" , "20 min ago" , "fftt456765gjkkjhi8306767" , "4"]
+} ,
+"user_type" : {
+"1" : ["SUPER ADMIN"],
+"2" : ["ADMIN"]
+} ,
+"auth" : {
+"1" : ["SMS OTP"],
+"2" : ["WA OTP"],
+"3" : ["Direct"]
+}
+}
+}

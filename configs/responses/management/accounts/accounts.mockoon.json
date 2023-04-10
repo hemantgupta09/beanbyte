@@ -1,0 +1,3991 @@
+{
+  "uuid": "2587d57c-106e-4183-9e57-2bfb7885ed93",
+  "lastMigration": 27,
+  "name": "Management > Accounts",
+  "endpointPrefix": "management/accounts",
+  "latency": 0,
+  "port": 4220,
+  "hostname": "127.0.0.1",
+  "folders": [
+    {
+      "uuid": "c003d1e9-b581-4335-8c2a-206cd4541108",
+      "name": "Contacts",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "7ae55c95-e485-464d-9c94-1c10a3b42b6d"
+        },
+        {
+          "type": "route",
+          "uuid": "8b029347-3969-441c-bd5a-3b3c02a9f89a"
+        }
+      ]
+    },
+    {
+      "uuid": "41375ea2-90bf-4a77-9081-83c40ee2ca03",
+      "name": "Ledgers",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "be9cc668-faaf-4be0-85db-7643d5cab46b"
+        },
+        {
+          "type": "route",
+          "uuid": "97e9bbf4-4034-4a71-8266-14ae805e8df2"
+        }
+      ]
+    },
+    {
+      "uuid": "3671a854-d29a-4192-95b0-a410ca16ddbb",
+      "name": "Suppliers",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "b772397d-f7ec-4192-a648-0351a1edd773"
+        },
+        {
+          "type": "route",
+          "uuid": "049d80cf-5e9b-4f9d-a5f8-123aa39d4e28"
+        }
+      ]
+    },
+    {
+      "uuid": "69858751-d81c-4041-9244-c39fdfe82fd5",
+      "name": "Gateways",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "9edff869-929b-448c-859a-7a5872538966"
+        },
+        {
+          "type": "route",
+          "uuid": "0bf718d8-cf8c-4faf-b87b-6185f2cff14b"
+        }
+      ]
+    },
+    {
+      "uuid": "9602618e-a35b-4cf0-84f1-3782b2ca69fa",
+      "name": "Vendors",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "547707e9-4406-4ca0-a0e7-f3d6b6a43f30"
+        },
+        {
+          "type": "route",
+          "uuid": "59bd9192-82eb-447a-a949-c76bb5418bdd"
+        }
+      ]
+    },
+    {
+      "uuid": "c867be35-b5a8-461d-827d-aea4d8147531",
+      "name": "Expenses",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "a1a5b56e-ed2c-4e66-a9de-98982540365e"
+        },
+        {
+          "type": "route",
+          "uuid": "0272a8cb-14b8-448f-ad59-86367e8148c8"
+        }
+      ]
+    },
+    {
+      "uuid": "f7f11905-7fca-4e39-9813-1347be548382",
+      "name": "Banks",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "de7d9108-3f17-400a-8ec3-79dacebf47da"
+        },
+        {
+          "type": "route",
+          "uuid": "54a0f8d4-37aa-4426-b4e3-f7b542dd0863"
+        }
+      ]
+    },
+    {
+      "uuid": "04f72d6d-fdb1-4fb8-b90b-f47bebbce4b7",
+      "name": "Loans",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "2c3c0514-98cc-49a6-880a-2b497e2b9359"
+        },
+        {
+          "type": "route",
+          "uuid": "affe4edf-c2ac-4305-8be6-bbb24f547db4"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "7ae55c95-e485-464d-9c94-1c10a3b42b6d",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "get",
+      "endpoint": "contacts",
+      "responses": [
+        {
+          "uuid": "0cd02b42-e249-46cd-ba73-ec38a5a807a5",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "e00ebb49-5ebc-4cc1-bc63-0affad8771a1",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "show the list of contacts",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/list_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "list",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "74c86796-11d6-4d59-b940-9af7afd015e5",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view contact detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/view_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": false
+        },
+        {
+          "uuid": "0c2b9ac5-dd04-44ca-9895-3c788a2adbc1",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "edit contact detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/edit_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "2395f056-40da-4b88-a4b4-5b5bd0cf0be4",
+          "body": "{}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "get contact detail of general",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/general_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "general",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a7666262-de90-44eb-a74e-c39c5f204bee",
+          "body": "{}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "get contact detail of receipts",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/receipts_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "receipts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "9378d4b1-dd47-438a-8af7-a7b2ac6cadbe",
+          "body": "{}",
+          "latency": 1000,
+          "statusCode": 200,
+          "label": "get contact detail of payments",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/payments_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "payments",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "8b029347-3969-441c-bd5a-3b3c02a9f89a",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "contacts",
+      "responses": [
+        {
+          "uuid": "b75bdd54-7a80-417b-b0e6-815de8ff952e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "delete contact",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/delete_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "delete",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "7124c503-3c07-46fe-9d81-41f5bedfe665",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Save contact",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/save_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "save",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a7d9d950-3afa-4cd4-8e31-6a191a7224c8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "update contact detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./contacts/update_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "b772397d-f7ec-4192-a648-0351a1edd773",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "get",
+      "endpoint": "suppliers",
+      "responses": [
+        {
+          "uuid": "6145078e-c1de-47eb-a7d8-2535d3f59022",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "d42886d7-ade6-4fd1-9bb8-7e32c3bfa565",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "show the list of suppliers",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/list_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "list",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "1ba82043-60eb-4054-beda-79a4feaf84f9",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view suppliers detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/view_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": false
+        },
+        {
+          "uuid": "5fa51522-a7e3-4e8a-83e7-77d598cf961a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "edit suppliers detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/edit_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "66e11fc4-ad26-4d4d-8bfd-7c3e0eda3339",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get suppliers detail of general",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/general_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "general",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "53810a02-cdfa-48de-a9dc-45ef2aaa2433",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get suppliers detail of purchases",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/purchases_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "purchases",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "c3658549-97e7-4cf1-8cc8-76d328acd693",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get suppliers detail of payments",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/payments_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "payments",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "db12c943-1c93-43aa-bb66-ca9424517760",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get suppliers detail of deductions",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/deductions_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "deductions",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "dd64a7f4-a3ef-4eff-b373-2f3c7cba307d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get suppliers detail of incentives",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/incentives_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "incentives",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "049d80cf-5e9b-4f9d-a5f8-123aa39d4e28",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "post",
+      "endpoint": "suppliers",
+      "responses": [
+        {
+          "uuid": "fb886f8a-19bd-4412-a086-ad82c32e4578",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "delete suppliers",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/delete_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "delete",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "9e1f75d6-69c1-4492-a12f-0ca5b5810dcb",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Save suppliers",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/save_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "save",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "faa0496f-1d50-4f2f-9fb3-58f3aabe1931",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "update suppliers detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./suppliers/update_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "9edff869-929b-448c-859a-7a5872538966",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "get",
+      "endpoint": "gateways",
+      "responses": [
+        {
+          "uuid": "8bc9ca2d-504d-469e-bf2f-5931221e2e4f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "551cbe58-b94e-4b8c-9ba4-ee67c69e6a3c",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "show the list of gateways",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/list_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "list",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0c762658-1937-4f4f-a241-ea3afaf9f98b",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view gateways detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/view_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": false
+        },
+        {
+          "uuid": "8221d1d0-abdb-4bc9-9ea6-e88aaba005d0",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "edit gateways detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/edit_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "cc327685-f2d6-49a6-b1ec-f7c556283222",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get gateways detail of general",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/general_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "general",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "32e920ae-3b4a-4456-addd-d592b05a2dcc",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get gateways detail of sales_receipts",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/sales_receipts_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "sales_receipts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0d01d717-5554-4854-8c96-f382dd7286aa",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get gateways detail of customer_receipts",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/customer_receipts_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer_receipts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "aca3698a-9187-421e-bfbc-5e5d3a25fc47",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get gateways detail of settlements",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/settlements_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "settlements",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "0bf718d8-cf8c-4faf-b87b-6185f2cff14b",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "post",
+      "endpoint": "gateways",
+      "responses": [
+        {
+          "uuid": "fb704b10-7d3b-4ca5-bfa6-996006e9cba6",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "delete gateways",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/delete_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "delete",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "f61f5933-37cb-48e0-a5fb-b6e3673f10da",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Save gateways",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/save_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "save",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "3c602291-9fdf-4c70-991e-2537a95df8a7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "update gateways detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./gateways/update_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "547707e9-4406-4ca0-a0e7-f3d6b6a43f30",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "get",
+      "endpoint": "vendors",
+      "responses": [
+        {
+          "uuid": "fbbdeeb9-c555-4c95-86c0-76ac34d84b18",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "bc309c23-45a1-42fe-ab11-5e43f75e1521",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "show the list of vendors",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/list_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "list",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "1d02a47b-ee87-48f9-90fc-ea9ffbdc3c14",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view vendors detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/view_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": false
+        },
+        {
+          "uuid": "d3652584-4bce-48e4-be52-cd2bfe552880",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "edit vendors detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/edit_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "13e2bee1-8456-4db7-a275-6249113ef897",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get vendors detail of general",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/general_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "general",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "50c2af8e-9d06-4aae-a02c-552081227f2b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get gateways detail of bills",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/bills_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "bills",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "d836f700-7e96-48ef-8f39-ed8010292ca8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get gateways detail of payments",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/payments_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "payments",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "746065bb-4c99-4e17-b9c1-15338846d02c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get gateways detail of dues",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/dues_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "dues",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "59bd9192-82eb-447a-a949-c76bb5418bdd",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "post",
+      "endpoint": "vendors",
+      "responses": [
+        {
+          "uuid": "fb00f8ef-62cc-45f0-b9a0-7728feb970e9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "delete vendors",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/delete_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "delete",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "a289639c-330d-4f1f-bcc5-e38ab80e73ff",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Save vendors",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/save_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "save",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "c07dc05f-e835-4d78-8e84-48a768b49883",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "update vendors detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./vendors/update_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "be9cc668-faaf-4be0-85db-7643d5cab46b",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "get",
+      "endpoint": "ledgers",
+      "responses": [
+        {
+          "uuid": "895de14f-3288-4815-a684-cc25bb422bc1",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "43215e01-c13e-49f3-b776-7ef10c58f1af",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "show the list of ledgers",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/list_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "list",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "e88fe971-fca2-4cf9-92b0-925515fc5e04",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view ledgers detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/view_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": false
+        },
+        {
+          "uuid": "0aae0339-7677-4af1-ad95-c7b3eb98522b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "edit ledgers detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/edit_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "825bcd69-b42b-443a-92f1-2027b4f3b713",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get ledgers detail of general",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/general_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "general",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "dee72aca-d11d-4b4f-83eb-5746c453a3ff",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get ledgers detail of receipts",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/receipts_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "receipts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "4fec40ef-d81b-4bfc-a56f-b2e2cc1a1050",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get ledgers detail of payments",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/payments_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "payments",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "97e9bbf4-4034-4a71-8266-14ae805e8df2",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "post",
+      "endpoint": "ledgers",
+      "responses": [
+        {
+          "uuid": "cce678a9-77e4-49dc-80e6-34c3ec3a741f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "delete ledgers",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/delete_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "delete",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "a9669842-c334-4cdb-ace1-e0c50d89bb38",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Save ledgers",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/save_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "save",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a3bd9671-4ddb-40fa-aaa8-751480983a49",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "update ledgers detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./ledgers/update_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "a1a5b56e-ed2c-4e66-a9de-98982540365e",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "get",
+      "endpoint": "expenses",
+      "responses": [
+        {
+          "uuid": "a03bffc1-6a67-447b-93e9-3e9f74c8f572",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "73a82774-fc71-4cab-98db-702264618224",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "show the list of expenses",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/list_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "list",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "798c3f27-99ee-44ca-8487-788548dd8e3c",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view expenses detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/view_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": false
+        },
+        {
+          "uuid": "7b9b1f3e-9d45-4e1b-8de2-88b3bcef41e8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "edit expenses detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/edit_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "2c7742ee-58c0-4252-a6be-ad8c027ce3e4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get expenses detail of general",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/general_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "general",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "9297eb02-6735-49e7-8ffc-ce3dfb9495a0",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get expenses detail of datewise",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/datewise_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "datewise",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "ed9f0a63-94fb-40c2-b453-c32c0c0ad591",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get expenses detail of monthwise",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/monthwise_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "monthwise",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "8e544c43-094c-4596-bc4c-a6eb23d8dbf3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get expenses detail of details",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/details_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "details",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "0272a8cb-14b8-448f-ad59-86367e8148c8",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "post",
+      "endpoint": "expenses",
+      "responses": [
+        {
+          "uuid": "e692625d-00b2-45b7-b569-8b12b6dca2b5",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "delete expenses",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/delete_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "delete",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "74969c06-5ef1-4aac-bc2f-3d917c585184",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Save expenses",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/save_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "save",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "cf0436ed-c23d-48b9-a70e-a230dd61bc09",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "update expenses detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./expenses/update_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "de7d9108-3f17-400a-8ec3-79dacebf47da",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "get",
+      "endpoint": "banks",
+      "responses": [
+        {
+          "uuid": "860eddcc-2276-4e9e-b678-e1b09a6053bc",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "c7e2ba6a-d5ea-4ea8-b457-96f5fde4e09d",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "show the list of banks",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/list_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "list",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "ba0dd247-2e97-4b01-b88f-a7ff626f58e9",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view banks detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/view_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": false
+        },
+        {
+          "uuid": "256b1106-ee5f-443c-aefc-50a20348919f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "edit banks detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/edit_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "0d0fef90-8c18-4eec-b375-ce744d9e6db9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get banks detail of general",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/general_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "general",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "fa8e01ca-1d01-4fcc-89bd-c9e5574f093a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get banks detail of receipts",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/receipts_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "receipts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "8b473c74-9ba2-4559-b469-11a30f99e63f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get banks detail of payments",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/payments_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "payments",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "eaf6e5e6-0dc2-4c98-b5a0-b1b45cd07dee",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get banks detail of expenses",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/expenses_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "expenses",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "dc2fe5be-356c-445c-b032-641f81be5b59",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get banks detail of deposits",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/deposits_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "deposits",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "54a0f8d4-37aa-4426-b4e3-f7b542dd0863",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "post",
+      "endpoint": "banks",
+      "responses": [
+        {
+          "uuid": "7d3fb8e1-24eb-40f9-858b-d6b6a0198836",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "delete banks",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/delete_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "delete",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "2708115e-2215-4783-8994-8a78ed4f931b",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Save suppliers",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/save_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "save",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "27a9ced2-aa8c-4c74-b07a-61799099c45d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "update banks detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./banks/update_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "2c3c0514-98cc-49a6-880a-2b497e2b9359",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "get",
+      "endpoint": "loans",
+      "responses": [
+        {
+          "uuid": "5862c212-e074-48b0-b830-363982ded363",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0ad64522-7f03-4904-84f5-5453cdaa7a6f",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "show the list of loans",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/list_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "list",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "4602d43b-5bfd-4a58-9be7-a90151302439",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view loans detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/view_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": true,
+          "default": false
+        },
+        {
+          "uuid": "962fc930-2c09-452d-9d5e-f355bfc39d12",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "edit loans detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/edit_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "cd659603-523f-4caa-a9e9-788c10edb52c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get loans detail of general",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/general_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "general",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0ab3c147-ed6f-4f40-8faa-ec9600e2db74",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get loans detail of receipts",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/receipts_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "receipts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "4b93dca0-5646-4336-8126-b74e675dcbb4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "get loans detail of payments",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/payments_navtab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "payments",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "navtab",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "affe4edf-c2ac-4305-8be6-bbb24f547db4",
+      "type": "http",
+      "documentation": "this is the description.",
+      "method": "post",
+      "endpoint": "loans",
+      "responses": [
+        {
+          "uuid": "683c84d0-49c6-459d-b3ff-72b93353b898",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "delete loans",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/delete_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "delete",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "df87fa90-54bc-4b36-b719-b6a8fb47778d",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Save loans",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/save_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "save",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "action",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "5eb98539-c823-43de-bc57-ad3577fd9a3c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "update loans detail",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./loans/update_action.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "edit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "account",
+              "value": "12",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "c003d1e9-b581-4335-8c2a-206cd4541108"
+    },
+    {
+      "type": "folder",
+      "uuid": "41375ea2-90bf-4a77-9081-83c40ee2ca03"
+    },
+    {
+      "type": "folder",
+      "uuid": "3671a854-d29a-4192-95b0-a410ca16ddbb"
+    },
+    {
+      "type": "folder",
+      "uuid": "69858751-d81c-4041-9244-c39fdfe82fd5"
+    },
+    {
+      "type": "folder",
+      "uuid": "9602618e-a35b-4cf0-84f1-3782b2ca69fa"
+    },
+    {
+      "type": "folder",
+      "uuid": "c867be35-b5a8-461d-827d-aea4d8147531"
+    },
+    {
+      "type": "folder",
+      "uuid": "f7f11905-7fca-4e39-9813-1347be548382"
+    },
+    {
+      "type": "folder",
+      "uuid": "04f72d6d-fdb1-4fb8-b90b-f47bebbce4b7"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

@@ -1,0 +1,379 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "customers" : [
+      {
+        "id"          : 1 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "DPS SCHOOL ,INDIA" ,
+        "category_id" : 11 ,
+        "balance"     : "57040" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "45000" ,
+        "visits"      : "25" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 2 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "DPS SCHOOL ,INDIA" ,
+        "category_id" : 12 ,
+        "balance"     : "57040" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "45000" ,
+        "visits"      : "25" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 3 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "DPS SCHOOL ,INDIA" ,
+        "category_id" : 12 ,
+        "balance"     : "57040" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "45000" ,
+        "visits"      : "25" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 4 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "DPS SCHOOL ,INDIA" ,
+        "category_id" : 13 ,
+        "balance"     : "57040" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "45000" ,
+        "visits"      : "25" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 5 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "DPS SCHOOL ,INDIA" ,
+        "category_id" : 14 ,
+        "balance"     : "57040" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "45000" ,
+        "visits"      : "25" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 6 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "DPS SCHOOL ,INDIA" ,
+        "category_id" : 15 ,
+        "balance"     : "57040" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "45000" ,
+        "visits"      : "25" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 7 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "DPS SCHOOL ,INDIA" ,
+        "category_id" : 11 ,
+        "balance"     : "57040" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "45000" ,
+        "visits"      : "25" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 8 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "DPS SCHOOL ,INDIA" ,
+        "category_id" : 12 ,
+        "balance"     : "57040" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "45000" ,
+        "visits"      : "25" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 9 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "DPS SCHOOL ,INDIA" ,
+        "category_id" : 14 ,
+        "balance"     : "57040" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "45000" ,
+        "visits"      : "25" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 10 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "ABC Corporation" ,
+        "category_id" : 15 ,
+        "balance"     : "75000" ,
+        "status"      : "1" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 1 ,
+          "login"   : 0
+        } ,
+        "limit"       : "150000" ,
+        "revenue"     : "85000" ,
+        "visits"      : "40" ,
+        "overdue"     : "12"
+      } ,
+      {
+        "id"          : 11 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "XYZ Corporation" ,
+        "category_id" : 11 ,
+        "balance"     : "12000" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 0 ,
+          "billing" : 1 ,
+          "login"   : 0
+        } ,
+        "limit"       : "50000" ,
+        "revenue"     : "20000" ,
+        "visits"      : "10" ,
+        "overdue"     : "12"
+      } ,
+      {
+        "id"          : 12 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "PQR Corporation" ,
+        "category_id" : 13 ,
+        "balance"     : "25000" ,
+        "status"      : "1" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 0
+        } ,
+        "limit"       : "75000" ,
+        "revenue"     : "50000" ,
+        "visits"      : "20" ,
+        "overdue"     : "13"
+      } ,
+      {
+        "id"          : 13 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "LMN Corporation" ,
+        "category_id" : 12 ,
+        "balance"     : "90000" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 1 ,
+          "login"   : 1
+        } ,
+        "limit"       : "200000" ,
+        "revenue"     : "100000" ,
+        "visits"      : "50" ,
+        "overdue"     : "14"
+      } ,
+      {
+        "id"          : 14 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "RST Corporation" ,
+        "category_id" : 14 ,
+        "balance"     : "50000" ,
+        "status"      : "1" ,
+        "tags"        : {
+          "credit"  : 0 ,
+          "billing" : 1 ,
+          "login"   : 1
+        } ,
+        "limit"       : "100000" ,
+        "revenue"     : "75000" ,
+        "visits"      : "30" ,
+        "overdue"     : "14"
+      } ,
+      {
+        "id"          : 15 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "MNO Corporation" ,
+        "category_id" : 14 ,
+        "balance"     : "30000" ,
+        "status"      : "0" ,
+        "tags"        : {
+          "credit"  : 1 ,
+          "billing" : 0 ,
+          "login"   : 1
+        } ,
+        "limit"       : "80000" ,
+        "revenue"     : "55000" ,
+        "visits"      : "15" ,
+        "overdue"     : "11"
+      } ,
+      {
+        "id"          : 16 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "PQS Corporation" ,
+        "category_id" : 15 ,
+        "balance"     : "65000" ,
+        "status"      : "1" ,
+        "tags"        : {
+          "credit"  : 0 ,
+          "billing" : 1 ,
+          "login"   : 0
+        } ,
+        "limit"       : "120000" ,
+        "revenue"     : "55000" ,
+        "visits"      : "15" ,
+        "overdue"     : "13"
+      } ,
+      {
+        "id"          : 17 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "PQS Corporation" ,
+        "category_id" : 14 ,
+        "balance"     : "65000" ,
+        "status"      : "1" ,
+        "tags"        : {
+          "credit"  : 0 ,
+          "billing" : 1 ,
+          "login"   : 0
+        } ,
+        "limit"       : "120000" ,
+        "revenue"     : "55000" ,
+        "visits"      : "15" ,
+        "overdue"     : "12"
+      } ,
+      {
+        "id"          : 18 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "PQS Corporation" ,
+        "category_id" : 11 ,
+        "balance"     : "65000" ,
+        "status"      : "1" ,
+        "tags"        : {
+          "credit"  : 0 ,
+          "billing" : 1 ,
+          "login"   : 0
+        } ,
+        "limit"       : "120000" ,
+        "revenue"     : "55000" ,
+        "visits"      : "15" ,
+        "overdue"     : "14"
+      } ,
+      {
+        "id"          : 19 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "PQS Corporation" ,
+        "category_id" : 14 ,
+        "balance"     : "65000" ,
+        "status"      : "1" ,
+        "tags"        : {
+          "credit"  : 0 ,
+          "billing" : 1 ,
+          "login"   : 0
+        } ,
+        "limit"       : "120000" ,
+        "revenue"     : "55000" ,
+        "visits"      : "15" ,
+        "overdue"     : "15"
+      } ,
+      {
+        "id"          : 20 ,
+        "icon"        : "300-4.jpg" ,
+        "customer"    : "PQS Corporation" ,
+        "category_id" : 14 ,
+        "balance"     : "65000" ,
+        "status"      : "1" ,
+        "tags"        : {
+          "credit"  : 0 ,
+          "billing" : 1 ,
+          "login"   : 0
+        } ,
+        "limit"       : "120000" ,
+        "revenue"     : "55000" ,
+        "visits"      : "15" ,
+        "overdue"     : "12"
+      }
+    ] ,
+    "dates"     : {
+      "11" : ["2021-03-04"] ,
+      "12" : ["2022-03-04"] ,
+      "13" : ["2023-02-02"] ,
+      "14" : ["2023-02-02"] ,
+      "15" : ["2022-03-04"]
+    } ,
+    "category"  : {
+      "11" : ["Regular Customer"] ,
+      "12" : ["LOUT Customer"] ,
+      "13" : ["AUT Customer"] ,
+      "14" : ["Temp Customer"] ,
+      "15" : ["Daily Customer"]
+    }
+  }
+}

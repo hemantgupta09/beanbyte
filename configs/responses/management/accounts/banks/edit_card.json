@@ -1,0 +1,35 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "account_name"    : "sbi India" ,
+    "account_number"  : "984237923498" ,
+    "ifsc_code"       : "9876543211" ,
+    "category"        : "13" ,
+    "opening_balance" : "987439" ,
+    "opening_date"    : "2023-01-03"
+  } ,
+  "data"    : {
+    "account_name"    : "sbi India" ,
+    "account_number"  : "984237923498" ,
+    "ifsc_code"       : "9876543211" ,
+    "category"        : "13" ,
+    "opening_balance" : "987439" ,
+    "opening_date"    : "2023-01-03"
+  }
+}

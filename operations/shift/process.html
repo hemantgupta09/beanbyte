@@ -1,0 +1,2128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="../../" />
+	<title>PetroByte</title>
+	<meta charset="utf-8" />
+	<meta name="description"
+	      content="PetroByte" />
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon"
+	      href="assets/media/logos/favicon.ico" />
+	<link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+	<link href="assets/plugins/custom/datatables/datatables.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="assets/plugins/global/plugins.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="assets/css/style.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+</head>
+
+<body id="kt_app_body"
+      data-kt-app-header-fixed-mobile="true"
+      data-kt-app-sidebar-enabled="true"
+      data-kt-app-sidebar-fixed="true"
+      data-kt-app-sidebar-push-header="true"
+      data-kt-app-sidebar-push-toolbar="true"
+      data-kt-app-sidebar-push-footer="true"
+      class="app-default">
+<script src="assets/js/theme.js"></script>
+
+<div class="d-flex flex-column flex-root app-root"
+     id="kt_app_root">
+	<div class="app-page flex-column flex-column-fluid"
+	     id="kt_app_page">
+		<div id="kt_app_header"
+		     class="app-header d-flex"
+		     data-kt-sticky="true"
+		     data-kt-sticky-name="app-header-sticky"
+		     data-kt-sticky-offset="{default: 'false', lg: '300px'}">
+			<div class="app-container container-fluid d-flex align-items-stretch justify-content-between"
+			     id="kt_app_header_container">
+				<div class="d-flex d-lg-none align-items-center ms-n2 me-2"
+				     title="Show sidebar menu">
+					<div class="btn btn-icon btn-active-color-primary w-35px h-35px"
+					     id="kt_app_sidebar_mobile_toggle">
+						<span class="svg-icon svg-icon-2">
+							<svg width="24"
+							     height="24"
+							     viewBox="0 0 24 24"
+							     fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+								      fill="currentColor" />
+								<path opacity="0.3"
+								      d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
+								      fill="currentColor" />
+							</svg>
+						</span>
+					</div>
+				</div>
+				<div class="d-flex d-lg-none align-items-center me-auto">
+					<a href="">
+						<img alt="PetroByte"
+						     src="assets/media/logos/petrobyte.png"
+						     class="theme-light-show h-25px" />
+						<img alt="PetroByte"
+						     src="assets/media/logos/petrobyte-dark.png"
+						     class="theme-dark-show h-25px" />
+					</a>
+				</div>
+				<div data-kt-swapper="true"
+				     data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}"
+				     data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_container'}"
+				     class="page-title d-flex flex-column justify-content-center me-3 mb-6 mb-lg-0">
+					<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Title of the Page</h1>
+					<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+						<li class="breadcrumb-item text-muted">Level-0</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-1</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-2</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-3</li>
+					</ul>
+				</div>
+				<!--## Navbar ##-->
+				<div class="app-navbar flex-shrink-0"
+				     id="kt_app_aside_navbar">
+					<!--  ## toolbar of navbar ##-->
+					<div class="app-navbar-item ms-1 ms-lg-3"
+					     id="kt_header_user_menu_toggle">
+						<!--@@ USer wrapper-->
+						<div class="cursor-pointer symbol symbol-circle ms-2 symbol-35px symbol-lg-50px"
+						     data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+						     data-kt-menu-attach="parent"
+						     data-kt-menu-placement="bottom-end">
+							<img src="assets/media/logos/petrobyte-round.png"
+							     alt="petrobyte" />
+						</div>
+						<!--@@ User Menu-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--## Wrapper ##-->
+		<div class="app-wrapper flex-column flex-row-fluid"
+		     id="kt_app_wrapper">
+			
+			<!--## Sidebar ##-->
+			<div id="kt_app_sidebar"
+			     class="app-sidebar flex-column"
+			     data-kt-drawer="true"
+			     data-kt-drawer-name="app-sidebar"
+			     data-kt-drawer-activate="{default: true, lg: false}"
+			     data-kt-drawer-overlay="true"
+			     data-kt-drawer-width="250px"
+			     data-kt-drawer-direction="start"
+			     data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+				<!-- ## sidebar menus ## -->
+			</div>
+			
+			<div class="app-main flex-column flex-row-fluid"
+			     id="kt_app_main">
+				<div class="d-flex flex-column flex-column-fluid">
+					<div id="kt_app_content"
+					     class="app-content flex-column-fluid">
+						<div id="kt_app_content_container"
+						     class="app-container container-fluid">
+							
+							<div class="d-flex flex-row">
+								<div class="d-lg-flex flex-column flex-lg-row-auto w-lg-325px"
+								     data-kt-drawer="true"
+								     data-kt-drawer-name="start-sidebar"
+								     data-kt-drawer-activate="{default: true, lg: false}"
+								     data-kt-drawer-overlay="true"
+								     data-kt-drawer-width="{default:'200px', '250px': '300px'}"
+								     data-kt-drawer-direction="start"
+								     data-kt-drawer-toggle="#kt_social_start_sidebar_toggle">
+									<div class="card mb-5 mb-xl-8">
+										<div class="card-body pt-15 px-0">
+											<div class="d-flex flex-column text-center mb-9 px-9">
+												<div class="symbol symbol-80px symbol-lg-150px mb-4">
+													<img src="assets/media/avatars/300-3.jpg"
+													     class=""
+													     alt="" />
+												</div>
+												<div class="text-center">
+													<a href="../../demo2/dist/pages/user-profile/overview.html"
+													   class="text-gray-800 fw-bold text-hover-primary fs-4">Jerry Kane</a>
+													<span class="text-muted d-block fw-semibold">Grade 8, AE3 Student</span>
+												</div>
+											</div>
+											<div class="row px-9 mb-4">
+												<div class="col-md-4 text-center">
+													<div class="text-gray-800 fw-bold fs-3">
+														<span class="m-0"
+														      data-kt-countup="true"
+														      data-kt-countup-value="642">0
+														</span>
+													</div>
+													<span class="text-gray-500 fs-8 d-block fw-bold">POSTS</span>
+												</div>
+												<div class="col-md-4 text-center">
+													<div class="text-gray-800 fw-bold fs-3">
+														<span class="m-0"
+														      data-kt-countup="true"
+														      data-kt-countup-value="24">0
+														</span>
+														K
+													</div>
+													<span class="text-gray-500 fs-8 d-block fw-bold">FOLLOWERS</span>
+												</div>
+												<div class="col-md-4 text-center">
+													<div class="text-gray-800 fw-bold fs-3">
+														<span class="m-0"
+														      data-kt-countup="true"
+														      data-kt-countup-value="12">0
+														</span>
+														K
+													</div>
+													<span class="text-gray-500 fs-8 d-block fw-bold">FOLLOWING</span>
+												</div>
+											</div>
+											<div class="m-0">
+												<ul class="nav nav-pills nav-pills-custom flex-column border-transparent fs-5 fw-bold">
+													<li class="nav-item mt-5">
+														<a class="nav-link text-muted text-active-primary ms-0 py-2 me-10 ps-9 border-0 active"
+														   href="calculate.html">
+															<span class="bullet-custom position-absolute start-0 top-0 w-5px h-100 bg-primary rounded-end"></span>
+															<i class="fs-2 me-1 bi bi-calculator"></i>
+															Calculate Readings
+														</a>
+													</li>
+													<li class="nav-item mt-5">
+														<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0"
+														   href="collect.html">
+															<i class="fs-2 me-1 bi bi-basket3"></i>
+															Shift Collection
+															<span class="bullet-custom position-absolute start-0 top-0 w-5px h-100 bg-primary rounded-end"></span>
+														</a>
+													</li>
+													<li class="nav-item mt-5">
+														<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0"
+														   href="../../demo2/dist/pages/social/followers.html">
+															<i class="fs-2 me-1 bi bi-calculator"></i>
+															asdf
+															<span class="bullet-custom position-absolute start-0 top-0 w-5px h-100 bg-primary rounded-end"></span>
+														</a>
+													</li>
+													<li class="nav-item mt-5">
+														<a class="nav-link text-muted text-active-primary ms-0 py-0 me-10 ps-9 border-0"
+														   href="../../demo2/dist/pages/social/settings.html">
+															<i class="fs-2 me-1 bi bi-calculator"></i>
+															sdf
+															<span class="bullet-custom position-absolute start-0 top-0 w-5px h-100 bg-primary rounded-end"></span>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="card card-flush">
+										<div class="card-header pt-5">
+											<h3 class="card-title align-items-start flex-column">
+												<span class="card-label fw-bold text-dark">Progress</span>
+												<span class="text-gray-400 pt-2 fw-semibold fs-6"></span>
+											</h3>
+											<div class="card-toolbar">
+											
+											</div>
+										</div>
+										<div class="card-body pt-6">
+											<div class="timeline-label">
+												<div class="timeline-item">
+													<div class="timeline-label fw-bold text-gray-800 fs-6">S-1</div>
+													<div class="timeline-badge">
+														<i class="fs-2 me-1 bi bi-check-circle-fill text-success"></i>
+													</div>
+													<div class="timeline-content fw-semibold text-gray-800 ps-3">Shift has Initiated</div>
+												</div>
+												<div class="timeline-item d-flex align-items-center">
+													<div class="timeline-label fw-bold text-gray-800 fs-6">S-2</div>
+													<div class="timeline-badge">
+														<i class="fs-2 me-1 bi bi-dash-circle-fill text-primary"></i>
+													</div>
+													<div class="timeline-content fw-semibold text-gray-800 ps-3">Meter Reading Calculated</div>
+												</div>
+												<div class="timeline-item">
+													<div class="timeline-label fw-bold text-gray-800 fs-6">S-3</div>
+													<div class="timeline-badge">
+														<i class="fs-2 bi bi-exclamation-circle-fill text-warning"></i>
+													</div>
+													<div class="timeline-content fw-semibold text-gray-800 ps-3">Collection has Taken</div>
+												</div>
+												<div class="timeline-item">
+													<div class="timeline-label fw-bold text-gray-800 fs-6">S-4</div>
+													<div class="timeline-badge">
+														<i class="fs-2 bi bi-exclamation-circle-fill text-danger"></i>
+													</div>
+													<div class="timeline-content fw-semibold text-gray-800 ps-3">Shift has Settled</div>
+												</div>
+												<div class="timeline-item">
+													<div class="timeline-label fw-bold text-gray-800 fs-6">S-5</div>
+													<div class="timeline-badge">
+														<i class="fs-2 bi bi-exclamation-circle-fill text-danger"></i>
+													</div>
+													<div class="timeline-content fw-semibold text-gray-800 ps-3">Shift has Verified</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="w-100 flex-lg-row-fluid mx-lg-13">
+									<div class="d-flex d-lg-none align-items-center justify-content-end mb-10">
+										<div class="d-flex align-items-center gap-2">
+											<div class="btn btn-icon btn-active-color-primary w-30px h-30px"
+											     id="kt_social_start_sidebar_toggle">
+												<span class="svg-icon svg-icon-1">
+													<svg width="18"
+													     height="18"
+													     viewBox="0 0 18 18"
+													     fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path opacity="0.3"
+														      d="M16.5 9C16.5 13.125 13.125 16.5 9 16.5C4.875 16.5 1.5 13.125 1.5 9C1.5 4.875 4.875 1.5 9 1.5C13.125 1.5 16.5 4.875 16.5 9Z"
+														      fill="currentColor" />
+														<path d="M9 16.5C10.95 16.5 12.75 15.75 14.025 14.55C13.425 12.675 11.4 11.25 9 11.25C6.6 11.25 4.57499 12.675 3.97499 14.55C5.24999 15.75 7.05 16.5 9 16.5Z"
+														      fill="currentColor" />
+														<rect x="7"
+														      y="6"
+														      width="4"
+														      height="4"
+														      rx="2"
+														      fill="currentColor" />
+													</svg>
+												</span>
+											</div>
+											<div class="btn btn-icon btn-active-color-primary w-30px h-30px"
+											     id="kt_social_end_sidebar_toggle">
+												<span class="svg-icon svg-icon-1">
+													<svg width="24"
+													     height="24"
+													     viewBox="0 0 24 24"
+													     fill="none"
+													     xmlns="http://www.w3.org/2000/svg">
+														<path opacity="0.3"
+														      d="M18 22C19.7 22 21 20.7 21 19C21 18.5 20.9 18.1 20.7 17.7L15.3 6.30005C15.1 5.90005 15 5.5 15 5C15 3.3 16.3 2 18 2H6C4.3 2 3 3.3 3 5C3 5.5 3.1 5.90005 3.3 6.30005L8.7 17.7C8.9 18.1 9 18.5 9 19C9 20.7 7.7 22 6 22H18Z"
+														      fill="currentColor" />
+														<path d="M18 2C19.7 2 21 3.3 21 5H9C9 3.3 7.7 2 6 2H18Z"
+														      fill="currentColor" />
+														<path d="M9 19C9 20.7 7.7 22 6 22C4.3 22 3 20.7 3 19H9Z"
+														      fill="currentColor" />
+													</svg>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="card card-flush mb-10">
+										<div class="card-header justify-content-start align-items-center pt-4">
+											<div class="symbol symbol-45px me-5">
+												<img src="assets/media/avatars/300-3.jpg"
+												     class=""
+												     alt="" />
+											</div>
+											<span class="text-gray-400 fw-semibold fs-6">What’s on your mind, Jerry?</span>
+										</div>
+										<div class="card-body pt-2 pb-0">
+											<textarea class="form-control bg-transparent border-0 px-0"
+											          id="kt_social_feeds_post_input"
+											          name="message"
+											          data-kt-autosize="true"
+											          rows="1"
+											          placeholder="Type your message..."></textarea>
+										</div>
+										<div class="card-footer d-flex justify-content-end pt-0">
+											<a href="../../demo2/dist/pages/blog/post.html"
+											   class="btn btn-sm btn-primary"
+											   id="kt_social_feeds_post_btn">
+												<span class="indicator-label">Post</span>
+												<span class="indicator-progress">Please wait...
+													<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+												</span>
+											</a>
+										</div>
+									</div>
+									<div class="mb-10"
+									     id="kt_social_feeds_posts">
+										<div class="card card-flush mb-10">
+											<div class="card-header pt-9">
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-50px me-5">
+														<img src="assets/media/avatars/300-4.jpg"
+														     class=""
+														     alt="" />
+													</div>
+													<div class="flex-grow-1">
+														<a href="#"
+														   class="text-gray-800 text-hover-primary fs-4 fw-bold">Grace Logan</a>
+														<span class="text-gray-400 fw-semibold d-block">Yestarday at 5:06 PM</span>
+													</div>
+												</div>
+												<div class="card-toolbar">
+													<div class="m-0">
+														<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary me-n4"
+														        data-kt-menu-trigger="click"
+														        data-kt-menu-placement="bottom-end"
+														        data-kt-menu-overflow="true">
+															<span class="svg-icon svg-icon-1">
+																<svg width="24"
+																     height="24"
+																     viewBox="0 0 24 24"
+																     fill="none"
+																     xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.3"
+																	      x="2"
+																	      y="2"
+																	      width="20"
+																	      height="20"
+																	      rx="4"
+																	      fill="currentColor" />
+																	<rect x="11"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="15"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="7"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																</svg>
+															</span>
+														</button>
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+														     data-kt-menu="true">
+															<div class="menu-item px-3">
+																<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+															</div>
+															<div class="separator mb-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Ticket</a>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Customer</a>
+															</div>
+															<div class="menu-item px-3"
+															     data-kt-menu-trigger="hover"
+															     data-kt-menu-placement="right-start">
+																<a href="#"
+																   class="menu-link px-3">
+																	<span class="menu-title">New Group</span>
+																	<span class="menu-arrow"></span>
+																</a>
+																<div class="menu-sub menu-sub-dropdown w-175px py-4">
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Admin Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Staff Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Member Group</a>
+																	</div>
+																</div>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Contact</a>
+															</div>
+															<div class="separator mt-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<div class="menu-content px-3 py-3">
+																	<a class="btn btn-primary btn-sm px-4"
+																	   href="#">Generate Reports</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="card-body">
+												<div class="fs-6 fw-normal text-gray-700 mb-5">There are two main approaches you can take to writing amazing blog post headlines. You can either decide on your final headline before outstanding you write the most of the rest of your creative post</div>
+												<div class="row g-7 h-250px h-md-375px">
+													<div class="col-6">
+														<a class="d-block card-rounded overlay h-100"
+														   data-fslightbox="lightbox-projects"
+														   href="assets/media/stock/600x600/img-23.jpg">
+															<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-100"
+															     style="background-image:url('assets/media/stock/600x600/img-23.jpg')"></div>
+															<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+																<i class="bi bi-eye-fill fs-3x text-white"></i>
+															</div>
+														</a>
+													</div>
+													<div class="col-6">
+														<div class="row g-7 h-250px h-md-375px">
+															<div class="col-lg-12">
+																<a class="d-block card-rounded overlay h-100"
+																   data-fslightbox="lightbox-projects"
+																   href="assets/media/stock/600x600/img-22.jpg">
+																	<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-100"
+																	     style="background-image:url('assets/media/stock/600x400/img-71.jpg')"></div>
+																	<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+																		<i class="bi bi-eye-fill fs-3x text-white"></i>
+																	</div>
+																</a>
+															</div>
+															<div class="col-lg-12">
+																<a class="d-block card-rounded overlay h-100"
+																   data-fslightbox="lightbox-projects"
+																   href="assets/media/stock/600x600/img-21.jpg">
+																	<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-100"
+																	     style="background-image:url('assets/media/stock/600x400/img-79.jpg')"></div>
+																	<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+																		<i class="bi bi-eye-fill fs-3x text-white"></i>
+																	</div>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="card-footer pt-0">
+												<div class="mb-6">
+													<div class="separator separator-solid"></div>
+													<ul class="nav py-3">
+														<li class="nav-item">
+															<a class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary btn-active-light-primary fw-bold px-4 me-1 collapsible active"
+															   data-bs-toggle="collapse"
+															   href="#kt_social_feeds_comments_1">
+																<i class="bi bi-chat-square fs-2 me-1"></i>2 Comments
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4 me-1">
+																<i class="bi bi-heart fs-2 me-1"></i>47k Likes
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4">
+																<i class="bi bi-bookmark fs-2 me-1"></i>900 Saves
+															</a>
+														</li>
+													</ul>
+													<div class="separator separator-solid mb-1"></div>
+													<div class="collapse show"
+													     id="kt_social_feeds_comments_1">
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-13.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Mr. Anderson</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">1 Day ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-2.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Mrs. Anderson</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">2 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-35px me-3">
+														<img src="assets/media/avatars/300-3.jpg"
+														     alt="" />
+													</div>
+													<div class="position-relative w-100">
+														<textarea type="text"
+														          class="form-control form-control-solid border ps-5"
+														          rows="1"
+														          name="search"
+														          value=""
+														          data-kt-autosize="true"
+														          placeholder="Write your comment.."></textarea>
+														<div class="position-absolute top-0 end-0 translate-middle-x mt-1 me-n14">
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-attach fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-smile fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-gallery fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-location fs-2"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card card-flush mb-10">
+											<div class="card-header pt-9">
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-50px me-5">
+														<img src="assets/media/avatars/300-7.jpg"
+														     class=""
+														     alt="" />
+													</div>
+													<div class="flex-grow-1">
+														<a href="#"
+														   class="text-gray-800 text-hover-primary fs-4 fw-bold">Brooklyn Simmons</a>
+														<span class="text-gray-400 fw-semibold d-block">Yestarday at 5:06 PM</span>
+													</div>
+												</div>
+												<div class="card-toolbar">
+													<div class="m-0">
+														<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary me-n4"
+														        data-kt-menu-trigger="click"
+														        data-kt-menu-placement="bottom-end"
+														        data-kt-menu-overflow="true">
+															<span class="svg-icon svg-icon-1">
+																<svg width="24"
+																     height="24"
+																     viewBox="0 0 24 24"
+																     fill="none"
+																     xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.3"
+																	      x="2"
+																	      y="2"
+																	      width="20"
+																	      height="20"
+																	      rx="4"
+																	      fill="currentColor" />
+																	<rect x="11"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="15"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="7"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																</svg>
+															</span>
+														</button>
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+														     data-kt-menu="true">
+															<div class="menu-item px-3">
+																<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+															</div>
+															<div class="separator mb-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Ticket</a>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Customer</a>
+															</div>
+															<div class="menu-item px-3"
+															     data-kt-menu-trigger="hover"
+															     data-kt-menu-placement="right-start">
+																<a href="#"
+																   class="menu-link px-3">
+																	<span class="menu-title">New Group</span>
+																	<span class="menu-arrow"></span>
+																</a>
+																<div class="menu-sub menu-sub-dropdown w-175px py-4">
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Admin Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Staff Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Member Group</a>
+																	</div>
+																</div>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Contact</a>
+															</div>
+															<div class="separator mt-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<div class="menu-content px-3 py-3">
+																	<a class="btn btn-primary btn-sm px-4"
+																	   href="#">Generate Reports</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="card-body">
+												<div class="fs-6 fw-normal text-gray-700">You can either decide on your final headline before outstanding you write the most of the rest of your creative post</div>
+											</div>
+											<div class="card-footer pt-0">
+												<div class="mb-6">
+													<div class="separator separator-solid"></div>
+													<ul class="nav py-3">
+														<li class="nav-item">
+															<a class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary btn-active-light-primary fw-bold px-4 me-1 collapsible"
+															   data-bs-toggle="collapse"
+															   href="#kt_social_feeds_comments_2">
+																<i class="bi bi-chat-square fs-2 me-1"></i>3 Comments
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4 me-1">
+																<i class="bi bi-heart fs-2 me-1"></i>8 Likes
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4">
+																<i class="bi bi-bookmark fs-2 me-1"></i>47k Saves
+															</a>
+														</li>
+													</ul>
+													<div class="separator separator-solid mb-1"></div>
+													<div class="collapse"
+													     id="kt_social_feeds_comments_2">
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-13.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Mr. Anderson</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">1 Day ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-2.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Mrs. Anderson</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">2 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-20.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Alice Danchik</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">3 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-35px me-3">
+														<img src="assets/media/avatars/300-3.jpg"
+														     alt="" />
+													</div>
+													<div class="position-relative w-100">
+														<textarea type="text"
+														          class="form-control form-control-solid border ps-5"
+														          rows="1"
+														          name="search"
+														          value=""
+														          data-kt-autosize="true"
+														          placeholder="Write your comment.."></textarea>
+														<div class="position-absolute top-0 end-0 translate-middle-x mt-1 me-n14">
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-attach fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-smile fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-gallery fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-location fs-2"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card card-flush mb-10">
+											<div class="card-header pt-9">
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-50px me-5">
+														<div class="symbol-label fs-2 fw-semibold bg-light text-inverse-success">
+															<span class="svg-icon svg-icon-2x svg-icon-primary">
+																<svg width="24"
+																     height="24"
+																     viewBox="0 0 24 24"
+																     fill="none"
+																     xmlns="http://www.w3.org/2000/svg">
+																	<path opacity="0.3"
+																	      d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"
+																	      fill="currentColor" />
+																	<path d="M20 8L14 2V6C14 7.10457 14.8954 8 16 8H20Z"
+																	      fill="currentColor" />
+																	<path d="M10.3629 14.0084L8.92108 12.6429C8.57518 12.3153 8.03352 12.3153 7.68761 12.6429C7.31405 12.9967 7.31405 13.5915 7.68761 13.9453L10.2254 16.3488C10.6111 16.714 11.215 16.714 11.6007 16.3488L16.3124 11.8865C16.6859 11.5327 16.6859 10.9379 16.3124 10.5841C15.9665 10.2565 15.4248 10.2565 15.0789 10.5841L11.4631 14.0084C11.1546 14.3006 10.6715 14.3006 10.3629 14.0084Z"
+																	      fill="currentColor" />
+																</svg>
+															</span>
+														</div>
+													</div>
+													<div class="flex-grow-1">
+														<a href="#"
+														   class="text-gray-800 text-hover-primary fs-4 fw-bold">Finance Deprt - Annual Report</a>
+														<span class="text-gray-400 fw-semibold d-block">Yestarday at 5:06 PM</span>
+													</div>
+												</div>
+												<div class="card-toolbar">
+													<div class="m-0">
+														<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary me-n4"
+														        data-kt-menu-trigger="click"
+														        data-kt-menu-placement="bottom-end"
+														        data-kt-menu-overflow="true">
+															<span class="svg-icon svg-icon-1">
+																<svg width="24"
+																     height="24"
+																     viewBox="0 0 24 24"
+																     fill="none"
+																     xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.3"
+																	      x="2"
+																	      y="2"
+																	      width="20"
+																	      height="20"
+																	      rx="4"
+																	      fill="currentColor" />
+																	<rect x="11"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="15"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="7"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																</svg>
+															</span>
+														</button>
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+														     data-kt-menu="true">
+															<div class="menu-item px-3">
+																<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+															</div>
+															<div class="separator mb-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Ticket</a>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Customer</a>
+															</div>
+															<div class="menu-item px-3"
+															     data-kt-menu-trigger="hover"
+															     data-kt-menu-placement="right-start">
+																<a href="#"
+																   class="menu-link px-3">
+																	<span class="menu-title">New Group</span>
+																	<span class="menu-arrow"></span>
+																</a>
+																<div class="menu-sub menu-sub-dropdown w-175px py-4">
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Admin Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Staff Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Member Group</a>
+																	</div>
+																</div>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Contact</a>
+															</div>
+															<div class="separator mt-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<div class="menu-content px-3 py-3">
+																	<a class="btn btn-primary btn-sm px-4"
+																	   href="#">Generate Reports</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="card-body">
+												<div class="fs-6 fw-normal text-gray-700 mb-5">You can either decide on your final headline before outstanding you write the most of the rest of your creative post</div>
+												<div class="m-0">
+													<iframe class="embed-responsive-item rounded h-300px w-100"
+													        src="https://www.youtube.com/embed/TWdDZYNqlg4"
+													        allowfullscreen="allowfullscreen"></iframe>
+												</div>
+											</div>
+											<div class="card-footer pt-0">
+												<div class="mb-6">
+													<div class="separator separator-solid"></div>
+													<ul class="nav py-3">
+														<li class="nav-item">
+															<a class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary btn-active-light-primary fw-bold px-4 me-1 collapsible"
+															   data-bs-toggle="collapse"
+															   href="#kt_social_feeds_comments_3">
+																<i class="bi bi-chat-square fs-2 me-1"></i>4 Comments
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4 me-1">
+																<i class="bi bi-heart fs-2 me-1"></i>10k Likes
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4">
+																<i class="bi bi-bookmark fs-2 me-1"></i>2 Saves
+															</a>
+														</li>
+													</ul>
+													<div class="separator separator-solid mb-1"></div>
+													<div class="collapse"
+													     id="kt_social_feeds_comments_3">
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-13.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Mr. Anderson</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">1 Day ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-2.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Mrs. Anderson</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">2 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-20.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Alice Danchik</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">3 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-6.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Grace Green</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">4 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-35px me-3">
+														<img src="assets/media/avatars/300-3.jpg"
+														     alt="" />
+													</div>
+													<div class="position-relative w-100">
+														<textarea type="text"
+														          class="form-control form-control-solid border ps-5"
+														          rows="1"
+														          name="search"
+														          value=""
+														          data-kt-autosize="true"
+														          placeholder="Write your comment.."></textarea>
+														<div class="position-absolute top-0 end-0 translate-middle-x mt-1 me-n14">
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-attach fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-smile fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-gallery fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-location fs-2"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card card-flush mb-10">
+											<div class="card-header pt-9">
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-50px me-5">
+														<img src="assets/media/avatars/300-10.jpg"
+														     class=""
+														     alt="" />
+													</div>
+													<div class="flex-grow-1">
+														<a href="#"
+														   class="text-gray-800 text-hover-primary fs-4 fw-bold">Ana Lee</a>
+														<span class="text-gray-400 fw-semibold d-block">Yestarday at 5:06 PM</span>
+													</div>
+												</div>
+												<div class="card-toolbar">
+													<div class="m-0">
+														<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary me-n4"
+														        data-kt-menu-trigger="click"
+														        data-kt-menu-placement="bottom-end"
+														        data-kt-menu-overflow="true">
+															<span class="svg-icon svg-icon-1">
+																<svg width="24"
+																     height="24"
+																     viewBox="0 0 24 24"
+																     fill="none"
+																     xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.3"
+																	      x="2"
+																	      y="2"
+																	      width="20"
+																	      height="20"
+																	      rx="4"
+																	      fill="currentColor" />
+																	<rect x="11"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="15"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="7"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																</svg>
+															</span>
+														</button>
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+														     data-kt-menu="true">
+															<div class="menu-item px-3">
+																<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+															</div>
+															<div class="separator mb-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Ticket</a>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Customer</a>
+															</div>
+															<div class="menu-item px-3"
+															     data-kt-menu-trigger="hover"
+															     data-kt-menu-placement="right-start">
+																<a href="#"
+																   class="menu-link px-3">
+																	<span class="menu-title">New Group</span>
+																	<span class="menu-arrow"></span>
+																</a>
+																<div class="menu-sub menu-sub-dropdown w-175px py-4">
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Admin Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Staff Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Member Group</a>
+																	</div>
+																</div>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Contact</a>
+															</div>
+															<div class="separator mt-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<div class="menu-content px-3 py-3">
+																	<a class="btn btn-primary btn-sm px-4"
+																	   href="#">Generate Reports</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="card-body">
+												<div class="fs-6 fw-normal text-gray-700">You can either decide on your final headline before outstanding you write the most of the rest of your creative post</div>
+											</div>
+											<div class="card-footer pt-0">
+												<div class="mb-6">
+													<div class="separator separator-solid"></div>
+													<ul class="nav py-3">
+														<li class="nav-item">
+															<a class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary btn-active-light-primary fw-bold px-4 me-1 collapsible"
+															   data-bs-toggle="collapse"
+															   href="#kt_social_feeds_comments_4">
+																<i class="bi bi-chat-square fs-2 me-1"></i>10 Comments
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4 me-1">
+																<i class="bi bi-heart fs-2 me-1"></i>10k Likes
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4">
+																<i class="bi bi-bookmark fs-2 me-1"></i>3k Saves
+															</a>
+														</li>
+													</ul>
+													<div class="separator separator-solid mb-1"></div>
+													<div class="collapse"
+													     id="kt_social_feeds_comments_4">
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-13.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Mr. Anderson</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">1 Day ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-2.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Mrs. Anderson</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">2 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-20.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Alice Danchik</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">3 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-6.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Grace Green</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">4 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper</span>
+															</div>
+														</div>
+														<div class="d-flex pt-6">
+															<div class="symbol symbol-45px me-5">
+																<img src="assets/media/avatars/300-25.jpg"
+																     alt="" />
+															</div>
+															<div class="d-flex flex-column flex-row-fluid">
+																<div class="d-flex align-items-center flex-wrap mb-0">
+																	<a href="#"
+																	   class="text-gray-800 text-hover-primary fw-bold me-6">Mat Dillon</a>
+																	<span class="text-gray-400 fw-semibold fs-7 me-5">5 Days ago</span>
+																	<a href="#"
+																	   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																</div>
+																<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-35px me-3">
+														<img src="assets/media/avatars/300-3.jpg"
+														     alt="" />
+													</div>
+													<div class="position-relative w-100">
+														<textarea type="text"
+														          class="form-control form-control-solid border ps-5"
+														          rows="1"
+														          name="search"
+														          value=""
+														          data-kt-autosize="true"
+														          placeholder="Write your comment.."></textarea>
+														<div class="position-absolute top-0 end-0 translate-middle-x mt-1 me-n14">
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-attach fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-smile fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-gallery fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-location fs-2"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="d-none"
+										     id="kt_social_feeds_more_posts">
+											<div class="card card-flush mb-10">
+												<div class="card-header pt-9">
+													<div class="d-flex align-items-center">
+														<div class="symbol symbol-50px me-5">
+															<img src="assets/media/avatars/300-11.jpg"
+															     class=""
+															     alt="" />
+														</div>
+														<div class="flex-grow-1">
+															<a href="#"
+															   class="text-gray-800 text-hover-primary fs-4 fw-bold">Stive Strong</a>
+															<span class="text-gray-400 fw-semibold d-block">Yestarday at 3:30 PM</span>
+														</div>
+													</div>
+													<div class="card-toolbar">
+														<div class="m-0">
+															<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary me-n4"
+															        data-kt-menu-trigger="click"
+															        data-kt-menu-placement="bottom-end"
+															        data-kt-menu-overflow="true">
+																<span class="svg-icon svg-icon-1">
+																	<svg width="24"
+																	     height="24"
+																	     viewBox="0 0 24 24"
+																	     fill="none"
+																	     xmlns="http://www.w3.org/2000/svg">
+																		<rect opacity="0.3"
+																		      x="2"
+																		      y="2"
+																		      width="20"
+																		      height="20"
+																		      rx="4"
+																		      fill="currentColor" />
+																		<rect x="11"
+																		      y="11"
+																		      width="2.6"
+																		      height="2.6"
+																		      rx="1.3"
+																		      fill="currentColor" />
+																		<rect x="15"
+																		      y="11"
+																		      width="2.6"
+																		      height="2.6"
+																		      rx="1.3"
+																		      fill="currentColor" />
+																		<rect x="7"
+																		      y="11"
+																		      width="2.6"
+																		      height="2.6"
+																		      rx="1.3"
+																		      fill="currentColor" />
+																	</svg>
+																</span>
+															</button>
+															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+															     data-kt-menu="true">
+																<div class="menu-item px-3">
+																	<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+																</div>
+																<div class="separator mb-3 opacity-75"></div>
+																<div class="menu-item px-3">
+																	<a href="#"
+																	   class="menu-link px-3">New Ticket</a>
+																</div>
+																<div class="menu-item px-3">
+																	<a href="#"
+																	   class="menu-link px-3">New Customer</a>
+																</div>
+																<div class="menu-item px-3"
+																     data-kt-menu-trigger="hover"
+																     data-kt-menu-placement="right-start">
+																	<a href="#"
+																	   class="menu-link px-3">
+																		<span class="menu-title">New Group</span>
+																		<span class="menu-arrow"></span>
+																	</a>
+																	<div class="menu-sub menu-sub-dropdown w-175px py-4">
+																		<div class="menu-item px-3">
+																			<a href="#"
+																			   class="menu-link px-3">Admin Group</a>
+																		</div>
+																		<div class="menu-item px-3">
+																			<a href="#"
+																			   class="menu-link px-3">Staff Group</a>
+																		</div>
+																		<div class="menu-item px-3">
+																			<a href="#"
+																			   class="menu-link px-3">Member Group</a>
+																		</div>
+																	</div>
+																</div>
+																<div class="menu-item px-3">
+																	<a href="#"
+																	   class="menu-link px-3">New Contact</a>
+																</div>
+																<div class="separator mt-3 opacity-75"></div>
+																<div class="menu-item px-3">
+																	<div class="menu-content px-3 py-3">
+																		<a class="btn btn-primary btn-sm px-4"
+																		   href="#">Generate Reports</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="fs-6 fw-normal text-gray-700 mb-5">You can either decide on your final headline before outstanding.</div>
+													<div class="row g-3 g-lg-6">
+														<div class="col-md-6 col-lg-4">
+															<a href="">
+																<img src="assets/media/stock/600x600/img-14.jpg"
+																     class="rounded w-100"
+																     alt="" />
+															</a>
+														</div>
+														<div class="col-md-6 col-lg-4">
+															<a href="">
+																<img src="assets/media/stock/600x600/img-10.jpg"
+																     class="rounded w-100"
+																     alt="" />
+															</a>
+														</div>
+														<div class="col-md-6 col-lg-4">
+															<a href="">
+																<img src="assets/media/stock/600x600/img-18.jpg"
+																     class="rounded w-100"
+																     alt="" />
+															</a>
+														</div>
+														<div class="col-md-6 col-lg-4">
+															<a href="">
+																<img src="assets/media/stock/600x600/img-30.jpg"
+																     class="rounded w-100"
+																     alt="" />
+															</a>
+														</div>
+														<div class="col-md-6 col-lg-4">
+															<a href="">
+																<img src="assets/media/stock/600x600/img-31.jpg"
+																     class="rounded w-100"
+																     alt="" />
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="card-footer pt-0">
+													<div class="mb-6">
+														<div class="separator separator-solid"></div>
+														<ul class="nav py-3">
+															<li class="nav-item">
+																<a class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary btn-active-light-primary fw-bold px-4 me-1 collapsible"
+																   data-bs-toggle="collapse"
+																   href="#kt_social_feeds_comments_5">
+																	<i class="bi bi-chat-square fs-2 me-1"></i>3 Comments
+																</a>
+															</li>
+															<li class="nav-item">
+																<a href="#"
+																   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4 me-1">
+																	<i class="bi bi-heart fs-2 me-1"></i>15k Likes
+																</a>
+															</li>
+															<li class="nav-item">
+																<a href="#"
+																   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4">
+																	<i class="bi bi-bookmark fs-2 me-1"></i>3.8k Saves
+																</a>
+															</li>
+														</ul>
+														<div class="separator separator-solid mb-1"></div>
+														<div class="collapse"
+														     id="kt_social_feeds_comments_5">
+															<div class="d-flex pt-6">
+																<div class="symbol symbol-45px me-5">
+																	<img src="assets/media/avatars/300-13.jpg"
+																	     alt="" />
+																</div>
+																<div class="d-flex flex-column flex-row-fluid">
+																	<div class="d-flex align-items-center flex-wrap mb-0">
+																		<a href="#"
+																		   class="text-gray-800 text-hover-primary fw-bold me-6">Mr. Anderson</a>
+																		<span class="text-gray-400 fw-semibold fs-7 me-5">1 Day ago</span>
+																		<a href="#"
+																		   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																	</div>
+																	<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+																</div>
+															</div>
+															<div class="d-flex pt-6">
+																<div class="symbol symbol-45px me-5">
+																	<img src="assets/media/avatars/300-2.jpg"
+																	     alt="" />
+																</div>
+																<div class="d-flex flex-column flex-row-fluid">
+																	<div class="d-flex align-items-center flex-wrap mb-0">
+																		<a href="#"
+																		   class="text-gray-800 text-hover-primary fw-bold me-6">Mrs. Anderson</a>
+																		<span class="text-gray-400 fw-semibold fs-7 me-5">2 Days ago</span>
+																		<a href="#"
+																		   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																	</div>
+																	<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper</span>
+																</div>
+															</div>
+															<div class="d-flex pt-6">
+																<div class="symbol symbol-45px me-5">
+																	<img src="assets/media/avatars/300-20.jpg"
+																	     alt="" />
+																</div>
+																<div class="d-flex flex-column flex-row-fluid">
+																	<div class="d-flex align-items-center flex-wrap mb-0">
+																		<a href="#"
+																		   class="text-gray-800 text-hover-primary fw-bold me-6">Alice Danchik</a>
+																		<span class="text-gray-400 fw-semibold fs-7 me-5">3 Days ago</span>
+																		<a href="#"
+																		   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																	</div>
+																	<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="d-flex align-items-center">
+														<div class="symbol symbol-35px me-3">
+															<img src="assets/media/avatars/300-3.jpg"
+															     alt="" />
+														</div>
+														<div class="position-relative w-100">
+															<textarea type="text"
+															          class="form-control form-control-solid border ps-5"
+															          rows="1"
+															          name="search"
+															          value=""
+															          data-kt-autosize="true"
+															          placeholder="Write your comment.."></textarea>
+															<div class="position-absolute top-0 end-0 translate-middle-x mt-1 me-n14">
+																<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																	<i class="fonticon-attach fs-2"></i>
+																</button>
+																<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																	<i class="fonticon-smile fs-2"></i>
+																</button>
+																<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																	<i class="fonticon-gallery fs-2"></i>
+																</button>
+																<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																	<i class="fonticon-location fs-2"></i>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="card card-flush mb-10">
+												<div class="card-header pt-9">
+													<div class="d-flex align-items-center">
+														<div class="symbol symbol-50px me-5">
+															<img src="assets/media/avatars/300-12.jpg"
+															     class=""
+															     alt="" />
+														</div>
+														<div class="flex-grow-1">
+															<a href="#"
+															   class="text-gray-800 text-hover-primary fs-4 fw-bold">Lara Nilson</a>
+															<span class="text-gray-400 fw-semibold d-block">Yestarday at 10:10 AM</span>
+														</div>
+													</div>
+													<div class="card-toolbar">
+														<div class="m-0">
+															<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary me-n4"
+															        data-kt-menu-trigger="click"
+															        data-kt-menu-placement="bottom-end"
+															        data-kt-menu-overflow="true">
+																<span class="svg-icon svg-icon-1">
+																	<svg width="24"
+																	     height="24"
+																	     viewBox="0 0 24 24"
+																	     fill="none"
+																	     xmlns="http://www.w3.org/2000/svg">
+																		<rect opacity="0.3"
+																		      x="2"
+																		      y="2"
+																		      width="20"
+																		      height="20"
+																		      rx="4"
+																		      fill="currentColor" />
+																		<rect x="11"
+																		      y="11"
+																		      width="2.6"
+																		      height="2.6"
+																		      rx="1.3"
+																		      fill="currentColor" />
+																		<rect x="15"
+																		      y="11"
+																		      width="2.6"
+																		      height="2.6"
+																		      rx="1.3"
+																		      fill="currentColor" />
+																		<rect x="7"
+																		      y="11"
+																		      width="2.6"
+																		      height="2.6"
+																		      rx="1.3"
+																		      fill="currentColor" />
+																	</svg>
+																</span>
+															</button>
+															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+															     data-kt-menu="true">
+																<div class="menu-item px-3">
+																	<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+																</div>
+																<div class="separator mb-3 opacity-75"></div>
+																<div class="menu-item px-3">
+																	<a href="#"
+																	   class="menu-link px-3">New Ticket</a>
+																</div>
+																<div class="menu-item px-3">
+																	<a href="#"
+																	   class="menu-link px-3">New Customer</a>
+																</div>
+																<div class="menu-item px-3"
+																     data-kt-menu-trigger="hover"
+																     data-kt-menu-placement="right-start">
+																	<a href="#"
+																	   class="menu-link px-3">
+																		<span class="menu-title">New Group</span>
+																		<span class="menu-arrow"></span>
+																	</a>
+																	<div class="menu-sub menu-sub-dropdown w-175px py-4">
+																		<div class="menu-item px-3">
+																			<a href="#"
+																			   class="menu-link px-3">Admin Group</a>
+																		</div>
+																		<div class="menu-item px-3">
+																			<a href="#"
+																			   class="menu-link px-3">Staff Group</a>
+																		</div>
+																		<div class="menu-item px-3">
+																			<a href="#"
+																			   class="menu-link px-3">Member Group</a>
+																		</div>
+																	</div>
+																</div>
+																<div class="menu-item px-3">
+																	<a href="#"
+																	   class="menu-link px-3">New Contact</a>
+																</div>
+																<div class="separator mt-3 opacity-75"></div>
+																<div class="menu-item px-3">
+																	<div class="menu-content px-3 py-3">
+																		<a class="btn btn-primary btn-sm px-4"
+																		   href="#">Generate Reports</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="fs-6 fw-normal text-gray-700">You can either decide on your final headline before outstanding you write the most of the rest of your creative post</div>
+												</div>
+												<div class="card-footer pt-0">
+													<div class="mb-6">
+														<div class="separator separator-solid"></div>
+														<ul class="nav py-3">
+															<li class="nav-item">
+																<a class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary btn-active-light-primary fw-bold px-4 me-1 collapsible"
+																   data-bs-toggle="collapse"
+																   href="#kt_social_feeds_comments_6">
+																	<i class="bi bi-chat-square fs-2 me-1"></i>2 Comments
+																</a>
+															</li>
+															<li class="nav-item">
+																<a href="#"
+																   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4 me-1">
+																	<i class="bi bi-heart fs-2 me-1"></i>14k Likes
+																</a>
+															</li>
+															<li class="nav-item">
+																<a href="#"
+																   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4">
+																	<i class="bi bi-bookmark fs-2 me-1"></i>7.5k Saves
+																</a>
+															</li>
+														</ul>
+														<div class="separator separator-solid mb-1"></div>
+														<div class="collapse"
+														     id="kt_social_feeds_comments_6">
+															<div class="d-flex pt-6">
+																<div class="symbol symbol-45px me-5">
+																	<img src="assets/media/avatars/300-13.jpg"
+																	     alt="" />
+																</div>
+																<div class="d-flex flex-column flex-row-fluid">
+																	<div class="d-flex align-items-center flex-wrap mb-0">
+																		<a href="#"
+																		   class="text-gray-800 text-hover-primary fw-bold me-6">Mr. Anderson</a>
+																		<span class="text-gray-400 fw-semibold fs-7 me-5">1 Day ago</span>
+																		<a href="#"
+																		   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																	</div>
+																	<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper you need to make sure you have to sit down and write.</span>
+																</div>
+															</div>
+															<div class="d-flex pt-6">
+																<div class="symbol symbol-45px me-5">
+																	<img src="assets/media/avatars/300-2.jpg"
+																	     alt="" />
+																</div>
+																<div class="d-flex flex-column flex-row-fluid">
+																	<div class="d-flex align-items-center flex-wrap mb-0">
+																		<a href="#"
+																		   class="text-gray-800 text-hover-primary fw-bold me-6">Mrs. Anderson</a>
+																		<span class="text-gray-400 fw-semibold fs-7 me-5">2 Days ago</span>
+																		<a href="#"
+																		   class="ms-auto text-gray-400 text-hover-primary fw-semibold fs-7">Reply</a>
+																	</div>
+																	<span class="text-gray-800 fs-7 fw-normal pt-1">Long before you sit dow to put digital pen to paper</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="d-flex align-items-center">
+														<div class="symbol symbol-35px me-3">
+															<img src="assets/media/avatars/300-3.jpg"
+															     alt="" />
+														</div>
+														<div class="position-relative w-100">
+															<textarea type="text"
+															          class="form-control form-control-solid border ps-5"
+															          rows="1"
+															          name="search"
+															          value=""
+															          data-kt-autosize="true"
+															          placeholder="Write your comment.."></textarea>
+															<div class="position-absolute top-0 end-0 translate-middle-x mt-1 me-n14">
+																<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																	<i class="fonticon-attach fs-2"></i>
+																</button>
+																<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																	<i class="fonticon-smile fs-2"></i>
+																</button>
+																<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																	<i class="fonticon-gallery fs-2"></i>
+																</button>
+																<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																	<i class="fonticon-location fs-2"></i>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="d-none"
+									     id="kt_social_feeds_new_post">
+										<div class="card card-flush mb-10">
+											<div class="card-header pt-9">
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-50px me-5">
+														<img src="assets/media/avatars/300-3.jpg"
+														     class=""
+														     alt="" />
+													</div>
+													<div class="flex-grow-1">
+														<a href="#"
+														   class="text-gray-800 text-hover-primary fs-4 fw-bold">Jerry Kane</a>
+														<span class="text-gray-400 fw-semibold d-block">Yestarday at 5:06 PM</span>
+													</div>
+												</div>
+												<div class="card-toolbar">
+													<div class="m-0">
+														<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary me-n4"
+														        data-kt-menu-trigger="click"
+														        data-kt-menu-placement="bottom-end"
+														        data-kt-menu-overflow="true">
+															<span class="svg-icon svg-icon-1">
+																<svg width="24"
+																     height="24"
+																     viewBox="0 0 24 24"
+																     fill="none"
+																     xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.3"
+																	      x="2"
+																	      y="2"
+																	      width="20"
+																	      height="20"
+																	      rx="4"
+																	      fill="currentColor" />
+																	<rect x="11"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="15"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																	<rect x="7"
+																	      y="11"
+																	      width="2.6"
+																	      height="2.6"
+																	      rx="1.3"
+																	      fill="currentColor" />
+																</svg>
+															</span>
+														</button>
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+														     data-kt-menu="true">
+															<div class="menu-item px-3">
+																<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+															</div>
+															<div class="separator mb-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Ticket</a>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Customer</a>
+															</div>
+															<div class="menu-item px-3"
+															     data-kt-menu-trigger="hover"
+															     data-kt-menu-placement="right-start">
+																<a href="#"
+																   class="menu-link px-3">
+																	<span class="menu-title">New Group</span>
+																	<span class="menu-arrow"></span>
+																</a>
+																<div class="menu-sub menu-sub-dropdown w-175px py-4">
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Admin Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Staff Group</a>
+																	</div>
+																	<div class="menu-item px-3">
+																		<a href="#"
+																		   class="menu-link px-3">Member Group</a>
+																	</div>
+																</div>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">New Contact</a>
+															</div>
+															<div class="separator mt-3 opacity-75"></div>
+															<div class="menu-item px-3">
+																<div class="menu-content px-3 py-3">
+																	<a class="btn btn-primary btn-sm px-4"
+																	   href="#">Generate Reports</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="card-body">
+												<div class="fs-6 fw-normal text-gray-700"
+												     data-kt-post-element="content">You can either decide on your final headline before outstanding you write the most of the rest of your creative post
+												</div>
+											</div>
+											<div class="card-footer pt-0">
+												<div class="mb-6">
+													<div class="separator separator-solid"></div>
+													<ul class="nav py-3">
+														<li class="nav-item">
+															<a class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary btn-active-light-primary fw-bold px-4 me-1 collapsible"
+															   data-bs-toggle="collapse"
+															   href="#kt_social_feeds_comments_2">
+																<i class="bi bi-chat-square fs-2 me-1"></i>0 Comment
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4 me-1">
+																<i class="bi bi-heart fs-2 me-1"></i>0 Like
+															</a>
+														</li>
+														<li class="nav-item">
+															<a href="#"
+															   class="nav-link btn btn-sm btn-color-gray-600 btn-active-color-primary fw-bold px-4">
+																<i class="bi bi-bookmark fs-2 me-1"></i>0 Saves
+															</a>
+														</li>
+													</ul>
+													<div class="separator separator-solid mb-1"></div>
+												</div>
+												<div class="d-flex align-items-center">
+													<div class="symbol symbol-35px me-3">
+														<img src="assets/media/avatars/300-3.jpg"
+														     alt="" />
+													</div>
+													<div class="position-relative w-100">
+														<textarea type="text"
+														          class="form-control form-control-solid border ps-5"
+														          rows="1"
+														          name="search"
+														          value=""
+														          data-kt-autosize="true"
+														          placeholder="Write your comment.."></textarea>
+														<div class="position-absolute top-0 end-0 translate-middle-x mt-1 me-n14">
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-attach fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-smile fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-gallery fs-2"></i>
+															</button>
+															<button class="btn btn-icon btn-sm btn-color-gray-500 btn-active-color-primary w-25px p-0">
+																<i class="fonticon-location fs-2"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="d-flex flex-center">
+										<a href="#"
+										   class="btn btn-primary fw-bold px-6"
+										   id="kt_social_feeds_more_posts_btn">
+											<span class="indicator-label">Show more</span>
+											<span class="indicator-progress">Please wait...
+												<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="d-lg-flex flex-column flex-lg-row-auto w-lg-325px"
+								     data-kt-drawer="true"
+								     data-kt-drawer-name="end-sidebar"
+								     data-kt-drawer-activate="{default: true, lg: false}"
+								     data-kt-drawer-overlay="true"
+								     data-kt-drawer-width="{default:'200px', '250px': '300px'}"
+								     data-kt-drawer-direction="end"
+								     data-kt-drawer-toggle="#kt_social_end_sidebar_toggle">
+									<div class="card mb-5 mb-xl-8">
+										<div class="card-header border-0 pt-5">
+											<h3 class="card-title align-items-start flex-column">
+												<span class="card-label fw-bold text-dark">Collection History</span>
+												<span class="text-muted mt-1 fw-semibold fs-7"></span>
+											</h3>
+											<div class="card-toolbar">
+												<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
+												        data-kt-menu-trigger="click"
+												        data-kt-menu-placement="bottom-end"
+												        data-kt-menu-overflow="true">
+													<i class="bi bi-menu-button-fill fs-2"></i>
+												</button>
+												<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px"
+												     data-kt-menu="true">
+													<div class="menu-item px-3">
+														<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
+													</div>
+													<div class="separator mb-3 opacity-75"></div>
+													<div class="menu-item px-3">
+														<a href="#"
+														   class="menu-link px-3">New Ticket</a>
+													</div>
+													<div class="menu-item px-3">
+														<a href="#"
+														   class="menu-link px-3">New Customer</a>
+													</div>
+													<div class="menu-item px-3"
+													     data-kt-menu-trigger="hover"
+													     data-kt-menu-placement="right-start">
+														<a href="#"
+														   class="menu-link px-3">
+															<span class="menu-title">New Group</span>
+															<span class="menu-arrow"></span>
+														</a>
+														<div class="menu-sub menu-sub-dropdown w-175px py-4">
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">Admin Group</a>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">Staff Group</a>
+															</div>
+															<div class="menu-item px-3">
+																<a href="#"
+																   class="menu-link px-3">Member Group</a>
+															</div>
+														</div>
+													</div>
+													<div class="menu-item px-3">
+														<a href="#"
+														   class="menu-link px-3">New Contact</a>
+													</div>
+													<div class="separator mt-3 opacity-75"></div>
+													<div class="menu-item px-3">
+														<div class="menu-content px-3 py-3">
+															<a class="btn btn-primary btn-sm px-4"
+															   href="#">Generate Reports</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-body pt-5">
+											<div class="d-flex flex-stack">
+												<div class="d-flex align-items-center flex-row-fluid flex-wrap">
+													<div class="flex-grow-1 me-2">
+														<a href="#"
+														   class="text-gray-800 text-hover-primary fs-5 fw-bold">Jacob Jones</a>
+														<span class="fw-semibold d-block text-gray-500 fs-7 in_inr"
+														      data-cs-round="0"
+														      data-cs-currency="1">241234
+														</span>
+													</div>
+													<a href=""
+													   class="btn btn-sm btn-light fs-8 fw-bold"><i class="fs-2 me-1 bi bi-card-heading"></i>VIEW
+													</a>
+												</div>
+											</div>
+											<div class="separator separator-dashed my-4"></div>
+											// loop through
+										</div>
+									</div>
+									<div class="card card-flush mb-5 mb-xl-8">
+										<div class="card-header pt-5">
+											<h3 class="card-title align-items-start flex-column">
+												<span class="card-label fw-bold text-dark">Trending Feeds</span>
+												<span class="text-muted mt-1 fw-semibold fs-7">8k social visitors</span>
+											</h3>
+											<div class="card-toolbar">
+												<a href="../../demo2/dist/pages/social/activity.html"
+												   class="btn btn-sm btn-light">View All</a>
+											</div>
+										</div>
+										<div class="card-body">
+											<div class="row g-3 g-lg-6">
+												<div class="col-md-6">
+													<a href="">
+														<img src="assets/media/stock/600x600/img-33.jpg"
+														     class="rounded w-100"
+														     alt="" />
+													</a>
+												</div>
+												<div class="col-md-6">
+													<a href="">
+														<img src="assets/media/stock/600x600/img-26.jpg"
+														     class="rounded w-100"
+														     alt="" />
+													</a>
+												</div>
+												<div class="col-md-6">
+													<a href="">
+														<img src="assets/media/stock/600x600/img-25.jpg"
+														     class="rounded w-100"
+														     alt="" />
+													</a>
+												</div>
+												<div class="col-md-6">
+													<a href="">
+														<img src="assets/media/stock/600x600/img-35.jpg"
+														     class="rounded w-100"
+														     alt="" />
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+				<div id="kt_app_footer"
+				     class="app-footer">
+					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+						@lokesh
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--@@ Javascript-->
+<script>var hostUrl = "assets/";</script>
+<!--@@ Global Javascript Bundle(mandatory for all pages)-->
+<script src="assets/plugins/global/plugins.bundle.js"></script>
+<script src="assets/js/scripts.bundle.js"></script>
+<script src="assets/js/scripts.common.js"></script>
+
+<!--@@ Vendors Javascript(used for this page only)-->
+
+
+<!--@@ Custom Javascript(used for this page only)-->
+<script src="assets/js/custom/pages/social/feeds.js"></script>
+
+
+</body>
+</html>

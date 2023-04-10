@@ -1,0 +1,181 @@
+{
+  "uuid": "25b40927-8c04-42fd-87a0-4aba4237ef47",
+  "lastMigration": 27,
+  "name": "Management > Users",
+  "endpointPrefix": "management/users",
+  "latency": 0,
+  "port": 4260,
+  "hostname": "127.0.0.1",
+  "folders": [
+    {
+      "uuid": "68d780b3-d981-43e7-9a94-a7c6c1ef87cf",
+      "name": "listing",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "7646e291-30de-41a7-97a4-831edf579ae9"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "7646e291-30de-41a7-97a4-831edf579ae9",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "listing",
+      "responses": [
+        {
+          "uuid": "db8052d1-8193-4218-b442-deabc8be9697",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page_open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./listing/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "0e5b9788-4524-4937-bb0a-28ab21749e38",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page 1",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./listing/users_cards_page1.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "1",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "paging",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "55f5ebad-4ec8-45f2-8320-204eef114644",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page2",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./listing/users_cards_page2.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "2",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "paging",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "68d780b3-d981-43e7-9a94-a7c6c1ef87cf"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

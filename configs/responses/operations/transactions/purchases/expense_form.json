@@ -1,0 +1,102 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Lokesh" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+    "expense" : {
+      "group_id" : [
+        "int: entry_id" ,
+        "url: Bank Name" ,
+        "str: current balance"
+      ]
+    }
+  } ,
+  "data"    : {
+    "taxrate" : [
+      {
+        "lid"  : 40 ,
+        "name" : "Out of Scope"
+      } ,
+      {
+        "lid"  : 41 ,
+        "name" : "non-GST supply"
+      } ,
+      {
+        "lid"  : 42 ,
+        "name" : "12% GST"
+      }
+    ] ,
+    "bank"    : [
+      {
+        "lid"     : 10 ,
+        "name"    : "SBI Bank" ,
+        "balance" : "52374.52" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 11 ,
+        "name"    : "HDFC Bank" ,
+        "balance" : "1234.2" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 12 ,
+        "name"    : "KOTAK Bank" ,
+        "balance" : "89027" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 14 ,
+        "name"    : "Lokesh Bank" ,
+        "balance" : "1892.54" ,
+        "suffix"  : "0"
+      }
+    ] ,
+    "credit"  : [
+      {
+        "lid"     : 10 ,
+        "name"    : "ICICI OD Account" ,
+        "balance" : "-52345" ,
+        "suffix"  : "1"
+      }
+    ] ,
+    "nature"  : [
+      {
+        "lid"  : 4 ,
+        "name" : "TAX Inclusive"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "TAX Exclusive"
+      }
+    ] ,
+    "group"   : [
+      {
+        "id"     : 24 ,
+        "name"   : "Lokesh Kumar" ,
+        "alias"  : "Payable:" ,
+        "string" : "0" ,
+        "group"  : "Assets"
+      } , {
+        "id"     : 25 ,
+        "name"   : "EBill" ,
+        "alias"  : "Receivable:" ,
+        "string" : "0" ,
+        "group"  : "Utility Expenses"
+      } , {
+        "id"     : 25 ,
+        "name"   : "LFR<" ,
+        "alias"  : "Receivable:" ,
+        "string" : "0" ,
+        "group"  : "Non-Operating Expenses"
+      }
+    ]
+  }
+}

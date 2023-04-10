@@ -1,0 +1,7 @@
+{
+  id          : "",
+  name        : "accounts",
+  description : "Accounts",
+  icon        : "FOLDER",
+  sortWeight  : 1000000
+}

@@ -1,0 +1,39 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "locations" : {
+      "group_id" : [
+        "int : id",
+        "int : location_name"
+      ]
+    }
+  },
+  "data" : {
+    "locations" : {
+      "21" : [
+        21 , 
+        "Location 1"
+      ],
+      "22" : [
+        22 , 
+        "Location 2"
+      ],
+      "23" : [
+        23 , 
+        "Location 3"
+      ],
+      "24" : [
+        24 , 
+        "Location 4"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "25-03-2023" ,
+      "author"     : "dinesh" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "users" : {
+      "id" : ["id" , "avatar" , "name" , "alias" , "role_id" , "last_login" , "two-step-verification" , "joined_date"]
+    } ,
+    "date"  : {
+      "joined_date" : ["2023-03-25"]
+    } ,
+    "role"  : {
+      "role_id" : ["Administrator"]
+    }
+  } ,
+  "data"    : {
+    "users" : {
+      "1" : ["1" , "avatars/300-2.jpg" , "dinesh" , "dinu" , "11" , "yesterday" , "0" , "21"] ,
+      "2" : ["2" , "avatars/300-3.jpg" , "John" , "johnny" , "12" , "today" , "1" , "22"] ,
+      "3" : ["3" , "avatars/300-4.jpg" , "Emma" , "emmy" , "13" , "2 days ago" , "1" , "23"] ,
+      "4" : ["4" , "avatars/300-5.jpg" , "Peter" , "pete" , "14" , "last week" , "0" , "24"]
+    } ,
+    "date"  : {
+      "21" : ["2023-03-25"] ,
+      "22" : ["2022-04-12"] ,
+      "23" : ["2023-01-15"] ,
+      "24" : ["2023-02-27"]
+    } ,
+    "role"  : {
+      "11" : ["Administrator"] ,
+      "12" : ["developer"] ,
+      "13" : ["analyst"] ,
+      "14" : ["Cashier"]
+    }
+  }
+}

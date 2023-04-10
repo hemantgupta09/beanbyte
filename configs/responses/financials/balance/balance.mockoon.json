@@ -1,0 +1,235 @@
+{
+  "uuid": "70ba33a4-8382-472f-96e0-a66e01a7efef",
+  "lastMigration": 27,
+  "name": "Financials  > balance",
+  "endpointPrefix": "financials/balance",
+  "latency": 0,
+  "port": 4501,
+  "hostname": "localhost",
+  "folders": [
+    {
+      "uuid": "cbf870cc-09e5-4bcc-a87c-7b524f5b4e5b",
+      "name": "tformat",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "14a6b463-6b57-4d50-9fea-5ba79548364d"
+        }
+      ]
+    },
+    {
+      "uuid": "02973a89-9405-4a1f-ae40-3bc6edb2c604",
+      "name": "comparison",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "60557bbe-43c7-4694-b7b9-9375574226a8"
+        }
+      ]
+    },
+    {
+      "uuid": "2a3d5fd7-f419-4060-bc16-feeed7584d5e",
+      "name": "detailed",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "bf5ec7c6-517e-47b5-a1ed-00bb849ba7f1"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "14a6b463-6b57-4d50-9fea-5ba79548364d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "tformat",
+      "responses": [
+        {
+          "uuid": "97fc1254-28aa-442f-bd13-ac2d379b6f36",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./tformat/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "60557bbe-43c7-4694-b7b9-9375574226a8",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "comparison",
+      "responses": [
+        {
+          "uuid": "a18c128d-1d8d-4218-a698-2ea4d420cc05",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./comparison/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "31903b66-e933-4de9-9e28-bcf44a428815",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "./comparison/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "bf5ec7c6-517e-47b5-a1ed-00bb849ba7f1",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "detailed",
+      "responses": [
+        {
+          "uuid": "30e7e621-98d1-4792-87c7-27ec8777717b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./detailed/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "cbf870cc-09e5-4bcc-a87c-7b524f5b4e5b"
+    },
+    {
+      "type": "folder",
+      "uuid": "02973a89-9405-4a1f-ae40-3bc6edb2c604"
+    },
+    {
+      "type": "folder",
+      "uuid": "2a3d5fd7-f419-4060-bc16-feeed7584d5e"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "localhost",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

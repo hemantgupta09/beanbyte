@@ -1,0 +1,40 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "name"                : "Dinesh Kumar" ,
+    "role"                : "1" ,
+    "phone"               : "8757349832" ,
+    "email"               : "dinesh@gmail.com" ,
+    "basic_salary"        : "23434" ,
+    "nett_salary"         : "4329349" ,
+    "outstanding"         : "2343243" ,
+    "allow_salary"        : "23432" ,
+    "absents"             : "34" ,
+    "notify"              : "1" ,
+    "rule"                : "1" ,
+    "deduction"           : "1" ,
+    "colldiff_salary"     : "1" ,
+    "basic_allowance"     : "23434" ,
+    "allow_employment"    : "45454" ,
+    "absent_deduction"    : "1" ,
+    "colldiff_employment" : "1"
+  }
+}

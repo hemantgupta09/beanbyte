@@ -1,0 +1,76 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "years" : {
+      "group_id" : [
+        "int : id",
+        "str : customer_name",
+        "str : alias",
+        "int : category_id",
+        "int : status"
+      ]
+    }
+  },
+  "sample1" : {
+    "years" : {
+      "group_id" : [
+        "int : id",
+        "str : category_name"
+      ]
+    }
+  },
+  "data" : {
+    "customers" : {
+      "21" : [
+        21 ,
+        "Lokesh Kumar" ,
+        "lucky" ,
+        "0" ,
+        "2"
+      ] ,
+      "22" : [
+        22 ,
+        "Naveen Kumar" ,
+        "vicky" ,
+        "0" ,
+        "3"
+      ] ,
+      "23" : [
+        23,
+        "Suresh Kumar" ,
+        "suri" ,
+        "0" ,
+        "4"
+      ] ,
+      "24" : [
+        24 ,
+        "Rakesh Kumar" ,
+        "rakhi" ,
+        "0" ,
+        "2"
+      ]
+    } ,
+    "categories" : {
+      "2" : [
+        2,
+        "Govt Vehicles"
+      ] ,
+      "3" : [
+        3,
+        "Regular Customers"
+      ] ,
+      "4" : [
+        4,
+        "Agriculture Customers"
+      ]
+    }
+  }
+}

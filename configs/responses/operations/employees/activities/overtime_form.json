@@ -1,0 +1,40 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Sagar" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+    "name" : {
+      "employee" : [
+        "int: group_id" ,
+        "str: Employee Name"
+      ]
+    }
+  } ,
+  "data"    : {
+    "employee" : [
+      {
+        "lid"  : 10 ,
+        "name" : "Lokesh Kumar"
+      } ,
+      {
+        "lid"  : 11 ,
+        "name" : "Naveen Kumar"
+      } ,
+      {
+        "lid"  : 12 ,
+        "name" : "Suresh Kumar"
+      } ,
+      {
+        "lid"  : 14 ,
+        "name" : "Rakesh Kumar"
+      }
+    ]
+  }
+}

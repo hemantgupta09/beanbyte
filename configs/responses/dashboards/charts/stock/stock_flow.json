@@ -1,0 +1,46 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "dataset" : [
+      {
+        "name" : "Upper" ,
+        "type" : "line" ,
+        "data" : [120 , 120 , 120 , 120 , 120 , 120 , 120 , 120 , 120 , 120]
+      } ,
+      {
+        "name" : "Fuel Stock" ,
+        "type" : "line" ,
+        "data" : [60 , 50 , 80 , 40 , 100 , 600 , 80 , 70 , 60 , 65]
+      } ,
+      {
+        "name" : "Lower" ,
+        "type" : "line" ,
+        "data" : [40 , 40 , 40 , 40 , 40 , 40 , 40 , 4000 , 40 , 40]
+      } ,
+      {
+        "name" : "Dry Reference" ,
+        "type" : "line" ,
+        "data" : [20 , 20 , 20 , 200 , 20 , 20 , 20 , 20 , 20 , 20]
+      }
+    ] ,
+    "labels"  : ["1 Jan" , "2 Jan" , "3 Jan" , "4 Jan" , "5 Jan" , "6 Jan" , "7 Jan" , "8 Jan" , "9 Jan" , "10 Jan"]
+  }
+}

@@ -1,0 +1,2961 @@
+{
+  "uuid": "fb5678f6-cd35-4417-b1b4-878b6f76a329",
+  "lastMigration": 27,
+  "name": "Operations > Transactions",
+  "endpointPrefix": "operations/transactions",
+  "latency": 0,
+  "port": 4110,
+  "hostname": "127.0.0.1",
+  "folders": [
+    {
+      "uuid": "35ac8054-134a-406c-ae47-328c796bef58",
+      "name": "banking",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "11fa7b1b-807b-4b23-b8d7-14b6f2032d1f"
+        },
+        {
+          "type": "route",
+          "uuid": "1a46d482-d84d-483d-99a9-086965bbc71c"
+        }
+      ]
+    },
+    {
+      "uuid": "aec115bc-3fbf-4002-b231-5c6166160e7f",
+      "name": "payments",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "44677b32-fc88-477f-94f5-7cbf730b8678"
+        },
+        {
+          "type": "route",
+          "uuid": "bb0c3186-aa90-48cd-9344-8b937bc2a8f8"
+        }
+      ]
+    },
+    {
+      "uuid": "1efb20c5-ec39-44ff-a7a9-32a4c755992c",
+      "name": "sales",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "83527d09-0b1f-468e-9987-1220d112762b"
+        },
+        {
+          "type": "route",
+          "uuid": "5bce18aa-3625-46ad-910b-1d7f20906f6b"
+        }
+      ]
+    },
+    {
+      "uuid": "31fd312f-70be-463d-878b-8b2bba2c5ec9",
+      "name": "purchases",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "df36d450-106f-4620-943e-cebb733517dc"
+        },
+        {
+          "type": "route",
+          "uuid": "790acc01-34f1-4983-b5a8-2042be7dd447"
+        }
+      ]
+    },
+    {
+      "uuid": "c3f96813-e5ac-4dc9-bee3-775abdfcf0c3",
+      "name": "receipts",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "6e490041-869d-426a-b5ff-a76176c5cb76"
+        },
+        {
+          "type": "route",
+          "uuid": "7378ffea-27f9-41b2-bd45-0fc89d2bc99a"
+        }
+      ]
+    },
+    {
+      "uuid": "fe82a7c4-3f61-4963-9441-824419402aad",
+      "name": "journals",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "b19315f8-ee3a-460f-9281-ea1b58d4b43f"
+        },
+        {
+          "type": "route",
+          "uuid": "a875b2eb-c389-47a3-86ad-1ae172d15c1f"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "11fa7b1b-807b-4b23-b8d7-14b6f2032d1f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "banking",
+      "responses": [
+        {
+          "uuid": "206e2efc-00ec-4cd5-9b30-821ec2a49b5f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Page Open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "1e050544-8a58-4eda-9069-1678719f9de1",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "deposit form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/deposit_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "deposit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "e3374ba9-efb3-48e5-96b0-18cb0ef42f5e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "deposit table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/deposit_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "deposit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "4f143687-0431-4590-b2de-8a027142cf73",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "withdrawal form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/withdrawal_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "withdrawal",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "498ab50f-7cca-4094-8915-00cd1322b48b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "withdrawal table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/withdrawal_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "withdrawal",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "6c1d39e0-5836-441e-b4fc-9e6a2d018b9c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "transfer form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/transfer_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "transfer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "6076f10d-2ea2-41d8-ad9d-2ceb9fba29a7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "transfer table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/transfer_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "transfer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "f62eb745-bf9e-41b5-8771-4d8a2102df45",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Clearance form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/clearance_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "clearance",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "ccd646d2-d936-4d42-80c7-631e2b02addb",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "clearance table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/clearance_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "clearance",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0863e3c9-6166-4ce9-a857-3fe5f96c4183",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Clearance load",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/clearance_load.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "clearance",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "load",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "d94111a3-4c5e-43e2-95fa-97302f2105f4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "modal card",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/modal_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "auto",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "modal",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "882c0583-4b43-43e5-a8bb-714bf1084143",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "delete card",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/delete_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "delete",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "card",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "b19315f8-ee3a-460f-9281-ea1b58d4b43f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "journals",
+      "responses": [
+        {
+          "uuid": "81dd635e-4ddb-48c9-a561-418d38962397",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Page Open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./journals/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "5dd2e316-259d-4d2b-b293-891958f50d93",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "modal card",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./journals/modal_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "auto",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "modal",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "c9424419-d507-41db-8485-8140502216c3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "entry form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./journals/entry_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "entry",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "44677b32-fc88-477f-94f5-7cbf730b8678",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "payments",
+      "responses": [
+        {
+          "uuid": "d48684e0-6016-40cc-a88e-e5ff1d7af10b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Page Open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "845a1dd9-5be8-4ace-afbb-5a91b56ef9b1",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "supplier form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/supplier_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "supplier",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "940e99e0-b81f-478a-b392-6df787c22768",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "supplier table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/supplier_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "supplier",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "cbbb4575-5174-4186-8e59-a036f313b62e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "operating form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/operating_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "operating",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "3a994348-dcf9-44b3-a119-0bca8fef30c7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "operating table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/operating_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "operating",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "b5c9293c-bde9-46a2-a965-38f500e1d906",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "salary form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/salary_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "salary",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "d85f2366-d596-4baa-aa23-91853543e96e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "salary table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/salary_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "salary",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "aecd0283-9127-4086-9ac9-1ee4a00381d3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "vendor form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/vendor_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "vendor",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "50db9bb9-863d-4cf8-a5ca-f02293d40166",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "vendor table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/vendor_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "vendor",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0a101f65-0c9d-41e0-8c4c-b212a90db824",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "vendor load",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/vendor_load.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "vendor",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "load",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "8ed7d3e7-6880-48d0-9087-85d41a98a142",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "modal card",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/modal_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "auto",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "modal",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "55ee20c5-eea7-436d-961a-4921ae2a6625",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "loans form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/loans_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "loans",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "667b800b-775c-4923-8b73-bbbad7538cc8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "loans table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/loans_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "loans",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "262afa54-2728-4ddb-95b0-23385a9c7b60",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "loans load",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/loans_load.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "loans",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "load",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "83527d09-0b1f-468e-9987-1220d112762b",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "sales",
+      "responses": [
+        {
+          "uuid": "c09d1ee8-da9c-415e-96e7-08eda4517159",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Page Open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "946e77d7-71ba-4df6-b47a-173954a50bcc",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "cash form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/cash_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "cash",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "bdbba999-ee60-49c3-9053-2931e789135e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "cash table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/cash_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "cash",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "630e4e02-d3fe-4a72-a195-75b6e41594ed",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "credit form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/credit_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "credit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "7728acd0-050d-48b5-a14e-8f158b4d6ebd",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "credit table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/credit_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "credit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "b6400d55-3951-4fde-b4ed-a2e23071d3c3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "regular form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/regular_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "regular",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "bdd95ced-38af-44b6-a44e-3a975a74cc9c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "regular table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/regular_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "regular",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "dccef470-52ca-495b-84c5-d4871597dac6",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "separate form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/separate_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "separate",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "1983c071-8cd4-41e6-83c7-7a57982e430f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "separate table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/separate_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "separate",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "1203d3f2-c7b2-4752-a543-297c437be4c8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "modal card",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/modal_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "auto",
+              "value": "auto",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "modal",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "df36d450-106f-4620-943e-cebb733517dc",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "purchases",
+      "responses": [
+        {
+          "uuid": "60f7822f-35f9-4e73-a897-2c55bf124ecf",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Page Open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "44ca45ea-eeca-48a6-bc19-94faa5313afc",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "fuel form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/fuel_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "fuel",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "5a0e310d-0de2-478c-b065-98c604d88334",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "fuel table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/fuel_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "fuel",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "aa8deeb6-0795-4ba4-a3a1-08dd0665d63a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "oil form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/oil_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "oil",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "ddb7b5e6-68e9-43d6-b6a2-ab0637a5523a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "oil table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/oil_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "oil",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "5cba51d4-e584-4115-a4b3-499dce8e21f3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "goods form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/goods_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "goods",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "11896c4b-2aaa-4d27-8145-af48f074450b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "goods table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/goods_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "goods",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "9aec6041-bbb6-4493-9b73-9dc843bd1c2c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "expense form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/expense_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "expense",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "e4fc6cfa-387e-4c6b-a3d5-236b09b4f522",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "expense table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/expense_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "expense",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "290b141e-b2b5-46af-88eb-55a48706db38",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "modal card",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/modal_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "auto",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "modal",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "6e490041-869d-426a-b5ff-a76176c5cb76",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "receipts",
+      "responses": [
+        {
+          "uuid": "cbec004c-2f52-47e8-9f2d-6a41b62eb757",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Page Open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "a0979c49-3fe9-41cd-b9b0-3b6a904fe4f4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/customer_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "2d9afd0a-8958-40dd-8da4-b0352eb63977",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/customer_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "5d7e3e0a-b1db-4bd2-9955-96e9cdd4ab3c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "contact form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/contact_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "contact",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "e0ed70bb-e55d-4a1e-a8a9-5a4e0c1ae79b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "contact table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/contact_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "contact",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0c4d7ad6-1cd3-471d-938e-018e93360d2a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "income form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/income_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "income",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "7a676fd8-8ffc-46a3-bd4b-b407ea368d64",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "income table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/income_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "income",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "01200704-f823-4ed3-8a57-a2475ed944ea",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "transact form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/transact_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "transact",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "122c73c6-493d-48d3-b9e0-254ddcf23d45",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "transact table",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/transact_table.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "transact",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "table",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0b472775-0a9b-443b-a0b7-2b1625506198",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "modal card",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/modal_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "auto",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "modal",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "1a46d482-d84d-483d-99a9-086965bbc71c",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "banking",
+      "responses": [
+        {
+          "uuid": "a3b4fbab-8343-4b9f-bd76-44a8f036e51f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "deposit form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/deposit_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "deposit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "78c86eba-b928-4f6b-8ad6-bef9b52f4521",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "withdrawal form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/withdrawal_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "withdrawal",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "b40b3177-696e-480a-81ce-873eebc001db",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "transfer form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/transfer_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "transfer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "ebcbb86b-ffda-4cbe-ba85-5c5f8a415fb0",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Clearance form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/clearance_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "clearance",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "bb0c3186-aa90-48cd-9344-8b937bc2a8f8",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "payments",
+      "responses": [
+        {
+          "uuid": "15bffff9-44f3-41d2-9e0f-6a326b963b8c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Supplier form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/supplier_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "Supplier",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "d05496a4-8da9-4e20-ab1d-f96b29459d83",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "operating form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/operating_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "operating",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "00bd7f6e-4dfa-4ce1-98a5-78b58d6f2c6d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "salary form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/salary_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "salary",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "c706acae-ce0c-436e-962a-4e3e002e75ed",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "vendor form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./banking/vendor_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "vendor",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "e10611eb-e633-468c-8a22-568a4f50ef9d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "loans form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./payments/loans_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "loans",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "5bce18aa-3625-46ad-910b-1d7f20906f6b",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "sales",
+      "responses": [
+        {
+          "uuid": "d3306200-3e1e-4793-b0e5-11e16ea4bcea",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "cash form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/cash_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "cash",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "262a0eab-999d-4eed-8e76-1a59be268f9e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "credit form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/credit_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "credit",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "3f689516-da66-4dfc-8f0c-7bbff02b40c8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "regular form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/regular_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "regular",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "77102de3-b710-4e3f-9d64-32171ec34c4b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "separate form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./sales/separate_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "separate",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "790acc01-34f1-4983-b5a8-2042be7dd447",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "purchases",
+      "responses": [
+        {
+          "uuid": "470d68cd-d311-4628-aa72-5f45c4fa7266",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "fuel form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/fuel_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "fuel",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "87c17484-53cd-4895-b100-27a52c955cc7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "oil form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/oil_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "oil",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "ade4c6e0-5e3a-44eb-8925-bc4239e8a16f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "goods form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/goods_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "goods",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "ebc2d81e-3ed1-4ca4-a55d-08c5a23d9155",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "expense form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./purchases/expense_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "expense",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "7378ffea-27f9-41b2-bd45-0fc89d2bc99a",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "receipts",
+      "responses": [
+        {
+          "uuid": "ec6c1518-f0b3-4123-a206-66be83fbd56f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/customer_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "144f2277-29a7-4724-9dcd-02a87178d431",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "contact form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/contact_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "contact",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "48a241e8-4fa7-422a-a3cb-08df0664ff30",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "income form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/income_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "income",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "31d562e5-9bb7-4634-915e-6af078b29bc3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "transact form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./receipts/transact_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "transact",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "a875b2eb-c389-47a3-86ad-1ae172d15c1f",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "journals",
+      "responses": [
+        {
+          "uuid": "52539822-4303-43dd-b8dc-5450067936b9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Page Open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./journals/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "ff60c7d5-d1ba-49f8-9fff-66ab0b879013",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "modal card",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./journals/modal_card.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "auto",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "modal",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "47e54892-566f-4088-983e-acc46d6fcae9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "entry form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./journals/entry_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "entry",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "35ac8054-134a-406c-ae47-328c796bef58"
+    },
+    {
+      "type": "folder",
+      "uuid": "aec115bc-3fbf-4002-b231-5c6166160e7f"
+    },
+    {
+      "type": "folder",
+      "uuid": "1efb20c5-ec39-44ff-a7a9-32a4c755992c"
+    },
+    {
+      "type": "folder",
+      "uuid": "31fd312f-70be-463d-878b-8b2bba2c5ec9"
+    },
+    {
+      "type": "folder",
+      "uuid": "c3f96813-e5ac-4dc9-bee3-775abdfcf0c3"
+    },
+    {
+      "type": "folder",
+      "uuid": "fe82a7c4-3f61-4963-9441-824419402aad"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

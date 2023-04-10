@@ -1,0 +1,60 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "customer_table" : {
+      "id" : ["id" , "customer_name" , "description" , "earning" , "task" , "sales"]
+    } ,
+    "bill_report"    : {
+      "id" : ["id" , "bill_number" , "Customer_Account" , "date" , "slips" , "bill_value" , "discount" , "amount" , "received" , "status"]
+    } ,
+    "dates"          : {
+      "date" : ["2022-01-08"]
+    } ,
+    "status"         : {
+      "status" : ["Due"]
+
+    }
+  } ,
+  "data"    : {
+    "month"    : {
+      "11" : ["11" , "Bill-1" , "DPS School India" , "11" , "1" , "108000" , "587" , "8475974" , "0" , "0"] ,
+      "12" : ["12" , "Bill-2" , "DPS School India" , "12" , "5" , "128000" , "587" , "8475974" , "0" , "1"] ,
+      "13" : ["13" , "Bill-3" , "DPS School India" , "13" , "8" , "128000" , "587" , "8475974" , "0" , "1"] ,
+      "14" : ["14" , "Bill-4" , "DPS School India" , "14" , "3" , "128000" , "587" , "8475974" , "0" , "0"] ,
+      "15" : ["15" , "Bill-5" , "DPS School India" , "15" , "23" , "128000" , "587" , "8475974" , "0" , "0"] ,
+      "16" : ["16" , "Bill-6" , "DPS School India" , "16" , "34" , "128000" , "587" , "8475974" , "0" , "1"] ,
+      "17" : ["17" , "Bill-7" , "DPS School India" , "17" , "2" , "128000" , "587" , "8475974" , "0" , "0"] ,
+      "18" : ["18" , "Bill-8" , "DPS School India" , "18" , "4" , "128000" , "587" , "8475974" , "0" , "0"]
+    } ,
+    "dates"          : {
+      "11" : ["2022-01-08"] ,
+      "12" : ["2022-01-08"] ,
+      "13" : ["2022-01-02"] ,
+      "14" : ["2022-01-04"] ,
+      "15" : ["2022-01-06"] ,
+      "16" : ["2022-01-08"] ,
+      "17" : ["2022-01-03"] ,
+      "18" : ["2022-01-01"]
+    } ,
+    "status"         : {
+      "0" : ["Due"] ,
+      "1" : ["Paid"]
+    }
+  }
+}

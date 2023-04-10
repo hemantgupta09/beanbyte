@@ -1,0 +1,47 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "vehicle" : {
+      "id" : ["id" , "vehicle" , "driver" , "contact" , "type" , "lastvisit" , "sales"]
+    }
+  } ,
+  "data"    : {
+    "profile" : {
+      "name"     : "LOUT" ,
+      "position" : "salesman" ,
+      "status"   : "1" ,
+      "phone"    : "4789239823" ,
+      "email"    : "lout@example.com" ,
+      "salary"   : "23432" ,
+      "date"     : "14"
+    } ,
+    "status"  : {
+      "0" : ["DEACTIVATE"] ,
+      "1" : ["ACTIVATE"]
+    } ,
+    "dates"   : {
+      "11" : ["2022-11-10"] ,
+      "12" : ["2022-12-10"] ,
+      "13" : ["2022-13-10"] ,
+      "14" : ["2022-14-03"] ,
+      "15" : ["2022-15-10"] ,
+      "16" : ["2022-16-10"]
+    }
+  }
+}

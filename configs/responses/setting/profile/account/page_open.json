@@ -1,0 +1,77 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "pageState" : {
+      "state"     : {
+        "cid" : ["cid" , "name"]
+
+      } ,
+      "district"  : {
+        "cid" : ["cid" , "name"]
+
+      } ,
+      "language"  : {
+        "cid" : ["cid" , "name"]
+
+      } ,
+      "time_zone" : {
+        "cid" : ["cid" , "name"]
+
+      } ,
+      "currency"  : {
+        "cid" : ["cid" , "name"]
+
+      }
+    }
+  } ,
+  "data"    : {
+    "pageState" : {
+      "state"     : {
+        "1" : ["1" , "Rajasthan"] ,
+        "2" : ["2" , "Goa"] ,
+        "3" : ["3" , "kashmir"] ,
+        "4" : ["4" , "Himachal Pradesh"]
+      } ,
+      "district"  : {
+        "1" : ["1" , "Rajasthan"] ,
+        "2" : ["2" , "Goa"] ,
+        "3" : ["3" , "kashmir"] ,
+        "4" : ["4" , "Himachal Pradesh"]
+      } ,
+      "language"  : {
+        "1" : ["1" , "Hindi"] ,
+        "2" : ["2" , "English"] ,
+        "3" : ["3" , "Gujarati"] ,
+        "4" : ["4" , "tamil"]
+      } ,
+      "time_zone" : {
+        "1" : ["1" , "North"] ,
+        "2" : ["2" , "South"] ,
+        "3" : ["3" , "West"] ,
+        "4" : ["4" , "East"]
+      } ,
+      "currency"  : {
+        "1" : ["1" , "rupees"] ,
+        "2" : ["2" , "dollar"] ,
+        "3" : ["3" , "Euro"] ,
+        "4" : ["4" , "pound"]
+      }
+    }
+  }
+}

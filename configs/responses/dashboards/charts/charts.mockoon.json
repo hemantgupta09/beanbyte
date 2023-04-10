@@ -1,0 +1,547 @@
+{
+  "uuid": "abc60831-4929-47bc-8139-c88c9954a9ce",
+  "lastMigration": 27,
+  "name": "Charts in Dashboard",
+  "endpointPrefix": "dashboards/charts",
+  "latency": 0,
+  "port": 4010,
+  "hostname": "127.0.0.1",
+  "folders": [
+    {
+      "uuid": "4609ec9b-e84b-46b5-9841-c06f74fe47d3",
+      "name": "Business",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "f393ceda-8e4e-4cb9-951f-8f98a33a8dcb"
+        }
+      ]
+    },
+    {
+      "uuid": "a2a8ded4-2df3-4b5e-87e1-1088ca74da21",
+      "name": "Profilt",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "541809ca-5f23-4c20-b33c-e8542aee3fa1"
+        }
+      ]
+    },
+    {
+      "uuid": "1ec0a5ed-78e4-458d-85e8-6b3bf3ffaa7a",
+      "name": "Stock",
+      "collapsed": true,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "e24d1545-0968-4a79-976e-82f58751c39f"
+        }
+      ]
+    },
+    {
+      "uuid": "9ce42207-e21c-4894-9055-a6d7bc54859f",
+      "name": "Customers",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "ecf60be2-ece6-4cbb-b89c-fcb4c8b50eb5"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "f393ceda-8e4e-4cb9-951f-8f98a33a8dcb",
+      "type": "http",
+      "documentation": "Busines Status",
+      "method": "get",
+      "endpoint": "business",
+      "responses": [
+        {
+          "uuid": "362f21dd-2191-4f5a-a902-83c8f3ee9236",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Page Open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./business/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "81ef53f2-ad33-47a5-bc1b-ff0cdfeb9866",
+          "body": "",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "daily_chart",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./business/daily_chart.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "daily-sales",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "chart",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "8e9fc2b9-e025-4923-a421-fdfb4fed4ca0",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "working_chart",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./business/working_chart.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "working-capital",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "chart",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "69539f9e-6809-4b05-8bf1-0543b607b4bd",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "heads_chart",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./business/heads_chart.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "heads-breakup",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "chart",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "541809ca-5f23-4c20-b33c-e8542aee3fa1",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "profit",
+      "responses": [
+        {
+          "uuid": "84f9c5a1-d834-41cf-b895-39b3cd090988",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page_open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./profit/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "717e006d-7271-4036-9e04-2173f9a1903f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "items_trade",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./profit/items_trade.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "items-trade",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "chart",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "82027422-2a43-482b-b71e-7d361397bb7f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "profit_item",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./profit/gross_profit.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "profit-item",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "chart",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "e24d1545-0968-4a79-976e-82f58751c39f",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "stock",
+      "responses": [
+        {
+          "uuid": "7b589474-4bf1-4c64-a155-822513907647",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page_open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./stock/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "2a5a302e-552d-471d-aa65-6404763e4e91",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./stock/stock_flow.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "stock-flow",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "chart",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "ecf60be2-ece6-4cbb-b89c-fcb4c8b50eb5",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "customers",
+      "responses": [
+        {
+          "uuid": "979ad39d-5f99-4ec2-b481-cdad3d7a0767",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page_open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./customers/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "2403c7be-5577-4960-9940-1b163531a4d3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "credit_volume",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./customers/credit_volume.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "credit-volume",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "chart",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "b10e7c2d-97be-4244-b086-95897f13733f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer_balance",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./customers/customer_balance.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer-balance",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "chart",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "4609ec9b-e84b-46b5-9841-c06f74fe47d3"
+    },
+    {
+      "type": "folder",
+      "uuid": "a2a8ded4-2df3-4b5e-87e1-1088ca74da21"
+    },
+    {
+      "type": "folder",
+      "uuid": "1ec0a5ed-78e4-458d-85e8-6b3bf3ffaa7a"
+    },
+    {
+      "type": "folder",
+      "uuid": "9ce42207-e21c-4894-9055-a6d7bc54859f"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

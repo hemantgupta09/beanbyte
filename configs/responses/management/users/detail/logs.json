@@ -1,0 +1,43 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "25-03-2023" ,
+      "author"     : "dinesh" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "logs"  : {
+      "id" : ["id" , "status" , "description" , "date_id"]
+    } ,
+    "dates" : {
+      "date_id" : ["2022-12-12"]
+    }
+  } ,
+  "data"    : {
+    "logs"  : {
+      "1" : ["1" , "404 Wrn" , "this is the path" , "11"] ,
+      "2" : ["2" , "200 OK" , "another path" , "22"] ,
+      "3" : ["3" , "500 Err" , "yet another path" , "33"] ,
+      "4" : ["4" , "302 Red" , "the path less traveled" , "44"] ,
+      "5" : ["5" , "403 Forb" , "no trespassing" , "55"]
+    } ,
+    "dates" : {
+      "10" : ["2022-12-12"] ,
+      "11" : ["2022-12-12"] ,
+      "12" : ["2022-12-12"] ,
+      "13" : ["2022-12-12"] ,
+      "14" : ["2022-12-12"]
+    }
+  }
+}

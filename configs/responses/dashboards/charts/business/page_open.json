@@ -1,0 +1,149 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "session"         : {
+      "daily-sales"     : "0" ,
+      "working-capital" : "0" ,
+      "heads-breakup"   : "124"
+    } ,
+    "pageState"       : {
+      "days"     : [
+        {
+          "value"  : "0" ,
+          "key"    : "This Month" ,
+          "select" : true
+        } ,
+        {
+          "value"  : "1" ,
+          "key"    : "Last Month" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "30" ,
+          "key"    : "Last 30 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "60" ,
+          "key"    : "Last 60 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "90" ,
+          "key"    : "Last 90 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "365" ,
+          "key"    : "This Year" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "100" ,
+          "key"    : "Whole Time" ,
+          "select" : false
+        }
+      ] ,
+      "duration" : [
+        {
+          "value"  : "0" ,
+          "key"    : "This Month" ,
+          "select" : true
+        } ,
+        {
+          "value"  : "1" ,
+          "key"    : "Last Month" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "30" ,
+          "key"    : "Last 30 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "60" ,
+          "key"    : "Last 60 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "90" ,
+          "key"    : "Last 90 days" ,
+          "select" : false
+        }
+      ] ,
+      "masters"  : [
+        {
+          "value"  : "124" ,
+          "name"   : "Current Assets" ,
+          "select" : true
+        } ,
+        {
+          "value"  : "534" ,
+          "name"   : "Current Liability" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "224" ,
+          "name"   : "Indirect Expenses" ,
+          "select" : false
+        }
+      ]
+    } ,
+    "daily-sales"     : {
+      "dataset" : [
+        {
+          "name" : "Average sale" ,
+          "data" : [50 , 50 , 50 , 50 , 50 , 50 , 50]
+        } ,
+        {
+          "name" : "Daily Sales" ,
+          "data" : [45 , 52 , 38 , 45 , 33 , 54 , 32]
+        }
+      ] ,
+      "labels"  : ["01 Jan" , "02 Jan" , "03 Jan" , "04 Jan" , "05 Jan" , "06 Jan" , "07 Jan"]
+    } ,
+    "working-capital" : {
+      "dataset" : [
+        {
+          "name" : "Total" ,
+          "data" : [130 , 150 , 145 , 208 , 309 , 240 , 110]
+        } ,
+        {
+          "name" : "Cash" ,
+          "data" : [50 , 55 , 90 , 70 , 120 , 90 , 100]
+        } ,
+        {
+          "name" : "Bank" ,
+          "data" : [40 , 10 , 30 , 78 , 89 , 70 , 70]
+        } ,
+        {
+          "name" : "Clearance" ,
+          "data" : [30 , 45 , 25 , 60 , 100 , 80 , 85]
+        }
+      ] ,
+      "labels"  : ["01 Jan" , "02 Jan" , "03 Jan" , "04 Jan" , "05 Jan" , "06 Jan" , "07 Jan"]
+    } ,
+    "heads-breakup"   : {
+      "dataset" : [40 , 20 , 30 , 10] ,
+      "labels"  : ["Credit Customers" , "Bank Accounts" , "Cash-in-Hand" , "Others"]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "years" : {
+      "group_id" : [
+        "int : id",
+        "str : group_name",
+        "str : detail",
+        "int : numbers",
+        "int : status"
+      ]
+    }
+  },
+  "data" : {
+    "groups" : {
+      "2" : [
+        2 , 
+        "Govt Vehicles" , 
+        "10 A/cs" , 
+        "2" , 
+        "1"
+      ],
+      "3" : [
+        3 , 
+        "Regular Customers" , 
+        "10 A/cs" , 
+        "2" , 
+        "1"
+      ],
+      "4" : [
+        4 , 
+        "Agriculture Customers" , 
+        "10 A/cs" , 
+        "2" , 
+        "1"
+      ]
+    }
+  }
+}

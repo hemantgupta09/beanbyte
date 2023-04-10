@@ -1,0 +1,98 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "data" : {
+      "group_id" : [
+        "int : id",
+        "int : customer_id",
+        "int : Opening",
+        "int : Sold",
+        "int : SubTotal",
+        "int : receipts",
+        "int : other",
+        "int : close",
+        "int : current"
+      ]
+    }
+  },
+  "data" : {
+    "detail": {
+      "account": "DPS School, India",
+      "closing": "340971",
+      "range": ["2021-10-20", "2022-01-30"],
+      "ledger_id": 232
+    },
+    "data" : {
+      "12" : [
+        234 , 
+        1 , 
+        "1" , 
+        "87.60" , 
+        "171.23" , 
+        "1" , 
+        "15,000" , 
+        "4" , 
+        "132" 
+      ],
+      "13" : [
+        406 , 
+        1 , 
+        "2" , 
+        "89.20" , 
+        "168.16" , 
+        "1" , 
+        "16,000" , 
+        "2" , 
+        "132" 
+      ],
+      "14" : [
+        496 , 
+        1 , 
+        "3" , 
+        "87.60" , 
+        "171.23" , 
+        "1" , 
+        "17,000" , 
+        "9" , 
+        "132" 
+      ],
+      "15" : [
+        505 , 
+        1 , 
+        "4" , 
+        "87.60" , 
+        "171.23" , 
+        "4" , 
+        "18,000" , 
+        "6" , 
+        "132" 
+      ]
+    },
+    "customers" : {
+      "1" : [
+        1, 
+        "Lokesh Kumar" 
+      ],
+      "2" : [
+        2, 
+        "Naveen Kumar" 
+      ],
+      "3" : [
+        3, 
+        "Suresh Kumar" 
+      ],
+      "4" : [
+        4, 
+        "Rakesh Kumar" 
+      ]
+    }
+  }
+}

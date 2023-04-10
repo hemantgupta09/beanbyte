@@ -1,0 +1,25 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "25-03-2023" ,
+      "author"     : "dinesh" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "role"     : "Manager" ,
+    "controls" : ["Some Admin Controls" , "View Financial Summaries only" , "View and Edit API Controls" , "View Payouts only" , "View and Edit Disputes" , "Load here all..."]
+  }
+}

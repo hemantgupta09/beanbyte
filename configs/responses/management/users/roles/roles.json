@@ -1,0 +1,59 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "25-03-2023" ,
+      "author"     : "dinesh" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "id" : {
+      "id"          : 1 ,
+      "role"        : "Administrator" ,
+      "total_users" : 5 ,
+      "controls"    : ["All Admin Controls" , "View and Edit Financial Summaries" , "Enabled Bulk Reports" , "View and Edit Payouts" , "View and Edit Disputes"]
+    }
+  } ,
+  "data"    : {
+    "1" : {
+      "id"          : 1 ,
+      "role"        : "Administrator" ,
+      "total_users" : 5 ,
+      "controls"    : ["All Admin Controls" , "View and Edit Financial Summaries" , "Enabled Bulk Reports" , "View and Edit Payouts" , "View and Edit Disputes"]
+    } ,
+    "2" : {
+      "id"          : 2 ,
+      "role"        : "Developer" ,
+      "total_users" : 14 ,
+      "controls"    : ["Some Admin Controls" , "View Financial Summaries only" , "View and Edit API Controls" , "View Payouts only" , "View and Edit Disputes"]
+    } ,
+    "3" : {
+      "id"          : 3 ,
+      "role"        : "Analyst" ,
+      "total_users" : 4 ,
+      "controls"    : ["No Admin Controls" , "View and Edit Financial Summaries" , "Enabled Bulk Reports" , "View Payouts only" , "View Disputes only"]
+    } ,
+    "4" : {
+      "id"          : 4 ,
+      "role"        : "Support" ,
+      "total_users" : 23 ,
+      "controls"    : ["No Admin Controls" , "View Financial Summaries only" , "View Payouts only" , "View and Edit Disputes" , "Response to Customer Feedback"]
+    } ,
+    "5" : {
+      "id"          : 5 ,
+      "role"        : "Trial" ,
+      "total_users" : 546 ,
+      "controls"    : ["No Admin Controls" , "View Financial Summaries only" , "View Bulk Reports only" , "View Payouts only" , "View Disputes only"]
+    }
+  }
+}

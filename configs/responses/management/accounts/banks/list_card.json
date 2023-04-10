@@ -1,0 +1,67 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "list" : {
+      "id" : [
+        "id" ,
+        "icon" ,
+        "name" ,
+        "cate_id" ,
+        "ifsc" ,
+        "account_number" ,
+        "balance" ,
+        "last_reconciliation"
+      ]
+    }
+  } ,
+  "data"    : {
+    "list" : {
+      "11" : [
+        11 ,
+        "avatars/300-2.jpg" ,
+        "SBI Bank" ,
+        "11" ,
+        "SIB341" ,
+        "834792479324793" ,
+        "352345" ,
+        "2022-03-25"
+      ] ,
+      "12" : [
+        12 ,
+        "avatars/300-3.jpg" ,
+        "PNB Bank" ,
+        "12" ,
+        "SIB341" ,
+        "349873988937327" ,
+        "52345" ,
+        "2022-03-21"
+      ] ,
+      "13" : [
+        13 ,
+        "avatars/300-4.jpg" ,
+        "BOB Bank" ,
+        "13" ,
+        "SIB341" ,
+        "843848383783479" ,
+        "2345" ,
+        "2022-03-20"
+      ]
+    }
+  }
+}

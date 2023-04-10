@@ -1,0 +1,3002 @@
+{
+  "uuid": "ee1d3415-68f0-472f-9d67-e9c7a1bf9f68",
+  "lastMigration": 27,
+  "name": "Reports>Customers",
+  "endpointPrefix": "reports/customers",
+  "latency": 0,
+  "port": 4350,
+  "hostname": "",
+  "folders": [
+    {
+      "uuid": "161268c9-491c-455f-8856-7a2351e4741a",
+      "name": "Sales",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "16b1020f-ff31-4830-b8bb-bfe54311f299"
+        },
+        {
+          "type": "route",
+          "uuid": "4bbf6b94-c5e8-4335-9343-54136116c2b4"
+        }
+      ]
+    },
+    {
+      "uuid": "6010e754-4296-4083-b6e3-c233e94efd28",
+      "name": "Transactions",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "42b1206c-a1ee-4d17-98e0-711e6c0ecd6e"
+        },
+        {
+          "type": "route",
+          "uuid": "57fd8dda-db54-4c62-840e-c7ec68d7a536"
+        }
+      ]
+    },
+    {
+      "uuid": "ed264164-e28a-499e-93e1-cfd804b8a302",
+      "name": "Bills",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "910dd527-53f7-422f-acbd-5cf1986b46a4"
+        },
+        {
+          "type": "route",
+          "uuid": "c6680a6f-9526-48a3-b9ca-2411fedafd5d"
+        }
+      ]
+    },
+    {
+      "uuid": "553b9d68-92a3-4457-97a0-378249f2be8c",
+      "name": "Indents",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "d36fec39-95b1-45a1-a14b-c9150bff9145"
+        },
+        {
+          "type": "route",
+          "uuid": "1f461179-b36d-45e4-bb74-098f7ceb40c9"
+        }
+      ]
+    },
+    {
+      "uuid": "2c4428e5-087f-429a-9393-8ef09b83dc78",
+      "name": "Summary",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "0cfc4311-75ed-49e4-aaca-3badaa126f32"
+        },
+        {
+          "type": "route",
+          "uuid": "2537d671-84b5-4733-b40f-a50f93483b62"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "16b1020f-ff31-4830-b8bb-bfe54311f299",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "sales",
+      "responses": [
+        {
+          "uuid": "b9dc2063-fa2e-403d-9ddf-d6eb8f610951",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./sales/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "f750373b-c47f-488d-93d0-a1663a5d7085",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "direct-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./sales/direct_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "direct",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "3f96873b-41e0-4d72-9765-9b059da48f83",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "direct-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./sales/direct_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "direct",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "bbd3119b-7fc4-4b7e-a6c2-2cd67ab2117d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "group-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./sales/group_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "group",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "96091769-75b5-4ec6-aa31-fd63bfeea55b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "group-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./sales/group_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "group",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "5c82bfee-7ede-49d8-bf70-3e52d369c3ad",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "vehicle-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./sales/vehicle_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "vehicle",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "12b3a0d4-e689-46b9-b22d-b877d8aac9f3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "vehicle-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./sales/vehicle_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "vehicle",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "42b1206c-a1ee-4d17-98e0-711e6c0ecd6e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "transactions",
+      "responses": [
+        {
+          "uuid": "3e8a6bf9-63c8-4990-becc-f6453237b0b8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./transactions/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "c462ee4e-93bc-4c38-9f56-6d997e39db1a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "simple-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./transactions/simple_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "simple",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a237ab6b-5ae1-4a0d-8f3d-504ee510c5d5",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "simple-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./transactions/simple_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "simple",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "3ec1dc06-3484-4534-965e-9b988c0e9a0a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "detailed-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./transactions/detailed_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "detailed",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "d47a2b0a-2290-4874-868c-c46fb6092c4e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "detailed-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./transactions/detailed_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "detailed",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "e6232e1a-eca5-4eea-bf15-bf3c9c4aeb1e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "statement-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./transactions/statement_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "statement",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "90db4f75-a581-4dac-9f91-330a4bb56651",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "statement-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./transactions/statement_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "statement",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "910dd527-53f7-422f-acbd-5cf1986b46a4",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "bills",
+      "responses": [
+        {
+          "uuid": "85b469f2-a89c-4db3-afec-ec7df015e072",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./bills/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "0f8827de-3d9c-4e1d-af37-830beadd1a35",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./bills/view_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "e9844d5e-6c10-4c15-b604-de385aee29ef",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./bills/view_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "830a0cce-dc3e-447c-a948-5498f6035656",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "statement-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./bills/statement_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "statement",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "6fce8e86-5d2d-436a-8961-14ab8c4cbbac",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "statement-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./bills/statement_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "statement",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "4b3ad078-c3ee-4443-babd-58950bd903f3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./bills/customer_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "fdd44526-f635-4be0-997f-60d0afacd2c2",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./bills/customer_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "d36fec39-95b1-45a1-a14b-c9150bff9145",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "indents",
+      "responses": [
+        {
+          "uuid": "49baeb23-4639-4c59-825d-fcd439bbcfaa",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./indents/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "bdf665b9-42fd-49f9-be23-b3756b4ae694",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "bucket-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./indents/bucket_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "bucket",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "d20ab158-966c-4c45-a6c0-2cc458f2477d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "bucket-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./indents/bucket_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "bucket",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "92c0ae94-95f8-4208-9642-479e4cfb861e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "period-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./indents/period_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "period",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "2223ebbc-b0fa-4030-b2bf-a78a4629bb3e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "period-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./indents/period_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "period",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "c69e150b-40c7-4624-aebf-809bd2f8c93c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "book-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./indents/book_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "book",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "f44d2342-ade4-4926-bb5d-0fd739e51d83",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "book-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./indents/book_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "book",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "ca6c1665-5799-4f1b-a387-258cd9f3a0af",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./indents/customer_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "12bf302f-26f5-40fa-bd5f-8ef5f775c223",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./indents/customer_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "0cfc4311-75ed-49e4-aaca-3badaa126f32",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "summary",
+      "responses": [
+        {
+          "uuid": "6b3bcd11-6276-4bbe-8c23-388af78399b6",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./summary/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "7bda7430-fec4-4026-9180-bf638f37eb9f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "accounts-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./summary/accounts_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "accounts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "1bb266e5-d195-4d06-b133-1897e68cfe28",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "accounts-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./summary/accounts_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "accounts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a011287a-ffec-464e-a950-4504801050d5",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "trade-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./summary/trade_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "trade",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0ac88f8a-38a5-4987-be54-9fba7a7f6941",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "trade-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./summary/trade_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "trade",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "287a7761-75e8-47dc-acf7-c3df9f9dc4f1",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "group-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./summary/group_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "group",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "c7c116ef-5f35-46a8-a322-ebae65440b72",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "group-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "./summary/group_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "group",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "4bbf6b94-c5e8-4335-9343-54136116c2b4",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "sales",
+      "responses": [
+        {
+          "uuid": "80baa2b5-38e7-4153-8e6f-5a648044454b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\sales\\page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "55040132-e087-4059-a08d-70ea65596738",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "direct-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\sales\\direct_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "direct",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "39afaa51-ebf6-4347-92dd-609d81b422dd",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "direct-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\sales\\direct_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "direct",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a825672c-0ade-4016-a845-033df2f902e4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "group-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\sales\\group_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "group",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "36fb48da-905f-4e21-a418-faaa6fcab7cc",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "group-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\sales\\group_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "group",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "6de5648e-593b-4b38-b2f4-9abbc1b1cc00",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "vehicle-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\sales\\vehicle_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "vehicle",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "212e53f4-a46c-4b73-9f35-b0380bee155c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "vehicle-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\sales\\vehicle_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "vehicle",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "57fd8dda-db54-4c62-840e-c7ec68d7a536",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "transactions",
+      "responses": [
+        {
+          "uuid": "5fd950e9-0b6e-4dad-a077-677d8c25bd3b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "dc102247-b37b-416c-885e-736e719d2597",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "simple-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\transactions\\simple_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "simple",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "d1bd1192-f68a-40eb-bb6c-fdd073d2c016",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "simple-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\transactions\\simple_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "simple",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "21dea05d-2fb9-445e-b4ab-7aee715c636d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "detailed-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\transactions\\detailed_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "detailed",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "4c0b69dc-0420-4058-b51d-6d42ebe9796f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "detailed-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\transactions\\detailed_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "detailed",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "59f31838-7d93-4356-af6b-c128c2b6160e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "statement-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\transactions\\statement_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "statement",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "5e1bbf4f-1ca6-4293-9a32-d0174e7cdcb5",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "statement-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\transactions\\statement_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "statement",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "c6680a6f-9526-48a3-b9ca-2411fedafd5d",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "bills",
+      "responses": [
+        {
+          "uuid": "5ee3e989-64af-4621-a620-780345985fdc",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\bills\\page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "3c46cca2-8172-4078-b708-714347692a94",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\bills\\view_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "0264849c-1fa1-41e3-a7fd-d95eaf691bc8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "view-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\bills\\view_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "view",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a8b19d9a-73ae-4c56-8213-9fad989818be",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "statement-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\bills\\statement_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "statement",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "40c4fe25-946e-4f0a-b40c-447f1a30d008",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "statement-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\bills\\statement_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "statement",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "6299ac90-d444-48df-b6a8-ea816c938347",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\bills\\customer_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a5e52fa6-9f74-4053-b829-c71778e4e458",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\bills\\customer_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "1f461179-b36d-45e4-bb74-098f7ceb40c9",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "indents",
+      "responses": [
+        {
+          "uuid": "92ef7d27-f53b-40c3-9c23-c3aa2403b05d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "5f0bdad1-c249-4d95-a551-332228dafaeb",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "bucket-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\bucket_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "bucket",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "7b120a40-b471-470a-b694-bb9256969b08",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "bucket-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\bucket_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "bucket",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "52b6137e-f6a0-4ac4-abdc-f2f226f1dbb6",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "period-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\period_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "period",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "d465ad13-5df1-4cf4-8fbb-e52c9b2a65b9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "period-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\period_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "period",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "e812cbed-abe6-4cff-93cd-4541ac5535b5",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "book-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\book_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "book",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "83c5474c-33af-45d0-86fb-f5789817ff6d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "book-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\book_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "book",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "8f0c24e0-9b1d-4f94-9758-a6f080749240",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\customer_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "7b8648d3-1431-46f0-b8d1-522547e6c9fb",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "customer-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\indents\\customer_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "customer",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "2537d671-84b5-4733-b40f-a50f93483b62",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "summary",
+      "responses": [
+        {
+          "uuid": "438d28e1-12ee-41fe-a90e-b34dabadc4e6",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page-open response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\summary\\page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "22ddb6a3-eb7a-471e-95cd-8ebfefbfb277",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "accounts-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\summary\\accounts_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "accounts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "114644c2-e405-4ee7-bdf8-f51f2f74fa38",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "accounts-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\summary\\accounts_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "accounts",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "4af165da-fc0b-45a4-a75e-441dafa9da47",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "trade-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\summary\\trade_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "trade",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a9977d78-76ea-4d5a-ad39-1a25b5b23ca6",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "trade-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\summary\\trade_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "trade",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a98adc2e-344a-4617-b8cb-cd16f2876a07",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "group-tab response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\summary\\group_tab.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "group",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "tab",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "d625290c-f95b-45bd-ac74-a9919915c0f8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "group-report response",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "FILE",
+          "filePath": "C:\\Users\\Suyog Shirpe\\WebstormProjects\\html\\configs\\responses\\reports\\customers\\summary\\group_report.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "group",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "report",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "161268c9-491c-455f-8856-7a2351e4741a"
+    },
+    {
+      "type": "folder",
+      "uuid": "6010e754-4296-4083-b6e3-c233e94efd28"
+    },
+    {
+      "type": "folder",
+      "uuid": "ed264164-e28a-499e-93e1-cfd804b8a302"
+    },
+    {
+      "type": "folder",
+      "uuid": "553b9d68-92a3-4457-97a0-378249f2be8c"
+    },
+    {
+      "type": "folder",
+      "uuid": "2c4428e5-087f-429a-9393-8ef09b83dc78"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

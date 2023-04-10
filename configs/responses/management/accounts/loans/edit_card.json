@@ -1,0 +1,59 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "bank"  : {
+      "account_number"   : "498327493847" ,
+      "sectioned_amount" : "2423432" ,
+      "received_amount"  : "12312" ,
+      "received_ac"      : "21" ,
+      "interest_rate"    : "12.5" ,
+      "emi"              : "6" ,
+      "issue_bank"       : "SBI BANK" ,
+      "tenure_loan"      : "6"
+    } ,
+    "local" : {
+      "loan_name"     : "Suresh Kumar" ,
+      "loan_amount"   : "24323" ,
+      "interest_rate" : "11" ,
+      "interest_type" : "21" ,
+      "notification"  : "1" ,
+      "frequency"     : "6"
+    }
+  } ,
+  "data"    : {
+    "bank"  : {
+      "account_number"   : "498327493847" ,
+      "sectioned_amount" : "2423432" ,
+      "received_amount"  : "12312" ,
+      "received_ac"      : "21" ,
+      "interest_rate"    : "12.5" ,
+      "emi"              : "6" ,
+      "issue_bank"       : "SBI BANK" ,
+      "tenure_loan"      : "6"
+    } ,
+    "local" : {
+      "loan_name"     : "Suresh Kumar" ,
+      "loan_amount"   : "24323" ,
+      "interest_rate" : "11" ,
+      "interest_type" : "21" ,
+      "notification"  : "1" ,
+      "frequency"     : "6"
+    }
+  }
+  }

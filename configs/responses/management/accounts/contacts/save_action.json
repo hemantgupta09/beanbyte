@@ -1,0 +1,46 @@
+[
+  {
+    "name" : "avatar_remove" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "account_name" ,
+    "value" : "Ramesh Kumar"
+  } ,
+  {
+    "name" : "display_name" ,
+    "value" : "lokesh_124"
+  } ,
+  {
+    "name" : "alias" ,
+    "value" : "lucky"
+  } ,
+  {
+    "name" : "category_id" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "mobile" ,
+    "value" : "9876543211"
+  } ,
+  {
+    "name" : "email" ,
+    "value" : "lokesh@beanbyte.in"
+  } ,
+  {
+    "name" : "notify" ,
+    "value" : "1"
+  } ,
+  {
+    "name" : "account_balance" ,
+    "value" : "349341.42"
+  } ,
+  {
+    "name" : "behave" ,
+    "value" : "1"
+  } ,
+  {
+    "name" : "balance_date" ,
+    "value" : "2023-01-03"
+  }
+]

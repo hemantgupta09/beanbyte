@@ -1,0 +1,18 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Sagar" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "pageState" : {
+    }
+  }
+}

@@ -1,0 +1,48 @@
+project:
+  head:
+
+    dashboards:
+      - starts: 4000
+      - charts: 4010
+      - statics: 4020
+      - summary: 4030
+
+    operations:
+      - starts: 4100
+      - transactions: 4110
+      - shifts: 4120
+      - employees: 4130
+      - stocks: 4140
+
+    management:
+      - starts: 4200
+      - products: 4210
+      - accounts: 4220
+      - customers: 4230
+      - billing: 4240
+      - employees: 4250
+      - users: 4260
+    reports:
+      - starts: 4300
+      - general: 4310
+      - petroleum: 4320
+      - products: 4330
+      - accounts: 4340
+      - customers: 4350
+      - employees: 4360
+    taxation:
+      - starts: 4400
+      - gstreport: 4410
+
+    financial:
+      - starts: 4500
+        -balance: 4501
+        -profit: 4502
+
+    communication:
+      - starts: 4600
+
+    setting:
+      - starts: 4700
+      - profile: 4710
+

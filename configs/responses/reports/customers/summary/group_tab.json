@@ -1,0 +1,39 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "groups" : {
+      "group_id" : [
+        "int : id",
+        "str : group_name"
+      ]
+    }
+  },
+  "data" : {
+    "groups" : {
+      "21" : [
+        21 , 
+        "Group 1"
+      ],
+      "22" : [
+        22 , 
+        "Group 2"
+      ],
+      "23" : [
+        23 , 
+        "Group 3"
+      ],
+      "24" : [
+        24 , 
+        "Group 4"
+      ]
+    }
+  }
+}

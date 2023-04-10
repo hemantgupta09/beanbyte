@@ -1,0 +1,133 @@
+{
+  "status" : true ,
+  "message" : "message" ,
+  "title" : "title" ,
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "20-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "menu" : {
+        "0" : {
+          "id"      : 0 ,
+          "cate_id" : "0" ,
+          "value"   : 10000 ,
+          "type"    : "0"
+        }
+      },
+      "pageState" : {
+        "categories" : {
+          "0" : [
+            0 ,
+            "All Loans"
+          ] ,
+          "11" : [
+            11 ,
+            "Bank Loan",
+            "CODE",
+            "Head"
+          ] ,
+          "12" : [
+            12 ,
+            "Local Loan",
+            "CODE",
+            "Head"
+          ]
+        } ,
+        "received_ac" : {
+          "cid" : [
+            "cid" ,
+            "name"
+          ]
+        } ,
+        "interest_type" : {
+          "cid" : [
+            "cid" ,
+            "name"
+          ]
+
+        }
+      }
+    } ,
+  "data" : {
+    "menu" : {
+      "0" : {
+        "id" : 0 ,
+        "cate_id" : "0" ,
+        "value" : 10000 ,
+        "type" : "0"
+      } ,
+      "1" : {
+        "id" : 1 ,
+        "cate_id" : "11" ,
+        "value" : 12039 ,
+        "type" : "1"
+      } ,
+      "2" : {
+        "id" : 2 ,
+        "cate_id" : "12" ,
+        "value" : 22222 ,
+        "type" : "1"
+      }
+    } ,
+    "pageState" : {
+      "categories" : {
+      "0" : [
+           0 ,
+           "All Loans"
+        ] ,
+      "11" : [
+           11 ,
+           "Bank Loan",
+        "CODE",
+        "Head"
+        ] ,
+      "12" : [
+           12 ,
+           "Local Loan",
+        "CODE",
+        "Head"
+        ]
+      } ,
+      "received_ac" : {
+        "21" : [
+          21 ,
+          "SBI Bank"
+        ] ,
+        "22" : [
+          22 ,
+          "BOB Bank"
+        ] ,
+        "23" : [
+          23 ,
+          "ICICI Bank"
+        ] ,
+        "24" : [
+          24 ,
+          "PNB Bank"
+        ]
+      } ,
+      "interest_type" : {
+        "21" : [
+          21 ,
+          "Simple Interest"
+        ] ,
+        "22" : [
+          22 ,
+          "Compound Interest"
+        ]
+      }
+    }
+  }
+}

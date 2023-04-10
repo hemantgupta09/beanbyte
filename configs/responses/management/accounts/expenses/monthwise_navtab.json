@@ -1,0 +1,45 @@
+{
+  "status" : true ,
+  "message" : "message" ,
+  "title" : "title" ,
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "20-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "data": {
+        "row_id": ["row_id", "month_id", "entries", "amount"]
+      },
+      "date": {
+        "date_id": ["date_id with date"]
+
+      }
+    } ,
+  "data" : {
+    "data": {
+      "534": [534, 12, 32, 3453],
+      "535": [535, 11, 33, 25000],
+      "536": [536, 13, 34, 345345],
+      "537": [537, 14, 32, 345345],
+      "538": [537, 12, 33, 345345],
+      "539": [537, 11, 31, 345345]
+    },
+    "date": {
+      "11": ["2001-04"],
+      "12": ["2011-09"],
+      "13": ["2022-03"],
+      "14": ["2019-10"]
+    }
+  }
+}

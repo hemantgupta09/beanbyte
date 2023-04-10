@@ -1,0 +1,117 @@
+{
+  "uuid": "db24464b-5651-4579-a2b4-8defb0e7a877",
+  "lastMigration": 27,
+  "name": "financials > profit",
+  "endpointPrefix": "financials/profit",
+  "latency": 0,
+  "port": 4502,
+  "hostname": "localhost",
+  "folders": [
+    {
+      "uuid": "7386b238-5693-4917-999b-48f926798650",
+      "name": "clients",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "66c320e8-efa3-47c5-a0d3-ac34e011264b"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "66c320e8-efa3-47c5-a0d3-ac34e011264b",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "clients",
+      "responses": [
+        {
+          "uuid": "98c8b1b1-d639-4464-8e65-4e28ee2e84e5",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./clients/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "7386b238-5693-4917-999b-48f926798650"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

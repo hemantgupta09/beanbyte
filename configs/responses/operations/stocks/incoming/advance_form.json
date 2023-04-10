@@ -1,0 +1,39 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Sagar" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+    "list" : {
+      "group_id" : [
+        "int: entry_id" ,
+        "url: Bank Name" ,
+        "str: current balance"
+      ]
+    }
+  } ,
+  "data"    : {
+
+    "tanks"     : [
+      {
+        "lid"  : 4 ,
+        "name" : "Tank-1"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "Tank-2"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "Tank-3"
+      } 
+
+    ]
+  }
+}

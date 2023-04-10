@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="" />
+	<title>PetroByte</title>
+	<meta charset="utf-8" />
+	<meta name="description"
+	      content="PetroByte" />
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon"
+	      href="../../assets/media/logos/favicon.ico" />
+	<link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+	<link href="../../assets/plugins/custom/datatables/datatables.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/plugins/global/plugins.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/css/style.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/css/style.common.css"
+	      rel="stylesheet"
+	      type="text/css" />
+</head>
+
+<body id="kt_app_body"
+      data-kt-app-header-fixed-mobile="true"
+      data-kt-app-sidebar-enabled="true"
+      data-kt-app-sidebar-fixed="true"
+      data-kt-app-sidebar-push-header="true"
+      data-kt-app-sidebar-push-toolbar="true"
+      data-kt-app-sidebar-push-footer="true"
+      class="app-default">
+<script src="../../assets/js/base/theme.js"></script>
+
+<div class="d-flex flex-column flex-root app-root"
+     id="kt_app_root">
+	<div class="app-page flex-column flex-column-fluid"
+	     id="kt_app_page">
+		<div id="kt_app_header"
+		     class="app-header d-flex"
+		     data-kt-sticky="true"
+		     data-kt-sticky-name="app-header-sticky"
+		     data-kt-sticky-offset="{default: 'false', lg: '300px'}">
+			<div class="app-container container-fluid d-flex align-items-stretch justify-content-between"
+			     id="kt_app_header_container">
+				<div class="d-flex d-lg-none align-items-center ms-n2 me-2"
+				     title="Show sidebar menu">
+					<div class="btn btn-icon btn-active-color-primary w-35px h-35px"
+					     id="kt_app_sidebar_mobile_toggle">
+						<span class="svg-icon svg-icon-2">
+							<svg width="24"
+							     height="24"
+							     viewBox="0 0 24 24"
+							     fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+								      fill="currentColor" />
+								<path opacity="0.3"
+								      d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
+								      fill="currentColor" />
+							</svg>
+						</span>
+					</div>
+				</div>
+				<div class="d-flex d-lg-none align-items-center me-auto">
+					<a href="">
+						<img alt="PetroByte"
+						     src="../../assets/media/logos/petrobyte.png"
+						     class="theme-light-show h-25px" />
+						<img alt="PetroByte"
+						     src="../../assets/media/logos/petrobyte-dark.png"
+						     class="theme-dark-show h-25px" />
+					</a>
+				</div>
+				<div data-kt-swapper="true"
+				     data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}"
+				     data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_container'}"
+				     class="page-title d-flex flex-column justify-content-center me-3 mb-6 mb-lg-0">
+					<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Balance Sheet Comparison</h1>
+					<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+						<li class="breadcrumb-item text-muted">Level-0</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-1</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-2</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-3</li>
+					</ul>
+				</div>
+				<!--## Navbar ##-->
+				<div class="app-navbar flex-shrink-0"
+				     id="kt_app_aside_navbar">
+					<!--  ## toolbar of navbar ##-->
+					<div class="app-navbar-item ms-1 ms-lg-3"
+					     id="kt_header_user_menu_toggle">
+						<!--@@ USer wrapper-->
+						<div class="cursor-pointer symbol symbol-circle ms-2 symbol-35px symbol-lg-50px"
+						     data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+						     data-kt-menu-attach="parent"
+						     data-kt-menu-placement="bottom-end">
+							<img src="../../assets/media/logos/petrobyte-round.png"
+							     alt="petrobyte" />
+						</div>
+						<!--@@ User Menu-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--## Wrapper ##-->
+		<div class="app-wrapper flex-column flex-row-fluid"
+		     id="kt_app_wrapper">
+			
+			<!--## Sidebar ##-->
+			<div id="kt_app_sidebar"
+			     class="app-sidebar flex-column"
+			     data-kt-drawer="true"
+			     data-kt-drawer-name="app-sidebar"
+			     data-kt-drawer-activate="{default: true, lg: false}"
+			     data-kt-drawer-overlay="true"
+			     data-kt-drawer-width="250px"
+			     data-kt-drawer-direction="start"
+			     data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+				<!-- ## sidebar menus ## -->
+			</div>
+			
+			<div class="app-main flex-column flex-row-fluid"
+			     id="kt_app_main">
+				<div class="d-flex flex-column flex-column-fluid">
+					<div id="kt_app_content"
+					     class="app-content flex-column-fluid">
+						<div id="kt_app_content_container"
+						     class="app-container container-fluid">
+							
+							<div class="row g-7"
+							     id="layout_zone"
+							     data-pb-welcome="starter"
+							     data-pb-layout="sheets">
+								
+								<div id="starter">
+									<div class="card shadow-sm">
+										<div class="card-body p-5">
+											<div class="d-flex flex-center">
+												<div class="w-300px">
+													<label class="form-label">Date for Balance Sheet</label>
+													<input type="text"
+													       data-control="range"
+													       data-pb-method="dropdown"
+													       name="sheet_range"
+													       class="form-control form-control-solid"
+													       placeholder=""
+													       title="" />
+												</div>
+												<div class="ms-5">
+													<button type="button"
+													        name="load"
+													        value="sheet"
+													        data-pb-origin="starter"
+													        class="btn btn-flex btn-primary px-6">
+														<i class="fs-2x me-1 bi bi-arrow-clockwise"></i>
+														<span class="d-flex flex-column align-items-start ms-2">
+															<span class="fs-3 fw-bold btnText">Load</span>
+															<span class="fs-7">Balance Sheet</span>
+														</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="sheet"
+								     class="d-none"
+								     aria-description="complete sheet element ">
+									<div class="card shadow-sm">
+										<div class="card-body">
+											<!--header-->
+											<div aria-description="sheet information element">
+												<div class="d-block flex-center"
+												     data-pb-control="business">
+													<div aria-description="sheet toolbar line"
+													     class="d-flex flex-stack">
+														<div aria-description="export buttons">
+															<a href="javascript:"
+															   data-bs-toggle="modal"
+															   data-bs-target="#sheet_export_modal"
+															   class="btn py-3 lh-sm fw-bold text-uppercase btn-light-primary">
+																<i class="fs-2 las la-download"></i>
+																Export
+															</a>
+															<button type="button"
+															        value="print"
+															        name="action"
+															        class="btn py-3 lh-sm fw-bold text-uppercase btn-light-danger">
+																<i class="fs-2 las la-print"></i>
+															</button>
+														</div>
+														<div>
+															<button type="button"
+															        value="resize"
+															        name="action"
+															        class="btn btn-icon- py-3 px-2 lh-sm btn-light-secondary">
+																<!--<i class="fs-2 me-1 text-dark bi bi-arrows-collapse"></i>-->
+																<i class="fs-2 ms-1 text-dark bi bi-arrows-expand"></i>
+															</button>
+															<button type="button"
+															        value="starter"
+															        name="back"
+															        data-pb-origin="sheet"
+															        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+																<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+																<span>Go Back</span>
+															</button>
+														</div>
+													</div>
+													<div class="flex-column text-center">
+														<h3>$$@outlet@$$</h3>
+														<p class="mb-1">$$@sheet@$$</p>
+														<p class="mb-0">Balances As On:
+															<span class="ms-1 fw-semibold dF"
+															      data-cs-format="z"
+															      data-pb-update="date">24 Jan, 2023
+															</span>
+														</p>
+													</div>
+													<div class="d-flex flex-stack"></div>
+												</div>
+												<div class="separator border-dark mt-1 mb-5"></div>
+											</div>
+											<!-- ## masters -> heads -> groups -> ledgers ## -->
+											<div class="text-end">
+												<h3>Total</h3>
+											</div>
+											<div class="separator border-dark mt-1 mb-5"></div>
+											<div class="d-flex flex-column gap-md-10 ">
+												<div aria-description="TOP side head"
+												     class="col-12 col-md-12 col-xxl-12 mb-lg-2">
+													<div aria-description="header">
+														<table class="table align-middle text-gray-700 fs-5 fw-normal table-row-dashed gy-1 gs-3">
+															<thead>
+															<tr class="text-start fw-semibold fs-7 text-muted text-uppercase">
+																<th class=""
+																    data-index="0">Ledger Account
+																</th>
+																<th class="w-90px text-center"
+																    data-index="1">Balance
+																</th>
+																<th class="w-90px text-center"
+																    data-index="2">Balance
+																</th>
+																<th class="w-90px text-center d-print-none"
+																    data-index="3">Action
+																</th>
+															</tr>
+															</thead>
+														</table>
+													</div>
+													
+													<div aria-description="body"
+													     data-pb-space="master"
+													     data-pb-value="0"></div>
+													
+													<div aria-description="footer"
+													     data-pb-target="abc"></div>
+												
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div id="transact"
+								     class="d-none"
+								     aria-description="account transactions">
+									<div class="card shadow-sm">
+										<div class="card-header">
+											<h3 class="card-title">Account Name</h3>
+											<div class="card-subtitle">
+												Account Statement
+											</div>
+											<div class="card-toolbar">
+												<button type="button"
+												        value="transact"
+												        name="back"
+												        class="btn btn-sm btn-light btn-text-dark hover-rotate-start">
+													<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+													<span>Go Back</span>
+												</button>
+											</div>
+										</div>
+										<div class="card-body">
+											
+											<div class="table-responsive">
+												<table class="table align-middle text-gray-700 fs-5 fw-normal table-row-dashed gy-2 gs-3">
+													<thead>
+													<tr class="text-start fw-semibold fs-6 text-muted text-uppercase">
+														<th data-index="0">Date</th>
+														<th data-index="1">Ledger Account</th>
+														<th data-index="2">Txn Type</th>
+														<th data-index="3">Txn No.</th>
+														<th data-index="4">Description</th>
+														<th data-index="5">Debit</th>
+														<th data-index="6">Credit</th>
+													</tr>
+													</thead>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div id="modals"
+								     class="d-block-"
+								     aria-description="modal for account summary">
+									<!--	Sheet Export -->
+									<div class="modal fade"
+									     id="sheet_export_modal"
+									     tabindex="-1"
+									     aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered mw-650px">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h2 class="fw-bold">Balance Sheet</h2>
+													<div data-bs-dismiss="modal"
+													     class="btn btn-icon btn-sm btn-active-icon-primary">
+														<span class="svg-icon svg-icon-1">
+															<i class="bi bi-x-lg fs-2"></i>
+														</span>
+													</div>
+												</div>
+												<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+													<form id=""
+													      class="form"
+													      action="#">
+														<div class="fv-row mb-10">
+															<label class="fs-5 fw-semibold form-label mb-5">Select Export Format:</label>
+															<select required
+															        name="format"
+															        data-control="select"
+															        data-pb-method="simple"
+															        data-pb-tack="subtext"
+															        data-pb-placeholder="Select a format"
+															        data-pb-search="0"
+															        class="form-select form-select-solid"
+															        title="">
+																<option></option>
+																<option value="excel"
+																        data-sel-subtext="MS office Excel">Excel
+																</option>
+																<option value="pdf"
+																        data-sel-subtext="">PDF
+																</option>
+																<option value="cvs"
+																        data-sel-subtext="A General raw data format">CVS
+																</option>
+															</select>
+														</div>
+														<div class="fv-row">
+															<label class="fs-5 fw-semibold form-label mb-5">Select Date as Accounts Closing Balance:</label>
+															<input required
+															       name="date"
+															       class="form-control form-control-solid"
+															       data-control="date"
+															       data-pb-method="human"
+															       value="2023-02-26"
+															       placeholder="Select a Date as Closing"
+															       title="" />
+														</div>
+													</form>
+												</div>
+												<div class="modal-footer">
+													<div class="text-center">
+														<a data-bs-dismiss="modal"
+														   class="btn btn-light me-3">Discard</a>
+														<button type="submit"
+														        name="action"
+														        value="export"
+														        class="btn btn-primary">
+															<span class="indicator-label">Export File</span>
+															<span class="indicator-progress">Please wait...
+																<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+															</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div id="template"
+								     class="d-none"
+								     aria-description="used to take templates">
+									<!--## direct-->
+									<div aria-description="a dummy template"
+									     class="d-none"
+									     data-pb-target="master">
+										<div class="d-block">
+											<p class="text-uppercase text-primary fs-3 mb-1">Liabilities</p>
+										</div>
+										<div class="ms-1"
+										     aria-description="ledger heads">
+											<div data-pb-target="head">
+												<p class="text-capitalize my-1 fs-4">
+													<i class="bi text-gray-800 bi-arrow-return-right"></i>
+													<span class="fw-semibold text-info">Current Liabilities</span>
+												</p>
+												<div class="ms-2"
+												     aria-description="element for groups">
+													<div data-pb-target="group">
+														<div class="accordion accordion-icon-toggle"
+														     id="accord_gid_r1">
+															<div class="my-1">
+																<div class="accordion-header py-2 collapsed-"
+																     data-bs-toggle="collapse"
+																     data-bs-target="#accord_gid_r1_item"
+																     aria-expanded="false">
+																	<div class="d-flex flex-stack">
+																		<div class="d-flex align-items-center fw-semibold">
+																			<span class="accordion-icon">
+																				<i class="fs-4 bi bi-arrow-right-short"></i>
+																			</span>
+																			<h3 class="fs-5 fw-semibold mb-0 ms-2">Salary Payable</h3>
+																		</div>
+																		<div class="d-flex align-items-center">
+																			<h5 class="fs-5 fw-semibold mb-0">₹ 45,900.23</h5>
+																		</div>
+																	</div>
+																</div>
+																<div id="accord_gid_r1_item"
+																     class="ps-5 collapse show"
+																     data-bs-parent="#accord_gid_r1"
+																     style="">
+																	<table class="table align-middle text-gray-700 fs-6 fw-normal table-row-dashed gy-1 gs-3 mb-1">
+																		<tbody>
+																		<tr>
+																			<td>Dinesh Kumar Meena</td>
+																			<td class="text-end">₹ 34,909</td>
+																			<td class="w-75px text-center d-print-none">
+																				<button type="button"
+																				        name="modal"
+																				        value="summary"
+																				        class="btn btn-link btn-color-gray-700 btn-active-color-danger p-0 hover-scale"
+																				        data-bs-placement="top"
+																				        data-bs-dismiss="click"
+																				        data-bs-toggle="tooltip"
+																				        data-bs-html="true"
+																				        title="<span class='fs-6'>View Summary</span>">
+																					<i class="fs-4 bi bi-card-text"></i>
+																				</button>
+																				<button type="button"
+																				        name="table"
+																				        value="trans"
+																				        class="btn btn-link btn-color-gray-700 btn-active-color-success p-0 hover-scale"
+																				        data-bs-placement="bottom"
+																				        data-bs-dismiss="click"
+																				        data-bs-toggle="tooltip"
+																				        data-bs-html="true"
+																				        title="<span class='fs-6'>Account Transaction</span>">
+																					<i class="fs-5 bi bi-table"></i>
+																				</button>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Balram singh</td>
+																			<td class="text-end">₹ 97,909</td>
+																			<td class="w-75px text-center d-print-none">
+																				<button type="button"
+																				        name="modal"
+																				        value="summary"
+																				        class="btn btn-link btn-color-gray-700 btn-active-color-danger p-0 hover-scale"
+																				        data-bs-placement="top"
+																				        data-bs-dismiss="click"
+																				        data-bs-toggle="tooltip"
+																				        data-bs-html="true"
+																				        title="<span class='fs-6'>View Summary</span>">
+																					<i class="fs-4 bi bi-card-text"></i>
+																				</button>
+																				<button type="button"
+																				        name="table"
+																				        value="trans"
+																				        class="btn btn-link btn-color-gray-700 btn-active-color-success p-0 hover-scale"
+																				        data-bs-placement="top"
+																				        data-bs-dismiss="click"
+																				        data-bs-toggle="tooltip"
+																				        data-bs-html="true"
+																				        title="<span class='fs-6'>Account Transaction</span>">
+																					<i class="fs-5 bi bi-table"></i>
+																				</button>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Mukul Kumar</td>
+																			<td class="text-end">₹ 9,909</td>
+																			<td class="w-75px text-center d-print-none">
+																				<button type="button"
+																				        name="modal"
+																				        value="summary"
+																				        class="btn btn-link btn-color-gray-700 btn-active-color-danger p-0 hover-scale"
+																				        data-bs-placement="top"
+																				        data-bs-dismiss="click"
+																				        data-bs-toggle="tooltip"
+																				        data-bs-html="true"
+																				        title="<span class='fs-6'>View Summary</span>">
+																					<i class="fs-4 bi bi-card-text"></i>
+																				</button>
+																				<button type="button"
+																				        name="table"
+																				        value="trans"
+																				        class="btn btn-link btn-color-gray-700 btn-active-color-success p-0 hover-scale"
+																				        data-bs-placement="top"
+																				        data-bs-dismiss="click"
+																				        data-bs-toggle="tooltip"
+																				        data-bs-html="true"
+																				        title="<span class='fs-6'>Account Transaction</span>">
+																					<i class="fs-5 bi bi-table"></i>
+																				</button>
+																			</td>
+																		</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div>
+														<div class="separator separator-dotted"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									
+									<!-- # master -->
+									<div data-pb-template="master">
+										<div class="d-block">
+											<p class="text-uppercase text-primary fs-3 mb-1"
+											   data-pb-child="name">{{Master}}</p>
+										</div>
+										<div class="ms-1"
+										     aria-description="ledger heads"
+										     data-pb-space="head">
+											<!-- @@ head -->
+										</div>
+									</div>
+									
+									<!--	# head -->
+									<div data-pb-template="head">
+										<p class="text-capitalize my-1 fs-4">
+											<i class="bi text-gray-800 bi-arrow-return-right"></i>
+											<span class="fw-semibold text-info"
+											      data-pb-child="name">{{Head}}
+											</span>
+										</p>
+										<div aria-description="element for groups"
+										     data-pb-space="group">
+											<!--	@@ group -->
+										</div>
+									</div>
+									
+									<!--	# Group -->
+									<div data-pb-template="group">
+										<div class="accordion accordion-icon-toggle"
+										     id="accord_gid">
+											<div class="my-1">
+												<div class="accordion-header py-2 collapsed-"
+												     data-bs-toggle="collapse"
+												     data-bs-target="#accord_gid_item"
+												     aria-expanded="false">
+													<div class="d-flex flex-stack">
+														<div class="d-flex align-items-center fw-semibold">
+															<span class="accordion-icon">
+																<i class="fs-4 bi bi-arrow-right-short"></i>
+															</span>
+															<h3 class="fs-5 fw-semibold mb-0 ms-2"
+															    data-pb-put="group">{{Group}}</h3>
+														</div>
+														<div class="d-flex align-items-center">
+															<h5 class="fs-5 fw-semibold mb-0 in_inr"
+															    data-cs-round="2"
+															    data-cs-currency="0"
+															    data-pb-put="balance">{{Balance}}</h5>
+														</div>
+													</div>
+												</div>
+												<div id="accord_gid_item"
+												     class="ps-5 collapse show accordion-content"
+												     data-bs-parent="#accord_gid"
+												     style="">
+													<table class="table align-middle text-gray-700 fs-6 fw-normal table-row-dashed gy-1 gs-3 mb-1">
+														<tbody aria-description="ledger row"
+														       data-pb-space="ledger">
+														<!-- @@ ledger-->
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+										<div class="separator separator-dotted"></div>
+									</div>
+									
+									<!--	# ledger -->
+									<table>
+										<tbody>
+										<tr data-pb-template="ledger">
+											<td data-pb-put="name">{{ledger}}</td>
+											<td data-pb-put="balancepy"
+											    class="w-100px text-center">{{balance}}
+											</td>
+											<td data-pb-put="balancecy"
+											    class="w-100px text-center">{{balance}}
+											</td>
+											<td class="w-75px text-center d-print-none">
+												<button type="button"
+												        name="modal"
+												        value="summary"
+												        data-pb-value=""
+												        class="btn btn-link btn-color-gray-700 btn-active-color-danger p-0 hover-scale"
+												        data-bs-placement="top"
+												        data-bs-dismiss="click"
+												        data-bs-toggle="tooltip"
+												        data-bs-html="true"
+												        title="<span class='fs-6'>View Summary</span>">
+													<i class="fs-4 bi bi-card-text"></i>
+												</button>
+												<button type="button"
+												        name="table"
+												        value="transact"
+												        data-pb-value=""
+												        class="btn btn-link btn-color-gray-700 btn-active-color-success p-0 hover-scale"
+												        data-bs-placement="top"
+												        data-bs-dismiss="click"
+												        data-bs-toggle="tooltip"
+												        data-bs-html="true"
+												        title="<span class='fs-6'>Account Transaction</span>">
+													<i class="fs-5 bi bi-table"></i>
+												</button>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								
+								</div>
+							
+							</div>
+						
+						</div>
+					</div>
+				</div>
+				<div id="kt_app_footer"
+				     class="app-footer">
+					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+						@lokesh
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--@@ Javascript-->
+<script>
+	var hostUrl = "assets/";
+	var thePage = "financials@balance@comparison";
+</script>
+<!--@@ Global Javascript Bundle (mandatory for all pages)-->
+<script src="../../assets/plugins/global/plugins.bundle.js"></script>
+<script src="../../assets/js/scripts/scripts.bundle.js"></script>
+<script src="../../assets/js/scripts/scripts.common.js"></script>
+<script src="../../assets/js/scripts/scripts.general.js"></script>
+
+<!--@@ Global Javascript CORE (mandatory for all pages)-->
+<script src="../../assets/js/base/const.js"></script>
+<script src="../../assets/js/base/attributes.js"></script>
+<script src="../../assets/js/base/structure.js"></script>
+<script src="../../assets/js/base/events.js"></script>
+<script src="../../assets/js/base/elements.js"></script>
+<script src="../../assets/js/base/holding.js"></script>
+<script src="../../assets/js/base/arranges.js"></script>
+<script src="../../assets/js/base/handling.js"></script>
+<script src="../../assets/js/base/layout.js"></script>
+<script src="../../assets/js/base/ajax.js"></script>
+
+<!--@@ Rendering data into javascript (mandatory for all pages)-->
+<script src="../../assets/js/render/render.menu.js"></script>
+<script src="../../assets/js/render/render.table.js"></script>
+<script src="../../assets/js/render/render.form.js"></script>
+<script src="../../assets/js/extend/extend.foreign.js"></script>
+<script src="../../assets/js/extend/extend.collect.js"></script>
+<script src="../../assets/js/extend/extend.append.js"></script>
+
+<!--@@ Vendors Javascript -->
+<script src="../../assets/plugins/custom/formrepeater/formrepeater.bundle.js"></script>
+<script src="../../assets/plugins/custom/datatables/datatables.bundle.js"></script>
+
+
+<!--@@ Plugins Javascript -->
+<script src="../../assets/js/plugins/quickAccess.js"></script>
+<script src="../../assets/js/plugins/formValid.js"></script>
+<script src="../../assets/js/plugins/datePicker.js"></script>
+<script src="../../assets/js/plugins/rangePicker.js"></script>
+<script src="../../assets/js/plugins/selectPicker.js"></script>
+<script src="../../assets/js/plugins/formKeen.js"></script>
+
+<!--@@ Custom Files Javascript -->
+<script src="../../assets/js/heads/financials.js"></script>
+<script src="../../assets/js/pages/financials/balance.js"></script>
+<script src="../../assets/js/pages/financials/balance/dummyAjax.js"></script>
+<script src="../../assets/js/pages/financials/balance/comparison.js"></script>
+
+</body>
+</html>

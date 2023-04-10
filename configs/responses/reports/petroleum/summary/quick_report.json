@@ -1,0 +1,91 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "data" : {
+      "group_id" : [
+        "int : id",
+        "int : shift_id",
+        "int : date_id",
+        "int : shift_slot",
+        "int : revenue",
+        "str : status",
+        "str : action"
+
+      ]
+    }
+  },
+  "data" : {
+    "detail": {
+      "account": "DPS School, India",
+      "closing": "340971",
+      "range": ["2021-10-20", "2022-01-30"],
+      "ledger_id": 232
+    },
+    "data": {
+      "12" : [
+        12 ,
+        "1" ,
+        "12",
+        "87.60" ,
+        "171.23" ,
+        "S-1" ,
+        "A-1"
+      ],
+      "13" : [
+        13 ,
+        "2" ,
+        "13",
+        "89.20" ,
+        "1168.16 ",
+        "S-1" ,
+        "A-1"
+
+
+      ],
+      "14" : [
+        14 ,
+        "3" ,
+        "14",
+        "87.60" ,
+        "171.23" ,
+        "S-1" ,
+        "A-1"
+
+
+      ],
+      "15" : [
+        15 ,
+        "4" ,
+        "18",
+        "87.60" ,
+        "171.23" ,
+        "S-4" ,
+        "A-1"
+
+
+      ]
+    },
+    "dates": {
+      "12" : [
+        "2022-12-12"
+      ],
+      "13" : [
+        "2022-03-23"
+      ],
+      "14" : [
+        "2022-12-15"
+      ],
+      "18" : [
+        "2022-12-20"
+      ]
+    }
+  }
+}

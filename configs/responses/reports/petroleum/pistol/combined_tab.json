@@ -1,0 +1,39 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "categories" : {
+      "group_id" : [
+        "int : id",
+        "int : category_name"
+      ]
+    }
+  },
+  "data" : {
+    "categories" : {
+      "21" : [
+        21 ,
+        "category 1"
+      ],
+      "22" : [
+        22 ,
+        "category 2"
+      ],
+      "23" : [
+        23 ,
+        "category 3"
+      ],
+      "24" : [
+        24 ,
+        "category 4"
+      ]
+    }
+  }
+}

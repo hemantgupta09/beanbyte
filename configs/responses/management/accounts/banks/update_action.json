@@ -1,0 +1,62 @@
+[
+  {
+    "name" : "avatar_remove" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "account_name" ,
+    "value" : "sbi India"
+  } ,
+  {
+    "name" : "account_number" ,
+    "value" : "984237923498"
+  } ,
+  {
+    "name" : "ifsc_code" ,
+    "value" : "9876543211"
+  } ,
+  {
+    "name" : "category" ,
+    "value" : "11"
+  } ,
+  {
+    "name" : "opening_balance" ,
+    "value" : "₹ 987,439.00"
+  } ,
+  {
+    "name" : "opening_date" ,
+    "value" : "2023-01-03"
+  } ,
+  {
+    "name" : "od_ac_limit" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "interest_rate" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "renew_date" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "due_date" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "credit_card_ac" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "creation_date" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "due_date" ,
+    "value" : ""
+  } ,
+  {
+    "name" : "auto_debit_ac" ,
+    "value" : ""
+  }
+]

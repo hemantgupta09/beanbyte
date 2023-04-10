@@ -1,0 +1,423 @@
+{
+  "uuid": "30388b3a-b8ca-45a0-ac15-c7b8cf2d40e2",
+  "lastMigration": 27,
+  "name": "Operations > Stocks",
+  "endpointPrefix": "operations/stock",
+  "latency": 0,
+  "port": 4140,
+  "hostname": "127.0.0.1",
+  "folders": [
+    {
+      "uuid": "71dcd2a5-91c4-4861-bece-f7f56ffaa1c1",
+      "name": "transfer",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "739b4236-6a0a-456f-ad23-ea0b550d92f2"
+        }
+      ]
+    },
+    {
+      "uuid": "19e93ca6-0c8c-4541-a5b7-5545f9677ae6",
+      "name": "incoming",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "57b09c5d-2d05-4609-8114-b5294c010403"
+        },
+        {
+          "type": "route",
+          "uuid": "b3258239-dd78-4ddb-8749-7882c9103ecd"
+        }
+      ]
+    },
+    {
+      "uuid": "8b7019b0-3de5-4cd9-a628-8dbed428eaff",
+      "name": "movement",
+      "collapsed": false,
+      "children": [
+        {
+          "type": "route",
+          "uuid": "77280de2-a382-4dbd-90bf-93a503d84f78"
+        },
+        {
+          "type": "route",
+          "uuid": "579cb341-0f5b-4613-b386-6eb2e04c46a0"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "uuid": "739b4236-6a0a-456f-ad23-ea0b550d92f2",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "transfer",
+      "responses": [
+        {
+          "uuid": "ffa552ef-945c-427e-9549-d79de37b1f6c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./transfer/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "57b09c5d-2d05-4609-8114-b5294c010403",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "incoming",
+      "responses": [
+        {
+          "uuid": "77ab9061-22bb-4442-a700-658e8d9e36c6",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./incoming/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "3c69151a-000d-47ca-8380-a7f88ad07674",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "simple form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./incoming/simple_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "simple",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        },
+        {
+          "uuid": "a548a01a-ad78-4212-8863-60c31925f190",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "advance form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./incoming/advance_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "advance",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "b3258239-dd78-4ddb-8749-7882c9103ecd",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "incoming",
+      "responses": [
+        {
+          "uuid": "485da112-2669-4ed4-9bc6-d56fb982b435",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "simple form",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./incoming/simple_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "simple",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        },
+        {
+          "uuid": "8fb43266-d89a-4612-b87c-a65798355a9e",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "advance form ",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./incoming/advance_form.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "simple",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "form",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "77280de2-a382-4dbd-90bf-93a503d84f78",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "movement",
+      "responses": [
+        {
+          "uuid": "ee96d974-e2c1-4ab8-ad84-31e73b7cd88a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./movement/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "579cb341-0f5b-4613-b386-6eb2e04c46a0",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "movement",
+      "responses": [
+        {
+          "uuid": "8dec7b86-21e0-4141-b698-b0bbef7152b2",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "page open",
+          "headers": [],
+          "bodyType": "FILE",
+          "filePath": "./movement/page_open.json",
+          "databucketID": "",
+          "sendFileAsBody": true,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "act",
+              "value": "page",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "type",
+              "value": "open",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "folder",
+      "uuid": "71dcd2a5-91c4-4861-bece-f7f56ffaa1c1"
+    },
+    {
+      "type": "folder",
+      "uuid": "19e93ca6-0c8c-4541-a5b7-5545f9677ae6"
+    },
+    {
+      "type": "folder",
+      "uuid": "8b7019b0-3de5-4cd9-a628-8dbed428eaff"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

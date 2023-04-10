@@ -1,0 +1,39 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "25-03-2023" ,
+      "author"     : "dinesh" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "users_schedule" : {
+      "id" : ["id" , "name" , "event_name" , "date_id" , "time"]
+    } ,
+    "date"           : {
+      "date_id" : ["2023-3-25"]
+    }
+  } ,
+  "data"    : {
+    "users_schedule" : {
+      "1" : ["1" , "Terry Robins" , "Development Team Capacity Review" , "11" , "14:30 - 15:30 PM"] ,
+      "2" : ["2" , "John Smith" , "Product Launch Meeting" , "12" , "11:00 - 12:00 PM"] ,
+      "3" : ["3" , "Jane Doe" , "Customer Service Training" , "13" , "09:00 - 10:30 AM"]
+    } ,
+    "date"           : {
+      "11" : ["2023-3-25"] ,
+      "12" : ["2023-2-5"] ,
+      "13" : ["2023-3-20"]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "yearRecord"  : {
+      "id" : ["id" , "month" , "amount"]
+    } ,
+    "starting"    : {
+      "year" : 2021
+    } ,
+    "months"      : {
+      "month" : ["Jan"]
+    } ,
+    "bill_report" : {
+      "id" : ["id" , "bill_number" , "Customer_Account" , "date" , "slips" , "bill_value" , "discount" , "amount" , "received" , "status"]
+    } ,
+    "dates"       : {
+      "date" : ["2022-01-08"]
+    } ,
+    "status"      : {
+      "status" : ["Due"]
+    }
+  } ,
+  "data"    : {
+    "yearRecord"  : {
+      "1"  : ["1" , "1" , "347338"] ,
+      "2"  : ["2" , "2" , "347338"] ,
+      "3"  : ["3" , "3" , "347338"] ,
+      "4"  : ["4" , "4" , "347338"] ,
+      "5"  : ["5" , "5" , "347338"] ,
+      "6"  : ["6" , "6" , "347338"] ,
+      "7"  : ["7" , "7" , "347338"] ,
+      "8"  : ["8" , "8" , "347338"] ,
+      "9"  : ["9" , "9" , "347338"] ,
+      "10" : ["10" , "10" , "347338"] ,
+      "11" : ["11" , "11" , "347338"] ,
+      "12" : ["12" , "12" , "347338"]
+    } ,
+    "starting"    : {
+      "year" : 2021
+    } ,
+    "months"      : {
+      "1"  : ["Jan"] ,
+      "2"  : ["Feb"] ,
+      "3"  : ["Mar"] ,
+      "4"  : ["Apr"] ,
+      "5"  : ["May"] ,
+      "6"  : ["Jun"] ,
+      "7"  : ["Jul"] ,
+      "8"  : ["Aug"] ,
+      "9"  : ["Sept"] ,
+      "10" : ["Oct"] ,
+      "11" : ["Nov"] ,
+      "12" : ["Dec"]
+    }
+  }
+}

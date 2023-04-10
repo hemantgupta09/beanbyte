@@ -1,0 +1,98 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "pageState" : {
+
+    }
+  },
+  "data" : {
+    "pageState" : {
+      "accounts": {
+        "21" : [
+          "21" ,
+          "Cash-in-hand" ,
+          "cash" ,
+          "0" ,
+          "2"
+        ],
+        "22" : [
+          "22" ,
+          "SBI Bank" ,
+          "xx7623" ,
+          "0" ,
+          "3"
+        ],
+        "23" : [
+          "23" ,
+          "PAYTM POS" ,
+          "paytm" ,
+          "0" ,
+          "4"
+        ],
+        "24" : [
+          "24" ,
+          "ICICI OD A/c" ,
+          "1880" ,
+          "0" ,
+          "5"
+        ]
+      },
+      "groups": {
+        "2" : [
+          "2" ,
+          "Cash"],
+        "3" : [
+          "3" ,
+          "Bank Accounts"],
+        "4" : [
+          "4" ,
+          "Gateways"],
+        "5" : [
+          "5" ,
+          "Over Draft A/c"]
+      },
+      "users": {
+        "3" : [
+          "3" , "Lokesh Kumar" ,
+          "manager"],
+        "4" : [
+          "4" , "Naveen Kumar" ,
+          "admin"]
+      },
+      "types": {
+        "1" : [
+          "1" ,
+          "Sales"
+        ],
+        "2" : [
+          "2" ,
+          "Purchases"
+        ],
+        "3" : [
+          "3" ,
+          "Receipts"
+        ],
+        "4" : [
+          "4" ,
+          "Payments"
+        ],
+        "5" : [
+          "5" ,
+          "Banking"
+        ],
+        "6" : [
+          "6" ,
+          "Journals"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "list" : {
+      "id" : ["id" , "avatar" , "name" , "alias" , "cate_id" , "balance" , "last_entry" , "alert"]
+    }
+  } ,
+  "data"    : {
+    "list" : {
+      "12" : [12 , "avatars/300-2.jpg" , "Ramesh Kumar" , "ramu" , "12" , "352345" , "2022-03-25" , "3"] ,
+      "13" : [13 , "avatars/300-3.jpg" , "Lokesh Kumar" , "lucky" , "11" , "52345" , "2022-03-21" , "1"] ,
+      "14" : [14 , "avatars/300-4.jpg" , "Suresh Kumar" , "suri" , "15" , "2345" , "2022-03-20" , "2"]
+    }
+  }
+}

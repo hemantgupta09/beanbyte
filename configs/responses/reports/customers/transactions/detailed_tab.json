@@ -1,0 +1,47 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "customers" : {
+      "group_id" : [
+        "int : id",
+        "str : customer_name"
+      ]
+    }
+  },
+  "data" : {
+    "customers": {
+      "342" : [
+        342 , 
+        "Lokesh Kumar" , 
+        "21" , 
+        "1" 
+      ],
+      "424" : [
+        424 , 
+        "Naveen Kumar" , 
+        "22" , 
+        "3" 
+      ],
+      "426" : [
+        426 , 
+        "Suresh Kumar" , 
+        "23" , 
+        "4" 
+      ],
+      "427" : [
+        427 , 
+        "Rakesh Kumar" , 
+        "24" , 
+        "4" 
+      ]
+    }
+  }
+}

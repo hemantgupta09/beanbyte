@@ -1,0 +1,50 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Sagar" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+    "clearance" : {
+      "form_id" : [
+        "int: form_id" ,
+        "str: contact alias (account code)" ,
+        "str: current balance" ,
+        "int: notify method"
+      ]
+    }
+  } ,
+  "data"    : {
+    "gateway_ac" : [
+      {
+        "lid"     : 40 ,
+        "name"    : "Phone PE" ,
+        "alias"   : "xx52345" ,
+        "prefix"  : 1 ,
+        "balance" : "53484" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 41 ,
+        "name"    : "Google Pay" ,
+        "alias"   : "xx52345" ,
+        "prefix"  : 1 ,
+        "balance" : "52345" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 42 ,
+        "name"    : "Paytm" ,
+        "alias"   : "xx52345" ,
+        "prefix"  : 1 ,
+        "balance" : "90000" ,
+        "suffix"  : "0"
+      }
+    ]
+  }
+}

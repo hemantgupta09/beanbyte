@@ -1,0 +1,128 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "data" : {
+      "group_id" : [
+        "int : id",
+        "int : customer_id",
+        "int : date_id",
+        "int : item_id",
+        "int : rate",
+        "int : quantity",
+        "int : amount",
+        "int : slip",
+        "int : voucher_no",
+        "int : bill"
+      ]
+    }
+  },
+  "data" : {
+    "detail": {
+      "account": "DPS School, India",
+      "closing": "340971",
+      "range": ["2021-10-20", "2022-01-30"],
+      "ledger_id": 232
+    },
+    "data" : {
+      "12" : [
+        234 , 
+        "212" , 
+        "12" , 
+         1 , 
+        "87.60 /Ltr" ,
+        "171.23" , 
+        "15000" , 
+        "1000" , 
+        "273" , 
+        "2000"
+      ],
+      "13" : [
+        406 , 
+        "213" , 
+        "12" , 
+         2 , 
+        "89.20 /Ltr" ,
+        "168.16" , 
+        "15000" , 
+        "1000" , 
+        "273" , 
+        "2000"
+      ],
+      "14" : [
+        496 , 
+        "214" , 
+        "12" , 
+         3 , 
+        "87.60 /Ltr" ,
+        "171.23" , 
+        "15000" , 
+        "1000" , 
+        "273" , 
+        "2000"
+      ],
+      "15" : [
+        505 , 
+        "218" , 
+        "12" , 
+         4 , 
+        "87.60 /Ltr" ,
+        "171.23" , 
+        "15000" , 
+        "1000" , 
+        "273" , 
+        "2000"
+      ]
+    },
+    "dates" : {
+      "12" : [
+        "2022-12-12"
+      ],
+      "13" : [
+        "2022-03-23"
+      ],
+      "14" : [
+        "2022-12-15"
+      ],
+      "18" : [
+        "2022-12-20"
+      ]
+    },
+    "customers" : {
+      "212" : [
+        "DPS School, India"
+      ],
+      "213" : [
+        "DPS School, India"
+      ],
+      "214" : [
+        "chennai "
+      ],
+      "218" : [
+        "DPS School, India"
+      ]
+    },
+    "items" : {
+      "1" : [
+        "Diesel"
+      ],
+      "2" : [
+        "Diesel"
+      ],
+      "3" : [
+        "Petrol"
+      ],
+      "4" : [
+        "Petrol"
+      ]
+    }
+
+  }
+}

@@ -1,0 +1,39 @@
+data-pb-origin="start" => in any action button.
+
+
+
+every form should have an id, that will be conencted wiht thesubmit button of the form.
+
+
+
+- if your want to apply common render at dom load then add {data-pb-catch="DOM"} to the target element.
+
+
+-> at the time form submission
+        return `ajaxResponse.status` and `ajaxResponse.message`
+
+
+eventType = button.name;
+eventValue = button.value;
+eventPlace = button.getAttribute(atr.core.origin);
+eventData = button.getAttribute(atr.core.value);
+
+
+"data-on-change" use into select for consider event listener from layout.
+
+// at the time of response check.
+toastr.error(xResponse.message, xResponse.title);
+
+
+
+
+`data-pb-source="accounts"` where it has name `name="account_id"`
+in the placement: this select will take data from accounts key of ajaxResponse.
+=> ```select.hasAttribute(atr.core.source) ? select.getAttribute(atr.core.source) : select.name;```
+
+
+
+
+get help from dashboard -> business. how to update next time at line
+     let promise = Plug_apexChart.Update_onCalling(chartObject[event.target], redData);
+     i have store chart object here chartObject[event.target]

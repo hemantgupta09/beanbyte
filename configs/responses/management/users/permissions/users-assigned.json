@@ -1,0 +1,51 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "25-03-2023" ,
+      "author"     : "dinesh" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "users_assigned" : {
+      "id" : ["id" , "avatar" , "name" , "alias" , "created_id" , "date_id"]
+    } ,
+    "created"        : {
+      "created_id" : ["Admin"]
+    } ,
+    "date"           : {
+      "date_id" : ["2023-03-25"]
+    }
+  } ,
+  "data"    : {
+    "users_assigned" : {
+      "1" : ["1" , "avatars/300-2.jpg" , "dinesh" , "dinu" , "31" , "21"] ,
+      "2" : ["2" , "avatars/300-2.jpg" , "john" , "smith" , "32" , "22"] ,
+      "3" : ["3" , "avatars/300-2.jpg" , "jane" , "doe" , "33" , "23"] ,
+      "4" : ["4" , "avatars/300-2.jpg" , "michael" , "lee" , "34" , "24"]
+    } ,
+    "created"        : {
+      "31" : ["Admin"] ,
+      "32" : ["manager"] ,
+      "33" : ["Employee"] ,
+      "34" : ["supervisor"]
+    } ,
+    "date"           : {
+      "21" : ["2023-03-25"] ,
+      "22" : ["2022-04-12"] ,
+      "23" : ["2023-01-15"] ,
+      "24" : ["2023-02-27"]
+    }
+  }
+}
+

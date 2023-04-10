@@ -1,0 +1,141 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "recent"    : {
+      "12" : ["12" , "Lokesh Kumar" , "overview" , "Regular Employees"]
+    } ,
+    "employees" : {
+      "12" : ["12" , "Dinesh Meena" , "dinu" , "Regulars"]
+    } ,
+    "pageState" : {
+      "employ" : [
+        {
+          "eid"   : 21 ,
+          "name"  : "Lokesh Kumar" ,
+          "post"  : "Manager" ,
+          "image" : "false"
+        }
+      ]
+    }
+  } ,
+  "data"    : {
+    "recent"    : {
+      "12" : {
+        "id"      : 12 ,
+        "name"    : "Lokesh Kumar" ,
+        "page"    : "overview" ,
+        "post_id" : "11"
+      } ,
+      "13" : {
+        "id"      : 13 ,
+        "name"    : "Ramesh Kumar" ,
+        "page"    : "profits" ,
+        "post_id" : "12"
+      }
+    } ,
+    "employees" : {
+      "12" : {
+        "id"      : "12" ,
+        "name"    : "Dinesh Meena" ,
+        "alias"   : "dinu" ,
+        "post_id" : "11"
+      } ,
+      "13" : {
+        "id"      : "13" ,
+        "name"    : "Mukul Loat" ,
+        "alias"   : "aki" ,
+        "post_id" : "13"
+      } ,
+      "11" : {
+        "id"      : "11" ,
+        "name"    : "Mukesh Singh" ,
+        "alias"   : "aki" ,
+        "post_id" : "11"
+      } ,
+      "14" : {
+        "id"      : "14" ,
+        "name"    : "Bharti Meena" ,
+        "alias"   : "idk" ,
+        "post_id" : "12"
+      } ,
+      "15" : {
+        "id"      : "15" ,
+        "name"    : "Saloni Mathur" ,
+        "alias"   : "chinu" ,
+        "post_id" : "13"
+      }
+    } ,
+    "category"  : {
+      "11" : ["Manager"] ,
+      "12" : ["Owner"] ,
+      "13" : ["Dealer"]
+    } ,
+    "pageState" : {
+      "employ"              : [
+        {
+          "eid"   : 21 ,
+          "name"  : "Lokesh Kumar" ,
+          "post"  : "Manager" ,
+          "image" : "false"
+        } ,
+        {
+          "eid"   : 22 ,
+          "name"  : "Naveen Kumar" ,
+          "post"  : "Employee" ,
+          "image" : "false"
+        }
+      ] ,
+      "role"                : {
+        "1" : ["1" , "Manager"] ,
+        "2" : ["2" , "SalesMan"] ,
+        "3" : ["3" , "Driver"] ,
+        "4" : ["4" , "Other"]
+      } ,
+      "notify"              : {
+        "1" : ["1" , "SMS"] ,
+        "2" : ["2" , "Whatsapp"] ,
+        "3" : ["3" , "Facebook"] ,
+        "4" : ["4" , "Other"]
+      } ,
+      "rule"                : {
+        "1" : ["1" , "No Rule, Deduct if he cross allowed"] ,
+        "2" : ["2" , "A, Deduct for all if crossed allowed"] ,
+        "3" : ["3" , " B, Deduct if absents are continue"] ,
+        "4" : ["4" , "Rule - C, Waved off, if the gap is 6+ Days"] ,
+        "5" : ["5" , "Rule - D, Waved off, if the gap is 14+ Days"]
+      } ,
+      "deduction"           : {
+        "1" : ["1" , "Do NOT Add Absents"] ,
+        "2" : ["2" , "Add Absent Charges"]
+      } ,
+      "colldiff_salary"     : {
+        "1" : ["1" , "Do NOT Add Collection Difference"] ,
+        "2" : ["2" , "Add Collection Difference Amount"]
+      } ,
+      "absent_deduction"    : {
+        "1" : ["1" , "Do NOT Add Absents"] ,
+        "2" : ["2" , "Add Absent Charges"]
+      } ,
+      "colldiff_employment" : {
+        "1" : ["1" , "Do NOT Add Collection Difference"] ,
+        "2" : ["2" , "Add Collection Difference Amount"]
+      }
+    }
+  }
+}

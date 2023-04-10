@@ -1,0 +1,62 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "pageState" : {
+      "header" : {
+        "amount" : "2343242" ,
+        "limit"  : "5023232"
+      }
+    } ,
+    "top"       : {
+      "month"   : {
+        "1" : [1 , "Dinesh Kumar" , "312345"] ,
+        "2" : [2 , "Ramesh Kumar" , "523434"] ,
+        "3" : [3 , "Lout" , "43234"]
+      } ,
+      "quarter" : {
+        "1" : [1 , "Dinesh Kumar" , "612345"] ,
+        "2" : [2 , "Ramesh Kumar" , "123434"] ,
+        "3" : [3 , "Lout" , "43234"]
+      } ,
+      "year"    : {
+        "1" : [1 , "Dinesh Kumar" , "912345"] ,
+        "2" : [2 , "Ramesh Kumar" , "523434"] ,
+        "3" : [3 , "Lout" , "43934"]
+      }
+    } ,
+    "month"     : {
+      "chart" : {
+        "dataset" : [
+          {
+            "name" : "Upper" ,
+            "data" : [1201 , 3120 , 4120 , 1120 , 1230 , 12320 , 1420 , 1260 , 6120 , 8120]
+          }
+        ] ,
+        "labels"  : ["1 Jan" , "2 Jan" , "3 Jan" , "4 Jan" , "5 Jan" , "6 Jan" , "7 Jan" , "8 Jan" , "9 Jan" , "10 Jan"]
+      } ,
+      "tableone" : {
+        "1" : [1 , "Dinesh Kumar" , "312345"] ,
+        "2" : [2 , "Ramesh Kumar" , "523434"] ,
+        "3" : [3 , "Lout" , "43234"]
+      }
+    }
+  }
+}

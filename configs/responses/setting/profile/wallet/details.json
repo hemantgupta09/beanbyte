@@ -1,0 +1,62 @@
+{
+  "status"  : true,
+  "message" : "message",
+  "title"   : "title",
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "20-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "header"        : {
+        "net_balance"   : "234324",
+        "cash_balance"  : "23432",
+        "coins_balance" : "4524234"
+      },
+      "referrals_one" : {
+        "id" : ["id", "date", "order_id", "details", "amount"]
+
+      },
+      "referrals_two" : {
+        "id" : ["id", "date", "order_id", "details", "amount"]
+
+      },
+      "dates"         : {
+        "date" : ["2022-03-04"]
+
+      }
+
+    } ,
+  "data"    : {
+    "header"        : {
+      "net_balance"   : "234324",
+      "cash_balance"  : "23432",
+      "coins_balance" : "4524234"
+    },
+    "referrals_one" : {
+      "11" : ["11", "21", "32432", "On Successful Referral - New User Register", "92845"],
+      "12" : ["12", "22", "32432", "On Successful Referral - New User Register", "92845"],
+      "13" : ["13", "23", "32432", "On Successful Referral - New User Register", "92845"]
+    },
+    "referrals_two" : {
+      "11" : ["11", "21", "32432", "On Successful Referral - New User Register", "92845"],
+      "12" : ["12", "22", "32432", "On Successful Referral - New User Register", "92845"],
+      "13" : ["13", "23", "32432", "On Successful Referral - New User Register", "92845"]
+    },
+    "dates"         : {
+      "21" : ["2022-03-04"],
+      "22" : ["2022-03-04"],
+      "23" : ["2022-03-04"]
+    }
+  }
+}

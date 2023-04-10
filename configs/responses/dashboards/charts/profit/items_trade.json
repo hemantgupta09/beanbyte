@@ -1,0 +1,38 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "dataset" : [
+      {
+        "name"    : "Purchase" ,
+        "type"    : "bar" ,
+        "stacked" : false ,
+        "data"    : [440459 , 554545 , 574534 , 56343 , 6134 , 5834 , 5634454 , 7823 , 7812 , 603445435 , 9023]
+      } ,
+      {
+        "name"    : "Sales" ,
+        "type"    : "bar" ,
+        "stacked" : false ,
+        "data"    : [7634 , 8343245 , 10341 , 934348 , 834347 , 105343 , 67343 , 90234 , 6745 , 1103 , 2304]
+      }
+    ] ,
+    "labels"  : ["Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sept" , "Oct" , "Nov" , "Dec"]
+  }
+}

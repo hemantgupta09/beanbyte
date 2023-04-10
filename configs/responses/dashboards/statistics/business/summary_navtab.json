@@ -1,0 +1,29 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "id": 11,
+    "sales_revenue": "1334334",
+    "credit_sale": "13342",
+    "cash_hand": "3455654",
+    "cash_sale": "345564",
+    "gross_profit": "943568"
+  }
+}

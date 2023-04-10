@@ -1,0 +1,40 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "recurring" : {
+      "id" : ["id" , "avatar" , "name" , "alias" , "start_date" , "cycle" , "pre_discount" , "category"]
+    } ,
+    "dates"     : {
+      "start_date" : ["2022-03-25"]
+    }
+  } ,
+  "data"    : {
+    "customer_table" : {
+      "11" : ["11" , "avatars/300-2.jpg" , "Dinesh Kumar Meena" , "Ramu" , "11" , "1.5" , "82479" , "cate"] ,
+      "12" : ["12" , "avatars/300-2.jpg" , "Dinesh Kumar Meena" , "Ramu" , "11" , "1.5" , "82479" , "cate"] ,
+      "13" : ["13" , "avatars/300-2.jpg" , "Dinesh Kumar Meena" , "Ramu" , "11" , "1.5" , "82479" , "cate"]
+    } ,
+    "dates"     : {
+      "11" : ["2022-03-25"] ,
+      "12" : ["2021-01-21"] ,
+      "13" : ["2022-04-23"] ,
+      "14" : ["2021-08-26"]
+    }
+  }
+}

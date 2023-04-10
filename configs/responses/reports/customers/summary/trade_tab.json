@@ -1,0 +1,44 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "dates" : {
+      "group_id" : [
+        "int : id",
+        "str : month_name",
+        "int : year"
+      ]
+    }
+  },
+  "data" : {
+    "dates" : {
+      "21" : [
+        21 , 
+        "January" , 
+        "2021"
+      ],
+      "22" : [
+        22 , 
+        "February" , 
+        "2021"
+      ],
+      "23" : [
+        23 , 
+        "March" , 
+        "2021"
+      ],
+      "24" : [
+        24 , 
+        "April" , 
+        "2021"
+      ]
+    }
+  }
+}

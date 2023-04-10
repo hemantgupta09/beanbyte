@@ -1,0 +1,55 @@
+{
+  "status": true,
+  "message": "message",
+  "title": "title",
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "20-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "account": {
+        "id": 12,
+        "ledger_id": 311,
+        "name": "Lokesh Kumar",
+        "email": "lokesh@beanbyte.in",
+        "mobile": "9876543211",
+        "avatar": "300-4.jpg",
+        "alias": "lucky",
+        "display_name": "lokesh_124",
+        "category": "Local Connections",
+        "notify": "2",
+        "account_balance": "349341",
+        "behave": "1",
+        "balance_date": "2023-01-20"
+      }
+    } ,
+  "data": {
+    "account": {
+      "id": 12,
+      "ledger_id": 311,
+      "name": "Lokesh Kumar",
+      "email": "lokesh@beanbyte.in",
+      "mobile": "9876543211",
+      "avatar": "300-4.jpg",
+      "alias": "lucky",
+      "display_name": "lokesh_124",
+      "category": "Local Connections",
+      "notify": "2",
+      "account_balance": "349341",
+      "behave": "1",
+      "balance_date": "2023-01-20"
+    }
+  }
+
+}

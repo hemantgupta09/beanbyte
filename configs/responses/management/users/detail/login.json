@@ -1,0 +1,46 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "25-03-2023" ,
+        "author"     : "dinesh" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "login_sessions" : {
+        "id": ["id", "location", "device", "ip-address", "date_id", "action"]
+      },
+      "dates"  : {
+        "date_id" : ["2022-12-12"]
+
+      }
+    } ,
+  "data"    : {
+    "login_sessions" : {
+      "1": ["1", "Australia", "Chrome - Windows", "207.39.42.49", "10", "Current session"],
+      "2": ["2", "United States", "Safari - Mac", "192.168.0.1", "11", "Previous session"],
+      "3": ["3", "Canada", "Firefox - Windows", "10.0.0.1", "12", "Current session"],
+      "4": ["4", "France", "Edge - Windows", "172.16.0.1", "13", "Current session"],
+      "5": ["5", "Germany", "Chrome - Android", "192.168.1.1", "14", "Previous session"]
+    },
+    "dates"  : {
+      "10" : ["2022-12-12"] ,
+      "11" : ["2022-12-12"] ,
+      "12" : ["2022-12-12"],
+      "13" : ["2022-12-12"] ,
+      "14" : ["2022-12-12"]
+
+  }
+}
+}

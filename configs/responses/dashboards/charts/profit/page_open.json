@@ -1,0 +1,122 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "session"      : {
+      "items-trade"  : "0" ,
+      "gross-profit" : "0" ,
+      "profit-item"  : "0"
+    } ,
+    "pageState"    : {
+      "category" : [
+        {
+          "value"  : "0" ,
+          "key"    : "item cat-1" ,
+          "select" : true
+        } ,
+        {
+          "value"  : "1" ,
+          "key"    : "item cat-2" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "2" ,
+          "key"    : "item cat-3" ,
+          "select" : false
+        }
+      ] ,
+      "days"     : [
+        {
+          "value"  : "0" ,
+          "key"    : "This Month" ,
+          "select" : true
+        } ,
+        {
+          "value"  : "1" ,
+          "key"    : "Last Month" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "30" ,
+          "key"    : "Last 30 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "60" ,
+          "key"    : "Last 60 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "90" ,
+          "key"    : "Last 90 days" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "365" ,
+          "key"    : "This Year" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "100" ,
+          "key"    : "Whole Time" ,
+          "select" : false
+        }
+      ]
+    } ,
+    "items-trade"  : {
+      "dataset" : [
+        {
+          "name"    : "Purchase" ,
+          "type"    : "bar" ,
+          "stacked" : false ,
+          "data"    : [44 , 55 , 57 , 56 , 61 , 58 , 56 , 78 , 78 , 60 , 90]
+        } ,
+        {
+          "name "   : "Sales" ,
+          "type"    : "bar" ,
+          "stacked" : false ,
+          "data"    : [76 , 85 , 101 , 98 , 87 , 105 , 67 , 90 , 67 , 110 , 230]
+        }
+      ] ,
+      "labels"  : ["Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sept" , "Oct" , "Nov" , "Dec"]
+    } ,
+    "gross-profit" : {
+      "dataset" : [
+        {
+          "name"    : "Net Profit" ,
+          "type"    : "bar" ,
+          "stacked" : false ,
+          "data"    : [44 , 55 , 57 , 56 , 61 , 58 , 44 , 55 , 57 , 56 , 61 , 58]
+        } ,
+        {
+          "name"    : "Revenue" ,
+          "type"    : "bar" ,
+          "stacked" : false ,
+          "data"    : [76 , 85 , 101 , 98 , 87 , 105 , 76 , 85 , 101 , 98 , 87 , 105]
+        }
+      ] ,
+      "labels"  : ["Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sept" , "Oct" , "Nov" , "Dec"]
+    } ,
+    "profit-item"  : {
+      "dataset" : [40 , 55 , 5] ,
+      "labels"  : ["Diesel" , "Petrol" , "Speed"]
+    }
+  }
+}

@@ -1,0 +1,169 @@
+banks:
+  - type: List of Private Sector Banks in India
+    list:
+      - name: Axis Bank Ltd.
+      - name: Bandhan Bank Ltd.
+      - name: CSB Bank Limited
+      - name: City Union Bank Ltd.
+      - name: DCB Bank Ltd.
+      - name: Dhanlaxmi Bank Ltd.
+      - name: Federal Bank Ltd.
+      - name: HDFC Bank Ltd
+      - name: ICICI Bank Ltd.
+      - name: IndusInd Bank Ltd
+      - name: IDFC FIRST Bank Limited
+      - name: Jammu & Kashmir Bank Ltd.
+      - name: Karnataka Bank Ltd.
+      - name: Karur Vysya Bank Ltd.
+      - name: Kotak Mahindra Bank Ltd
+      - name: Nainital bank Ltd.
+      - name: RBL Bank Ltd.
+      - name: South Indian Bank Ltd.
+      - name: Tamilnad Mercantile Bank Ltd.
+      - name: YES Bank Ltd.
+      - name: IDBI Bank Limited
+  - type: List of Local Area Banks (LAB)
+    list:
+      - name: Coastal Local Area Bank Ltd
+      - name: Krishna Bhima Samruddhi LAB Ltd
+  - type: List of Small Finance Banks (SFB)
+    list:
+      - name: Au Small Finance Bank Ltd.
+      - name: Capital Small Finance Bank Ltd
+      - name: Fincare Small Finance Bank Ltd.
+      - name: Equitas Small Finance Bank Ltd
+      - name: ESAF Small Finance Bank Ltd.
+      - name: Suryoday Small Finance Bank Ltd.
+      - name: Ujjivan Small Finance Bank Ltd.
+      - name: Utkarsh Small Finance Bank Ltd.
+      - name: North East Small finance Bank Ltd
+      - name: Jana Small Finance Bank Ltd
+      - name: Shivalik Small Finance Bank Ltd
+      - name: Unity Small Finance Bank Ltd
+
+  - type: List of Payments Banks (PB)
+    list:
+      - name: Airtel Payments Bank Ltd
+      - name: India Post Payments Bank Ltd
+      - name: FINO Payments Bank Ltd
+      - name: Paytm Payments Bank Ltd
+      - name: Jio Payments Bank Ltd
+      - name: NSDL Payments Bank Limited
+
+  - type: Public Sector Banks in India
+    list:
+      - name: Bank of Baroda
+      - name: Bank of India
+      - name: Bank of Maharashtra
+      - name: Canara Bank
+      - name: Central Bank of India
+      - name: Indian Bank
+      - name: Indian Overseas Bank
+      - name: Punjab & Sind Bank
+      - name: Punjab National Bank
+      - name: State Bank of India
+      - name: UCO Bank
+      - name: Union Bank of India
+
+
+  - type: Financial Institutions in India
+    list:
+      - name: National Bank for Agriculture and Rural Development
+      - name: Export-Import Bank of India
+      - name: National Housing Bank
+      - name: Small Industries Development Bank of India
+
+
+  - type: Regional Rural Banks in India
+    list:
+      - name: Assam Gramin Vikash Bank
+      - name: Andhra Pradesh Grameena Vikas Bank
+      - name: Andhra Pragathi Grameena Bank
+      - name: Arunachal Pradesh Rural Bank
+      - name: Aryavart Bank
+      - name: Bangiya Gramin Vikash Bank
+      - name: Baroda Gujarat Gramin Bank
+      - name: Baroda Rajasthan Kshetriya Gramin Bank
+      - name: Baroda UP Bank
+      - name: Chaitanya Godavari GB
+      - name: Chhattisgarh Rajya Gramin Bank
+      - name: Dakshin Bihar Gramin Bank
+      - name: Ellaquai Dehati Bank
+      - name: Himachal Pradesh Gramin Bank
+      - name: J&K Grameen Bank
+      - name: Jharkhand Rajya Gramin Bank
+      - name: Karnataka Gramin Bank
+      - name: Karnataka Vikas Gramin Bank
+      - name: Kerala Gramin Bank
+      - name: Madhya Pradesh Gramin Bank
+      - name: Madhyanchal Gramin Bank
+      - name: Maharashtra Gramin Bank
+      - name: Manipur Rural Bank
+      - name: Meghalaya Rural Bank
+      - name: Mizoram Rural Bank
+      - name: Nagaland Rural Bank
+      - name: Odisha Gramya Bank
+      - name: Paschim Banga Gramin Bank
+      - name: Prathama U.P. Gramin Bank
+      - name: Puduvai Bharathiar Grama Bank
+      - name: Punjab Gramin Bank
+      - name: Rajasthan Marudhara Gramin Bank
+      - name: Saptagiri Grameena Bank
+      - name: Sarva Haryana Gramin Bank
+      - name: Saurashtra Gramin Bank
+      - name: Tamil Nadu Grama Bank
+      - name: Telangana Grameena Bank
+      - name: Tripura Gramin Bank
+      - name: Uttar Bihar Gramin Bank
+      - name: Utkal Grameen Bank
+      - name: Uttarbanga Kshetriya Gramin Bank
+      - name: Vidharbha Konkan Gramin Bank
+      - name: Uttarakhand Gramin Bank
+
+  - type: foreign banks having banking presence in India
+    list:
+      - name: AB Bank Ltd.
+      - name: Abu Dhabi Commercial Bank PJSC
+      - name: American Express Banking Corporation
+      - name: Australia and New Zealand Banking Group Ltd.
+      - name: Barclays Bank Plc.
+      - name: Bank of America
+      - name: Bank of Bahrain & Kuwait B.S.C.
+      - name: Bank of Ceylon
+      - name: Bank of China
+      - name: Bank of Nova Scotia
+      - name: BNP Paribas
+      - name: Citibank N.A.
+      - name: Cooperatieve Rabobank U.A./ Coöperatieve Centrale Raiffeisen-Boerenleenbank B.A.
+      - name: Credit Agricole Corporate & Investment Bank
+      - name: Credit Suisse AG
+      - name: CTBC Bank Co., Ltd.
+      - name: DBS Bank India Limited
+      - name: Deutsche Bank A.G.
+      - name: Doha Bank Q.P.S.C
+      - name: Emirates NBD Bank PJSC
+      - name: First Abu Dhabi Bank PJSC
+      - name: FirstRand Bank Limited
+      - name: Hong Kong and Shanghai Banking Corporation Limited
+      - name: Industrial & Commercial Bank of China Ltd.
+      - name: Industrial Bank of Korea
+      - name: J.P. Morgan Chase Bank N.A.
+      - name: JSC VTB Bank
+      - name: KEB Hana Bank
+      - name: Kookmin Bank
+      - name: Krung Thai Bank Public Co. Ltd. $
+      - name: Mashreq bank PSC
+      - name: Mizuho Bank Ltd.
+      - name: MUFG Bank, Ltd.
+      - name: NatWest Markets Plc
+      - name: PT Bank Maybank Indonesia TBK
+      - name: Qatar National Bank (Q.P.S.C.)
+      - name: Sberbank
+      - name: SBM Bank (India) Limited
+      - name: Shinhan Bank
+      - name: Societe Generale India
+      - name: Sonali Bank Ltd. %
+      - name: Standard Chartered Bank
+      - name: Sumitomo Mitsui Banking Corporation
+      - name: United Overseas Bank Limited
+      - name: Woori Bank

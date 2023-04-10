@@ -1,0 +1,38 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "28-03-2023" ,
+    "lastCreatedBy" : "Sagar" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+    "delete_data" : {
+      "form_id" : [
+        "int: form_id" ,
+        "str: contact alias (account code)" ,
+        "str: current balance" ,
+        "int: notify method"
+      ]
+    }
+  } ,
+  "data"    : {
+    "table1" : {
+        "transaction"     : "28th January 2023" ,
+        "name"    : "Vikas" ,
+        "created"   : "mahesh" ,
+        "type"  : "cash"
+
+      } ,
+      "table2" :{
+
+        "debited" : "SBI" ,
+        "credited"  : "kotak",
+        "amount"   : "52345"
+
+      }
+  }
+}

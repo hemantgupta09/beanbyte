@@ -1,0 +1,6 @@
+{
+  id: "ed160612-80a0-48bb-8d10-f34f35bc6052",
+  name: "dashboard",
+  icon: "FOLDER",
+  sortWeight: 1000000
+}

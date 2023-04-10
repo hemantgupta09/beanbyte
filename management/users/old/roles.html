@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="" />
+	<title>PetroByte</title>
+	<meta charset="utf-8" />
+	<meta name="description"
+	      content="PetroByte" />
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon"
+	      href="../../assets/media/logos/favicon.ico" />
+	<link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+	<link href="../../assets/plugins/custom/datatables/datatables.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/plugins/global/plugins.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/css/style.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/css/style.common.css"
+	      rel="stylesheet"
+	      type="text/css" />
+</head>
+
+<body id="kt_app_body"
+      data-kt-app-header-fixed-mobile="true"
+      data-kt-app-sidebar-enabled="true"
+      data-kt-app-sidebar-fixed="true"
+      data-kt-app-sidebar-push-header="true"
+      data-kt-app-sidebar-push-toolbar="true"
+      data-kt-app-sidebar-push-footer="true"
+      class="app-default">
+<script src="../../assets/js/base/theme.js"></script>
+
+<div class="d-flex flex-column flex-root app-root"
+     id="kt_app_root">
+	<div class="app-page flex-column flex-column-fluid"
+	     id="kt_app_page">
+		<div id="kt_app_header"
+		     class="app-header d-flex"
+		     data-kt-sticky="true"
+		     data-kt-sticky-name="app-header-sticky"
+		     data-kt-sticky-offset="{default: 'false', lg: '300px'}">
+			<div class="app-container container-fluid d-flex align-items-stretch justify-content-between"
+			     id="kt_app_header_container">
+				<div class="d-flex d-lg-none align-items-center ms-n2 me-2"
+				     title="Show sidebar menu">
+					<div class="btn btn-icon btn-active-color-primary w-35px h-35px"
+					     id="kt_app_sidebar_mobile_toggle">
+						<span class="svg-icon svg-icon-2">
+							<svg width="24"
+							     height="24"
+							     viewBox="0 0 24 24"
+							     fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+								      fill="currentColor" />
+								<path opacity="0.3"
+								      d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
+								      fill="currentColor" />
+							</svg>
+						</span>
+					</div>
+				</div>
+				<div class="d-flex d-lg-none align-items-center me-auto">
+					<a href="">
+						<img alt="PetroByte"
+						     src="../../assets/media/logos/petrobyte.png"
+						     class="theme-light-show h-25px" />
+						<img alt="PetroByte"
+						     src="../../assets/media/logos/petrobyte-dark.png"
+						     class="theme-dark-show h-25px" />
+					</a>
+				</div>
+				<div data-kt-swapper="true"
+				     data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}"
+				     data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_container'}"
+				     class="page-title d-flex flex-column justify-content-center me-3 mb-6 mb-lg-0">
+					<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Roles</h1>
+					<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+						<li class="breadcrumb-item text-muted">Level-0</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-1</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-2</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-3</li>
+					</ul>
+				</div>
+				<!--## Navbar ##-->
+				<div class="app-navbar flex-shrink-0"
+				     id="kt_app_aside_navbar">
+					<!--  ## toolbar of navbar ##-->
+					<div class="app-navbar-item ms-1 ms-lg-3"
+					     id="kt_header_user_menu_toggle">
+						<!--@@ USer wrapper-->
+						<div class="cursor-pointer symbol symbol-circle ms-2 symbol-35px symbol-lg-50px"
+						     data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+						     data-kt-menu-attach="parent"
+						     data-kt-menu-placement="bottom-end">
+							<img src="../../assets/media/logos/petrobyte-round.png"
+							     alt="petrobyte" />
+						</div>
+						<!--@@ User Menu-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--## Wrapper ##-->
+		<div class="app-wrapper flex-column flex-row-fluid"
+		     id="kt_app_wrapper">
+			
+			<!--## Sidebar ##-->
+			<div id="kt_app_sidebar"
+			     class="app-sidebar flex-column"
+			     data-kt-drawer="true"
+			     data-kt-drawer-name="app-sidebar"
+			     data-kt-drawer-activate="{default: true, lg: false}"
+			     data-kt-drawer-overlay="true"
+			     data-kt-drawer-width="250px"
+			     data-kt-drawer-direction="start"
+			     data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+				<!-- ## sidebar menus ## -->
+			</div>
+			
+			<div class="app-main flex-column flex-row-fluid"
+			     id="kt_app_main">
+				<div class="d-flex flex-column flex-column-fluid">
+					<div id="kt_app_content"
+					     class="app-content flex-column-fluid">
+						<div id="kt_app_content_container"
+						     class="app-container container-fluid">
+							
+							<div class="row g-7"
+							     id="layout_zone"
+							     data-pb-welcome="direct"
+							     data-pb-layout="direct">
+								
+								<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-5 g-xl-9"
+								     id="working">
+									<div class="col-md-4">
+										<div class="card card-flush h-md-100">
+											<div class="card-header">
+												<div class="card-title">
+													<h2>Administrator</h2>
+												</div>
+											</div>
+											<div class="card-body pt-1">
+												<div class="fw-bold text-gray-600 mb-5">Total users with this role: 5</div>
+												<div class="d-flex flex-column text-gray-600">
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														All Admin Controls
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View and Edit Financial Summaries
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														Enabled Bulk Reports
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View and Edit Payouts
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View and Edit Disputes
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														<em>and 7 more...</em>
+													</div>
+												</div>
+											</div>
+											<div class="card-footer flex-wrap pt-0">
+												<a href="../../demo2/dist/apps/user-management/roles/view.html"
+												   class="btn btn-light btn-active-primary my-1 me-2">View Role</a>
+												<button type="button"
+												        class="btn btn-light btn-active-light-primary my-1"
+												        data-bs-toggle="modal"
+												        data-bs-target="#kt_modal_update_role">Edit Role
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="card card-flush h-md-100">
+											<div class="card-header">
+												<div class="card-title">
+													<h2>Developer</h2>
+												</div>
+											</div>
+											<div class="card-body pt-1">
+												<div class="fw-bold text-gray-600 mb-5">Total users with this role: 14</div>
+												<div class="d-flex flex-column text-gray-600">
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														Some Admin Controls
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Financial Summaries only
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View and Edit API Controls
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Payouts only
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View and Edit Disputes
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														<em>and 3 more...</em>
+													</div>
+												</div>
+											</div>
+											<div class="card-footer flex-wrap pt-0">
+												<a href="../../demo2/dist/apps/user-management/roles/view.html"
+												   class="btn btn-light btn-active-primary my-1 me-2">View Role</a>
+												<button type="button"
+												        class="btn btn-light btn-active-light-primary my-1"
+												        data-bs-toggle="modal"
+												        data-bs-target="#kt_modal_update_role">Edit Role
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="card card-flush h-md-100">
+											<div class="card-header">
+												<div class="card-title">
+													<h2>Analyst</h2>
+												</div>
+											</div>
+											<div class="card-body pt-1">
+												<div class="fw-bold text-gray-600 mb-5">Total users with this role: 4</div>
+												<div class="d-flex flex-column text-gray-600">
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														No Admin Controls
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View and Edit Financial Summaries
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														Enabled Bulk Reports
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Payouts only
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Disputes only
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														<em>and 2 more...</em>
+													</div>
+												</div>
+											</div>
+											<div class="card-footer flex-wrap pt-0">
+												<a href="../../demo2/dist/apps/user-management/roles/view.html"
+												   class="btn btn-light btn-active-primary my-1 me-2">View Role</a>
+												<button type="button"
+												        class="btn btn-light btn-active-light-primary my-1"
+												        data-bs-toggle="modal"
+												        data-bs-target="#kt_modal_update_role">Edit Role
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="card card-flush h-md-100">
+											<div class="card-header">
+												<div class="card-title">
+													<h2>Support</h2>
+												</div>
+											</div>
+											<div class="card-body pt-1">
+												<div class="fw-bold text-gray-600 mb-5">Total users with this role: 23</div>
+												<div class="d-flex flex-column text-gray-600">
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														No Admin Controls
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Financial Summaries only
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Payouts only
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View and Edit Disputes
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														Response to Customer Feedback
+													</div>
+												</div>
+											</div>
+											<div class="card-footer flex-wrap pt-0">
+												<a href="../../demo2/dist/apps/user-management/roles/view.html"
+												   class="btn btn-light btn-active-primary my-1 me-2">View Role</a>
+												<button type="button"
+												        class="btn btn-light btn-active-light-primary my-1"
+												        data-bs-toggle="modal"
+												        data-bs-target="#kt_modal_update_role">Edit Role
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="card card-flush h-md-100">
+											<div class="card-header">
+												<div class="card-title">
+													<h2>Trial</h2>
+												</div>
+											</div>
+											<div class="card-body pt-1">
+												<div class="fw-bold text-gray-600 mb-5">Total users with this role: 546</div>
+												<div class="d-flex flex-column text-gray-600">
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														No Admin Controls
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Financial Summaries only
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Bulk Reports only
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Payouts only
+													</div>
+													<div class="d-flex align-items-center py-2">
+														<span class="bullet bg-primary me-3"></span>
+														View Disputes only
+													</div>
+												</div>
+											</div>
+											<div class="card-footer flex-wrap pt-0">
+												<a href="../../demo2/dist/apps/user-management/roles/view.html"
+												   class="btn btn-light btn-active-primary my-1 me-2">View Role</a>
+												<button type="button"
+												        class="btn btn-light btn-active-light-primary my-1"
+												        data-bs-toggle="modal"
+												        data-bs-target="#kt_modal_update_role">Edit Role
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="ol-md-4">
+										<div class="card h-md-100">
+											<div class="card-body d-flex flex-center">
+												<button type="button"
+												        class="btn btn-clear d-flex flex-column flex-center"
+												        data-bs-toggle="modal"
+												        data-bs-target="#kt_modal_add_role">
+													<img src="assets/media/illustrations/sketchy-1/4.png"
+													     alt=""
+													     class="mw-100 mh-150px mb-7" />
+													<div class="fw-bold fs-3 text-gray-600 text-hover-primary">Add New Role</div>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="modal">
+									<div class="modal fade"
+									     id="kt_modal_add_role"
+									     tabindex="-1"
+									     aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered mw-750px">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h2 class="fw-bold">Add a Role</h2>
+													<div class="btn btn-icon btn-sm btn-active-icon-primary"
+													     data-kt-roles-modal-action="close">
+														<span class="svg-icon svg-icon-1">
+															<svg width="24"
+															     height="24"
+															     viewBox="0 0 24 24"
+															     fill="none"
+															     xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5"
+																      x="6"
+																      y="17.3137"
+																      width="16"
+																      height="2"
+																      rx="1"
+																      transform="rotate(-45 6 17.3137)"
+																      fill="currentColor" />
+																<rect x="7.41422"
+																      y="6"
+																      width="16"
+																      height="2"
+																      rx="1"
+																      transform="rotate(45 7.41422 6)"
+																      fill="currentColor" />
+															</svg>
+														</span>
+													</div>
+												</div>
+												<div class="modal-body scroll-y mx-lg-5 my-7">
+													<form id="kt_modal_add_role_form"
+													      class="form"
+													      action="#">
+														<div class="d-flex flex-column scroll-y me-n7 pe-7"
+														     id="kt_modal_add_role_scroll"
+														     data-kt-scroll="true"
+														     data-kt-scroll-activate="{default: false, lg: true}"
+														     data-kt-scroll-max-height="auto"
+														     data-kt-scroll-dependencies="#kt_modal_add_role_header"
+														     data-kt-scroll-wrappers="#kt_modal_add_role_scroll"
+														     data-kt-scroll-offset="300px">
+															<div class="fv-row mb-10">
+																<label class="fs-5 fw-bold form-label mb-2">
+																	<span class="required">Role name</span>
+																</label>
+																<input class="form-control form-control-solid"
+																       placeholder="Enter a role name"
+																       name="role_name" />
+															</div>
+															<div class="fv-row">
+																<label class="fs-5 fw-bold form-label mb-2">Role Permissions</label>
+																<div class="table-responsive">
+																	<table class="table align-middle table-row-dashed fs-6 gy-5">
+																		<tbody class="text-gray-600 fw-semibold">
+																		<tr>
+																			<td class="text-gray-800">Administrator Access
+																				<i class="fas fa-exclamation-circle ms-1 fs-7"
+																				   data-bs-toggle="tooltip"
+																				   title="Allows a full access to the system"></i></td>
+																			<td>
+																				<label class="form-check form-check-custom form-check-solid me-9">
+																					<input class="form-check-input"
+																					       type="checkbox"
+																					       value=""
+																					       id="kt_roles_select_all_1" />
+																					<span class="form-check-label"
+																					      for="kt_roles_select_all">Select all
+																					</span>
+																				</label>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">User Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="user_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="user_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="user_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Content Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="content_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="content_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="content_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Financial Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="financial_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="financial_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="financial_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Reporting</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="reporting_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="reporting_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="reporting_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Payroll</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="payroll_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="payroll_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="payroll_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Disputes Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="disputes_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="disputes_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="disputes_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">API Controls</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="api_controls_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="api_controls_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="api_controls_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Database Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="database_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="database_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="database_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Repository Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="repository_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="repository_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-sm form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="repository_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div>
+														<div class="text-center pt-15">
+															<button type="reset"
+															        class="btn btn-light me-3"
+															        data-kt-roles-modal-action="cancel">Discard
+															</button>
+															<button type="submit"
+															        class="btn btn-primary"
+															        data-kt-roles-modal-action="submit">
+																<span class="indicator-label">Submit</span>
+																<span class="indicator-progress">Please wait...
+																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																</span>
+															</button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="modal fade"
+									     id="kt_modal_update_role"
+									     tabindex="-1"
+									     aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered mw-750px">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h2 class="fw-bold">Update Role</h2>
+													<div class="btn btn-icon btn-sm btn-active-icon-primary"
+													     data-kt-roles-modal-action="close">
+														<span class="svg-icon svg-icon-1">
+															<svg width="24"
+															     height="24"
+															     viewBox="0 0 24 24"
+															     fill="none"
+															     xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5"
+																      x="6"
+																      y="17.3137"
+																      width="16"
+																      height="2"
+																      rx="1"
+																      transform="rotate(-45 6 17.3137)"
+																      fill="currentColor" />
+																<rect x="7.41422"
+																      y="6"
+																      width="16"
+																      height="2"
+																      rx="1"
+																      transform="rotate(45 7.41422 6)"
+																      fill="currentColor" />
+															</svg>
+														</span>
+													</div>
+												</div>
+												<div class="modal-body scroll-y mx-5 my-7">
+													<form id="kt_modal_update_role_form"
+													      class="form"
+													      action="#">
+														<div class="d-flex flex-column scroll-y me-n7 pe-7"
+														     id="kt_modal_update_role_scroll"
+														     data-kt-scroll="true"
+														     data-kt-scroll-activate="{default: false, lg: true}"
+														     data-kt-scroll-max-height="auto"
+														     data-kt-scroll-dependencies="#kt_modal_update_role_header"
+														     data-kt-scroll-wrappers="#kt_modal_update_role_scroll"
+														     data-kt-scroll-offset="300px">
+															<div class="fv-row mb-10">
+																<label class="fs-5 fw-bold form-label mb-2">
+																	<span class="required">Role name</span>
+																</label>
+																<input class="form-control form-control-solid"
+																       placeholder="Enter a role name"
+																       name="role_name"
+																       value="Developer" />
+															</div>
+															<div class="fv-row">
+																<label class="fs-5 fw-bold form-label mb-2">Role Permissions</label>
+																<div class="table-responsive">
+																	<table class="table align-middle table-row-dashed fs-6 gy-5">
+																		<tbody class="text-gray-600 fw-semibold">
+																		<tr>
+																			<td class="text-gray-800">Administrator Access
+																				<i class="fas fa-exclamation-circle ms-1 fs-7"
+																				   data-bs-toggle="tooltip"
+																				   title="Allows a full access to the system"></i></td>
+																			<td>
+																				<label class="form-check form-check-sm form-check-custom form-check-solid me-9">
+																					<input class="form-check-input"
+																					       type="checkbox"
+																					       value=""
+																					       id="kt_roles_select_all" />
+																					<span class="form-check-label"
+																					      for="kt_roles_select_all">Select all
+																					</span>
+																				</label>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">User Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="user_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="user_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="user_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Content Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="content_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="content_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="content_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Financial Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="financial_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="financial_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="financial_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Reporting</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="reporting_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="reporting_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="reporting_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Payroll</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="payroll_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="payroll_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="payroll_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Disputes Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="disputes_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="disputes_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="disputes_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">API Controls</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="api_controls_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="api_controls_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="api_controls_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Database Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="database_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="database_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="database_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-gray-800">Repository Management</td>
+																			<td>
+																				<div class="d-flex">
+																					<label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="repository_management_read" />
+																						<span class="form-check-label">Read</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid me-5 me-lg-20">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="repository_management_write" />
+																						<span class="form-check-label">Write</span>
+																					</label>
+																					<label class="form-check form-check-custom form-check-solid">
+																						<input class="form-check-input"
+																						       type="checkbox"
+																						       value=""
+																						       name="repository_management_create" />
+																						<span class="form-check-label">Create</span>
+																					</label>
+																				</div>
+																			</td>
+																		</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+														</div>
+														<div class="text-center pt-15">
+															<button type="reset"
+															        class="btn btn-light me-3"
+															        data-kt-roles-modal-action="cancel">Discard
+															</button>
+															<button type="submit"
+															        class="btn btn-primary"
+															        data-kt-roles-modal-action="submit">
+																<span class="indicator-label">Submit</span>
+																<span class="indicator-progress">Please wait...
+																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																</span>
+															</button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+						
+						</div>
+					</div>
+				</div>
+				<div id="kt_app_footer"
+				     class="app-footer">
+					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+						@lokesh
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--@@ Javascript-->
+<script>
+	var hostUrl = "assets/";
+	var thePage = "management@users@roles";
+</script>
+<!--@@ Global Javascript Bundle (mandatory for all pages)-->
+<script src="../../assets/plugins/global/plugins.bundle.js"></script>
+<script src="../../assets/js/scripts/scripts.bundle.js"></script>
+<script src="../../assets/js/scripts/scripts.common.js"></script>
+<script src="../../assets/js/scripts/scripts.general.js"></script>
+
+<!--@@ Global Javascript Base (mandatory for all pages)-->
+<script src="../../assets/js/base/const.js"></script>
+<script src="../../assets/js/base/structure.js"></script>
+<script src="../../assets/js/base/attributes.js"></script>
+<script src="../../assets/js/base/layout.js"></script>
+
+<!--@@ Rendering data into javascript (mandatory for all pages)-->
+<script src="../../assets/js/render/render.menu.js"></script>
+<script src="../../assets/js/render/render.table.js"></script>
+<script src="../../assets/js/render/render.form.js"></script>
+<script src="../../assets/js/extend/extend.foreign.js"></script>
+<script src="../../assets/js/extend/extend.collect.js"></script>
+
+<!--@@ Vendors Javascript -->
+<script src="../../assets/plugins/custom/formrepeater/formrepeater.bundle.js"></script>
+<script src="../../assets/plugins/custom/datatables/datatables.bundle.js"></script>
+
+
+<!--@@ Required Plugins Javascript -->
+<script src="../../assets/js/plugins/quickAccess.js"></script>
+<script src="../../assets/js/plugins/formValid.js"></script>
+<script src="../../assets/js/plugins/datePicker.js"></script>
+<script src="../../assets/js/plugins/rangePicker.js"></script>
+<script src="../../assets/js/plugins/selectPicker.js"></script>
+<script src="../../assets/js/plugins/tagifyInput.js"></script>
+<script src="../../assets/js/plugins/formKeen.js"></script>
+<script src="../../assets/js/plugins/formRepeater.js"></script>
+
+<!--@@ Custom Files Javascript -->
+<script src="../../assets/js/heads/management.js"></script>
+<script src="../../assets/js/pages/management/users.js"></script>
+<script src="../../assets/js/pages/management/users/roles.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Lokesh" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+    "contact" : {
+      "group_id" : [
+        "int: entry_id" ,
+        "str: Bank Name" ,
+        "url: Contact Name" ,
+        "str: current balance"
+      ]
+    }
+  } ,
+  "data"    : {
+    "contact" : [
+      {
+        "lid"    : 40 ,
+        "name"   : "Rakesh Junjanwala" ,
+        "alias"  : "lucky" ,
+        "string" : "1" ,
+        "amount" : "56000" ,
+        "behave" : "1"
+      } ,
+      {
+        "lid"    : 40 ,
+        "name"   : "Elon Bhai" ,
+        "alias"  : "lucky" ,
+        "string" : "1" ,
+        "amount" : "135000" ,
+        "behave" : "1"
+      }
+    ] ,
+    "nature"  : [
+      {
+        "id"      : 4 ,
+        "name"    : "Cash Main" ,
+        "balance" : "348971" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "id"      : 5 ,
+        "name"    : "Cash Local" ,
+        "balance" : "900.61" ,
+        "suffix"  : "0"
+      }
+    ] ,
+    "bank_ac" : [
+      {
+        "lid"     : 10 ,
+        "name"    : "SBI Bank" ,
+        "alias"   : "xx52345" ,
+        "prefix"  : 1 ,
+        "balance" : "52374.52" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 11 ,
+        "name"    : "HDFC Bank" ,
+        "alias"   : "xx23456" ,
+        "prefix"  : 1 ,
+        "balance" : "1234.2" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 12 ,
+        "name"    : "KOTAK Bank" ,
+        "alias"   : "xx42234" ,
+        "prefix"  : 1 ,
+        "balance" : "89027" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 14 ,
+        "name"    : "Lokesh Bank" ,
+        "alias"   : "" ,
+        "prefix"  : 1 ,
+        "balance" : "1892.54" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 10 ,
+        "name"    : "ICICI OD Account" ,
+        "alias"   : "" ,
+        "prefix"  : 1 ,
+        "balance" : "-52345" ,
+        "suffix"  : "1"
+      }
+    ]
+  }
+}

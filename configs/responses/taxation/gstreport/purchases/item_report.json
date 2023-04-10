@@ -1,0 +1,85 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "data" : {
+      "group_id" : [
+        "int : id",
+        "str : item",
+        "str : customer",
+        "int : quantity",
+        "int : taxable_value",
+        "int : Igst_value",
+        "int : Cgst_value",
+        "int : Sgst_value",
+        "int : Total value",
+        "int : customer_type"
+      ]
+    }
+  },
+  "data" : {
+    "detail": {
+      "account": "DPS School, India",
+      "closing": "340971",
+      "range": ["2021-10-20", "2022-01-30"],
+      "ledger_id": 232
+    },
+    "data": {
+      "12" : [
+        12 ,
+        "Item-1" ,
+        "Local customers",
+        "87.60" ,
+        "171.23" ,
+        "1" ,
+        "15000" ,
+        "4" ,
+        "132" ,
+        "Type"
+      ],
+      "13" : [
+        13 ,
+        "Item-2" ,
+        "Local customers",
+        "89.20" ,
+        "1168.16 ",
+        "1" ,
+        "16000" ,
+        "2" ,
+        "132" ,
+        "Type"
+      ],
+      "14" : [
+        14 ,
+        "Item-2" ,
+        "Local customers",
+        "87.60" ,
+        "171.23" ,
+        "1" ,
+        "17000" ,
+        "9" ,
+        "132" ,
+        "1Type"
+      ],
+      "15" : [
+        15 ,
+        "Item-2" ,
+        "Local customers",
+        "87.60" ,
+        "171.23" ,
+        "4" ,
+        "18000" ,
+        "6" ,
+        "132" ,
+        "Type"
+      ]
+    }
+  }
+}

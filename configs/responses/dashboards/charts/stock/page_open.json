@@ -1,0 +1,107 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "session"        : {
+      "business-trade" : "0" ,
+      "stock-flow"     : "0" ,
+      "sales-break"    : "0"
+    } ,
+    "pageState"      : {
+      "items" : [
+        {
+          "value"  : "0" ,
+          "key"    : "Diesel" ,
+          "select" : true
+        } ,
+        {
+          "value"  : "1" ,
+          "key"    : "Petrol" ,
+          "select" : false
+        } ,
+        {
+          "value"  : "2" ,
+          "key"    : "Speed" ,
+          "select" : false
+        }
+      ]
+    } ,
+    "business-trade" : {
+      "dataset" : [
+        {
+          "name" : "Expense" ,
+          "type" : "bar" ,
+          "data" : [44 , 55 , 57 , 56 , 61 , 58 , 78 , 45 , 34 , 78 , 90]
+        } ,
+        {
+          "name" : "Revenue" ,
+          "type" : "bar" ,
+          "data" : [76 , 85 , 101 , 98 , 87 , 105 , 45 , 90 , 120 , 56 , 98]
+        }
+      ] ,
+      "labels"  : ["Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sept" , "Oct" , "Nov" , "Dec"]
+    } ,
+    "stock-flow"     : {
+      "dataset" : [
+        {
+          "name" : "Upper" ,
+          "type" : "line" ,
+          "data" : [120 , 120 , 120 , 120 , 120 , 120 , 120 , 120 , 120 , 120]
+        } ,
+        {
+          "name" : "Fuel Stock" ,
+          "type" : "line" ,
+          "data" : [60 , 50 , 80 , 40 , 100 , 60 , 80 , 70 , 60 , 65]
+        } ,
+        {
+          "name" : "Lower" ,
+          "type" : "line" ,
+          "data" : [40 , 40 , 40 , 40 , 40 , 40 , 40 , 40 , 40 , 40]
+        } ,
+        {
+          "name" : "Dry Reference" ,
+          "type" : "line" ,
+          "data" : [20 , 20 , 20 , 20 , 20 , 20 , 20 , 20 , 20 , 20]
+        }
+      ] ,
+      "labels"  : ["1 Jan" , "2 Jan" , "3 Jan" , "4 Jan" , "5 Jan" , "6 Jan" , "7 Jan" , "8 Jan" , "9 Jan" , "10 Jan"]
+    } ,
+    "sales-break"    : {
+      "dataset" : [
+        {
+          "name" : "Credit" ,
+          "type" : "area" ,
+          "data" : [150 , 150 , 150 , 150 , 150 , 150 , 150 , 150 , 150 , 150]
+        } ,
+        {
+          "name" : "Cash" ,
+          "type" : "area" ,
+          "data" : [100 , 100 , 100 , 100 , 100 , 100 , 100 , 100 , 100 , 100]
+        } ,
+        {
+          "name" : "Digital" ,
+          "type" : "area" ,
+          "data" : [50 , 50 , 50 , 50 , 50 , 50 , 50 , 50 , 50 , 50]
+        }
+      ] ,
+      "labels"  : ["1 Jan" , "2 Jan" , "3 Jan" , "4 Jan" , "5 Jan" , "6 Jan" , "7 Jan" , "8 Jan" , "9 Jan" , "10 Jan"]
+    }
+  }
+}

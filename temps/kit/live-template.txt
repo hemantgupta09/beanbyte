@@ -1,0 +1,55 @@
+::{keyword}
+Adding big constant values
+---------------------------------------------
+..{keyword}
+Adding HTML components
+---------------------------------------------
+bs:{keyword}
+Bootstrap micro components
+---------------------------------------------
+f:{keyword}
+HTML Form related all elements
+---------------------------------------------
+cs:{keyword}
+Custom elements
+---------------------------------------------
+jh:{keyword}
+Javascript HTML components
+---------------------------------------------
+i:{keyword}
+Bootstrap Icon input
+---------------------------------------------
+-{keyword}
+Js random use code
+---------------------------------------------
+st:{keyword}
+Js static code
+---------------------------------------------
+={keyword}
+Js Keen code
+---------------------------------------------
+//zz-{keyword}
+Import file
+----------------------------------------------------------------
+100
+110 : modal class
+120 : borders class
+130 : buttons class
+190 : columns
+200
+210 :  colors
+220 : constants
+
+
+300
+320: hover
+330: ribbon
+340: symbol
+400
+410 : form select
+800
+809: card class
+810: table classes
+811: table header
+812: table body
+813: table footer

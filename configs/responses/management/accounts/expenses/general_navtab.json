@@ -1,0 +1,111 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "highlights" : {
+      "month"   : "March" ,
+      "payment" : "90200" ,
+      "receipt" : "23000" ,
+      "net"     : "-67200"
+    } ,
+    "balance"    : {
+      "amount"   : "534534" ,
+      "tag"      : "advance" ,
+      "opening"  : "56000" ,
+      "debited"  : "12000" ,
+      "credited" : "90000"
+    } ,
+    "charts"     : {
+      "balance"     : {
+        "dataset" : [
+          {
+            "name" : "Balance" ,
+            "data" : [
+              13000 ,
+              15000 , 14500 , 20800 , 30900 , 24000 , 19000 , 20800 , 30900 , 24000 , 21000 , 23300
+            ]
+          }
+        ] ,
+        "labels"  : ["Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+      } ,
+      "transaction" : {
+        "dataset" : [
+          {
+            "name" : "Debits" ,
+            "data" : [130 , 150 , 145 , 208 , 309 , 240 , 110 , 208 , 309 , 240 , 110 , 233]
+          } , {
+            "name" : "Credits" ,
+            "data" : [150 , 123 , 90 , 170 , 120 , 90 , 100 , 50 , 55 , 90 , 70 , 120]
+          }
+        ] ,
+        "labels"  : ["Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+      }
+    } ,
+    "other"      : {
+      "notify_mode" : 1 ,
+      "category"    : "Relative Business Group" ,
+      "description" : "This is the account"
+    }
+  } ,
+  "data"    : {
+    "highlights" : {
+      "month"   : "March" ,
+      "payment" : "90200" ,
+      "receipt" : "23000" ,
+      "net"     : "-67200"
+    } ,
+    "balance"    : {
+      "amount"   : "534534" ,
+      "tag"      : "advance" ,
+      "opening"  : "56000" ,
+      "debited"  : "12000" ,
+      "credited" : "90000"
+    } ,
+    "charts"     : {
+      "balance"     : {
+        "dataset" : [
+          {
+            "name" : "Balance" ,
+            "data" : [
+              13000 ,
+              15000 , 14500 , 20800 , 30900 , 24000 , 19000 , 20800 , 30900 , 24000 , 21000 , 23300
+            ]
+          }
+        ] ,
+        "labels"  : ["Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+      } ,
+      "transaction" : {
+        "dataset" : [
+          {
+            "name" : "Debits" ,
+            "data" : [130 , 150 , 145 , 208 , 309 , 240 , 110 , 208 , 309 , 240 , 110 , 233]
+          } , {
+            "name" : "Credits" ,
+            "data" : [150 , 123 , 90 , 170 , 120 , 90 , 100 , 50 , 55 , 90 , 70 , 120]
+          }
+        ] ,
+        "labels"  : ["Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+      }
+    } ,
+    "other"      : {
+      "notify_mode" : 1 ,
+      "category"    : "Relative Business Group" ,
+      "description" : "This is the account"
+    }
+  }
+}

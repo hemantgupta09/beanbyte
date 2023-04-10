@@ -1,0 +1,60 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Lokesh" ,
+    "note" : "first setup" ,
+    "changes" : "--"
+  } ,
+  "sample" : {
+    "customer" : {
+      "group_id" : [
+        "int: group_id" ,
+        "date: last date of transaction" ,
+        "str: Mode of payment" ,
+        "str: bank account" ,
+        "int: amount" ,
+        "str: note"
+      ]
+    }
+  } ,
+  "data" : {
+    "rows" : [
+      {
+        "id" : "1" ,
+        "date" : "2020-11-23" ,
+        "debit" : "Cash-in-hand" ,
+        "credit" : "SBI Bank" ,
+        "amount" : "12000.23" ,
+        "note" : "this is test"
+      } ,
+      {
+        "id" : "2" ,
+        "date" : "2020-11-24" ,
+        "debit" : "Cash-in-hand" ,
+        "credit" : "HDFC Bank" ,
+        "amount" : "14000.66" ,
+        "note" : "this is test"
+      } ,
+      {
+        "id" : "3" ,
+        "date" : "2020-11-25" ,
+        "debit" : "Cash-in-hand" ,
+        "credit" : "HDFC Bank" ,
+        "amount" : "12000.90" ,
+        "note" : "this is test"
+      } ,
+      {
+        "id" : "4" ,
+        "date" : "2020-11-26" ,
+        "debit" : "Cash-in-hand" ,
+        "credit" : "ICICI Bank" ,
+        "amount" : "123000.12" ,
+        "note" : "this is test"
+      }
+    ]
+  }
+}

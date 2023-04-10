@@ -1,0 +1,31 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "24-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "vehicle" : {
+      "id" : ["id" , "vehicle" , "driver" , "contact" , "type" , "lastvisit" , "sales"]
+    }
+  } ,
+  "data"    : {
+    "vehicle" : {
+      "3234" : ["3234" , "RJ-45-FA-5245" , "Rakesh" , "9876543211" , "DRUM" , "25 Oct 2022, 8 Mo & 14 Days ago" , "8687677"] ,
+      "3235" : ["3235" , "RJ-45-FA-5245" , "Rakesh" , "9876543211" , "DRUM" , "25 Oct 2022, 8 Mo & 14 Days ago" , "8687677"] ,
+      "3236" : ["3236" , "RJ-45-FA-5245" , "Balram" , "9834543211" , "DRUM" , "25 Oct 2022, 8 Mo & 14 Days ago" , "8687677"]
+    }
+  }
+}

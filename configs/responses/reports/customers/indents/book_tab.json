@@ -1,0 +1,77 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "books" : {
+      "group_id" : [
+        "int : id",
+        "int : book_name"
+      ]
+    }
+  },
+  "sample1" : {
+    "customers" : {
+      "group_id" : [
+        "int : id",
+        "str : book_name",
+        "str : book_name",
+        "int : book_id"
+
+      ]
+    }
+  },
+  "data" : {
+    "books" : {
+      
+      "342" : [
+        342 , 
+        "Science Book"
+      ],
+      "424" : [
+        424 , 
+        "BeanByte Book"
+      ],
+      "426" : [
+        426 , 
+        "History Book"
+      ],
+      "427" : [
+        427 , 
+        "Maths Book"
+      ]
+    },
+    "customers" : {
+      "21" : [
+        21 , 
+        "Lokesh Kumar" , 
+        "lucky" , 
+        "342"
+      ],
+      "22" : [
+        22 , 
+        "Lokesh Kumar" , 
+        "lucky" , 
+        "342"
+      ],
+      "23" : [
+        23 , 
+        "Lokesh Kumar" , 
+        "lucky" , 
+        "342"
+      ],
+      "24" : [
+        24 , 
+        "Lokesh Kumar" , 
+        "lucky" , 
+        "342"
+      ]
+    }
+  }
+}

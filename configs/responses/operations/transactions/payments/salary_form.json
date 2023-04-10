@@ -1,0 +1,137 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Sagar" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+    "list" : {
+      "group_id" : [
+        "int: entry_id" ,
+        "url: Bank Name" ,
+        "str: current balance"
+      ]
+    }
+  } ,
+  "data"    : {
+    "bank"      : [
+      {
+        "lid"     : 10 ,
+        "name"    : "SBI Bank" ,
+        "alias"   : "xx52345" ,
+        "prefix"  : 1 ,
+        "balance" : "52374.52" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 11 ,
+        "name"    : "HDFC Bank" ,
+        "alias"   : "xx23456" ,
+        "prefix"  : 1 ,
+        "balance" : "1234.2" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 12 ,
+        "name"    : "KOTAK Bank" ,
+        "alias"   : "xx42234" ,
+        "prefix"  : 1 ,
+        "balance" : "89027" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 14 ,
+        "name"    : "Lokesh Bank" ,
+        "alias"   : "" ,
+        "prefix"  : 1 ,
+        "balance" : "1892.54" ,
+        "suffix"  : "0"
+      } ,
+      {
+        "lid"     : 10 ,
+        "name"    : "ICICI OD Account" ,
+        "alias"   : "" ,
+        "prefix"  : 1 ,
+        "balance" : "-52345" ,
+        "suffix"  : "1"
+      }
+    ] ,
+    "credit"    : [
+      {
+        "lid"     : 10 ,
+        "name"    : "ICICI OD Account" ,
+        "balance" : "-52345" ,
+        "suffix"  : "1"
+      }
+    ] ,
+    "month"     : [
+      {
+        "lid"  : 4 ,
+        "name" : "January"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "February"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "March"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "April"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "May"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "June"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "July"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "August"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "September"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "October"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "Novemeber"
+      } ,
+      {
+        "lid"  : 5 ,
+        "name" : "December"
+      }
+    ] ,
+    "employ_ac" : [
+      {
+        "eid"   : 21 ,
+        "name"  : "Lokesh Kumar" ,
+        "image" : "" ,
+        "post"  : "Manager"
+      } ,
+      {
+        "eid"   : 22 ,
+        "name"  : "Naveen Kumar" ,
+        "image" : "" ,
+        "post"  : "Employee"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "24-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "transaction_history" : {
+        "id" : ["id" , "date_id" , "description" , "type" , "payment" , "posted" , "closing"]
+      } ,
+      "outSanding_salary"   : [
+        {
+          "id"     : 75 ,
+          "amount" : "7576444"
+        }
+      ] ,
+      "activities"          : [
+        {
+          "id"       : 123 ,
+          "absents"  : [5 , 1] ,
+          "self_exp" : "3534534"
+        }
+      ] ,
+      "type"                : {
+        "10" : ["Salary  Payment"] ,
+        "11" : ["Payable"]
+      } ,
+      "dates"               : {
+        "10" : ["2022-12-12"]
+
+      }
+    } ,
+  "data"    : {
+    "transaction_history" : {
+      "11" : ["11" , "10" , "Salary Payment of Jun2022" , "10" , "834834" , "23434" , "49857"] ,
+      "12" : ["12" , "21" , "Salary Infuse of SEP" , "11" , "834834" , "23434" , "873748"] ,
+      "13" : ["13" , "22" , "Salary Payment of July" , "10" , "834834" , "23434" , "809832"] ,
+      "14" : ["14" , "11" , "Salary Payment of Jun2022" , "11" , "834834" , "23434" , "87389"] ,
+      "15" : ["15" , "12" , "Salary Payment of Jun2022" , "11" , "834834" , "23434" , "8374893"]
+    } ,
+    "outSanding_salary"   : [
+      {
+        "id"     : 75 ,
+        "amount" : "7576444"
+      }
+    ] ,
+    "activities"          : [
+      {
+        "id"       : 123 ,
+        "absents"  : [5 , 1] ,
+        "self_exp" : "3534534"
+      }
+    ] ,
+    "type"                : {
+      "10" : ["Salary  Payment"] ,
+      "11" : ["Payable"]
+    } ,
+    "dates"               : {
+      "10" : ["2022-12-12"] ,
+      "11" : ["2022-12-12"] ,
+      "12" : ["2022-12-12"] ,
+      "21" : ["2022-03-23"] ,
+      "22" : ["2022-12-15"] ,
+      "23" : ["2022-12-20"] ,
+      "24" : ["2022-12-20"] ,
+      "25" : ["2022-12-20"]
+    }
+  }
+}

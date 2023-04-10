@@ -1,0 +1,124 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "data" : {
+      "group_id" : [
+        "int : id",
+        "int : date_id",
+        "int : vehicle_id",
+        "int : item_id",
+        "int : token",
+        "int : value",
+        "int : note",
+        "int : reject",
+        "int : cash",
+        "int : book",
+        "int : bill"
+      ]
+    }
+  },
+  "data" : {
+    " statement" : {
+      "12" : [
+        112 ,
+        312 ,
+        2 ,
+        53 ,
+        52 ,
+        51362.12 ,
+        1 ,
+        "this is cool"],
+      "13" : [
+        113 ,
+        361 ,
+        2 ,
+        53 ,
+        52 ,
+        51362.12 ,
+        1 ,
+        "this is cool"],
+      "14" : [
+        212 ,
+        234 ,
+        2 ,
+        53 ,
+        52 ,
+        51362.12 ,
+        1 ,
+        "this is cool"],
+      "15" : [
+        213 ,
+        235 ,
+        2 ,
+        53 ,
+        52 ,
+        51362.12 ,
+        1 ,
+        "this is cool"],
+      "16" : [
+        214 ,
+        236 ,
+        2 ,
+        53 ,
+        52 ,
+        51362.12 ,
+        1 ,
+        "this is cool"],
+      "17" : [
+        218 ,
+        237 ,
+        2 ,
+        53 ,
+        52 ,
+        51362.12 ,
+        1 ,
+        "this is cool"]
+    },
+    "dates" : {
+      "112" : [
+        "2022-12-12"
+      ],
+      "113" : [
+        "2023-01-01"
+      ],
+      "212" : [
+        "2022-12-12"
+      ],
+      "213" : [
+        "2022-03-23"
+      ],
+      "214" : [
+        "2022-12-15"
+      ],
+      "218" : [
+        "2022-12-20"
+      ]
+    },
+    "ledgers" : {
+      "312" : [
+        "POS machine"],
+      "361" : [
+        "Rakesh Supplier"],
+      "234" : [
+        "Lokesh"],
+      "235" : [
+        "Suresh"],
+      "236" : [
+        "ICICI Bank"],
+      "237" : [
+        "Shriram Finance"],
+      "238" : [
+        "Indian Oil"],
+      "239" : [
+        "Jai Bahgvati Travels"]
+    }
+  }
+}

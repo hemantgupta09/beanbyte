@@ -1,0 +1,42 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "" ,
+      "author"     : "" ,
+      "maintainer" : "" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+  } ,
+  "data"    : {
+    "dataset" : [
+      {
+        "name" : "Balance Line" ,
+        "data" : [1300 , 150 , 145 , 208 , 309 , 240 , 110]
+      } ,
+      {
+        "name" : "Credit Line" ,
+        "data" : [50 , 55 , 90 , 70 , 120 , 900 , 100]
+      } ,
+      {
+        "name" : "Receipts Line" ,
+        "data" : [40 , 102 , 30 , 78 , 89 , 70 , 70]
+      } ,
+      {
+        "name" : "Credit Sale" ,
+        "data" : [30 , 450 , 25 , 60 , 100 , 80 , 85]
+      }
+    ] ,
+    "labels"  : ["30 days" , "60 days" , "90 days" , "120 days" , "150 days" , "366 days" , "all time"]
+  }
+}

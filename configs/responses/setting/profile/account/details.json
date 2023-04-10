@@ -1,0 +1,58 @@
+{
+  "status"  : true,
+  "message" : "message",
+  "title"   : "title",
+  "info"    : {
+      "version" : "1.0.0" ,
+      "created" : {
+        "date"       : "20-03-2023" ,
+        "author"     : "Balram" ,
+        "maintainer" : "Lokesh" ,
+        "note"       : ""
+      } ,
+      "updated" : {
+        "updater"     : "" ,
+        "date"        : "" ,
+        "description" : ""
+      }
+    } ,
+    "sample"  : {
+
+      "profile" : {
+        "dealer_name"   : "Lokesh Kumar",
+        "person_name"   : "Naveen Kumar",
+        "company"       : "PetroByte Filling Station",
+        "gstin"         : "08AACIB3281H1ZM",
+        "tin"           : "GS5235453",
+        "phone"         : "8473294212",
+        "mobile"        : "3412656222",
+        "address"       : "lalsot",
+        "state"         : "1",
+        "district"      : "2",
+        "language"      : "1",
+        "time_zone"     : "3",
+        "currency"      : "4",
+        "communication" : "1",
+        "allow"         : "1"
+      }
+    } ,
+  "data"    : {
+    "profile" : {
+      "dealer_name"   : "Lokesh Kumar",
+      "person_name"   : "Naveen Kumar",
+      "company"       : "PetroByte Filling Station",
+      "gstin"         : "08AACIB3281H1ZM",
+      "tin"           : "GS5235453",
+      "phone"         : "8473294212",
+      "mobile"        : "3412656222",
+      "address"       : "lalsot",
+      "state"         : "1",
+      "district"      : "2",
+      "language"      : "1",
+      "time_zone"     : "3",
+      "currency"      : "4",
+      "communication" : "1",
+      "allow"         : "1"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  id: "d5358dda-4c42-43f7-97ba-77e367b28e6a",
+  name: "operations",
+  description: "Operations",
+  icon: "FOLDER",
+  sortWeight: 2000000
+}

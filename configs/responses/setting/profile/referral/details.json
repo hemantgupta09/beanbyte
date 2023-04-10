@@ -1,0 +1,72 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "referral_year"    : {
+      "id" : ["id" , "first_date" , "referral_user" , "details" , "status" , "profit"]
+
+    } ,
+    "referral_time"    : {
+      "id" : ["id" , "first_date" , "referral_user" , "details" , "status" , "profit"]
+
+    } ,
+    "referral_program" : {
+      "net_earnings"    : "123434" ,
+      "registrations"   : "33490" ,
+      "paid_referred"   : "125" ,
+      "failed_referral" : "223"
+    } ,
+    "dates"            : {
+      "first_date" : ["2022-02-04"]
+
+    } ,
+    "status"           : {
+      "status" : ["PAID"]
+
+    }
+  } ,
+  "data"    : {
+    "referral_year"    : {
+      "11" : ["11" , "24" , "Lokesh Filling Station" , "any extra detail about the user" , "1" , "2300"] ,
+      "12" : ["12" , "22" , "Lokesh Filling Station" , "any extra detail about the user" , "3" , "3000"] ,
+      "13" : ["13" , "21" , "Lokesh Filling Station" , "any extra detail about the user" , "2" , "2300"]
+    } ,
+    "referral_time"    : {
+      "11" : ["11" , "24" , "Lokesh Filling Station" , "any extra detail about the user" , "1" , "2300"] ,
+      "12" : ["12" , "22" , "Lokesh Filling Station" , "any extra detail about the user" , "3" , "3000"] ,
+      "13" : ["13" , "21" , "Lokesh Filling Station" , "any extra detail about the user" , "2" , "2300"]
+    } ,
+    "referral_program" : {
+      "net_earnings"    : "123434" ,
+      "registrations"   : "33490" ,
+      "paid_referred"   : "125" ,
+      "failed_referral" : "223"
+    } ,
+    "dates"            : {
+      "21" : ["2022-02-04"] ,
+      "22" : ["2022-02-01"] ,
+      "23" : ["2022-05-04"] ,
+      "24" : ["2022-02-04"]
+    } ,
+    "status"           : {
+      "1" : ["PAID"] ,
+      "2" : ["TRIAL"] ,
+      "3" : ["DUE"]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "employees" : {
+      "group_id" : [
+        "int : id",
+        "str : employee_name"
+      ]
+    }
+  },
+  "data" : {
+    "employees" : {
+      "21" : [
+        21 ,
+        "Lokesh Kumar"
+      ],
+      "22" : [
+        22 ,
+        "Naveen Kumar"
+      ],
+      "23" : [
+        23 ,
+        "Suresh Kumar"
+      ],
+      "24" : [
+        24 ,
+        "Rakesh Kumar"
+      ]
+    }
+  }
+}

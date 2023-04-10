@@ -1,0 +1,33 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "25-03-2023" ,
+      "author"     : "dinesh" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "profile" : {
+      "id" : ["id" , "E-mail" , "password" , "role" , "contact_number"]
+    }
+  } ,
+  "data"    : {
+    "profile" : {
+      "1" : ["1" , "smith@kpmg.com" , "cbds7ydc" , "Administrator" , "+919823827382"] ,
+      "2" : ["2" , "jane@kpmg.com" , "yde9s3bc" , "User" , "+919872635524"] ,
+      "3" : ["3" , "john@kpmg.com" , "trc5u2hb" , "User" , "+919819283746"] ,
+      "4" : ["4" , "susan@kpmg.com" , "fgr7t6yh" , "User" , "+919971239876"] ,
+      "5" : ["5" , "peter@kpmg.com" , "kmd8a5fx" , "User" , "+919978563421"]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "status"  : true ,
+  "message" : "this is the message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version"       : "1.0.1" ,
+    "lastCreatedOn" : "18-03-2023" ,
+    "lastCreatedBy" : "Sagar" ,
+    "note"          : "first setup" ,
+    "changes"       : "--"
+  } ,
+  "sample"  : {
+    "cash" : {
+      "cash_ac_id" : [
+        "int: group_id" ,
+        "str: Contact Name" ,
+        "str: cash Account" ,
+        "str: alias of the group" ,
+        "str: cash_id" ,
+        "str: current balance" ,
+        "int: notify method"
+      ]
+    }
+  } ,
+  "data"    : {
+    "cash_ac"  : [
+      {
+        "lid"     : 4 ,
+        "name"    : "Cash Main" ,
+        "alias"   : "cash" ,
+        "prefix"  : 1 ,
+        "balance" : "348971" ,
+        "behave"  : "0"
+      } ,
+      {
+        "lid"     : 5 ,
+        "name"    : "Cash Local" ,
+        "alias"   : "cash" ,
+        "prefix"  : 1 ,
+        "balance" : "900.61" ,
+        "behave"  : "1"
+      }
+    ] ,
+    "employee" : [
+      {
+        "lid"  : 10 ,
+        "name" : "Lokesh Kumar"
+      } ,
+      {
+        "lid"  : 11 ,
+        "name" : "Naveen Kumar"
+      } ,
+      {
+        "lid"  : 12 ,
+        "name" : "Suresh Kumar"
+      } ,
+      {
+        "lid"  : 14 ,
+        "name" : "Rakesh Kumar"
+      }
+    ]
+  }
+}

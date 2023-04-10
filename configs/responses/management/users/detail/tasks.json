@@ -1,0 +1,32 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "25-03-2023" ,
+      "author"     : "dinesh" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "users_tasks" : {
+      "id" : ["id" , "task" , "due_date" , "name"]
+    }
+  } ,
+  "data"    : {
+    "users_tasks" : {
+      "1" : ["1" , "Create FureStibe branding logo" , "1 day" , "Karina Clark"] ,
+      "2" : ["2" , "Develop marketing strategy" , "3 weeks" , "Tom Wilson"] ,
+      "3" : ["3" , "Design website layout" , "2 days" , "Sarah Lee"] ,
+      "4" : ["4" , "Write product user manual" , "5 days" , "John Doe"]
+    }
+  }
+}

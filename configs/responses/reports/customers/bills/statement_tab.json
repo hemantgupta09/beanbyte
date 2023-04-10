@@ -1,0 +1,64 @@
+{
+  "status" : true ,
+  "message" : "this is the message" ,
+  "title" : "title" ,
+  "info" : {
+    "version" : "1.0.1",
+    "latstCreatedOn" : "" ,
+    "latstCreatedOBy" : "" ,
+    "note" : ""
+  },
+  "sample" : {
+    "months" : {
+      "group_id" : [
+        "int : id",
+        "str : customer_name",
+        "str : alias",
+        "int : bill_id",
+        "int : status"
+      ]
+    }
+  },
+  "data" : {
+    "months" : {
+      "342" : [
+        342 , 
+        "JAN-2023" , 
+        "21" , 
+        "1"
+      ],
+      "424" : [
+        424 , 
+        "APR-2023" , 
+        "21" , 
+        "3"
+      ],
+      "426" : [
+        426 , 
+        "JULY-2023" , 
+        "21" , 
+        "4"
+      ],
+      "427" : [
+        427 , 
+        "ACT-2023" , 
+        "22" , 
+        "4"
+      ]
+    } ,
+    "years": {
+      "21" : [
+        21 , 
+        "JAN_FEB_MAR"],
+      "22" : [
+        22 , 
+        "APR-MAY-JUN"],
+      "23" : [
+        23 , 
+        "JULY-AUG-SEP"],
+      "24" : [
+        24 , 
+        "OCT-NOV-DEC"]
+    }
+  }
+}

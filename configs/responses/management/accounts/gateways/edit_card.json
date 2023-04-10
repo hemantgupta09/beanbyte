@@ -1,0 +1,43 @@
+{
+  "status"  : true ,
+  "message" : "message" ,
+  "title"   : "title" ,
+  "info"    : {
+    "version" : "1.0.0" ,
+    "created" : {
+      "date"       : "20-03-2023" ,
+      "author"     : "Balram" ,
+      "maintainer" : "Lokesh" ,
+      "note"       : ""
+    } ,
+    "updated" : {
+      "updater"     : "" ,
+      "date"        : "" ,
+      "description" : ""
+    }
+  } ,
+  "sample"  : {
+    "gateway_name"       : "Ramesh Kumar" ,
+    "terminal_id"        : "dk23" ,
+    "category"           : "11" ,
+    "connect_account"    : "11" ,
+    "settlement_charges" : "3124" ,
+    "unsettled_amount"   : "234231" ,
+    "cycle"              : "12" ,
+    "charge_method"      : "1" ,
+    "check"              : "1" ,
+    "balance_date"       : "2023-01-03"
+  } ,
+  "data"    : {
+    "gateway_name"       : "Ramesh Kumar" ,
+    "terminal_id"        : "dk23" ,
+    "category"           : "11" ,
+    "connect_account"    : "11" ,
+    "settlement_charges" : "3124" ,
+    "unsettled_amount"   : "234231" ,
+    "cycle"              : "12" ,
+    "charge_method"      : "1" ,
+    "check"              : "1" ,
+    "balance_date"       : "2023-01-03"
+  }
+}

@@ -1,0 +1,3158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="" />
+	<title>PetroByte</title>
+	<meta charset="utf-8" />
+	<meta name="description"
+	      content="PetroByte" />
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon"
+	      href="../../assets/media/logos/favicon.ico" />
+	<link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+	<link href="../../assets/plugins/custom/datatables/datatables.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/plugins/global/plugins.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/css/style.bundle.css"
+	      rel="stylesheet"
+	      type="text/css" />
+	<link href="../../assets/css/style.common.css"
+	      rel="stylesheet"
+	      type="text/css" />
+
+</head>
+
+<body id="kt_app_body"
+      data-kt-app-header-fixed-mobile="true"
+      data-kt-app-sidebar-enabled="true"
+      data-kt-app-sidebar-fixed="true"
+      data-kt-app-sidebar-push-header="true"
+      data-kt-app-sidebar-push-toolbar="true"
+      data-kt-app-sidebar-push-footer="true"
+      class="app-default">
+<script src="../../assets/js/base/theme.js"></script>
+
+<div class="d-flex flex-column flex-root app-root"
+     id="kt_app_root">
+	<div class="app-page flex-column flex-column-fluid"
+	     id="kt_app_page">
+		<div id="kt_app_header"
+		     class="app-header d-flex"
+		     data-kt-sticky="true"
+		     data-kt-sticky-name="app-header-sticky"
+		     data-kt-sticky-offset="{default: 'false', lg: '300px'}">
+			<div class="app-container container-fluid d-flex align-items-stretch justify-content-between"
+			     id="kt_app_header_container">
+				<div class="d-flex d-lg-none align-items-center ms-n2 me-2"
+				     title="Show sidebar menu">
+					<div class="btn btn-icon btn-active-color-primary w-35px h-35px"
+					     id="kt_app_sidebar_mobile_toggle">
+						<span class="svg-icon svg-icon-2">
+							<svg width="24"
+							     height="24"
+							     viewBox="0 0 24 24"
+							     fill="none"
+							     xmlns="http://www.w3.org/2000/svg">
+								<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z"
+								      fill="currentColor" />
+								<path opacity="0.3"
+								      d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z"
+								      fill="currentColor" />
+							</svg>
+						</span>
+					</div>
+				</div>
+				<div class="d-flex d-lg-none align-items-center me-auto">
+					<a href="">
+						<img alt="PetroByte"
+						     src="../../assets/media/logos/petrobyte.png"
+						     class="theme-light-show h-25px" />
+						<img alt="PetroByte"
+						     src="../../assets/media/logos/petrobyte-dark.png"
+						     class="theme-dark-show h-25px" />
+					</a>
+				</div>
+				<div data-kt-swapper="true"
+				     data-kt-swapper-mode="{default: 'prepend', lg: 'prepend'}"
+				     data-kt-swapper-parent="{default: '#kt_app_content_container', lg: '#kt_app_header_container'}"
+				     class="page-title d-flex flex-column justify-content-center me-3 mb-6 mb-lg-0">
+					<h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Title of the Page</h1>
+					<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+						<li class="breadcrumb-item text-muted">Level-0</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-1</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-2</li>
+						<li class="breadcrumb-item">
+							<span class="bullet bg-gray-400 w-5px h-2px"></span>
+						</li>
+						<li class="breadcrumb-item text-muted">Level-3</li>
+					</ul>
+				</div>
+				<!--## Navbar ##-->
+				<div class="app-navbar flex-shrink-0"
+				     id="kt_app_aside_navbar">
+					<!--  ## toolbar of navbar ##-->
+					<div class="app-navbar-item ms-1 ms-lg-3"
+					     id="kt_header_user_menu_toggle">
+						<!--@@ USer wrapper-->
+						<div class="cursor-pointer symbol symbol-circle ms-2 symbol-35px symbol-lg-50px"
+						     data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+						     data-kt-menu-attach="parent"
+						     data-kt-menu-placement="bottom-end">
+							<img src="../../assets/media/logos/petrobyte-round.png"
+							     alt="petrobyte" />
+						</div>
+						<!--@@ User Menu-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--## Wrapper ##-->
+		<div class="app-wrapper flex-column flex-row-fluid"
+		     id="kt_app_wrapper">
+			
+			<!--## Sidebar ##-->
+			<div id="kt_app_sidebar"
+			     class="app-sidebar flex-column"
+			     data-kt-drawer="true"
+			     data-kt-drawer-name="app-sidebar"
+			     data-kt-drawer-activate="{default: true, lg: false}"
+			     data-kt-drawer-overlay="true"
+			     data-kt-drawer-width="250px"
+			     data-kt-drawer-direction="start"
+			     data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+				<!-- ## sidebar menus ## -->
+			</div>
+			
+			<div class="app-main flex-column flex-row-fluid"
+			     id="kt_app_main">
+				<div class="d-flex flex-column flex-column-fluid">
+					<div id="kt_app_content"
+					     class="app-content flex-column-fluid">
+						<div id="kt_app_content_container"
+						     class="app-container container-fluid">
+							
+							<div id="layout_zone"
+							     class="row g-7"
+							     data-pb-welcome="buttons"
+							     data-pb-layout="buttons">
+								<div id="menu"
+								     class="col-xxl-4 col-xl-5 col-lg-6 col-md-6 col-12">
+									<div class="card">
+										<div class="card-header pt-1">
+											<div class="card-title w-50">
+												<h2>
+													<input type="text"
+													       name="work-date"
+													       data-control="date"
+													       data-pb-method="human"
+													       value="2023-03-10"
+													       class="form-control form-control-transparent p-0 fs-2"
+													       placeholder="Work Date"
+													       title="" />
+												</h2>
+											</div>
+											<div class="card-toolbar">
+												<button type="button"
+												        class="btn btn-outline btn-outline-dashed btn-outline-dark py-1"
+												        data-bs-toggle="tooltip"
+												        data-bs-html="true"
+												        title="<span class='fs-6'>Change Working Date</span>">
+													Change
+												</button>
+											</div>
+										</div>
+										
+										
+										<div class="card-body pt-5">
+											<div class="d-flex flex-column gap-5"
+											     id="menulist">
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="receipts"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-dark text-hover-primary">Total Receipts:
+													</button>
+													<div class="fs-4 badge badge-light-dark fw-semibold">0</div>
+												</div>
+												<div class="separator separator-dashed"></div>
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="cash-deposit"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-gray-800 text-hover-primary">Deposits
+														<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   data-bs-html="true"
+														   title="<span class='fs-4'>Used for Cash Deposits into Bank</span>"></i>
+													</button>
+													<div class="fs-4 badge fw-normal">0</div>
+												</div>
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="cash-withdrawal"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-gray-800 text-hover-primary">Withdrawals
+														<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   data-bs-html="true"
+														   title="<span class='fs-4'>Used for Cash Withdrawal from Bank</span>"></i>
+													</button>
+													<div class="fs-4 badge fw-normal">0</div>
+												</div>
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="intra-transfer"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-gray-800 text-hover-primary">Transfers
+														<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   data-bs-html="true"
+														   title="<span class='fs-4'>Used for Internal Banking Transfers</span>"></i>
+													</button>
+													<div class="fs-4 badge fw-normal">0</div>
+												</div>
+												<div class="d-flex flex-stack">
+													<button type="button"
+													        name="card"
+													        value="modal"
+													        data-pb-value="fund-clearance"
+													        class="fs-4 btn btn-link py-0 fw-semibold text-gray-800 text-hover-primary">Clearances
+														<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-600"
+														   data-bs-toggle="tooltip"
+														   data-bs-html="true"
+														   title="<span class='fs-4'>Used for POS / QR Settlement and cheque clearance</span>"></i>
+													</button>
+													<div class="fs-4 badge fw-normal">0</div>
+												</div>
+												<div class="separator separator-dashed"></div>
+												<div class="d-flex flex-stack">
+													<a href="javascript:"
+													   class="fs-4 fw-semibold text-gray-800 text-hover-danger">Contra Voucher</a>
+													<div class="fs-4 badge badge-light-primary"
+													     data-bs-toggle="tooltip"
+													     title="Total Entry Created">0
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<button class="btn btn-flex btn-light-primary px-6 w-100"
+											        name="card"
+											        value="search"
+											        type="button">
+												<i class="fs-3x lab la-searchengin"></i>
+												<span class="d-flex flex-column align-items-start ms-2">
+													<span class="fs-3 fw-bold">Search Entry</span>
+													<span class="fs-7">for View, Edit or Delete</span>
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div id="working"
+								     class="col-xxl-8 col-xl-7 col-lg-6 col-md-6 col-12"
+								     data-class="col-12">
+									<div id="buttons"
+									     class="row">
+										
+										<div class="col-xl-6 col-lg-12 col-md-12">
+											<div class="card card-flush mb-6 hover-elevate-up">
+												<div class="card-body p-0 ribbon">
+													<div class="card-px text-center py-10 my-0">
+														<i class="bi bi-people fs-1 fs-4x text-primary"></i>
+														<h2 class="fs-1 fw-bold text-primary mb-10 mt-5">Credit Customers</h2>
+														<button type="button"
+														        value="customer"
+														        name="form"
+														        data-pb-origin="buttons"
+														        class="btn btn-light-primary">
+															<i class="bi bi-plus-lg fs-2"></i>Create
+														</button>
+														<button type="button"
+														        value="customer"
+														        name="table"
+														        data-pb-origin="buttons"
+														        class="btn btn-active-light-primary btn-text-primary">
+															Overview
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-6 col-lg-12 col-md-12">
+											<div class="card card-flush mb-6 hover-elevate-up">
+												<div class="card-body p-0 ribbon">
+													<div class="card-px text-center py-10 my-0">
+														<i class="bi bi-person-check fs-1 fs-4x text-primary"></i>
+														<h2 class="fs-1 fw-bold text-primary mb-10 mt-5">Contact Deals</h2>
+														<button type="button"
+														        value="contact"
+														        name="form"
+														        class="btn btn-light-primary">
+															<i class="bi bi-plus-lg fs-2"></i>Create
+														</button>
+														<button type="button"
+														        value="contact"
+														        name="table"
+														        class="btn btn-active-light-primary btn-text-primary">
+															Overview
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-6 col-lg-12 col-md-12">
+											<div class="card card-flush mb-6 hover-elevate-up">
+												<div class="card-body p-0">
+													<div class="card-px text-center py-10 my-0">
+														<i class="bi bi-cash-coin fs-1 fs-4x text-primary"></i>
+														<h2 class="fs-1 fw-bold text-primary mb-10 mt-5">Other Incomes</h2>
+														<button type="button"
+														        value="income"
+														        name="form"
+														        class="btn btn-light-primary">
+															<i class="bi bi-plus-lg fs-2"></i>Create
+														</button>
+														<button type="button"
+														        value="income"
+														        name="table"
+														        class="btn btn-active-light-primary btn-text-primary">
+															Overview
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-6 col-lg-12 col-md-12">
+											<div class="card card-flush mb-6 hover-elevate-up">
+												<div class="card-body p-0">
+													<div class="card-px text-center py-10 my-0">
+														<i class="bi bi-archive fs-1 fs-4x text-primary"></i>
+														<h2 class="fs-1 fw-bold text-primary mb-10 mt-5">Owner Transactions</h2>
+														<button type="button"
+														        value="transact"
+														        name="form"
+														        class="btn btn-light-primary">
+															<i class="bi bi-plus-lg fs-2"></i>Create
+														</button>
+														<button type="button"
+														        value="transact"
+														        name="table"
+														        class="btn btn-active-light-primary btn-text-primary">
+															Overview
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="forms">
+										<div id="customer-form"
+										     class="d-none">
+											<div class="d-flex flex-column gap-7 gap-lg-10">
+												<div class="d-flex flex-wrap flex-stack gap-5 gap-lg-10">
+													<ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-semibold mb-lg-n2 me-auto">
+														<li class="nav-item">
+															<a class="nav-link text-active-primary pb-4 active"
+															   data-bs-toggle="tab"
+															   href="#r_c_direct">Direct</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link text-active-primary pb-4"
+															   data-bs-toggle="tab"
+															   href="#r_c_entrywise">Entry-wise</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link text-active-primary pb-4"
+															   data-bs-toggle="tab"
+															   href="#r_c_billwise">Bill-wise</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link text-active-primary pb-4"
+															   data-bs-toggle="tab"
+															   href="#r_c_interest">Interest</a>
+														</li>
+													</ul>
+													<button type="button"
+													        value="customer"
+													        name="minus"
+													        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale ms-auto me-lg-n7">
+														<i class="fs-3 me-1 text-dark bi bi-fullscreen"></i>
+													</button>
+													<button type="button"
+													        value="customer"
+													        name="back"
+													        class="btn btn-sm btn-white btn-text-dark hover-rotate-start">
+														<i class="bi fs-2 bi-arrow-bar-left"></i>
+														Go Back
+													</button>
+												</div>
+												<div class="tab-content">
+													<div class="tab-pane fade show active"
+													     id="r_c_direct"
+													     role="tab-panel">
+														
+														<div class="card shadow-sm">
+															<div class="card-body py-5">
+																<form id="form-receipt-direct"
+																      class=""
+																      data-pb-control="repeater"
+																      data-pb-method="nested"
+																      data-form-sno="1"
+																      method="post"
+																      autocomplete="off">
+																	<div class="form-group">
+																		<div data-repeater-list="receipt_direct">
+																			<div data-repeater-item>
+																				<div class="row fv-row">
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label required">Date of Transaction</label>
+																						<input type="text"
+																						       name="date"
+																						       required
+																						       class="form-control form-control-solid form-control-md"
+																						       data-pb-control="date"
+																						       data-pb-method="human"
+																						       placeholder="Receipt Date"
+																						       title="Money Received Date ??" />
+																					</div>
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<span class="required">Bank Account</span>
+																							<span class="fw-bold fs-6 text-success">[+]</span>
+																						</label>
+																						<select name="bank_ac"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="amount"
+																						        data-pb-placeholder="Select Bank Account"
+																						        title="Select Bank Account">
+																						
+																						</select>
+																					</div>
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label required">Received By</label>
+																						<select name="employ_ac"
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="image"
+																						        data-pb-tack="rich"
+																						        data-pb-placeholder="Received By"
+																						        title="Received By">
+																							<!--																							<option></option>-->
+																							<!--																							<option value="5" data-s3-subcontent="Salesman">Rakesh Kumar</option>-->
+																							<!--																							<option value="6" data-s3-subcontent="Manager">lokesh</option>-->
+																							<!--																							<option value="6" data-s3-subcontent="Admin">Owner</option>-->
+																						</select>
+																					</div>
+																				</div>
+																				<div class="inner-repeater">
+																					<div data-repeater-list="receipt_direct_inner"
+																					     class="mb-0">
+																						<div data-repeater-item>
+																							<div class="row fv-row">
+																								<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-10">
+																									<select name="group"
+																									        required
+																									        class="form-select form-select-solid"
+																									        data-pb-control="select"
+																									        data-pb-method="account"
+																									        data-pb-tack="group"
+																									        data-pb-placeholder="Select Customer Account"
+																									        title="Select other person or firm Account">
+																										<!--<option></option>-->
+																										<!--<optgroup label="Category - 1">-->
+																										<!--	<option value="1"-->
+																										<!--	        data-s3-text-a="Due:"-->
+																										<!--	        data-s3-text-b="45000"-->
+																										<!--	        data-s3-text-c="danger">Lokesh Kumar-->
+																										<!--	</option>-->
+																										<!--</optgroup>-->
+																										<!--<optgroup label="Category - 2">-->
+																										<!--	<option value="2"-->
+																										<!--	        data-s3-text-a="Due:"-->
+																										<!--	        data-s3-text-b="185000"-->
+																										<!--	        data-s3-text-c="danger">Jagdish Khichar-->
+																										<!--	</option>-->
+																										<!--	<option value="2"-->
+																										<!--	        data-s3-text-a="Advance:"-->
+																										<!--	        data-s3-text-b="4500"-->
+																										<!--	        data-s3-text-c="success">ASDFASDF Khichar-->
+																										<!--	</option>-->
+																										<!--</optgroup>-->
+																									</select>
+																								</div>
+																								<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label required">Deposited Amount</label>-->
+																									<input type="text"
+																									       name="amount"
+																									       required
+																									       class="form-control form-control-solid text-end"
+																									       data-pb-control="mask"
+																									       data-pb-method="amount"
+																									       placeholder="Received Amount"
+																									       title="How much Amount has Received" />
+																								</div>
+																								<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label">Receipt Note</label>-->
+																									<input type="text"
+																									       name="slip_no"
+																									       class="form-control form-control-solid"
+																									       placeholder="Note for Receipt"
+																									       title="Any Receipt Note" />
+																								</div>
+																								<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-7">
+																									<a href="javascript:"
+																									   data-repeater-delete
+																									   class="btn btn-sm btn-light-danger mt-3">
+																										<i class="bi bi-node-minus-fill"></i>
+																										Delete Row
+																									</a>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="ps-20">
+																						<a href="javascript:"
+																						   data-repeater-create="nest"
+																						   class="btn btn-sm btn-light-primary">
+																							<i class="bi bi-node-plus-fill"></i>Add Row
+																						</a>
+																					</div>
+																				</div>
+																				<div class="row">
+																					<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+																						<a href="javascript:"
+																						   data-repeater-delete
+																						   class="btn btn-sm btn-light-danger w-100">
+																							<i class="bi bi-node-minus-fill"></i>
+																							Delete Block
+																						</a>
+																					</div>
+																				</div>
+																				<div class="col-12"
+																				     data-pb-append="separate"></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="mt-0">
+																		<a href="javascript:"
+																		   data-repeater-create="core"
+																		   class="btn btn-sm btn-light-primary">
+																			<i class="bi bi-node-plus-fill"></i>Add Block
+																		</a>
+																	</div>
+																</form>
+															</div>
+															<div class="card-footer py-5">
+																<div class="d-flex flex-stack">
+																	<div class="align-items-start">
+																		<button type="button"
+																		        value="receipt-direct"
+																		        name="back"
+																		        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+																		</button>
+																	</div>
+																	<div class="align-items-end">
+																		<button form="form-receipt-direct"
+																		        class="btn btn-light-info btn-active-info mx-3"
+																		        name="action"
+																		        value="reset"
+																		        data-pb-value="receipt-direct"
+																		        type="button">Reset
+																		</button>
+																		<button form="form-receipt-direct"
+																		        class="btn btn-primary"
+																		        data-form-submit
+																		        name="action"
+																		        value="save"
+																		        data-pb-origin="form"
+																		        data-pb-value="receipt-direct"
+																		        type="button">
+																			<span class="indicator-label">Save Receipt Direct</span>
+																			<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																			</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade"
+													     id="r_c_entrywise"
+													     role="tab-panel">
+														<div class="card shadow-sm">
+															<div class="card-body">
+																<form id="form-receipt-entry"
+																      data-pb-method="advance"
+																      method="post">
+																	<div class="form-group">
+																		
+																		<div class="row fv-row">
+																			<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																				<label class="form-label">
+																					<i class="fs-2 me-1 text-gray-700 bi bi-people"></i>
+																					<span class="required">Customer Account</span>
+																				</label>
+																				<select name="ac_from"
+																				        required
+																				        data-pb-prefill="rc_unpaid_entries"
+																				        class="form-select form-select-solid"
+																				        data-pb-control="select"
+																				        data-pb-method="account"
+																				        data-pb-tack="group"
+																				        data-pb-placeholder="Select Customer Account"
+																				        title="Select Customer Account">
+																					<option></option>
+																					<optgroup label="CATE - 1">
+																						<option value="1"
+																						        data-s3-text-a="Invoice Due:"
+																						        data-s3-text-b="45000"
+																						        data-s3-text-c="Total Due:"
+																						        data-s3-text-d="54000"
+																						        data-s3-text-e="danger">Lokesh Kumar
+																						</option>
+																					</optgroup>
+																					<optgroup label="CATE_ _2">
+																						<option value="1"
+																						        data-s3-text-a="Invoice Due:"
+																						        data-s3-text-b="45000"
+																						        data-s3-text-c="Total Due:"
+																						        data-s3-text-d="54000"
+																						        data-s3-text-e="danger">Lokesh Kumar
+																						</option>
+																					</optgroup>
+																				</select>
+																			</div>
+																			<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																				<label class="form-label">
+																					<i class="fs-2 me-1 text-gray-700 bi bi-truck"></i>
+																					<span class="required">Vehicle Account</span>
+																				</label>
+																				<select name="ac_to"
+																				        required
+																				        data-pb-prefill="rc_unpaid_entries"
+																				        class="form-select form-select-solid"
+																				        data-pb-control="select"
+																				        data-pb-method="account"
+																				        data-placeholder="Select Bank Account"
+																				        title="Select Bank Account">
+																				
+																				</select>
+																			</div>
+																			<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																				<label class="form-label">
+																					<i class="fs-2 me-1 text-gray-700 bi bi-cash"></i>
+																					<span class="required">Received Amount</span>
+																				</label>
+																				<input type="text"
+																				       name="amount"
+																				       required
+																				       data-pb-prefill="rc_unpaid_entries"
+																				       class="form-control form-control-solid text-end"
+																				       data-pb-control="mask"
+																				       data-pb-method="amount"
+																				       placeholder="Received Amount"
+																				       title="How much Total Amount Received ??" />
+																			</div>
+																			<div class="col-xxl-2 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																				<button type="button"
+																				        id="loadCustomerEntries"
+																				        class="btn btn-flex btn-light-dark px-6 w-100"
+																				        data-pb-calling="rc_unpaid_entries"
+																				        value="receipt-entry"
+																				        name="load">
+																					<i class="fs-2x me-1 bi bi-arrow-repeat"></i>
+																					<span class="d-flex flex-column align-items-start ms-2">
+																						<span class="fs-3 fw-bold"
+																						      data-pb-label="text">Load
+																						</span>
+																						<span class="fs-7">Unpaid Entries</span>
+																					</span>
+																				</button>
+																			</div>
+																		</div>
+																		<div class="table-responsive">
+																			<table class="table table-rounded border bg-light-dark table-hover align-middle table-row-dashed gy-3 gs-4 py-3 d-none"
+																			       data-pb-table="rc_unpaid_entries">
+																				<thead>
+																				<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																					<th class="min-w-100px">Entry Date</th>
+																					<th class="min-w-75px">Slip No.</th>
+																					<th class="min-w-125px">Product</th>
+																					<th class="min-w-150px">Vehicle</th>
+																					<th class="min-w-125px">Amount</th>
+																					<th class="min-w-125px">Received</th>
+																					<th class="min-w-125px mw-150px">Receipt Amount</th>
+																					<th class="min-w-125px mw-150px">Receipt Note</th>
+																				</tr>
+																				</thead>
+																				<tbody class="text-gray-700 fw-semibold fs-5">
+																				<tr>
+																					<td>14 Aug, 2022<p data-cs-method="x"
+																					                   class="gF fs-8 mb-0">2022-08-14</p></td>
+																					<td>
+																						<span class="fw-bold fs-5">5345</span>
+																					</td>
+																					<td>Petrol</td>
+																					<td>RJ 14 BA 3456</td>
+																					<td>
+																						<span class="text-gray-800 in_inr"
+																						      data-cs-round="2"
+																						      data-cs-currency="1">2998
+																						</span>
+																					</td>
+																					<td>
+																						<span class="in_inr"
+																						      data-cs-round="2"
+																						      data-cs-currency="1">998.12
+																						</span>
+																						<button type="button"
+																						        data-pb-value="998"
+																						        data-pb-control="valueLoad"
+																						        class="btn btn-icon"><i class="fs-2 me-1 text-success bi bi-check-circle"></i></button>
+																					</td>
+																					<td>
+																						<input type="number"
+																						       name="amount"
+																						       class="form-control form-control-sm mw-150px"
+																						       max="998"
+																						       data-pb-control="valueGot"
+																						       placeholder="Amount"
+																						       title="Amount" />
+																					</td>
+																					<td>
+																						<input type="number"
+																						       name="note"
+																						       class="form-control form-control-sm mw-150px"
+																						       placeholder="Note"
+																						       title="Description" />
+																					</td>
+																				</tr>
+																				<tr>
+																					<td>14 Aug, 2022<p data-cs-method="x"
+																					                   class="gF fs-8 mb-0">2022-08-14</p></td>
+																					<td>
+																						<span class="fw-bold fs-5">5345</span>
+																					</td>
+																					<td>Petrol</td>
+																					<td>RJ 14 BA 3456</td>
+																					<td>
+																						<span class="text-gray-800 in_inr"
+																						      data-cs-round="2"
+																						      data-cs-currency="1">2998
+																						</span>
+																					</td>
+																					<td>
+																						<span class="in_inr"
+																						      data-cs-round="2"
+																						      data-cs-currency="1">998.12
+																						</span>
+																						<button type="button"
+																						        data-pb-value="998"
+																						        data-pb-control="valueLoad"
+																						        class="btn btn-icon"><i class="fs-2 me-1 text-success bi bi-check-circle"></i></button>
+																					</td>
+																					<td>
+																						<input type="number"
+																						       name="amount"
+																						       class="form-control form-control-sm mw-150px"
+																						       max="998"
+																						       data-pb-control="valueGot"
+																						       placeholder="Amount"
+																						       title="Amount" />
+																					</td>
+																					<td>
+																						<input type="number"
+																						       name="note"
+																						       class="form-control form-control-sm mw-150px"
+																						       placeholder="Note"
+																						       title="Description" />
+																					</td>
+																				</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																		<div class="row fv-row">
+																			<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-20 ps-xl-10">
+																				<label class="form-label">
+																					<i class="fs-2 me-1 text-gray-700 bi bi-calendar2-date"></i>
+																					<span class="required">Date of Receipt</span>
+																				</label>
+																				<input type="text"
+																				       name="date"
+																				       required
+																				       class="form-control form-control-solid"
+																				       data-pb-control="date"
+																				       data-pb-method="human"
+																				       placeholder="Deposit Date"
+																				       title="Deposit Date" />
+																			</div>
+																			<div class="col-xxl-4 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																				<label class="form-label">
+																					<i class="fs-2 me-1 text-gray-700 bi bi-bank"></i>
+																					<span class="required">Receipt Account</span>
+																				</label>
+																				<select name="bank_ac"
+																				        required
+																				        class="form-select form-select-solid"
+																				        data-pb-control="select"
+																				        data-pb-method="account"
+																				        data-placeholder="Select Bank Account"
+																				        title="Select Bank Account">
+																				
+																				</select>
+																			</div>
+																			<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																				<label class="form-label">
+																					<i class="fs-2 me-1 text-gray-700 bi bi-wallet2"></i>
+																					<span class="required">Total Collected</span>
+																				</label>
+																				<input type="text"
+																				       name="amount"
+																				       required
+																				       readonly
+																				       class="form-control form-control-solid text-end"
+																				       data-pb-control="mask"
+																				       data-pb-method="amount"
+																				       placeholder="Collected Amount"
+																				       title="Collected Amount" />
+																			</div>
+																		
+																		</div>
+																	
+																	</div>
+																</form>
+															</div>
+															<div class="card-footer py-5">
+																<div class="d-flex flex-stack">
+																	<div class="align-items-start">
+																		<button type="button"
+																		        value="receipt-entry"
+																		        name="back"
+																		        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+																		</button>
+																	</div>
+																	<div class="align-items-end">
+																		<button form="form-receipt-entry"
+																		        class="btn btn-light-info btn-active-info mx-3"
+																		        name="action"
+																		        value="reset"
+																		        data-pb-value="receipt-entry"
+																		        type="button">Reset
+																		</button>
+																		<button form="form-receipt-entry"
+																		        class="btn btn-primary"
+																		        data-form-submit
+																		        name="action"
+																		        value="save"
+																		        data-pb-origin="form"
+																		        data-pb-value="receipt-entry"
+																		        type="button">
+																			<span class="indicator-label">Save Receipt Entry</span>
+																			<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																			</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade"
+													     id="r_c_billwise"
+													     role="tab-panel">
+														<div class="card shadow-sm">
+															<div class="card-body">
+																<form class=""
+																      data-form-sno="13"
+																      data-pb-control="repeater"
+																      id="form-receipt-bill"
+																      data-pb-method="advance"
+																      method="post">
+																	<div class="form-group">
+																		<div data-repeater-list="repeater_form_list">
+																			<div data-repeater-item
+																			     class="border-gray-300 border-start border-bottom border-3 rounded-2 ps-5 mb-10">
+																				<div class="row fv-row">
+																					<div class="offset-xxl-1 col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 px-xxl-10">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-people"></i>
+																							<span class="required">Customer Account</span>
+																						</label>
+																						<select name="ac_from"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="group"
+																						        data-pb-placeholder="Select Customer Account"
+																						        title="Select Customer Account">
+																							<option></option>
+																							<optgroup label="CATE - 1">
+																								<option value="1"
+																								        data-s3-text-a="Invoice Due:"
+																								        data-s3-text-b="45000"
+																								        data-s3-text-c="Total Due:"
+																								        data-s3-text-d="54000"
+																								        data-s3-text-e="danger">Lokesh Kumar
+																								</option>
+																							</optgroup>
+																							<optgroup label="CATE_ _2">
+																								<option value="1"
+																								        data-s3-text-a="Invoice Due:"
+																								        data-s3-text-b="45000"
+																								        data-s3-text-c="Total Due:"
+																								        data-s3-text-d="54000"
+																								        data-s3-text-e="danger">Lokesh Kumar
+																								</option>
+																							</optgroup>
+																						</select>
+																					</div>
+																					<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 px-xxl-10">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-cash"></i>
+																							<span class="required">Received Amount</span>
+																						</label>
+																						<input type="text"
+																						       name="amount"
+																						       data-pb-control="mask"
+																						       data-pb-method="amount"
+																						       required
+																						       class="form-control form-control-solid text-end"
+																						       placeholder="Received Amount"
+																						       title="How much Total Amount Received ??" />
+																					</div>
+																					<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 px-xxl-10">
+																						<button type="button"
+																						        id="loadCustomerInvoices"
+																						        class="btn btn-flex btn-light-dark px-6 w-100">
+																							<i class="fs-2x me-1 bi bi-arrow-repeat"></i>
+																							<span class="d-flex flex-column align-items-start ms-2">
+																								<span class="fs-3 fw-bold">Load</span>
+																								<span class="fs-7">Unpaid Bills</span>
+																							</span>
+																						</button>
+																					</div>
+																				</div>
+																				<div class="table-responsive d-none- invoicesTable mb-5">
+																					<table class="table table-rounded table-bordered table-hover border bg-hover-light-dark align-middle table-row-bordered table-row-dashed gy-3 gs-4 py-3">
+																						<thead>
+																						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																							<th class="min-w-100px">Bill No.</th>
+																							<th class="min-w-75px"
+																							    nowrap="">Billing Period
+																							</th>
+																							<th class="min-w-125px">Bill Date</th>
+																							<th class="min-w-150px">Bill Amount</th>
+																							<th class="min-w-125px">Received</th>
+																							<th class="min-w-125px mw-150px">Receipt Amount</th>
+																							<th class="min-w-125px mw-175px">Receipt Note</th>
+																						</tr>
+																						</thead>
+																						<tbody class="text-gray-700 fw-semibold fs-5 fv-row">
+																						<tr>
+																							<td>
+																								<div class="d-flex flex-column">
+																									<span class="fw-bold fs-5">NGST-5423</span>
+																									<span class="text-gray-600 fs-7">BID: 45234</span>
+																								</div>
+																							</td>
+																							<td>
+																								<div class="d-flex flex-column">
+																									<span class="fw-bold fs-5 dF"
+																									      data-pb-format="fo">2022-11-01
+																									</span>
+																									<p class="text-gray-600 fs-7 m-0 text-end dF"
+																									   data-pb-format="to">2022-11-30</p>
+																								</div>
+																							</td>
+																							<td>
+																								<span class="dF"
+																								      data-pb-format="a">2022-09-14
+																								</span>
+																								<p class="gF fs-7 mb-0 text-end"
+																								   data-cs-method="y">2022-09-14</p></td>
+																							<td>
+																								<span class="text-gray-800 in_inr"
+																								      data-cs-round="2"
+																								      data-cs-currency="1">2998
+																								</span>
+																							</td>
+																							<td>
+																								<div class="d-flex flex-row">
+																									<div class="d-flex flex-column">
+																										<span class="in_inr"
+																										      data-cs-round="2"
+																										      data-cs-currency="1">998.12
+																										</span>
+																										<span class="fs-7 text-success">14% Received</span>
+																									</div>
+																									<span>
+																										<button type="button"
+																										        data-pb-value="998"
+																										        data-pb-control="valueLoad"
+																										        class="btn btn-icon"><i class="fs-1 me-1 text-success bi bi-check-circle"></i></button>
+																									</span>
+																								</div>
+																							</td>
+																							<td>
+																								<input type="text"
+																								       name="amount"
+																								       required
+																								       class="form-control form-control-transparent mw-150px"
+																								       max="998"
+																								       data-pb-control="valueGot"
+																								       placeholder="Enter Amount"
+																								       title="How Much Received ??" />
+																							</td>
+																							<td>
+																								<input type="text"
+																								       name="note"
+																								       class="form-control form-control-transparent mw-175px"
+																								       placeholder="Add Note Here"
+																								       title="Description" />
+																							</td>
+																						</tr>
+																						<tr>
+																							<td>
+																								<div class="d-flex flex-column">
+																									<span class="fw-bold fs-5">NGST-5423</span>
+																									<span class="text-gray-600 fs-7">BID: 45234</span>
+																								</div>
+																							</td>
+																							<td>
+																								<div class="d-flex flex-column">
+																									<span class="fw-bold fs-5 dF"
+																									      data-pb-format="fo">2022-11-01
+																									</span>
+																									<p class="text-gray-600 fs-7 m-0 text-end dF"
+																									   data-pb-format="to">2022-11-30</p>
+																								</div>
+																							</td>
+																							<td>
+																								<span class="dF"
+																								      data-pb-format="b">2022-09-14
+																								</span>
+																								<p class="gF fs-7 mb-0 text-end"
+																								   data-cs-method="y">2022-09-14</p></td>
+																							<td>
+																								<span class="text-gray-800 in_inr"
+																								      data-cs-round="2"
+																								      data-cs-currency="1">2998
+																								</span>
+																							</td>
+																							<td>
+																								<div class="d-flex flex-row">
+																									<div class="d-flex flex-column">
+																										<span class="in_inr"
+																										      data-cs-round="2"
+																										      data-cs-currency="1">998.12
+																										</span>
+																										<span class="fs-7 text-success">14% Received</span>
+																									</div>
+																									<span class="">
+																										<button type="button"
+																										        data-pb-value="998"
+																										        data-pb-control="valueLoad"
+																										        class="btn btn-icon"><i class="fs-1 me-1 text-success bi bi-check-circle"></i></button>
+																									</span>
+																								</div>
+																							</td>
+																							<td>
+																								<input type="text"
+																								       name="amount"
+																								       required
+																								       class="form-control form-control-transparent mw-150px"
+																								       max="998"
+																								       data-pb-control="valueGot"
+																								       placeholder="Enter Amount"
+																								       title="How Much Received ??" />
+																							</td>
+																							<td>
+																								<input type="text"
+																								       name="note"
+																								       class="form-control form-control-transparent mw-175px"
+																								       placeholder="Add Note Here"
+																								       title="Description" />
+																							</td>
+																						</tr>
+																						</tbody>
+																					</table>
+																				</div>
+																				<div class="row fv-row">
+																					<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-calendar2-date"></i>
+																							<span class="required">Date of Receipt</span>
+																						</label>
+																						<input type="text"
+																						       name="date"
+																						       required
+																						       class="form-control form-control-solid"
+																						       data-pb-control="date"
+																						       data-pb-method="human"
+																						       placeholder="Deposit Date"
+																						       title="Deposit Date" />
+																					</div>
+																					<div class="col-xxl-4 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-bank"></i>
+																							<span class="required">Receipt Account</span>
+																						</label>
+																						<select name="ac_to"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="amount"
+																						        data-pb-placeholder="Select Bank Account"
+																						        title="Select Bank Account">
+																							<option></option>
+																							<option value="2">SBI bank - 4809</option>
+																							<option value="2">HDFC bank - 4809</option>
+																							<option value="2">ICICI bank - 4809</option>
+																						</select>
+																					</div>
+																					<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-wallet2"></i>
+																							<span class="required">Total Collected</span>
+																						</label>
+																						<input type="text"
+																						       name="amount"
+																						       required
+																						       readonly
+																						       data-pb-control="totalReceivedAmount"
+																						       class="form-control form-control-solid inr_mask text-end"
+																						       placeholder="Deposited Amount"
+																						       title="Deposited Amount" />
+																					</div>
+																					<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																						<a href="javascript:"
+																						   data-repeater-delete
+																						   class="btn btn-sm btn-light-danger mt-12 w-100">
+																							<i class="bi bi-dash-circle"></i>
+																							Delete Row
+																						</a>
+																					</div>
+																				</div>
+																				<div class="col-12"
+																				     data-pb-append="separate"></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="mt-0">
+																		<a href="javascript:"
+																		   data-repeater-create="core"
+																		   class="btn btn-sm btn-light-primary">
+																			<i class="bi bi-node-plus-fill"></i>Add Block
+																		</a>
+																	</div>
+																</form>
+															</div>
+															<div class="card-footer py-5">
+																<div class="d-flex flex-stack">
+																	<div class="align-items-start">
+																		<button type="button"
+																		        value="receipt-bill"
+																		        name="back"
+																		        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+																		</button>
+																	</div>
+																	<div class="align-items-end">
+																		<button form="form-receipt-bill"
+																		        class="btn btn-light-info btn-active-info mx-3"
+																		        name="action"
+																		        value="reset"
+																		        data-pb-value="receipt-bill"
+																		        type="button">Reset
+																		</button>
+																		<button form="form-receipt-bill"
+																		        class="btn btn-primary"
+																		        data-form-submit
+																		        name="action"
+																		        value="save"
+																		        data-pb-origin="form"
+																		        data-pb-value="receipt-bill"
+																		        type="button">
+																			<span class="indicator-label">Save Receipt Bill</span>
+																			<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																			</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade"
+													     id="r_c_interest"
+													     role="tab-panel">
+														<!--todo: accountwise, entrywise and billwise, 3 layouts are required.-->
+														<div class="card shadow-sm">
+															<div class="card-body">
+																<form class=""
+																      data-form-sno="14"
+																      data-pb-control="repeater"
+																      id="form-receipt-interest"
+																      data-pb-method="advance"
+																      method="post">
+																	<div class="form-group">
+																		<div data-repeater-list="repeater_form_list">
+																			<div data-repeater-item
+																			     class="border-gray-300 border-start border-bottom border-3 rounded-2 ps-5 mb-10">
+																				<div class="row fv-row">
+																					<div class="offset-xxl-1 col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-people"></i>
+																							<span class="required">Customer Account</span>
+																						</label>
+																						<select name="ac_from"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="group"
+																						        data-pb-placeholder="Select Customer Account"
+																						        title="Select Customer Account">
+																							<option></option>
+																							<optgroup label="CATE - 1">
+																								<option value="1"
+																								        data-s3-text-a="Invoice Due:"
+																								        data-s3-text-b="45000"
+																								        data-s3-text-c="Total Due:"
+																								        data-s3-text-d="54000"
+																								        data-s3-text-e="danger">Lokesh Kumar
+																								</option>
+																							</optgroup>
+																							<optgroup label="CATE_ _2">
+																								<option value="1"
+																								        data-s3-text-a="Invoice Due:"
+																								        data-s3-text-b="45000"
+																								        data-s3-text-c="Total Due:"
+																								        data-s3-text-d="54000"
+																								        data-s3-text-e="danger">Lokesh Kumar
+																								</option>
+																							</optgroup>
+																						</select>
+																					</div>
+																					<div class="col-xxl-2 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-percent"></i>
+																							<span class="required">Interest Rate</span>
+																						</label>
+																						<input type="text"
+																						       name="amount"
+																						       required
+																						       class="form-control form-control-solid"
+																						       placeholder="Interest Rate"
+																						       title="Rate of Interest ??" />
+																					</div>
+																					<div class="col-xxl-2 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-calendar2-minus"></i>
+																							<span class="required">Due Term</span>
+																						</label>
+																						<input type="text"
+																						       name="days"
+																						       required
+																						       class="form-control form-control-solid"
+																						       placeholder="Offset Days"
+																						       title="How many Days you want to escape ??" />
+																					</div>
+																					<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<button type="button"
+																						        id="loadCustomerInterest"
+																						        class="btn btn-flex btn-light-dark px-6 w-100">
+																							<i class="fs-2x me-1 bi bi-arrow-repeat"></i>
+																							<span class="d-flex flex-column align-items-start ms-2">
+																								<span class="fs-3 fw-bold">Load</span>
+																								<span class="fs-7">Interest Table</span>
+																							</span>
+																						</button>
+																					</div>
+																				</div>
+																				<div class="table-responsive d-none- invoicesTable mb-5">
+																					<table class="table table-rounded table-bordered table-hover border align-middle table-row-bordered table-row-dashed gy-3 gs-4 py-3">
+																						<thead>
+																						<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																							<th class="min-w-100px">Bill No.</th>
+																							<th class="min-w-150px">Bill Amount</th>
+																							<th class="min-w-125px">Due Amount</th>
+																							<th class="min-w-125px">Bill Date</th>
+																							<th class="min-w-175px"
+																							    nowrap="">Counted up to
+																							</th>
+																							<th class="min-w-125px mw-150px">Interest Amount</th>
+																							<th class="min-w-125px mw-175px">Action Cell</th>
+																						</tr>
+																						</thead>
+																						<tbody class="text-gray-700 fw-semibold fs-5 fv-row">
+																						<tr>
+																							<td>
+																								<div class="d-flex flex-column">
+																									<span class="fw-bold fs-5">NGST-5423</span>
+																									<span class="text-gray-600 fs-7">BID: 45234</span>
+																								</div>
+																							</td>
+																							<td>
+																								<div class="d-flex flex-column">
+																									<span class="in_inr"
+																									      data-cs-round="2"
+																									      data-cs-currency="1">12998.12
+																									</span>
+																									<span class="fs-7 text-success">14% Received</span>
+																								</div>
+																							</td>
+																							<td>
+																								<span class="text-gray-800 in_inr"
+																								      data-cs-round="2"
+																								      data-cs-currency="1">10000
+																								</span>
+																							</td>
+																							<td>
+																								<div class="d-flex flex-column">
+																									<span class="fw-bold fs-5 dF"
+																									      data-pb-format="a">2022-10-01
+																									</span>
+																								</div>
+																							</td>
+																							<td>
+																								<span class="dF"
+																								      data-pb-format="a">2022-11-30
+																								</span>
+																								<p class="gF fs-7 mb-0 text-center"
+																								   data-cs-method="z"
+																								   data-pb-value="2022-10-01">2022-11-30</p></td>
+																							<td>
+																								<div class="d-flex flex-row">
+																									<div class="d-flex flex-column">
+																										<span class="in_inr"
+																										      data-cs-round="2"
+																										      data-cs-currency="1">1998.12
+																										</span>
+																										<span class="fs-7 text-primary">Rate: 14%</span>
+																									</div>
+																									<span><i class="fs-2x ms-1 text-success bi bi-check2-circle"></i></span>
+																								</div>
+																							</td>
+																							<td>
+																								<!--<button type="button" value="add" class="btn btn-outline btn-outline-success btn-active-light-success">Add Interest</button>-->
+																								<!--<button type="button" value="delete" class="btn btn-color-dark btn-active-light-danger">Delete Interest</button>-->
+																								<div class="form-check form-switch form-check-custom form-check-primary form-check-solid">
+																									<input class="form-check-input"
+																									       type="checkbox"
+																									       value="1"
+																									       id="" />
+																									<label class="form-check-label fw-semibold"
+																									       for="">
+																										Include
+																									</label>
+																								</div>
+																							</td>
+																						</tr>
+																						</tbody>
+																					</table>
+																				</div>
+																				<div class="row fv-row">
+																					<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7"></div>
+																					<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-calendar2-date"></i>
+																							<span class="required">Date on Interest Applied</span>
+																							<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+																							   data-bs-toggle="tooltip"
+																							   data-bs-html="true"
+																							   title="<span class='fs-6'>It should be the end date of interest period.</span>"></i>
+																						</label>
+																						<input type="text"
+																						       name="date"
+																						       required
+																						       class="form-control form-control-solid"
+																						       data-pb-control="date"
+																						       data-pb-method="human"
+																						       placeholder="Interest "
+																						       title="Deposit Date" />
+																					</div>
+																					<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<i class="fs-2 me-1 text-gray-700 bi bi-plus-square"></i>
+																							<span class="required">Total Interest Charged</span>
+																							<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+																							   data-bs-toggle="tooltip"
+																							   data-bs-html="true"
+																							   title="<span class='fs-6'>It automatically calculated as per selection of above Bill to charge interest.</span>"></i>
+																						</label>
+																						<input type="text"
+																						       name="amount"
+																						       required
+																						       readonly
+																						       class="form-control form-control-solid text-end"
+																						       data-pb-control="mask"
+																						       data-pb-method="amount"
+																						       placeholder="Interest Amount"
+																						       title="What is Total Interest Charged ??" /> <!--data-pb-control="totalChargedAmount"-->
+																					</div>
+																					<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																						<a href="javascript:"
+																						   data-repeater-delete
+																						   class="btn btn-sm btn-light-danger mt-12 w-100">
+																							<i class="bi bi-dash-circle"></i>
+																							Delete Block
+																						</a>
+																					</div>
+																				</div>
+																				<div class="col-12"
+																				     data-pb-append="separate"></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="mt-0">
+																		<a href="javascript:"
+																		   data-repeater-create="core"
+																		   class="btn btn-sm btn-light-primary">
+																			<i class="bi bi-node-plus-fill"></i>Add Block
+																		</a>
+																	</div>
+																</form>
+															</div>
+															<div class="card-footer py-5">
+																<div class="d-flex flex-stack">
+																	<div class="align-items-start">
+																		<button type="button"
+																		        value="receipt interest"
+																		        name="back"
+																		        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+																		</button>
+																	</div>
+																	<div class="align-items-end">
+																		<button form="form-receipt-interest"
+																		        class="btn btn-light-info btn-active-info mx-3"
+																		        name="action"
+																		        value="reset"
+																		        data-pb-value="receipt interest"
+																		        type="button">Reset
+																		</button>
+																		<button form="form-receipt-interest"
+																		        class="btn btn-primary"
+																		        data-form-submit
+																		        name="action"
+																		        value="save"
+																		        data-pb-origin="form"
+																		        data-pb-value="receipt interest"
+																		        type="button">
+																			<span class="indicator-label">Save Receipt Interest</span>
+																			<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																			</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="contact-form"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-body py-5">
+													<form id="form-contact-deals"
+													      class=""
+													      data-pb-control="repeater"
+													      data-pb-method="nested"
+													      data-form-sno="2"
+													      method="post"
+													      autocomplete="off">
+														<div class="form-group">
+															<div data-repeater-list="repeater_form_list">
+																<div data-repeater-item>
+																	<div class="row fv-row">
+																		<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																			<label class="form-label required">Date of Transaction</label>
+																			<input type="text"
+																			       name="date"
+																			       required
+																			       class="form-control form-control-solid"
+																			       data-pb-control="date"
+																			       data-pb-method="human"
+																			       placeholder="Transaction Date"
+																			       title="Transaction Date" />
+																		</div>
+																		<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																			<label class="form-label">
+																				<span class="required">Fund Account</span>
+																			</label>
+																			<select name="bank_ac"
+																			        required
+																			        class="form-select form-select-solid"
+																			        data-pb-control="select"
+																			        data-pb-method="account"
+																			        data-placeholder="Select Fund Account"
+																			        title="Select Fund Transacted Account"></select>
+																		</div>
+																		<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																		
+																		</div>
+																	</div>
+																	<div class="inner-repeater">
+																		<div data-repeater-list="kt_docs_repeater_nested_inner"
+																		     class="mb-0">
+																			<div data-repeater-item>
+																				<div class="row fv-row">
+																					<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<!--<label class="form-label"><span class="required">Contact Accounts</span></label>-->
+																						<select name="contact"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="group"
+																						        data-pb-placeholder="Select Contact Account"
+																						        title="Select other person or firm Account"> </select>
+																					</div>
+																					<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																						<!--<label class="form-label required">Transaction Amount</label>-->
+																						<input type="text"
+																						       name="amount"
+																						       required
+																						       class="form-control form-control-solid text-end"
+																						       data-pb-control="mask"
+																						       data-pb-method="amount"
+																						       placeholder="Transfer Amount"
+																						       title="Transfer Amount" />
+																					</div>
+																					<div class="col-xxl-2 col-xl-2 col-lg-12 col-md-6 col-12 mb-7">
+																						<!--<label class="form-label">Transaction Nature</label>-->
+																						<select name="nature"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="simple"
+																						        data-pb-tack="direct"
+																						        data-pb-placeholder="Txn Nature"
+																						        title="Nature of Transaction"> </select>
+																					</div>
+																					<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																						<!--<label class="form-label">Deal Number</label>-->
+																						<input data-control="tagify"
+																						       data-pb-method="select"
+																						       data-pb-source="remote"
+																						       data-pb-target="tgAbcdNote_sel"
+																						       data-pb-force="1"
+																						       data-pb-list="1"
+																						       data-pb-items="5"
+																						       type="text"
+																						       name="remote"
+																						       placeholder="Transaction Note"
+																						       title="Transaction Detail" />
+																						<span id="tgAbcdNote_sel"
+																						      data-tagify-source
+																						      class="d-none">a|b|c|d|asdf|rq34|hfdh|23423|fasdf
+																						</span>
+																					</div>
+																					<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-7">
+																						<a href="javascript:"
+																						   data-repeater-delete
+																						   class="btn btn-sm rounded-3 btn-light-danger w-100">
+																							<i class="fs-3 fa-solid fa-minus"></i>
+																							Delete
+																						</a>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="">
+																			<a href="javascript:"
+																			   data-repeater-create="inner"
+																			   class="btn rounded-3 btn-sm btn-light-primary">
+																				<i class="fs-3 fa-solid fa-plus"></i>Add Row
+																			</a>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+																			<a href="javascript:"
+																			   data-repeater-delete
+																			   class="btn btn-sm btn-light-danger w-100">
+																				<i class="fs-3 fa-solid fa-circle-minus"></i>
+																				Delete Block
+																			</a>
+																		</div>
+																	</div>
+																	<div class="col-12"
+																	     data-pb-append="separate"></div>
+																</div>
+															</div>
+														</div>
+														<div class="mt-0">
+															<a href="javascript:"
+															   data-repeater-create="outer"
+															   class="btn btn-sm btn-light-primary">
+																<i class="fs-3 fa-solid fa-circle-plus"></i>Add Block
+															</a>
+														</div>
+													</form>
+												</div>
+												<div class="card-footer py-5">
+													<div class="d-flex flex-stack">
+														<div class="align-items-start">
+															<button type="button"
+															        value="contact"
+															        name="back"
+															        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+															</button>
+														</div>
+														<div class="align-items-end">
+															<button form="form-contact-deals"
+															        class="btn btn-light-info btn-active-info mx-3"
+															        name="action"
+															        value="reset"
+															        data-pb-value="contact-deals"
+															        type="button">Reset
+															</button>
+															<button form="form-contact-deals"
+															        class="btn btn-primary"
+															        data-form-submit
+															        name="action"
+															        value="save"
+															        data-pb-origin="form"
+															        data-pb-value="contact-deals"
+															        type="button">
+																<span class="indicator-label">Save Contact Deals</span>
+																<span class="indicator-progress">Please wait...
+																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="income-form"
+										     class="d-none">
+											<div class="d-flex flex-column gap-7 gap-lg-10">
+												<div class="d-flex flex-wrap flex-stack gap-5 gap-lg-10">
+													<ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-semibold mb-lg-n2 me-auto">
+														<li class="nav-item">
+															<a class="nav-link text-active-primary pb-4 active"
+															   data-bs-toggle="tab"
+															   href="#r_income_received">Received</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link text-active-primary pb-4"
+															   data-bs-toggle="tab"
+															   href="#r_income_booked">Booked</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link text-active-primary pb-4"
+															   data-bs-toggle="tab"
+															   href="#r_income_quick">Quickest</a>
+														</li>
+													</ul>
+													<button type="button"
+													        value="income"
+													        name="minus"
+													        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale ms-auto me-lg-n7">
+														<i class="fs-3 me-1 text-dark bi bi-fullscreen"></i>
+													</button>
+													<button type="button"
+													        value="income"
+													        name="back"
+													        class="btn btn-sm btn-white btn-text-dark hover-rotate-start">
+														<i class="bi fs-2 bi-arrow-bar-left"></i>
+														Go Back
+													</button>
+												</div>
+												<div class="tab-content">
+													<div class="tab-pane fade show active"
+													     id="r_income_received"
+													     role="tab-panel">
+														<div class="card shadow-sm">
+															<div class="card-body">
+																<form class="fR"
+																      data-pb-control="repeater"
+																      id="form-income-receive"
+																      data-pb-method="nested"
+																      method="post">
+																	<div class="form-group">
+																		<div data-repeater-list="repeater_form_list">
+																			<div data-repeater-item>
+																				<div class="row fv-row">
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<span class="required">Income Received From</span>
+																							<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+																							   data-bs-toggle="tooltip"
+																							   data-bs-html="true"
+																							   title="<span class='fs-6'>Select Person or Party, where you have received this Income</span>"></i>
+																						</label>
+																						<!--todo: receivable balance will be loaded with drop down-->
+																						<!--<select name="group_ac"-->
+																						<!--        required-->
+																						<!--        class="form-select form-select-solid"-->
+																						<!--        data-pb-control="select"-->
+																						<!--        data-pb-method="account"-->
+																						<!--        data-pb-tack="group"-->
+																						<!--        data-pb-placeholder="Select Contact Account"-->
+																						<!--        title="Select other person or firm Account">-->
+																						<!--	<option></option>-->
+																						<!--	<optgroup label="receivables">-->
+																						<!--		<option value="1"-->
+																						<!--		        data-s3-text-a="Payable:"-->
+																						<!--		        data-s3-text-b="45000"-->
+																						<!--		        data-s3-text-c="danger">Lokesh Kumar-->
+																						<!--		</option>-->
+																						<!--	</optgroup>-->
+																						<!--	<optgroup label="">-->
+																						<!--		<option value="2"-->
+																						<!--		        data-s3-text-a="Receivable:"-->
+																						<!--		        data-s3-text-b="185000"-->
+																						<!--		        data-s3-text-c="success">Jagdish Khichar-->
+																						<!--		</option>-->
+																						<!--	</optgroup>-->
+																						<!--</select>-->
+																					</div>
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">&nbsp;</label>
+																						<br>
+																					</div>
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<span class="required">Receipt Account</span>
+																							<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+																							   data-bs-toggle="tooltip"
+																							   data-bs-html="true"
+																							   title="<span class='fs-6'>Select Fund Account, where you have received the Income.</span>"></i>
+																						</label>
+																						<select name="bank_ac"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="amount"
+																						        data-pb-placeholder="Select Income Account"
+																						        title="What Type of Income received ??">
+																							<option></option>
+																							<option value="5">SBI</option>
+																							<option value="5">CASH</option>
+																							<option value="5">ICICI</option>
+																						</select>
+																					</div>
+																				</div>
+																				<div class="inner-repeater">
+																					<div data-repeater-list="kt_docs_repeater_nested_inner"
+																					     class="mb-0">
+																						<div data-repeater-item>
+																							<div class="row fv-row">
+																								<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-20 ps-xl-10">
+																									<!--<label class="form-label required">Date of Transaction</label>-->
+																									<input type="text"
+																									       name="date"
+																									       required
+																									       class="form-control form-control-solid"
+																									       data-pb-control="date"
+																									       data-pb-method="human"
+																									       placeholder="Receipt Date *"
+																									       title="Date of Income Received" />
+																								</div>
+																								<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label required">Deposited Amount</label>-->
+																									<input type="text"
+																									       name="amount"
+																									       required
+																									       class="form-control form-control-solid text-end"
+																									       data-pb-control="mask"
+																									       data-pb-method="amount"
+																									       placeholder="Received Amount *"
+																									       title="How Much Amount Received ??" />
+																								</div>
+																								<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label required">TDS Amount</label>-->
+																									<input type="text"
+																									       name="amount"
+																									       required
+																									       class="form-control form-control-solid text-end"
+																									       data-pb-control="mask"
+																									       data-pb-method="amount"
+																									       placeholder="TDS Amount *"
+																									       title="How Much Amount Deducted ??" />
+																								</div>
+																								<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label">Income Note</label>-->
+																									<input type="text"
+																									       name="note"
+																									       required
+																									       class="form-control form-control-solid"
+																									       placeholder="Income Note *"
+																									       title="How this Income Comes ??" />
+																								</div>
+																								<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-7">
+																									<a href="javascript:"
+																									   data-repeater-delete
+																									   class="btn btn-sm btn-light-danger mt-3">
+																										<i class="bi bi-node-minus-fill"></i>
+																										Delete Row
+																									</a>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="ps-20">
+																						<a href="javascript:"
+																						   data-repeater-create="nest"
+																						   class="btn btn-sm btn-light-primary">
+																							<i class="bi bi-node-plus-fill"></i>Add Row
+																						</a>
+																					</div>
+																				</div>
+																				<div class="row">
+																					<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+																						<a href="javascript:"
+																						   data-repeater-delete
+																						   class="btn btn-sm btn-light-danger w-100">
+																							<i class="bi bi-node-minus-fill"></i>
+																							Delete Block
+																						</a>
+																					</div>
+																				</div>
+																				<div class="col-12"
+																				     data-pb-append="separate"></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="mt-0">
+																		<a href="javascript:"
+																		   data-repeater-create="core"
+																		   class="btn btn-sm btn-light-primary">
+																			<i class="bi bi-node-plus-fill"></i>Add Block
+																		</a>
+																	</div>
+																</form>
+															</div>
+															<div class="card-footer py-5">
+																<div class="d-flex flex-stack">
+																	<div class="align-items-start">
+																		<button type="button"
+																		        value="income-receive"
+																		        name="back"
+																		        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+																		</button>
+																	</div>
+																	<div class="align-items-end">
+																		<button form="form-income-receive"
+																		        class="btn btn-light-info btn-active-info mx-3"
+																		        name="action"
+																		        value="reset"
+																		        data-pb-value="income-receive"
+																		        type="button">Reset
+																		</button>
+																		<button form="form-income-receive"
+																		        class="btn btn-primary"
+																		        data-form-submit
+																		        name="action"
+																		        value="save"
+																		        data-pb-origin="form"
+																		        data-pb-value="income-receive"
+																		        type="button">
+																			<span class="indicator-label">Save Income Receive</span>
+																			<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																			</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade"
+													     id="r_income_booked"
+													     role="tab-panel">
+														<div class="card shadow-sm">
+															<div class="card-body">
+																<form class="fR"
+																      data-pb-control="repeater"
+																      id="form-income-book"
+																      data-pb-method="nested"
+																      method="post">
+																	<div class="form-group">
+																		<div data-repeater-list="repeater_form_list">
+																			<div data-repeater-item>
+																				<div class="row fv-row">
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<span class="required">Income Account</span>
+																							<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+																							   data-bs-toggle="tooltip"
+																							   data-bs-html="true"
+																							   title="<span class='fs-6'></span>"></i>
+																						</label>
+																						<select name="ac_from"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="simple"
+																						        data-pb-tack="direct"
+																						        data-pb-placeholder="Select Income Account"
+																						        title="What Type of Income received ??">
+																							<option></option>
+																							<option value="5">Discount Received</option>
+																							<option value="5">Incentive Received</option>
+																							<option value="5">Shortage Reimbursement</option>
+																						</select>
+																					
+																					</div>
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">&nbsp;</label>
+																						<br>
+																						<button type="button"
+																						        class="btn btn btn-icon-dark btn-text-dark btn-active-light-dark w-100 btn-text-dark"
+																						        id="drawer_income_setup_button">Create New Setup
+																						</button>
+																					
+																					
+																					</div>
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<span class="required">Income Booked From</span>
+																						</label>
+																						<select name="ac_to"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="group"
+																						        data-pb-placeholder="Received Account"
+																						        title="Select Bank Account">
+																							<option></option>
+																							<optgroup label="Receivables">
+																								<option value="2"
+																								        data-s3-subcontent="iocl">Indian OIL Depot Transport
+																								</option>
+																								<option value="2"
+																								        data-s3-subcontent="">Budha Ram Rent Receivable
+																								</option>
+																							</optgroup>
+																							<optgroup label="Contacts">
+																								<option value="2"
+																								        data-s3-subcontent="">Ramesh Ji
+																								</option>
+																								<option value="2"
+																								        data-s3-subcontent="">Suresh Ji
+																								</option>
+																								<option value="2"
+																								        data-s3-subcontent="">Jagdish Ji
+																								</option>
+																							</optgroup>
+																							<optgroup label="Supplier">
+																								<option value="2"
+																								        data-s3-subcontent="">Indian Oil
+																								</option>
+																								<option value="2"
+																								        data-s3-subcontent="">BPCL MAK Lube
+																								</option>
+																							</optgroup>
+																						</select>
+																					</div>
+																				</div>
+																				<div class="inner-repeater">
+																					<div data-repeater-list="kt_docs_repeater_nested_inner"
+																					     class="mb-0">
+																						<div data-repeater-item>
+																							<div class="row fv-row">
+																								<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-20 ps-xl-10">
+																									<!--<label class="form-label required">Date of Transaction</label>-->
+																									<input type="text"
+																									       name="date"
+																									       required
+																									       class="form-control form-control-solid"
+																									       data-pb-control="date"
+																									       data-pb-method="human"
+																									       placeholder="Booked Date *"
+																									       title="Income Booked On" />
+																								</div>
+																								<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label required">Deposited Amount</label>-->
+																									<input type="text"
+																									       name="amount"
+																									       required
+																									       class="form-control form-control-solid text-end"
+																									       data-pb-control="mask"
+																									       data-pb-method="amount"
+																									       placeholder="Income Amount *"
+																									       title="How Much Amount is Booked ??" />
+																								</div>
+																								<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label">Income Note</label>-->
+																									<input type="text"
+																									       name="note"
+																									       required
+																									       class="form-control form-control-solid"
+																									       placeholder="Income Note *"
+																									       title="How this Income Comes ??" />
+																								</div>
+																								<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-7">
+																									<a href="javascript:"
+																									   data-repeater-delete
+																									   class="btn btn-sm btn-light-danger mt-3">
+																										<i class="bi bi-node-minus-fill"></i>
+																										Delete Row
+																									</a>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="ps-20">
+																						<a href="javascript:"
+																						   data-repeater-create="nest"
+																						   class="btn btn-sm btn-light-primary">
+																							<i class="bi bi-node-plus-fill"></i>Add Row
+																						</a>
+																					</div>
+																				</div>
+																				<div class="row">
+																					<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+																						<a href="javascript:"
+																						   data-repeater-delete
+																						   class="btn btn-sm btn-light-danger w-100">
+																							<i class="bi bi-node-minus-fill"></i>
+																							Delete Block
+																						</a>
+																					</div>
+																				</div>
+																				<div class="col-12"
+																				     data-pb-append="separate"></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="mt-0">
+																		<a href="javascript:"
+																		   data-repeater-create="core"
+																		   class="btn btn-sm btn-light-primary">
+																			<i class="bi bi-node-plus-fill"></i>Add Block
+																		</a>
+																	</div>
+																</form>
+															</div>
+															<div class="card-footer py-5">
+																<div class="d-flex flex-stack">
+																	<div class="align-items-start">
+																		<button type="button"
+																		        value="income-book"
+																		        name="back"
+																		        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+																		</button>
+																	</div>
+																	<div class="align-items-end">
+																		<button form="form-income-book"
+																		        class="btn btn-light-info btn-active-info mx-3"
+																		        name="action"
+																		        value="reset"
+																		        data-pb-value="income-book"
+																		        type="button">Reset
+																		</button>
+																		<button form="form-income-book"
+																		        class="btn btn-primary"
+																		        data-form-submit
+																		        name="action"
+																		        value="save"
+																		        data-pb-origin="form"
+																		        data-pb-value="income-book"
+																		        type="button">
+																			<span class="indicator-label">Save Income Book</span>
+																			<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																			</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade"
+													     id="r_income_quick"
+													     role="tab-panel">
+														<div class="card shadow-sm">
+															<div class="card-body">
+																<form class="fR"
+																      data-pb-control="repeater"
+																      id="form-income-quick"
+																      data-pb-method="nested"
+																      method="post">
+																	<div class="form-group">
+																		<div data-repeater-list="repeater_form_list">
+																			<div data-repeater-item>
+																				<div class="row fv-row">
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<span class="required">Income Account</span>
+																							<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+																							   data-bs-toggle="tooltip"
+																							   data-bs-html="true"
+																							   title="<span class='fs-6'></span>"></i>
+																						</label>
+																						<select name="ac_from"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="amount"
+																						        data-pb-placeholder="Select Income Account"
+																						        title="What Type of Income received ??">
+																							<option></option>
+																							<option value="5">Discount Received</option>
+																							<option value="5">Incentive Received</option>
+																							<option value="5">Shortage Reimbursement</option>
+																						</select>
+																					</div>
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">&nbsp;</label>
+																						<br>
+																						<button type="button"
+																						        class="btn btn btn-icon-success btn-text-success btn-active-light-success btn-text-success drawer_new_account_button">Add Income Account
+																						</button>
+																					</div>
+																					<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																						<label class="form-label">
+																							<span class="required">Income Received Into</span>
+																						</label>
+																						<select name="bank_ac"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="group"
+																						        data-pb-placeholder="Received Account"
+																						        title="Select Bank Account">
+																							<option></option>
+																							<optgroup label="Bank Accounts">
+																								<option value="2">SBI bank - 4809</option>
+																								<option value="2">HDFC bank - 4809</option>
+																								<option value="2">ICICI bank - 4809</option>
+																							</optgroup>
+																						</select>
+																					</div>
+																				</div>
+																				<div class="inner-repeater">
+																					<div data-repeater-list="kt_docs_repeater_nested_inner"
+																					     class="mb-0">
+																						<div data-repeater-item>
+																							<div class="row fv-row">
+																								<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-10">
+																									<!--<label class="form-label required">Date of Transaction</label>-->
+																									<input type="text"
+																									       name="date"
+																									       required
+																									       class="form-control form-control-solid"
+																									       data-pb-control="date"
+																									       data-pb-method="human"
+																									       placeholder="Received Date *"
+																									       title="Income Received On" />
+																								</div>
+																								<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label required">Deposited Amount</label>-->
+																									<input type="text"
+																									       name="amount"
+																									       required
+																									       class="form-control form-control-solid text-end"
+																									       data-pbcontrol="inputmask"
+																									       data-pb-method="amount"
+																									       placeholder="Income Amount *"
+																									       title="How Much Amount Received ??" />
+																								</div>
+																								<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label required">Deposited Amount</label>-->
+																									<input type="text"
+																									       name="tds"
+																									       required
+																									       class="form-control form-control-solid text-end"
+																									       data-pb-control="mask"
+																									       data-pb-method="amount"
+																									       placeholder="TDS Amount *"
+																									       title="How Much Amount Deducted ??" />
+																								</div>
+																								<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																									<!--<label class="form-label">Income Note</label>-->
+																									<input type="text"
+																									       name="note"
+																									       required
+																									       class="form-control form-control-solid"
+																									       placeholder="Income Note *"
+																									       title="How this Income Comes ??" />
+																								</div>
+																								<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-7">
+																									<a href="javascript:"
+																									   data-repeater-delete
+																									   class="btn btn-sm btn-light-danger mt-3">
+																										<i class="bi bi-node-minus-fill"></i>
+																										Delete Row
+																									</a>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="ps-20">
+																						<a href="javascript:"
+																						   data-repeater-create="nest"
+																						   class="btn btn-sm btn-light-primary">
+																							<i class="bi bi-node-plus-fill"></i>Add Row
+																						</a>
+																					</div>
+																				</div>
+																				<div class="row">
+																					<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+																						<a href="javascript:"
+																						   data-repeater-delete
+																						   class="btn btn-sm btn-light-danger w-100">
+																							<i class="bi bi-node-minus-fill"></i>
+																							Delete Block
+																						</a>
+																					</div>
+																				</div>
+																				<div class="col-12"
+																				     data-pb-append="separate"></div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="mt-0">
+																		<a href="javascript:"
+																		   data-repeater-create="core"
+																		   class="btn btn-sm btn-light-primary">
+																			<i class="bi bi-node-plus-fill"></i>Add Block
+																		</a>
+																	</div>
+																</form>
+															</div>
+															<div class="card-footer py-5">
+																<div class="d-flex flex-stack">
+																	<div class="align-items-start">
+																		<button type="button"
+																		        value="income-quick"
+																		        name="back"
+																		        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+																		</button>
+																	</div>
+																	<div class="align-items-end">
+																		<button form="form-income-quick"
+																		        class="btn btn-light-info btn-active-info mx-3"
+																		        name="action"
+																		        value="reset"
+																		        data-pb-value="income-quic"
+																		        type="button">Reset
+																		</button>
+																		<button form="form-income-quick"
+																		        class="btn btn-primary"
+																		        data-form-submit
+																		        name="action"
+																		        value="save"
+																		        data-pb-origin="form"
+																		        data-pb-value="income-quick"
+																		        type="button">
+																			<span class="indicator-label">Save Income Quick</span>
+																			<span class="indicator-progress">Please wait...
+																				<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																			</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="transact-form"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-header">
+													<h3 class="card-title">Owner Transactions Entry</h3>
+													<div class="card-toolbar">
+														<button type="button"
+														        value="transact"
+														        name="back"
+														        class="btn btn-sm btn-text-dark btn-light hover-rotate-start">
+															<i class="bi fs-2 bi-arrow-bar-left"></i>
+															Go Back
+														</button>
+														<button type="button"
+														        value="transact"
+														        name="minus"
+														        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+															<i class="fs-3 me-1 text-dark bi bi-fullscreen"></i>
+														</button>
+													</div>
+												</div>
+												<div class="card-body">
+													<form class="fR"
+													      data-pb-control="repeater"
+													      id="form-owner-transact"
+													      data-pb-method="nested"
+													      method="post">
+														<div class="form-group">
+															<div data-repeater-list="repeater_form_list">
+																<div data-repeater-item>
+																	<div class="row fv-row">
+																		<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																			<label class="form-label">
+																				<span class="required">Owner Accounts</span>
+																				<i class="bi bi-exclamation-circle ms-2 fs-7 text-gray-500"
+																				   data-bs-toggle="tooltip"
+																				   data-bs-html="true"
+																				   title="<span class='fs-6 text-dark'>Proprietor Account<br>Partners Accounts</span>"></i>
+																			</label>
+																			<select name="bank_ac"
+																			        required
+																			        class="form-select form-select-solid"
+																			        data-pb-control="select"
+																			        data-pb-method="account"
+																			        data-pb-tack="amount"
+																			        data-pb-placeholder="Select Contact Account"
+																			        title="Select other person or firm Account">
+																			
+																			</select>
+																		</div>
+																		<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																			<label class="form-label">
+																				<span class="required">Fund Account</span>
+																			</label>
+																			<select name="bank_ac"
+																			        required
+																			        class="form-select form-select-solid"
+																			        data-pb-control="select"
+																			        data-pb-method="account"
+																			        data-pb-tack="amount"
+																			        data-pb-placeholder="Select Fund Account"
+																			        title="Select Fund Transacted Account">
+																			
+																			</select>
+																		</div>
+																		<div class="col-xxl-4 col-xl-4 col-lg-12 col-md-6 col-12 mb-7">
+																		
+																		</div>
+																	</div>
+																	<div class="inner-repeater">
+																		<div data-repeater-list="kt_docs_repeater_nested_inner"
+																		     class="mb-0">
+																			<div data-repeater-item>
+																				<div class="row fv-row">
+																					<div class="col-xxl-3 col-xl-4 col-lg-12 col-md-6 col-12 mb-7 ps-xxl-20 ps-xl-10">
+																						<!--<label class="form-label required">Date of Transaction</label>-->
+																						<input type="text"
+																						       name="date"
+																						       required
+																						       class="form-control form-control-solid"
+																						       data-pb-control="date"
+																						       data-pb-method="human"
+																						       placeholder="Transaction Date"
+																						       title="Transaction Date" />
+																					</div>
+																					<div class="col-xxl-2 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																						<!--<label class="form-label required">Transaction Amount</label>-->
+																						<input type="text"
+																						       name="amount"
+																						       required
+																						       class="form-control form-control-solid text-end"
+																						       data-pb-control="mask"
+																						       data-pb-method="amount"
+																						       placeholder="Transfer Amount"
+																						       title="Transfer Amount" />
+																					</div>
+																					<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-7 col-12 mb-7">
+																						<!--<label class="form-label">Transaction Nature</label>-->
+																						<select name="nature"
+																						        required
+																						        class="form-select form-select-solid"
+																						        data-pb-control="select"
+																						        data-pb-method="account"
+																						        data-pb-tack="group"
+																						        data-pb-placeholder="Txn Nature"
+																						        title="Nature of Transaction">
+																							<!--<option></option>-->
+																							<!--<optgroup label="Deposits">-->
+																							<!--	<option value="1">Equity</option>-->
+																							<!--	<option value="1">Capital</option>-->
+																							<!--</optgroup>-->
+																							<!--<optgroup label="Withdrawals">-->
+																							<!--	<option value="2">Dividends</option>-->
+																							<!--	<option value="2">Drawing</option>-->
+																							<!--</optgroup>-->
+																						</select>
+																					</div>
+																					<div class="col-xxl-3 col-xl-3 col-lg-12 col-md-6 col-12 mb-7">
+																						<!--<label class="form-label">Deal Number</label>-->
+																						<input type="text"
+																						       name="note"
+																						       class="form-control form-control-solid"
+																						       placeholder="Transaction Note"
+																						       
+																						       title="Transaction Detail" />
+																					</div>
+																					<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4 mb-7">
+																						<a href="javascript:"
+																						   data-repeater-delete
+																						   class="btn btn-sm btn-light-danger mt-3">
+																							<i class="bi bi-node-minus-fill"></i>
+																							Delete Row
+																						</a>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="ps-20">
+																			<a href="javascript:"
+																			   data-repeater-create="nest"
+																			   class="btn btn-sm btn-light-primary">
+																				<i class="bi bi-node-plus-fill"></i>Add Row
+																			</a>
+																		
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="offset-xxl-10 offset-8 col-xxl-2 col-xl-2 col-lg-4 col-md-4 col-4">
+																			<a href="javascript:"
+																			   data-repeater-delete
+																			   class="btn btn-sm btn-light-danger w-100">
+																				<i class="bi bi-node-minus-fill"></i>
+																				Delete Block
+																			</a>
+																		</div>
+																	</div>
+																	<div class="col-12"
+																	     data-pb-append="separate"></div>
+																</div>
+															</div>
+														</div>
+														<div class="mt-0">
+															<a href="javascript:"
+															   data-repeater-create="core"
+															   class="btn btn-sm btn-light-primary">
+																<i class="bi bi-node-plus-fill"></i>Add Block
+															</a>
+														</div>
+													</form>
+												</div>
+												<div class="card-footer py-5">
+													<div class="d-flex flex-stack">
+														<div class="align-items-start">
+															<button type="button"
+															        value="transact"
+															        name="back"
+															        class="btn btn-text-gray-600 btn-light-warning btn-active-text-dark btn-active-warning">Discard (Back to Home)
+															</button>
+														</div>
+														<div class="align-items-end">
+															<button form="form-owner-transact"
+															        class="btn btn-light-info btn-active-info mx-3"
+															        name="action"
+															        value="reset"
+															        data-pb-value="owner-transact"
+															        type="button">Reset
+															</button>
+															<button form="form-owner-transact"
+															        class="btn btn-primary"
+															        data-form-submit
+															        name="action"
+															        value="save"
+															        data-pb-origin="form"
+															        data-pb-value="owner-transact"
+															        type="button">
+																<span class="indicator-label">Save Owner Transaction</span>
+																<span class="indicator-progress">Please wait...
+																	<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+																</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="tables"
+									     class="d-none">
+										<div id="customer-table"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-header">
+													<h3 class="card-title">Credit Customer</h3>
+													<div class="card-toolbar">
+														<button type="button"
+														        value="customer"
+														        name="back"
+														        class="btn btn-sm btn-light hover-rotate-start">
+															<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+															<span>Go Back</span>
+														</button>
+														<button type="button"
+														        value="customer"
+														        name="minus"
+														        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+															<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+														</button>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="row mb-10 mt-5"
+													     data-pb-target="filter">
+														<div class="col">
+															<label class="form-label">Search</label>
+															<input type="search"
+															       name="search"
+															       data-dt-regex="1"
+															       class="form-control form-control-sm form-control-solid"
+															       placeholder="search"
+															       title="" />
+														</div>
+														<div class="col">
+															<label class="form-label">Item select</label>
+															<select name="select"
+															        data-dt-column="2"
+															        class="form-select form-select-sm form-select-solid"
+															        aria-label="Item Name">
+																<option value="">None</option>
+																<option value="diesel">Diesel</option>
+																<option value="mak">MAK</option>
+															</select>
+														</div>
+														<div class="col">
+														
+														</div>
+														<div class="col">
+															<label class="form-label">Date</label>
+															<div class="input-group">
+																<input type="text"
+																       name="date"
+																       data-dt-column="0"
+																       class="form-control form-select-sm form-control-solid"
+																       data-control="date"
+																       data-pb-method="range"
+																       placeholder="Select Date"
+																       title="" />
+																<input type="button"
+																       name="clear"
+																       data-pb-target="1"
+																       class="btn btn-sm btn-icon btn-light"
+																       value="X">
+															</div>
+														</div>
+														<div class="col">
+														
+														</div>
+													</div>
+													<div class="table-responsive">
+														<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+														       id="table-credit-customer">
+															<thead>
+															<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																<th class="w-10px pe-2">
+																	<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+																		<input class="form-check-input"
+																		       type="checkbox"
+																		       data-kt-check="true"
+																		       data-kt-check-target="# .form-check-input"
+																		       value="1" />
+																	</div>
+																</th>
+																<th>Date</th>
+																<th nowrap="">Withdraw from</th>
+																<th>Received Into</th>
+																<th>Amount</th>
+																<th>Slip Note</th>
+																<th>Actions</th>
+															</tr>
+															</thead>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="deals-table"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-header">
+													<h3 class="card-title">Contact Deals</h3>
+													<div class="card-toolbar">
+														<button type="button"
+														        value="contact"
+														        name="back"
+														        class="btn btn-sm btn-light hover-rotate-start">
+															<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+															<span>Go Back</span>
+														</button>
+														<button type="button"
+														        value="contact"
+														        name="minus"
+														        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+															<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+														</button>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="row mb-10 mt-5"
+													     data-pb-target="filter">
+														<div class="col">
+															<label class="form-label">Search</label>
+															<input type="search"
+															       name="search"
+															       data-dt-regex="1"
+															       class="form-control form-control-sm form-control-solid"
+															       placeholder="search"
+															       title="" />
+														</div>
+														<div class="col">
+															<label class="form-label">Item select</label>
+															<select name="select"
+															        data-dt-column="2"
+															        class="form-select form-select-sm form-select-solid"
+															        aria-label="Item Name">
+																<option value="">None</option>
+																<option value="diesel">Diesel</option>
+																<option value="mak">MAK</option>
+															</select>
+														</div>
+														<div class="col">
+														
+														</div>
+														<div class="col">
+															<label class="form-label">Date</label>
+															<div class="input-group">
+																<input type="text"
+																       name="date"
+																       data-dt-column="0"
+																       class="form-control form-select-sm form-control-solid"
+																       data-control="date"
+																       data-pb-method="range"
+																       placeholder="Select Date"
+																       title="" />
+																<input type="button"
+																       name="clear"
+																       data-pb-target="1"
+																       class="btn btn-sm btn-icon btn-light"
+																       value="X">
+															</div>
+														</div>
+														<div class="col">
+														
+														</div>
+													</div>
+													<div class="table-responsive">
+														<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+														       id="table-contact-deals">
+															<thead>
+															<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																<th class="w-10px pe-2">
+																	<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+																		<input class="form-check-input"
+																		       type="checkbox"
+																		       data-kt-check="true"
+																		       data-kt-check-target="# .form-check-input"
+																		       value="1" />
+																	</div>
+																</th>
+																<th>Date</th>
+																<th nowrap="">Withdraw from</th>
+																<th>Received Into</th>
+																<th>Amount</th>
+																<th>Slip Note</th>
+																<th>Actions</th>
+															</tr>
+															</thead>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="income-table"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-header">
+													<h3 class="card-title">Other Income</h3>
+													<div class="card-toolbar">
+														<button type="button"
+														        value="income"
+														        name="back"
+														        class="btn btn-sm btn-light hover-rotate-start">
+															<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+															<span>Go Back</span>
+														</button>
+														<button type="button"
+														        value="income"
+														        name="minus"
+														        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+															<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+														</button>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="row mb-10 mt-5"
+													     data-pb-target="filter">
+														<div class="col">
+															<label class="form-label">Search</label>
+															<input type="search"
+															       name="search"
+															       data-dt-regex="1"
+															       class="form-control form-control-sm form-control-solid"
+															       placeholder="search"
+															       title="" />
+														</div>
+														<div class="col">
+															<label class="form-label">Item select</label>
+															<select name="select"
+															        data-dt-column="2"
+															        class="form-select form-select-sm form-select-solid"
+															        aria-label="Item Name">
+																<option value="">None</option>
+																<option value="diesel">Diesel</option>
+																<option value="mak">MAK</option>
+															</select>
+														</div>
+														<div class="col">
+														
+														</div>
+														<div class="col">
+															<label class="form-label">Date</label>
+															<div class="input-group">
+																<input type="text"
+																       name="date"
+																       data-dt-column="0"
+																       class="form-control form-select-sm form-control-solid"
+																       data-control="date"
+																       data-pb-method="range"
+																       placeholder="Select Date"
+																       title="" />
+																<input type="button"
+																       name="clear"
+																       data-pb-target="1"
+																       class="btn btn-sm btn-icon btn-light"
+																       value="X">
+															</div>
+														</div>
+														<div class="col">
+														
+														</div>
+													</div>
+													<div class="table-responsive">
+														<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+														       id="table-other-income">
+															<thead>
+															<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																<th class="w-10px pe-2">
+																	<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+																		<input class="form-check-input"
+																		       type="checkbox"
+																		       data-kt-check="true"
+																		       data-kt-check-target="# .form-check-input"
+																		       value="1" />
+																	</div>
+																</th>
+																<th>Date</th>
+																<th nowrap="">Withdraw from</th>
+																<th>Received Into</th>
+																<th>Amount</th>
+																<th>Slip Note</th>
+																<th>Actions</th>
+															</tr>
+															</thead>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div id="transact-table"
+										     class="d-none">
+											<div class="card shadow-sm">
+												<div class="card-header">
+													<h3 class="card-title">Owner Transact</h3>
+													<div class="card-toolbar">
+														<button type="button"
+														        value="transact"
+														        name="back"
+														        class="btn btn-sm btn-light hover-rotate-start">
+															<i class="bi fs-2 bi-arrow-bar-left text-dark"></i>
+															<span>Go Back</span>
+														</button>
+														<button type="button"
+														        value="transact"
+														        name="minus"
+														        class="btn btn-sm btn-icon btn-link btn-color-dark btn-active-color-primary do_extend hover-scale">
+															<i class="fs-3 me-1 text-dark bi bi-fullscreen-exit"></i>
+														</button>
+													</div>
+												</div>
+												<div class="card-body">
+													<div class="row mb-10 mt-5"
+													     data-pb-target="filter">
+														<div class="col">
+															<label class="form-label">Search</label>
+															<input type="search"
+															       name="search"
+															       data-dt-regex="1"
+															       class="form-control form-control-sm form-control-solid"
+															       placeholder="search"
+															       title="" />
+														</div>
+														<div class="col">
+															<label class="form-label">Item select</label>
+															<select name="select"
+															        data-dt-column="2"
+															        class="form-select form-select-sm form-select-solid"
+															        aria-label="Item Name">
+																<option value="">None</option>
+																<option value="diesel">Diesel</option>
+																<option value="mak">MAK</option>
+															</select>
+														</div>
+														<div class="col">
+														
+														</div>
+														<div class="col">
+															<label class="form-label">Date</label>
+															<div class="input-group">
+																<input type="text"
+																       name="date"
+																       data-dt-column="0"
+																       class="form-control form-select-sm form-control-solid"
+																       data-control="date"
+																       data-pb-method="range"
+																       placeholder="Select Date"
+																       title="" />
+																<input type="button"
+																       name="clear"
+																       data-pb-target="1"
+																       class="btn btn-sm btn-icon btn-light"
+																       value="X">
+															</div>
+														</div>
+														<div class="col">
+														
+														</div>
+													</div>
+													<div class="table-responsive">
+														<table class="table align-middle table-row-dashed gy-3 gs-4 text-gray-700 fs-5"
+														       id="table-owner-transact">
+															<thead>
+															<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																<th class="w-10px pe-2">
+																	<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+																		<input class="form-check-input"
+																		       type="checkbox"
+																		       data-kt-check="true"
+																		       data-kt-check-target="# .form-check-input"
+																		       value="1" />
+																	</div>
+																</th>
+																<th>Date</th>
+																<th nowrap="">Withdraw from</th>
+																<th>Received Into</th>
+																<th>Amount</th>
+																<th>Slip Note</th>
+																<th>Actions</th>
+															</tr>
+															</thead>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									
+									</div>
+									<div id="modals_zone"
+									     class="d-flex">
+										<div class="d-flex"
+										     id="cash-deposit-modal">
+											<div class="modal fade"
+											     tabindex="-1">
+												<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered mw-650px">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h3 class="modal-title text-primary">Deposits</h3>
+															<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
+															     data-bs-dismiss="modal">
+																<i class="bi bi-x-lg fs-2"></i>
+															</div>
+														</div>
+														<div class="modal-body">
+															<div class="scroll mh-500px">
+																<div class="table-responsive">
+																	<table class="table align-middle table-row-dashed gy-3 gs-4">
+																		<thead>
+																		<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																			<th>Debited</th>
+																			<th>Credited</th>
+																			<th>Amount</th>
+																			<th>Note</th>
+																		</tr>
+																		</thead>
+																		<!--	this is for tbody that will append from js file by click on the button. -->
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex"
+										     id="cash-withdrawal-modal">
+											<div class="modal fade"
+											     tabindex="-1">
+												<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered mw-650px">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h3 class="modal-title text-primary">Withdrawals</h3>
+															<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
+															     data-bs-dismiss="modal">
+																<i class="bi bi-x-lg fs-2"></i>
+															</div>
+														</div>
+														<div class="modal-body">
+															<div class="scroll mh-500px">
+																<div class="table-responsive">
+																	<table class="table align-middle table-row-dashed gy-3 gs-4">
+																		<thead>
+																		<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																			<th>Debited</th>
+																			<th>Credited</th>
+																			<th>Amount</th>
+																			<th>Note</th>
+																		</tr>
+																		</thead>
+																		<!--	this is for tbody that will append from js file by click on the button. -->
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex"
+										     id="intra-transfer-modal">
+											<div class="modal fade"
+											     tabindex="-1">
+												<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered mw-650px">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h3 class="modal-title text-primary">Transfers</h3>
+															<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
+															     data-bs-dismiss="modal">
+																<i class="bi bi-x-lg fs-2"></i>
+															</div>
+														</div>
+														<div class="modal-body">
+															<div class="scroll mh-500px">
+																<div class="table-responsive">
+																	<table class="table align-middle table-row-dashed gy-3 gs-4">
+																		<thead>
+																		<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																			<th>Debited</th>
+																			<th>Credited</th>
+																			<th>Amount</th>
+																			<th>Note</th>
+																		</tr>
+																		</thead>
+																		<!--	this is for tbody that will append from js file by click on the button. -->
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex"
+										     id="fund-clearance-modal">
+											<div class="modal fade"
+											     tabindex="-1">
+												<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered mw-650px">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h3 class="modal-title text-primary">Clearances</h3>
+															<div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
+															     data-bs-dismiss="modal">
+																<i class="bi bi-x-lg fs-2"></i>
+															</div>
+														</div>
+														<div class="modal-body">
+															<div class="scroll mh-500px">
+																<div class="table-responsive">
+																	<table class="table align-middle table-row-dashed gy-3 gs-4">
+																		<thead>
+																		<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+																			<th>Debited</th>
+																			<th>Credited</th>
+																			<th>Amount</th>
+																			<th>Note</th>
+																		</tr>
+																		</thead>
+																		<!--	this is for tbody that will append from js file by click on the button. -->
+																	</table>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							<!--	this is drawers-->
+							<div id="drawer_income_setup"
+							     class="bg-white"
+							     data-kt-drawer="true"
+							     data-kt-drawer-activate="true"
+							     data-kt-drawer-toggle="#drawer_income_setup_button"
+							     data-kt-drawer-close="#drawer_new_account_close"
+							     data-kt-drawer-overlay="true"
+							     data-kt-drawer-width="{default:'300px', 'md': '500px'}">
+								<div class="card rounded-0 w-100">
+									<div class="card-header">
+										<h3 class="card-title">Income Setup</h3>
+									</div>
+									<div class="card-body">
+										
+										
+										//
+									</div>
+									<div class="card-footer">
+										<button class="btn btn-light-info"
+										        data-kt-drawer-dismiss="true">Dismiss
+										</button>
+									</div>
+								</div>
+							</div>
+							<div id="drawer_new_account"
+							     class="bg-white"
+							     data-kt-drawer="true"
+							     data-kt-drawer-activate="true"
+							     data-kt-drawer-toggle=".drawer_new_account_button"
+							     data-kt-drawer-close="#drawer_new_account_close"
+							     data-kt-drawer-overlay="true"
+							     data-kt-drawer-width="{default:'300px', 'md': '500px'}">
+								<div class="card rounded-0 w-100">
+									<div class="card-header">
+										<h3 class="card-title">Create Ledger Account</h3>
+									</div>
+									<div class="card-body">
+										
+										<div class="table-responsive">
+											<table class="table align-middle table-row-dashed gy-3 gs-4"
+											       id="table-cash-withdrawal">
+												<thead>
+												<tr class="text-start fw-bold fs-6 text-muted text-uppercase">
+													<th>Date</th>
+													<th>Withdraw from</th>
+													<th>Received Into</th>
+													<th>Amount</th>
+													<th>Slip Note</th>
+												</tr>
+												</thead>
+												<tbody class="text-gray-600 fw-semibold fs-5">
+												
+												</tbody>
+											</table>
+										</div>
+									
+									</div>
+									<div class="card-footer">
+										<button class="btn btn-light-info"
+										        data-kt-drawer-dismiss="true">Dismiss
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="kt_app_footer"
+				     class="app-footer">
+					<div class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+						@lokesh
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--@@ Javascript-->
+<script>
+	var hostUrl = "../../assets/";
+	var thePage = "operations@transactions@receipts";
+</script>
+<!--@@ Global Javascript Bundle (mandatory for all pages)-->
+<script src="../../assets/plugins/global/plugins.bundle.js"></script>
+<script src="../../assets/js/scripts/scripts.bundle.js"></script>
+<script src="../../assets/js/scripts/scripts.common.js"></script>
+<script src="../../assets/js/scripts/scripts.general.js"></script>
+
+<!--@@ Global Javascript Base (mandatory for all pages)-->
+<script src="../../assets/js/base/const.js"></script>
+<script src="../../assets/js/base/attributes.js"></script>
+<script src="../../assets/js/base/structure.js"></script>
+<script src="../../assets/js/base/events.js"></script>
+<script src="../../assets/js/base/elements.js"></script>
+<script src="../../assets/js/base/holding.js"></script>
+<script src="../../assets/js/base/arranges.js"></script>
+<script src="../../assets/js/base/handling.js"></script>
+<script src="../../assets/js/base/layout.js"></script>
+<script src="../../assets/js/base/ajax.js"></script>
+
+<!--@@ Rendering data into javascript (mandatory for all pages)-->
+<script src="../../assets/js/render/render.menu.js"></script>
+<script src="../../assets/js/render/render.table.js"></script>
+<script src="../../assets/js/render/render.common.js"></script>
+<script src="../../assets/js/render/render.form.js"></script>
+<script src="../../assets/js/options/option.datatables.js"></script>
+<script src="../../assets/js/extend/extend.collect.js"></script>
+<script src="../../assets/js/extend/extend.foreign.js"></script>
+<script src="../../assets/js/extend/extend.reset.js"></script>
+
+<!--@@ Vendors Javascript -->
+<script src="../../assets/plugins/custom/formrepeater/formrepeater.bundle.js"></script>
+<script src="../../assets/plugins/custom/datatables/datatables.bundle.js"></script>
+
+
+<!--@@ Plugins Javascript -->
+<script src="../../assets/js/plugins/quickAccess.js"></script>
+<script src="../../assets/js/plugins/dataTables.js"></script>
+<script src="../../assets/js/plugins/formValid.js"></script>
+<script src="../../assets/js/plugins/datePicker.js"></script>
+<script src="../../assets/js/plugins/selectPicker.js"></script>
+<script src="../../assets/js/plugins/tagifyInput.js"></script>
+<script src="../../assets/js/plugins/formKeen.js"></script>
+<script src="../../assets/js/plugins/inputMask.js"></script>
+<script src="../../assets/js/plugins/formRepeater.js"></script>
+
+<!--@@ Custom Files Javascript -->
+<script src="../../assets/js/heads/operations.js"></script>
+<script src="../../assets/js/pages/operations/transaction.js"></script>
+<script src="../../assets/js/pages/operations/transactions/dummyAjax.js"></script>
+<script src="../../assets/js/pages/operations/transactions/receipts.js"></script>
+
+</body>
+</html>
